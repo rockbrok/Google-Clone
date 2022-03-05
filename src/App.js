@@ -1,15 +1,17 @@
 import React from 'react';
 import logo from './googlelogo_color.png';
 import './App.css';
+import './/components/Container.css';
+import './/components/Navbar.css';
+import './/components/Logo.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Yo</h1>
+    <div className="container">
+      <header className="navbar">
       </header>
       <main>
-        <img src={logo} className="App-logo"
+        <img src={logo} className="logo"
         alt="logo" />
       </main>
     </div>
