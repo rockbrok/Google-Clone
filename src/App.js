@@ -9,11 +9,21 @@ function App() {
   return (
     <div className="container">
       <header className="navbar">
+        <ul>
+          <li><a href="#" alt="Gmail">Gmail</a></li>
+          <li><a href="#" alt="Images">Images</a></li>
+          <li>Icon 9</li>
+          <li>profile_pic</li>
+        </ul>
       </header>
       <main>
-        <img src={logo} className="logo"
-        alt="logo" />
+        <div className="logo"><img src={logo}
+        alt="logo" /></div>
+        
       </main>
+      <footer>
+        
+      </footer>
     </div>
   );
 }
