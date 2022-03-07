@@ -6,20 +6,6 @@
     justify-content: flex-end;
 }
 
-header li {
-    list-style: none;
-    padding: 0 0 0 15px;
-}
-
-a {
-    text-decoration: none;
-    color: hsl(0, 0%, 20%);
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
 header ul {
     display: inline-flex;
     align-items: center;
@@ -27,7 +13,21 @@ header ul {
     font-size: 13px;
 }
 
-.gb_A {
+header li {
+    list-style: none;
+    padding: 0 0 0 15px;
+}
+
+header a {
+    text-decoration: none;
+    color: hsl(0, 0%, 20%);
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+.gapps-icon-link {
     height: 40px;
     width: 40px;
     cursor: pointer;
@@ -35,21 +35,7 @@ header ul {
     margin-top: 0;
 }
 
-.profile-icon {
-    height: 40px;
-    width: 40px;
-    margin: 0;
-}
-
-.profile-icon-link {
-    display: flex;
-    align-self: center;
-    width: 40px;
-    height: 40px;
-    padding: 0 4px 0 0;
-}
-
-.gb_Se {
+.gapps-icon {
     padding: 0 1px 0 12px;
     display: flex;
     align-self: center;
@@ -58,6 +44,15 @@ header ul {
     fill: hsl(0, 0%, 20%);
 }
 
-svg:not(:root) {
-    overflow: hidden;
+.profile-icon,
+.profile-icon-link {
+    height: 40px;
+    width: 40px;
+    margin: 0;
+}
+
+.profile-icon-link {
+    display: flex;
+    align-self: center;
+    padding: 0 4px 0 0;
 }

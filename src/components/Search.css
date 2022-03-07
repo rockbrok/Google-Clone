@@ -18,12 +18,16 @@
     border-radius: 20px;
 }
 
-ul {
+.search-icon {
+    padding: 5px 8px 0px 14px;
+}
+
+.search-container ul {
     display: inline-flex;
     flex-direction: row;
 }
 
-li {
+.search-container li {
     margin: 0;
     list-style: none;
     padding: 0 5px 0 5px;
