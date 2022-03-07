@@ -1,0 +1,31 @@
+.search-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 140px;
+    width: 794px;
+    padding: 20px;
+}
+
+.search-bar {
+    display: flex;
+    justify-self: center;
+    width: 584px;
+    height: 44px;
+    margin: 0 105px 0 105px;
+    padding: 6px 0;
+    border: 1px solid hsl(0, 0%, 20%);
+    border-radius: 20px;
+}
+
+ul {
+    display: inline-flex;
+    flex-direction: row;
+}
+
+li {
+    margin: 0;
+    list-style: none;
+    padding: 0 5px 0 5px;
+}
+
