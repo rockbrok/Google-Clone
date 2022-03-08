@@ -8,6 +8,7 @@ import './/components/Search.css';
 import { UserCircleIcon } from '@heroicons/react/solid';
 import { SearchIcon } from '@heroicons/react/solid';
 import { MicrophoneIcon } from '@heroicons/react/solid';
+import { XIcon } from '@heroicons/react/solid';
 
 function App() {
   return (
@@ -43,17 +44,13 @@ function App() {
           <img src={logo} alt="logo" />
         </div>
         <div class="search-wrapper">
-          <div class="search-container">
-
-              <div class="search-bar-wrapper">
-              <div class="search-icon-container">
-              <SearchIcon className='search-icon' />
-              <MicrophoneIcon className='microphone-icon' />
-                <input className="search-bar" type="search" aria-label="search site" />
-              </div>
-            </div>
+          <div class="search-bar">
+            <SearchIcon className="search-icon" />
+            <input className="search" type="search" aria-label="search site" />
+            <XIcon className="x-icon" />
+            <span class="divider" />
+            <MicrophoneIcon className="microphone-icon" /> 
           </div>
-            
         </div>
         <div class="search-button-wrapper">
         <ul>
