@@ -4,7 +4,9 @@ import './App.css';
 import './/components/Container.css';
 import './/components/Navbar.css';
 import './/components/Logo.css';
-import './/components/Search.css';
+import './/components/Searchbar.css';
+import './/components/Searchbutton.css';
+import './/components/Footer.css';
 import { UserCircleIcon } from '@heroicons/react/solid';
 import { SearchIcon } from '@heroicons/react/solid';
 import { MicrophoneIcon } from '@heroicons/react/solid';
@@ -43,28 +45,36 @@ function App() {
         <div className="logo">
           <img src={logo} alt="logo" />
         </div>
-        <div class="search-wrapper">
-          <div class="search-bar">
-            <SearchIcon className="search-icon" />
-            <input className="search" type="search" aria-label="search site" />
-            <XIcon className="x-icon" />
-            <span class="divider" />
-            <MicrophoneIcon className="microphone-icon" /> 
+        <form>
+          <div class="search-wrapper">
+            <div class="search-bar">
+              <SearchIcon className="search-icon" />
+              <input type="search" maxLength="2048" autoComplete="off" autoCorrect="off" spellCheck="false" aria-label="Search" />
+              <XIcon className="x-icon" />
+              <span class="divider" />
+              <MicrophoneIcon className="microphone-icon" /> 
+            </div>
           </div>
-        </div>
-        <div class="search-button-wrapper">
-        <ul>
-              <li>
-                <button class="search-button">Google Search</button>
-              </li>
-              <li>
-                <button class="search-button">I'm Feeling Lucky</button>
-              </li>
-            </ul>
-        </div>
+          <div class="search-button-wrapper">
+            <div class="search-button-container">
+          <ul>
+                <li>
+                  <input class="search-button" value="Google Search" aria-label="Google Search" type="submit" role="button" />
+                </li>
+                <li>
+                  <input class="lucky-button" value="I'm Feeling Lucky" aria-label="I'm Feeling Lucky" type="submit" role="button" />
+                </li>
+              </ul>
+              </div>
+          </div>
+        </form>
+        <div class="empty-div"></div>
       </main>
       <footer>
-
+        <div class="footer-wrapper">
+        <div class="footer-country"><span>Argentina</span></div>
+        <div class="footer-content"></div>
+        </div>
       </footer>
     </div>
   );

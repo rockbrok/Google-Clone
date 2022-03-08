@@ -1,0 +1,29 @@
+.footer-wrapper {
+    height: 94px;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    --background-color: hsl(0, 0%, 30%);
+}
+
+.footer-country {
+    display: flex;
+    width: auto;
+    height: 17px;
+    padding: 15px 30px 15px 30px;
+    background-color: var(--background-color);
+    border-bottom: 1px solid hsl(0, 0%, 20%);
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    width: auto;
+    height: 46px;
+    background-color: var(--background-color);
+    padding: 0 20px 0 20px;
+}
