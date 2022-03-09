@@ -16,6 +16,15 @@
     border: 1px solid;
     border-color: var(--search-border);
     border-radius: 35px;
+    margin: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+
 }
 
 .search-icon,
@@ -30,7 +39,7 @@
 .search-icon {
     height: 18px;
     width: 18px;
-    padding: 13px 15px 13px 16px;
+    padding: 13px 15px 13px 15px;
     fill: hsl(217, 7%, 63%);
 }
 
@@ -44,6 +53,22 @@
 
 .microphone-icon {
     padding-right: 17px;
+}
+
+.x-icon {
+    padding-left: 9px;
+    transition: .1s;
+    outline: none;
+    border: none;
+}
+
+button {
+    cursor: default;
+    background-color: none;
+    background: none;
+    margin: 0;
+    padding: 0;
+    border: none;
 }
 
 .microphone-icon:hover,
@@ -67,10 +92,17 @@ input {
     align-self: center;
     height: 30px;
     padding: 0;
-    width: 446px;
+    width: 452px;
     border: none;
     font-size: 16px;
     color: hsl(0, 0%, 15%);
+    margin-left: -1px;
+}
+
+form input:placeholder-shown+button,
+form input:placeholder-shown+div.divider {
+    opacity: 0;
+    pointer-events: none;
 }
 
 input:focus {
@@ -81,5 +113,5 @@ input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
-  -webkit-appearance:none;
+    display: none;
 }

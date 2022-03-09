@@ -47,13 +47,15 @@ function App() {
         </div>
         <form>
           <div class="search-wrapper">
+            <form>
             <div class="search-bar">
               <SearchIcon className="search-icon" />
-              <input type="search" maxLength="2048" autoComplete="off" autoCorrect="off" spellCheck="false" aria-label="Search" />
-              <XIcon className="x-icon" />
-              <span class="divider" />
-              <MicrophoneIcon className="microphone-icon" /> 
+              <input type="search" placeholder=" " maxLength="2048" autoComplete="off" autoCorrect="off" spellCheck="false" aria-label="Search" />
+              <button className="clear" type="reset" title="Clear"><XIcon className="x-icon" /></button>
+              <div class="divider" />
+              <button type="" title="Search by voice"><MicrophoneIcon className="microphone-icon" /></button>
             </div>
+            </form>
           </div>
           <div class="search-button-wrapper">
             <div class="search-button-container">
