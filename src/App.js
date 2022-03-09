@@ -57,7 +57,7 @@ function App() {
           </div>
           <div class="search-button-wrapper">
             <div class="search-button-container">
-          <ul>
+              <ul>
                 <li>
                   <input class="search-button" value="Google Search" aria-label="Google Search" type="submit" role="button" />
                 </li>
@@ -65,16 +65,55 @@ function App() {
                   <input class="lucky-button" value="I'm Feeling Lucky" aria-label="I'm Feeling Lucky" type="submit" role="button" />
                 </li>
               </ul>
-              </div>
+            </div>
           </div>
         </form>
-        <div class="empty-div"></div>
       </main>
       <footer>
-        <div class="footer-wrapper">
-        <div class="footer-country"><span>Argentina</span></div>
-        <div class="footer-content"></div>
-        </div>
+          <div class="footer-country">
+            <p>Argentina</p>
+          </div>
+          <div class="footer-content">
+              <ul>
+                <li>
+                  <a href="#" alt="About">
+                    About
+                  </a>
+                </li>
+                <li>
+                  <a href="#" alt="Advertising">
+                    Advertising
+                  </a>
+                </li>
+                <li>
+                  <a href="#" alt="Business">
+                    Business
+                  </a>
+                </li>
+                <li>
+                  <a href="#" alt="How Search Works">
+                    How Search Works
+                  </a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="#" alt="Privacy">
+                    Privacy
+                  </a>
+                </li>
+                <li>
+                  <a href="#" alt="Terms">
+                    Terms
+                  </a>
+                </li>
+                <li>
+                  <a href="#" alt="Settings">
+                    Settings
+                  </a>
+                </li>
+              </ul>
+          </div>
       </footer>
     </div>
   );

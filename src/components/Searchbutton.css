@@ -46,13 +46,3 @@
     border-color: hsl(0, 0%, 80%);
     cursor: pointer;
 }
-
-.empty-div {
-    height: 100%;
-    width: auto;
-    display: flex;
-    flex-grow: 1;
-    flex-direction: column;
-    margin-bottom: auto;
-    content: "";
-}

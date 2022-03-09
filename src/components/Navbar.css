@@ -16,11 +16,12 @@ header ul {
 header li {
     list-style: none;
     padding: 0 0 0 15px;
+    margin-top: -1px;
 }
 
 header a {
     text-decoration: none;
-    color: hsl(0, 0%, 20%);
+    color: hsl(0, 0%, 22%);
 }
 
 header a:hover {
@@ -41,7 +42,7 @@ header a:hover {
     align-self: center;
     height: 24px;
     width: 24px;
-    fill: hsl(0, 0%, 20%);
+    fill: hsl(0, 0%, 45%);
 }
 
 .profile-icon,
