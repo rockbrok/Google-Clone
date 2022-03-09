@@ -22,7 +22,7 @@
 .microphone-icon,
 .x-icon {
     align-self: center;
-    margin: -1px;
+    margin: 0;
     z-index: 2;
     flex-shrink: 0;
 }
@@ -38,21 +38,29 @@
 .x-icon {
     height: 22px;
     width: 22px;
-    padding: 11px 14px 11px 14px;
+    padding: 11px 13px 11px 13px;
     fill: hsl(216, 4%, 46%);
 }
 
 .microphone-icon {
-    padding-right: 18px;
+    padding-right: 17px;
+}
+
+.microphone-icon:hover,
+.x-icon:hover {
+    cursor: pointer;
 }
 
 .divider {
     border-left: 1px solid;
     border-color: hsl(230, 9%, 87%);
     height: 65%;
-    cursor: pointer;
     line-height: 44px;
     align-self: center;
+}
+
+.divider:hover {
+    cursor: pointer;
 }
 
 input {

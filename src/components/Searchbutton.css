@@ -43,6 +43,6 @@
 
 .search-button:hover,
 .lucky-button:hover {
-    border-color: hsl(0, 0%, 80%);
+    border-color: hsl(230, 9%, 87%);
     cursor: pointer;
 }

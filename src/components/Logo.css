@@ -1,7 +1,14 @@
 .logo {
     min-height: 92px;
-    max-height: 108px;
+    width: auto;
     display: flex;
     justify-content: center;
-    margin-top: 16px;
+    align-content: flex-start;
+    flex-shrink: 0;
+}
+
+@media only screen and (device-width: 100vw){
+    .logo {
+      margin-top: 16px;
+    }
 }

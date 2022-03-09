@@ -41,6 +41,7 @@ footer ul {
     align-items: center;
     display: inline-flex;
     margin: -1px 0 0 0;
+    padding-left: 40px;
 }
 
 .footer-country {
@@ -54,18 +55,19 @@ footer ul {
     display: flex;
     flex-direction: row;
     align-self: flex-end;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 100%;
     height: 46px;
     background-color: var(--background-color);
     padding: 0 20px 0 20px;
     margin: 0;
+    overflow: hidden;
 }
 
-@media only screen and (max-width: 1060px) {
+@media all and (min-width: 1200px) {
     .footer-content {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
     }
 }
 
@@ -79,6 +81,7 @@ footer ul {
         height: 92px;
         width: 100%;
         flex-direction: column;
-        justify-items: center;
+        justify-content: center;
+        align-content: center;
     }
   }
