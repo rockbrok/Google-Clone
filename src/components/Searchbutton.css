@@ -1,7 +1,7 @@
 .search-button-wrapper {
     display: flex;
     justify-content: center;
-    padding: 18px 20px 20px 20px;
+    padding: 20px 20px 20px 20px;
 }
 
 .search-button-container {
@@ -33,7 +33,7 @@
     border-radius: 5px;
     color: hsl(0, 0%, 25%);
     font-size: 14px;
-    background-color: hsl(0, 0%, 97%);
+    background-color: hsl(210, 17%, 98%);
     border: 1px solid transparent;
 }
 

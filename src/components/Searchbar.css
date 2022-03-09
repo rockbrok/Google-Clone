@@ -6,7 +6,7 @@
     width: auto;
     padding: 26px 20px 0 20px;
     margin: 0;
-    --search-border: hsl(0, 0%, 88%);
+    --search-border: hsl(230, 10%, 89%);
 }
 
 .search-bar {
@@ -31,15 +31,15 @@
     height: 18px;
     width: 18px;
     padding: 13px 15px 13px 16px;
-    fill: hsl(0, 0%, 64%);
+    fill: hsl(217, 7%, 63%);
 }
 
 .microphone-icon,
 .x-icon {
     height: 22px;
     width: 22px;
-    padding: 11px 14px 11px 15px;
-    fill: hsl(0, 0%, 45%);
+    padding: 11px 14px 11px 14px;
+    fill: hsl(216, 4%, 46%);
 }
 
 .microphone-icon {
@@ -48,7 +48,7 @@
 
 .divider {
     border-left: 1px solid;
-    border-color: var(--search-border);
+    border-color: hsl(230, 9%, 87%);
     height: 65%;
     cursor: pointer;
     line-height: 44px;

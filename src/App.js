@@ -18,12 +18,12 @@ function App() {
       <header className="navbar">
         <ul>
           <li>
-            <a href="#" alt="Gmail">
+            <a href="https://mail.google.com/mail/" alt="Gmail">
               Gmail
             </a>
           </li>
           <li>
-            <a href="#" alt="Images">
+            <a href="https://images.google.com/" alt="Images">
               Images
             </a>
           </li>
@@ -76,34 +76,34 @@ function App() {
           <div class="footer-content">
               <ul>
                 <li>
-                  <a href="#" alt="About">
+                  <a href="https://about.google/" alt="About">
                     About
                   </a>
                 </li>
                 <li>
-                  <a href="#" alt="Advertising">
+                  <a href="https://ads.google.com/" alt="Advertising">
                     Advertising
                   </a>
                 </li>
                 <li>
-                  <a href="#" alt="Business">
+                  <a href="https://smallbusiness.withgoogle.com/" alt="Business">
                     Business
                   </a>
                 </li>
                 <li>
-                  <a href="#" alt="How Search Works">
+                  <a href="https://www.google.com/search/howsearchworks/" alt="How Search Works">
                     How Search Works
                   </a>
                 </li>
               </ul>
               <ul>
                 <li>
-                  <a href="#" alt="Privacy">
+                  <a href="https://policies.google.com/privacy/" alt="Privacy">
                     Privacy
                   </a>
                 </li>
                 <li>
-                  <a href="#" alt="Terms">
+                  <a href="https://policies.google.com/terms/" alt="Terms">
                     Terms
                   </a>
                 </li>
