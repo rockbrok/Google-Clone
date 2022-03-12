@@ -1,11 +1,11 @@
 import React from 'react';
-import Logo from './/components/Logo.js';
+import Logo from './components/Logo.js';
 import Navbar from './components/Navbar.js';
 import Searchbar from './components/Searchbar.js';
 import Searchbutton from './components/Searchbutton.js';
 import Footer from './components/Footer.js';
 import './App.css';
-import './/components/Container.css';
+import './components/Container.css';
 
 function App() {
   return (

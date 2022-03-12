@@ -12,9 +12,14 @@ function Searchbar() {
               <div class="search-bar">
                   <SearchIcon className="search-icon" />
                   <input type="search" placeholder=" " maxLength="2048" autoComplete="off" autoCorrect="off" spellCheck="false" aria-label="Search" />
-                  <button className="clear" type="reset" title="Clear"><XIcon className="x-icon" /></button>
-                  <div class="divider" />
-                  <button type="" title="Search by voice"><MicrophoneIcon className="microphone-icon" /></button>
+                    <div class="clear-button">
+                      <button className="clear" type="reset" title="Clear">
+                        <XIcon className="x-icon" />
+                      </button>
+                    </div>
+                  <button type="" title="Search by voice">
+                    <MicrophoneIcon className="microphone-icon" />
+                  </button>
               </div>
           </form>
         </center>

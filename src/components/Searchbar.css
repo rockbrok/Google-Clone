@@ -57,6 +57,7 @@ form {
     transition: .1s;
     outline: none;
     border: none;
+    margin-top: -8px;
 }
 
 button {
@@ -69,20 +70,17 @@ button {
 }
 
 .microphone-icon:hover,
-.x-icon:hover {
+.x-icon:hover,
+.clear-button:hover {
     cursor: pointer;
 }
 
-.divider {
-    border-left: 1px solid;
+.clear-button {
+    border-right: 1px solid;
     border-color: hsl(230, 9%, 87%);
     height: 65%;
     line-height: 44px;
     align-self: center;
-}
-
-.divider:hover {
-    cursor: pointer;
 }
 
 input {
@@ -96,8 +94,8 @@ input {
     margin-left: -1px;
 }
 
-form input:placeholder-shown+button,
-form input:placeholder-shown+div.divider {
+form input:placeholder-shown+div button,
+form input:placeholder-shown+.clear-button {
     opacity: 0;
     pointer-events: none;
 }
