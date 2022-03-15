@@ -80,27 +80,51 @@ header a:hover {
     margin-right: 4px;
 }
 
-[data-title]:hover:after {
+[data-title="Google Apps"]:hover:after {
     opacity: 1;
     transition: all 0.01s ease 0.5s;
     visibility: visible;
 }
 
-[data-title]:after {
+[data-title="Google Apps"]:after {
     content: attr(data-title);
     position: absolute;
-    bottom: -1.6em;
-    right: 50%;
+    top: 45px;
+    margin-right: auto;
+    margin-left: auto;
     padding: 4px 8px 4px 8px;
     color: hsl(240, 3%, 92%);
     white-space: nowrap;
     border-radius: 5px;  
     background-color: hsl(220, 5%, 39%);
-    opacity: 0;
-    z-index: 99999;
     visibility: hidden;
 }
 
-[data-title] {
+[data-title="Google Apps"] {
     position: relative;
 }
+
+[data-title="Google Account"]:hover:after {
+    opacity: 1;
+    transition: all 0.01s ease 0.5s;
+    visibility: visible;
+}
+
+[data-title="Google Account"]:after {
+    content: attr(data-title);
+    position: absolute;
+    top: 45px;
+    right: 0%;
+    margin-right: -6px;
+    padding: 4px 8px 4px 8px;
+    color: hsl(240, 3%, 92%);
+    white-space: nowrap;
+    border-radius: 5px;  
+    background-color: hsl(220, 5%, 39%);
+    visibility: hidden;
+}
+
+[data-title="Google Account"] {
+    position: relative;
+}
+
