@@ -29,20 +29,30 @@ header a:hover {
 }
 
 .gapps-icon-link {
+    display: flex;
+    align-self: center;
+    justify-content: center;
     height: 40px;
     width: 40px;
-    cursor: pointer;
-    padding: 8px 4px 8px 8px;
+    padding: 8px 0px 8px 0px;
     margin-top: 0;
+    margin-right: -7px;
+    margin-left: 4px;
 }
 
 .gapps-icon {
-    padding: 0 1px 0 12px;
     display: flex;
     align-self: center;
     height: 24px;
     width: 24px;
     fill: hsl(220, 5%, 39%)
+}
+
+.gapps-icon-link:hover {
+    background-color: hsl(240, 3%, 92%);
+    height: 24px;
+    border-radius:50%;
+    cursor: pointer;
 }
 
 .profile-icon,

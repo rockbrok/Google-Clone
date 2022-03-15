@@ -11,7 +11,7 @@ function Searchbar() {
             <form>
               <div class="search-bar">
                   <SearchIcon className="search-icon" />
-                  <input type="search" placeholder=" " maxLength="2048" autoComplete="off" autoCorrect="off" spellCheck="false" aria-label="Search" />
+                  <input className="search" type="search" placeholder=" " maxLength="2048" autoComplete="off" autoCorrect="off" spellCheck="false" aria-label="Search" />
                     <div class="clear-button">
                       <button className="clear" type="reset" title="Clear">
                         <XIcon className="x-icon" />
