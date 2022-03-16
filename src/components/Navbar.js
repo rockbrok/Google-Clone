@@ -24,7 +24,7 @@ function Navbar() {
                 </a>
             </li>
             <li>
-                <a className="profile-icon-link" href="#" alt="Google Account" data-title="Google Account&#013;John Smith&#013;johnsmith@gmail.com">
+                <a className="profile-icon-link google-account" href="#" alt="Google Account"><span>Google Account<br />John Smith <br />johnsmith@gmail.com</span>
                     <UserCircleIcon className='profile-icon' />
                 </a>
             </li>

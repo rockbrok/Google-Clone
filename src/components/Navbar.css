@@ -104,27 +104,26 @@ header a:hover {
     position: relative;
 }
 
-[data-title="Google Account"]:hover:after {
+a.google-account:hover span:after {
     opacity: 1;
     transition: all 0.01s ease 0.5s;
     visibility: visible;
 }
 
-[data-title="Google Account"]:after {
-    content: attr(data-title);
+a.google-account:hover span {
     position: absolute;
-    top: 45px;
+    display: block;
+    top: 55px;
     right: 0%;
-    margin-right: -6px;
+    margin-right: 6px;
     padding: 4px 8px 4px 8px;
     color: hsl(240, 3%, 92%);
-    white-space: nowrap;
     border-radius: 5px;  
     background-color: hsl(220, 5%, 39%);
-    visibility: hidden;
+    white-space: nowrap;
 }
 
-[data-title="Google Account"] {
+a.google-account span {
+    display: none;
     position: relative;
-}
-
+  }
