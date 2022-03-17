@@ -6,12 +6,10 @@ import SearchBar from './components/SearchBar/Index.js';
 import SearchButton from './components/SearchButton/Index.js';
 import Footer from './components/Footer/Index.js';
 import './App.css';
-import './components/Container.css';
 
 function App() {
-  return (
-    <div className="container">
-      <Header />
+  return ( <>
+    <Header />
       <main>
         <Logo />
         <form>
@@ -19,9 +17,8 @@ function App() {
           <SearchButton />
         </form>
       </main>
-      <Footer />
-    </div>
-  );
+    <Footer />
+  </> );
 }
 
 export default App;
