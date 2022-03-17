@@ -1,20 +1,21 @@
 import React from 'react';
+import ReactDom from 'react-dom';
 import Logo from './components/Logo.js';
-import Navbar from './components/Navbar.js';
-import Searchbar from './components/Searchbar.js';
+import Header from './components/Header/Index.js';
+import SearchBar from './components/SearchBar/Index.js';
 import Searchbutton from './components/Searchbutton.js';
-import Footer from './components/Footer.js';
+import Footer from './components/Footer/Index.js';
 import './App.css';
 import './components/Container.css';
 
 function App() {
   return (
     <div className="container">
-      <Navbar />
+      <Header />
       <main>
         <Logo />
         <form>
-          <Searchbar />
+          <SearchBar />
           <Searchbutton />
         </form>
       </main>
@@ -24,3 +25,4 @@ function App() {
 }
 
 export default App;
+ReactDom.render(App, document.getElementById('root'));
