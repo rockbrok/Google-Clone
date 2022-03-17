@@ -24,6 +24,7 @@ footer p {
 footer a {
     text-decoration: none;
     font-size: 14px;
+    letter-spacing: -0.05px;
 }
 
 footer a:hover {
@@ -41,7 +42,7 @@ footer ul {
     align-items: center;
     display: inline-flex;
     margin: -1px 0 0 0;
-    padding-left: 40px;
+    padding: 0 0 0 0;
 }
 
 .footer-country {
@@ -54,9 +55,7 @@ footer ul {
 .footer-content {
     display: flex;
     flex-direction: row;
-    align-self: flex-end;
     justify-content: space-evenly;
-    width: 100%;
     height: 46px;
     background-color: var(--background-color);
     padding: 0 20px 0 20px;
