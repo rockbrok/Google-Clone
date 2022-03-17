@@ -1,6 +1,5 @@
 import React from 'react'
 import './style.css';
-import { UserCircleIcon } from '@heroicons/react/solid';
 
 function Header() {
   return (
@@ -9,7 +8,7 @@ function Header() {
             <Gmail />
             <Images />
             <GoogleApps />
-            <GoogleAccount />
+            <SignIn />
         </ul>
     </header>
   )
@@ -41,11 +40,10 @@ const GoogleApps = () => (
     </li>
 );
 
-const GoogleAccount = () => (
+const SignIn = () => (
     <li>
-        <a className="profile-icon-link google-account" href="#" alt="Google Account">
-            <span>Google Account<br />John Smith<br />johnsmith@gmail.com</span>
-            <UserCircleIcon className='profile-icon' />
+        <a className="sign-in" href="https://accounts.google.com/ServiceLogin?hl=en" target="_top" alt="Sign in">
+            Sign in
         </a>
     </li>
 );

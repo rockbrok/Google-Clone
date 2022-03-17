@@ -53,29 +53,30 @@ header a:hover {
     cursor: pointer;
 }
 
-.profile-icon,
-.profile-icon-link {
-    height: 40px;
-    width: 40px;
-    margin: 0;
+.sign-in {
+    min-width: 96px;
+    width: 48px;
+    height: 16px;
+    padding: 9px 17px 9px 17px;
+    vertical-align: middle;
+    text-align: center;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    margin: 0 8px 0 4px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.25px;
+    line-height: 16px;
+    background: #1a73e8;
+    box-sizing: border-box;
+    white-space: nowrap;
 }
 
-.profile-icon-link {
-    display: flex;
-    align-self: center;
-    padding: 0;
-}
-
-.profile-icon-link:hover {
-    height: 40px;
-    border-radius: 50%;
-    background-color: hsl(240, 3%, 92%);
-    cursor: pointer;
-}
-
-.profile-icon-link,
-.profile-icon-link:hover {
-    margin-right: 4px;
+.sign-in:hover {
+    text-decoration: none;
+    border: 1px solid #4285f4;
+    background: #4285f4;
 }
 
 [data-title="Google Apps"]:hover:after {
@@ -102,26 +103,8 @@ header a:hover {
     position: relative;
 }
 
-a.google-account:hover span:after {
-    opacity: 1;
-    transition: all 0.01s ease 0.5s;
-    visibility: visible;
+@media all and (min-width: 615px) {
+    .sign-in {
+        padding: 9px 25px 9px 25px;
+    }
 }
-
-a.google-account:hover span {
-    position: absolute;
-    display: block;
-    top: 55px;
-    right: 0%;
-    margin-right: 6px;
-    padding: 4px 8px 4px 8px;
-    color: hsl(240, 3%, 92%);
-    border-radius: 5px;  
-    background-color: hsl(220, 5%, 39%);
-    white-space: nowrap;
-}
-
-a.google-account span {
-    display: none;
-    position: relative;
-  }
