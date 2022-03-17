@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import Logo from './components/Logo.js';
+import Logo from './components/Logo/Index.js';
 import Header from './components/Header/Index.js';
 import SearchBar from './components/SearchBar/Index.js';
 import SearchButton from './components/SearchButton/Index.js';
@@ -22,4 +22,4 @@ function App() {
 }
 
 export default App;
-ReactDom.render(App, document.getElementById('root'));
+ReactDom.render(<App />, document.getElementById('root'));

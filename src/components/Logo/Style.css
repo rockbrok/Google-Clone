@@ -1,0 +1,13 @@
+.logo {
+  display: flex;
+  flex-shrink: 0;
+  min-height: 92px;
+  width: auto;
+  margin: auto;
+}
+
+@media only screen and (device-width: 100vw){
+  .logo {
+    margin-top: 16px;
+  }
+}
