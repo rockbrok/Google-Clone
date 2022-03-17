@@ -1,10 +1,9 @@
 import React from 'react';
-import ReactDom from 'react-dom';
-import Logo from './components/Logo/Index.js';
-import Header from './components/Header/Index.js';
-import SearchBar from './components/SearchBar/Index.js';
-import SearchButton from './components/SearchButton/Index.js';
-import Footer from './components/Footer/Index.js';
+import Logo from './components/Logo/index';
+import Header from './components/Header/index';
+import SearchBar from './components/SearchBar/index';
+import SearchButton from './components/SearchButton/index';
+import Footer from './components/Footer/index';
 import './App.css';
 
 function App() {
@@ -22,4 +21,3 @@ function App() {
 }
 
 export default App;
-ReactDom.render(<App />, document.getElementById('root'));
