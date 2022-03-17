@@ -21,7 +21,6 @@ function SearchBar() {
 
 const Input = () => (
   <input 
-    className="search"
     type="search"
     placeholder=" "
     maxLength="2048"
