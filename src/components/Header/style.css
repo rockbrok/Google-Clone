@@ -1,110 +1,110 @@
 header {
-    height: 48px;
-    padding: 6px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+  height: 48px;
+  padding: 6px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
 
 header ul {
-    display: inline-flex;
-    align-items: center;
-    padding: 0 4px 0 15px;
-    font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 4px 0 15px;
+  font-size: 13px;
 }
 
 header li {
-    list-style: none;
-    padding: 0 0 0 15px;
-    margin-top: -1px;
+  list-style: none;
+  padding: 0 0 0 15px;
+  margin-top: -1px;
 }
 
 header a {
-    text-decoration: none;
-    color: hsl(0, 0%, 22%);
+  text-decoration: none;
+  color: hsl(0deg 0% 22%);
 }
 
 header a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .gapps-icon-link {
-    display: flex;
-    align-self: center;
-    justify-content: center;
-    height: 40px;
-    width: 40px;
-    padding: 8px 0px 8px 0px;
-    margin: 0 -7px 0 4px;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  padding: 8px 0;
+  margin: 0 -7px 0 4px;
 }
 
 .gapps-icon {
-    display: flex;
-    align-self: center;
-    height: 24px;
-    width: 24px;
-    fill: hsl(220, 5%, 39%);
+  display: flex;
+  align-self: center;
+  height: 24px;
+  width: 24px;
+  fill: hsl(220deg 5% 39%);
 }
 
 .gapps-icon-link:hover {
-    background-color: hsl(240, 3%, 92%);
-    height: 24px;
-    border-radius: 50%;
-    cursor: pointer;
+  background-color: hsl(240deg 3% 92%);
+  height: 24px;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 .sign-in {
-    min-width: 96px;
-    width: 48px;
-    height: 16px;
-    padding: 9px 17px 9px 17px;
-    vertical-align: middle;
-    text-align: center;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    margin: 0 8px 0 4px;
-    color: #fff;
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 0.25px;
-    line-height: 16px;
-    background: #1a73e8;
-    box-sizing: border-box;
-    white-space: nowrap;
+  min-width: 96px;
+  width: 48px;
+  height: 16px;
+  padding: 9px 17px;
+  vertical-align: middle;
+  text-align: center;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  margin: 0 8px 0 4px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.25px;
+  line-height: 16px;
+  background: #1a73e8;
+  box-sizing: border-box;
+  white-space: nowrap;
 }
 
 .sign-in:hover {
-    text-decoration: none;
-    border: 1px solid #4285f4;
-    background: #4285f4;
+  text-decoration: none;
+  border: 1px solid #4285f4;
+  background: #4285f4;
 }
 
-[data-title="Google Apps"]:hover:after {
-    opacity: 1;
-    transition: all 0.01s ease 0.5s;
-    visibility: visible;
+[data-title="Google Apps"]::after {
+  content: attr(data-title);
+  position: absolute;
+  top: 45px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 4px 8px;
+  color: hsl(240deg 3% 92%);
+  white-space: nowrap;
+  border-radius: 5px;
+  background-color: hsl(220deg 5% 39%);
+  visibility: hidden;
 }
 
-[data-title="Google Apps"]:after {
-    content: attr(data-title);
-    position: absolute;
-    top: 45px;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 4px 8px 4px 8px;
-    color: hsl(240, 3%, 92%);
-    white-space: nowrap;
-    border-radius: 5px;  
-    background-color: hsl(220, 5%, 39%);
-    visibility: hidden;
+[data-title="Google Apps"]:hover::after {
+  opacity: 1;
+  transition: all 0.01s ease 0.5s;
+  visibility: visible;
 }
 
 [data-title="Google Apps"] {
-    position: relative;
+  position: relative;
 }
 
 @media all and (min-width: 615px) {
-    .sign-in {
-        padding: 9px 25px 9px 25px;
-    }
+  .sign-in {
+    padding: 9px 25px;
+  }
 }

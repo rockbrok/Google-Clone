@@ -6,7 +6,7 @@
   margin: auto;
 }
 
-@media only screen and (device-width: 100vw){
+@media only screen and (device-width: 100vw) {
   .logo {
     margin-top: 16px;
   }
