@@ -1,7 +1,12 @@
 import React from 'react'
 import './style.css';
+import { useTranslation } from "react-i18next";
+import { t } from 'i18next';
+import './../../languages.js'
 
 function Header() {
+  const { t } = useTranslation()
+
   return (
     <header>
         <ul>
@@ -16,16 +21,16 @@ function Header() {
 
 const Gmail = () => (
     <li>
-        <a href="https://mail.google.com/mail/" alt="Gmail">
-            Gmail
+        <a href="https://mail.google.com/mail/">
+            {t('gmail')}
         </a>
     </li>
 );
 
 const Images = () => (
     <li>
-        <a href="https://images.google.com/" alt="Images">
-            Images
+        <a href="https://images.google.com/">
+            {t('images')}
         </a>
     </li>
 );
@@ -42,8 +47,8 @@ const GoogleApps = () => (
 
 const SignIn = () => (
     <li>
-        <a className="sign-in" href="https://accounts.google.com/ServiceLogin?hl=en" target="_top" alt="Sign in">
-            Sign in
+        <a className="sign-in" href="https://accounts.google.com/ServiceLogin?hl=en" target="_top">
+            {t('sign_in')}
         </a>
     </li>
 );

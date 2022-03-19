@@ -1,6 +1,7 @@
 import React from 'react'
 import './style.css';
 
+
 function SearchButton() {
   return (
     <div class="search-button-container">
