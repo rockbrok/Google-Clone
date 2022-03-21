@@ -28,12 +28,12 @@ const Language = () => (
         <div class="search-language">
             {t('google_language')}&nbsp;
 
-            {languages.map(({ code, language_name}) => (
+            {languages.map(({ code, name}) => (
 
             <a
               onClick={() => i18next.changeLanguage(code)}
             >
-              {language_name}
+              {name}
             </a>
             ))}
         </div>

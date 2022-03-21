@@ -1,10 +1,30 @@
 {
-    "app_title": "Google",
-    "language_name": "English (United States)",
     "gmail": "Gmail",
     "images": "Images",
     "sign_in": "Sign in",
+
     "google_search": "Google Search",
     "lucky_search": "I'm Feeling Lucky",
-    "google_language": "Google offered in:"
+
+    "google_language": "Google offered in:",
+    "language_name": "English (United States)",
+
+    "about": "About",
+    "advertising" : "Advertising",
+    "business": "Business",
+    "how_search_works": "How Search Works",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "settings": "Settings",
+    
+        "search_settings": "Search settings",
+        "advanced_search": "Advanced search",
+        "your_data_in_search": "Your data in Search",
+        "search_history": "Search history",
+        "search_help": "Search help",
+        "send_feedback": "Send feedback",
+        "dark_theme": {
+            "off": "Dark theme: Off",
+            "on": "Dark theme: On"
+        }
 }

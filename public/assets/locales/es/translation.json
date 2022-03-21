@@ -1,10 +1,30 @@
 {
-    "app_title": "Google",
-    "language_name": "Español (Latinoamérica)",
     "gmail": "Gmail",
     "images": "Imágenes",
     "sign_in": "Acceder",
+
     "google_search": "Buscar con Google",
     "lucky_search": "Me siento con suerte",
-    "google_language": "Google ofreció en:"
+
+    "google_language": "Google ofreció en:",
+    "language_name": "Español (Latinoamérica)",
+
+    "about": "Sobre",
+    "advertising" : "Publicidad",
+    "business": "Negocios",
+    "how_search_works": "Cómo Funciona La Búsqueda",
+    "privacy": "Privacidad",
+    "terms": "Condiciones",
+    "settings": "Preferencias",
+    
+        "search_settings": "Configuración de búsqueda",
+        "advanced_search": "Búsqueda avanzada",
+        "your_data_in_search": "Tus datos en la Búsqueda",
+        "search_history": "Historial de búsqueda",
+        "search_help": "Buscar en la ayuda",
+        "send_feedback": "Enviar comentarios",
+        "dark_theme": {
+            "off": "Tema oscuro: Desactivado",
+            "on": "Tema oscuro: Activado"
+        }
 }
