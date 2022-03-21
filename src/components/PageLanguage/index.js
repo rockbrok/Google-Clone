@@ -4,16 +4,9 @@ import i18next from 'i18next';
 import { useTranslation } from "react-i18next";
 import { t } from 'i18next';
 
-const languages = [
-    {
-        code: 'en',
-        language_name: 'English (United States)',
-    },
-    {
-        code: 'es',
-        language_name: 'Español (Latinoamérica)',
-    },
-]
+const changeLanguage = (language) => {
+    i18next.changeLanguage(language);
+};
 
 function PageLanguage() {
     const { t } = useTranslation()
@@ -26,16 +19,15 @@ function PageLanguage() {
 const Language = () => (
     <div class="search-language-container">
         <div class="search-language">
+        
             {t('google_language')}&nbsp;
 
-            {languages.map(({ code, name}) => (
-
-            <a
-              onClick={() => i18next.changeLanguage(code)}
-            >
-              {name}
-            </a>
-            ))}
+                <a onClick={() => changeLanguage("en")}>
+                {t('language_name')}
+                </a>
+                <a onClick={() => changeLanguage("es")}>
+                {t('language_name')}
+                </a>
         </div>
     </div>
 );
