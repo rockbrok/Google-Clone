@@ -1,6 +1,6 @@
 import React from 'react'
 import './style.css';
-
+import { t } from 'i18next';
 
 function SearchButton() {
   return (
@@ -15,13 +15,13 @@ function SearchButton() {
 
 const GoogleSearch = () => (
     <li>
-        <input class="google-search" value="Google Search" aria-label="Google Search" type="submit" />
+        <button class="google-search" type="submit">{t('google_search')}</button>
     </li>
 );
 
 const LuckySearch = () => (
     <li>
-        <input class="lucky-search" value="I'm Feeling Lucky" aria-label="I'm Feeling Lucky" type="submit" />
+        <button class="lucky-search" type="submit">{t('lucky_search')}</button>
     </li>
 );
 

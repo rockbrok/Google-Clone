@@ -19,6 +19,14 @@ li {
   padding: 0;
 }
 
+button {
+  cursor: default;
+  background: none;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
 .google-search,
 .lucky-search {
   height: 34px;

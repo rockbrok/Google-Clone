@@ -1,5 +1,7 @@
 import React from 'react'
 import './style.css';
+import SettingsPanel from './../../components/SettingsPanel/index';
+import { t } from 'i18next';
 
 function Footer() {
   return (
@@ -16,6 +18,7 @@ function Footer() {
                 <Privacy />
                 <Terms />
                 <Settings />
+                    <SettingsPanel />
             </ul>
         </div>
     </footer>
@@ -31,7 +34,7 @@ const FooterCountry = () => (
 const About = () => (
     <li>
         <a href="https://about.google/" alt="About">
-            About
+            {t('about')}
         </a>
     </li>
 );
@@ -39,7 +42,7 @@ const About = () => (
 const Advertising = () => (
     <li>
         <a href="https://ads.google.com/" alt="Advertising">
-            Advertising
+            {t('advertising')}
         </a>
     </li>
 );
@@ -47,7 +50,7 @@ const Advertising = () => (
 const Business = () => (
     <li>
         <a href="https://smallbusiness.withgoogle.com/" alt="Business">
-            Business
+            {t('business')}
         </a>
     </li>
 );
@@ -55,7 +58,7 @@ const Business = () => (
 const HowSearchWorks = () => (
     <li>
         <a href="https://www.google.com/search/howsearchworks/" alt="How Search Works">
-            How Search Works
+            {t('how_search_works')}
         </a>
     </li>
 );
@@ -63,7 +66,7 @@ const HowSearchWorks = () => (
 const Privacy = () => (
     <li>
         <a href="https://policies.google.com/privacy/" alt="Privacy">
-            Privacy
+            {t('privacy')}
         </a>
     </li>
 );
@@ -71,7 +74,7 @@ const Privacy = () => (
 const Terms = () => (
     <li>
         <a href="https://policies.google.com/terms/" alt="Terms">
-            Terms
+            {t('terms')}
         </a>
     </li>
 );
@@ -79,7 +82,7 @@ const Terms = () => (
 const Settings = () => (
     <li>
         <a href="#" alt="Settings">
-            Settings
+            {t('settings')}
         </a>
     </li>
 );
