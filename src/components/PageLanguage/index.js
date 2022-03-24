@@ -1,11 +1,11 @@
 import React from 'react'
 import './style.css';
-import i18next from 'i18next';
+import i18n from 'i18next';
 import { useTranslation } from "react-i18next";
 import { t } from 'i18next';
 
 const changeLanguage = (language) => {
-    i18next.changeLanguage(language);
+    i18n.changeLanguage(language);
 };
 
 function PageLanguage() {
@@ -16,18 +16,27 @@ function PageLanguage() {
     )
 }
 
+const change = () => {
+ arr = ["Español (Latinoamérica)", "English (United States)"];
+ index = 0;
+    $('#next').click(function(){
+      $('#quote').html(arr[index])
+      index = (index + 1) % arr.length;
+    }),
+};
+
 const Language = () => (
     <div class="search-language-container">
         <div class="search-language">
-        
             {t('google_language')}&nbsp;
-
-                <a onClick={() => changeLanguage("en")}>
-                {t('language_name')}
-                </a>
+            <div id="next">
                 <a onClick={() => changeLanguage("es")}>
-                {t('language_name')}
+                    {t('language_name')}
                 </a>
+                <a onClick={() => changeLanguage("en")}>
+                    {t('language_name')}
+                </a>
+            </div>
         </div>
     </div>
 );
