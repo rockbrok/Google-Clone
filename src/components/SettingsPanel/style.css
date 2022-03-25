@@ -1,0 +1,36 @@
+ul.panel {
+    position: absolute;
+    width: 200px;
+    height: auto;
+    background: #fff;
+    border: 1px solid #70757a;
+    z-index: 20000;
+    bottom: 46px;
+    right: 20px;
+    display: block;
+    /* display: none; */
+}
+
+ul.panel li {
+    display: block;
+    line-height: 16px;
+    padding: 0;
+}
+
+ul.panel li a {
+    width: auto;
+    display: block;
+    padding: 15px;
+    cursor: pointer;
+    text-align: left;
+    white-space: nowrap;
+    height: auto;
+    width: auto;
+}
+
+.panel_separator {
+    display: blocl;
+    border-top: 1px solid #ebebeb;
+    padding: 0;
+    margin: 0;
+}

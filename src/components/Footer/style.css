@@ -8,7 +8,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-content: flex-end;
-
+  z-index: 1;
   --background-color: hsl(0deg 0% 95%);
 }
 
@@ -51,6 +51,7 @@ footer ul {
   padding: 15px 30px;
   background-color: var(--background-color);
   border-bottom: 1px solid hsl(230deg 9% 87%);
+  z-index: 1;
 }
 
 .footer-content {
@@ -63,6 +64,7 @@ footer ul {
   padding: 0 20px;
   margin: 0;
   overflow: hidden;
+  z-index: 1;
 }
 
 @media all and (min-width: 1200px) {
