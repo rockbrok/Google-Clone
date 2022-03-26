@@ -1,6 +1,8 @@
 import React from 'react'
 import './style.css';
 import { t } from 'i18next';
+import { SunIcon } from '@heroicons/react/solid';
+import { MoonIcon } from '@heroicons/react/solid';
 
 function SettingsPanel() {
   return (
@@ -71,8 +73,9 @@ const Separator = () => (
 
 const DarkTheme = () => (
   <li>
-      <a href="#" role="menuitem" tabindex="-1" alt="Settings">
+      <a class="dark_off" href="#" role="menuitem" tabindex="-1" alt="Settings">
           {t('dark_theme.off')}
+          <SunIcon className="sun-icon"/>
       </a>
   </li>
 );

@@ -34,3 +34,21 @@ ul.panel li a {
     padding: 0;
     margin: 0;
 }
+
+a.dark_off .sun-icon {
+  height: 22px;
+  width: 22px;
+  fill: hsl(210deg 4% 46%);
+  position: absolute;
+  right: 15px;
+  bottom: 13px;
+  display: none;
+}
+
+a.dark_off:hover {
+    text-decoration: none;
+}
+
+a.dark_off:hover .sun-icon {
+    display: inline-block;
+}
