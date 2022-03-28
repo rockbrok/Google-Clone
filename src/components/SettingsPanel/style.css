@@ -46,12 +46,12 @@ a.dark_on .moon-icon {
   display: none;
 }
 
-a.dark_off:hover
+a.dark_off:hover,
 a.dark_on:hover {
     text-decoration: none;
 }
 
 a.dark_off:hover .sun-icon,
-a.dark_off:hover .moon-icon  {
+a.dark_on:hover .moon-icon  {
     display: inline-block;
 }

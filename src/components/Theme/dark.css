@@ -1,0 +1,15 @@
+body {
+    background: #000;
+    color: #bdc1c6;
+}
+
+ul.panel {
+    background: red;
+}
+
+.panel_separator {
+}
+
+a.dark_off .sun-icon,
+a.dark_on .moon-icon {
+}

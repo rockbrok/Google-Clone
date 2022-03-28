@@ -1,0 +1,14 @@
+body {
+    background: #fff;
+}
+   
+ul.panel {
+    background: #fff;
+}
+   
+.panel_separator {
+}
+   
+a.dark_off .sun-icon,
+a.dark_on .moon-icon {
+}
