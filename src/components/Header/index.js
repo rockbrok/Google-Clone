@@ -2,7 +2,6 @@ import React from 'react'
 import './style.css';
 import { useTranslation } from "react-i18next";
 import { t } from 'i18next';
-import './../../languages.js'
 
 function Header() {
   const { t } = useTranslation()

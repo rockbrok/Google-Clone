@@ -35,7 +35,8 @@ ul.panel li a {
     margin: 0;
 }
 
-a.dark_off .sun-icon {
+a.dark_off .sun-icon,
+a.dark_on .moon-icon {
   height: 22px;
   width: 22px;
   fill: hsl(210deg 4% 46%);
@@ -45,10 +46,12 @@ a.dark_off .sun-icon {
   display: none;
 }
 
-a.dark_off:hover {
+a.dark_off:hover
+a.dark_on:hover {
     text-decoration: none;
 }
 
-a.dark_off:hover .sun-icon {
+a.dark_off:hover .sun-icon,
+a.dark_off:hover .moon-icon  {
     display: inline-block;
 }

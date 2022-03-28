@@ -1,7 +1,7 @@
 footer {
   position: absolute;
   height: 94px;
-  width: fill;
+  width: stretch;
   bottom: 0;
   margin: 0;
   padding: 0;
@@ -59,7 +59,7 @@ footer ul {
   flex-direction: row;
   justify-content: space-evenly;
   height: 46px;
-  width: fill;
+  width: stretch;
   background-color: var(--background-color);
   padding: 0 20px;
   margin: 0;

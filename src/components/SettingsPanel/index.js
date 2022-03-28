@@ -1,10 +1,16 @@
 import React from 'react'
 import './style.css';
+import { ThemeProvider } from 'styled-components';
+import { lightTheme } from '../Theme/light';
+import { darkTheme } from '../Theme/dark';
+import { GlobalStyles } from '../Theme/global';
+import { useTheme } from '../Theme/useTheme';
+import { Toggle } from '../Theme/toggle';
 import { t } from 'i18next';
-import { SunIcon } from '@heroicons/react/solid';
-import { MoonIcon } from '@heroicons/react/solid';
 
 function SettingsPanel() {
+  const [theme, toggleTheme] = useTheme();
+
   return (
     <ul class="panel" role="menu">
       <SearchSettings />
@@ -14,7 +20,10 @@ function SettingsPanel() {
       <SearchHelp />
       <SendFeedback />
       <Separator />
-      <DarkTheme />
+      <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
+        <GlobalStyles />
+        <Toggle theme={theme} toggleTheme={toggleTheme} />
+      </ThemeProvider>
     </ul>
   )
 }
@@ -70,14 +79,5 @@ const SendFeedback = () => (
 const Separator = () => (
   <li class="panel_separator" role="separator" />
 )
-
-const DarkTheme = () => (
-  <li>
-      <a class="dark_off" href="#" role="menuitem" tabindex="-1" alt="Settings">
-          {t('dark_theme.off')}
-          <SunIcon className="sun-icon"/>
-      </a>
-  </li>
-);
 
 export default SettingsPanel
