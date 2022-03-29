@@ -67,7 +67,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   .clear-button {
-    fill: ${({ theme }) => theme.clearbuttondivider};
+    border-color: ${({ theme }) => theme.clearbuttondivider};
   }
 
   input[type="search"] {
