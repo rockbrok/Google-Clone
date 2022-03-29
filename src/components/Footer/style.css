@@ -9,6 +9,7 @@ footer {
   flex-direction: column;
   align-content: flex-end;
   z-index: 1;
+
   --background-color: hsl(0deg 0% 95%);
 }
 
@@ -20,7 +21,7 @@ button.settings {
   margin: 0;
   padding: 0;
   line-height: 16px;
-  font-family: Arial;
+  font-family: Arial, san-serif;
   font-weight: 400;
 }
 
@@ -55,17 +56,20 @@ footer ul {
   padding: 0;
 }
 
+.footer-country,
+.footer-content {
+  z-index: 1;
+}
+
 .footer-country {
   height: 17px;
   padding: 15px 30px;
   background-color: var(--background-color);
   border-bottom: 1px solid hsl(230deg 9% 87%);
-  z-index: 1;
 }
 
 .footer-content {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   height: stretch;
   width: stretch;
@@ -73,8 +77,7 @@ footer ul {
   padding: 0 20px;
   margin: 0;
   overflow: hidden;
-  z-index: 1;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -97,6 +100,5 @@ footer ul {
     margin-left: -20px;
     justify-items: center;
     align-items: center;
-
   }
 }

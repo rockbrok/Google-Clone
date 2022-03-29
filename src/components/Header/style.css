@@ -28,9 +28,13 @@ header a:hover {
   text-decoration: underline;
 }
 
-.gapps-icon-link {
+.gapps-icon-link,
+.gapps-icon {
   display: flex;
   align-self: center;
+}
+
+.gapps-icon-link {
   justify-content: center;
   height: 40px;
   width: 40px;
@@ -39,8 +43,6 @@ header a:hover {
 }
 
 .gapps-icon {
-  display: flex;
-  align-self: center;
   height: 24px;
   width: 24px;
   fill: hsl(220deg 5% 39%);

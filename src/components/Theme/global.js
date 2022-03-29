@@ -101,17 +101,18 @@ export const GlobalStyles = createGlobalStyle`
     background: ${({ theme }) => theme.panel};
     border-color: ${({ theme }) => theme.panelborder};
   }
-
+  
+  ul.panel li a,
   ul.panel li button {
     color: ${({ theme }) => theme.panelbuttontextcolor};
   }
 
-  .panel_separator {
+  .panel-separator {
     border-color: ${({ theme }) => theme.panelseparator};
   }
 
-  button.dark_off .sun-icon,
-  button.dark_on .moon-icon {
+  button.dark-off .sun-icon,
+  button.dark-on .moon-icon {
     fill: ${({ theme }) => theme.themeiconfill};
   }
 

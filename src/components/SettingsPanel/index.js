@@ -79,7 +79,7 @@ const SendFeedback = () => (
 );
 
 const Separator = () => (
-  <li class="panel_separator" role="separator" />
+  <li class="panel-separator" role="separator" />
 )
 
 export default SettingsPanel
