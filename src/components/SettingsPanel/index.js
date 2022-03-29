@@ -28,6 +28,8 @@ function SettingsPanel() {
   )
 }
 
+
+
 const SearchSettings = () => (
   <li>
       <a class="panel" href="https://www.google.com/preferences" role="menuitem" tabindex="-1" alt="Search settings">
