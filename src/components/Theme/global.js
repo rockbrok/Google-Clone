@@ -11,6 +11,10 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.color};
   }
 
+  header {
+    background-color: ${({ theme }) => theme.headerbackgroundcolor};
+  }
+
   header a {
     color: ${({ theme }) => theme.headertextcolor};
   }
@@ -39,12 +43,20 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.gappsaftercolor};
   }
 
+  .logo-container {
+    background-color: ${({ theme }) => theme.logobackgroundcolor};
+  }
+
   .search-language {
     color: ${({ theme }) => theme.searchlanguagecolor};
   }
 
   .search-language button {
     color: ${({ theme }) => theme.searchlanguageacolor};
+  }
+
+  .search-container {
+    background-color: ${({ theme }) => theme.searchbarcontainerbackground};
   }
 
   .search-bar {
@@ -85,6 +97,10 @@ export const GlobalStyles = createGlobalStyle`
     background-color: ${({ theme }) => theme.searchbarfocusbackground};
   }
 
+  .google-search-container {
+    background-color: ${({ theme }) => theme.searchbuttoncontainerbackground};
+  }
+
   .google-search,
   .lucky-search {
     color: ${({ theme }) => theme.searchbuttontextcolor};
@@ -95,6 +111,10 @@ export const GlobalStyles = createGlobalStyle`
   .google-search:hover,
   .lucky-search:hover {
     border-color: ${({ theme }) => theme.searchbuttonhoverborder};
+  }
+
+  .search-language-container {
+    background-color: ${({ theme }) => theme.pagelanguagebackground};
   }
 
   ul.panel {

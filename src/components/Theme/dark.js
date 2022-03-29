@@ -1,6 +1,7 @@
 export const darkTheme = {
-  body: '#202124;',
+  body: '#202124',
   // header //
+  headerbackgroundcolor: '#202124',
   headertextcolor: 'white',
   gappsfill: 'rgba(255,255,255,0.87)',
   gappshover: '#313034',
@@ -12,10 +13,11 @@ export const darkTheme = {
   signinborder: '',
   signinhoverborder: '#9fb8f4',
   // logo //
-
+  logobackgroundcolor: '#202124',
   // search language //
   searchlanguagecolor: '#bdc1c6',
   searchlanguageacolor: '#8ab4f8',
+  pagelanguagebackground: '#202124',
   // search bar //
   searchbarborder: '#5f6368',
   searchbarbackground: '#202124',
@@ -28,11 +30,13 @@ export const darkTheme = {
   searchbartexthighlight: '',
   searchbarinputbackground: '#303134',
   searchbarfocusbackground: '#303134',
+  searchbarcontainerbackground: '#202124',
   // search button //
   searchbuttontextcolor: '#e8eaed',
   searchbuttonbackground: '#303134',
   searchbuttonborder: '',
   searchbuttonhoverborder: 'rgb(118, 118, 118)',
+  searchbuttoncontainerbackground: '#202124',
   // settings panel //
   panel: '#202124',
   panelborder: '#868b90',

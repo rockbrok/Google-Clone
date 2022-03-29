@@ -1,9 +1,11 @@
 header {
   height: 48px;
   padding: 6px;
+  background: #fff;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  z-index: 100;
 }
 
 header ul {

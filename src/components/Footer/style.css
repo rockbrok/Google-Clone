@@ -8,7 +8,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-content: flex-end;
-  z-index: 1;
+  z-index: -1;
 
   --background-color: hsl(0deg 0% 95%);
 }
@@ -102,4 +102,9 @@ footer ul {
     justify-items: center;
     align-items: center;
   }
+}
+
+@media only screen and (max-height: 500px) {
+
+
 }

@@ -2,9 +2,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
-  width: 584px;
+  padding: 0 20px 10px 20px;
+  width: 100%;
+  margin-top: -1px;
   height: 58px;
+  background: #fff;
+  z-index: 3;
 }
 
 ul {
@@ -24,6 +27,8 @@ button {
   background: none;
   margin: 0;
   padding: 0;
+  outline: none;
+  border: none;
   white-space: nowrap;
 }
 
@@ -31,8 +36,8 @@ button {
 .lucky-search {
   height: 36px;
   width: min-content;
-  padding: 0 16px;
-  margin: 10px 4px;
+  padding: 0 16px 0 16px;
+  margin: 10px;
   border-radius: 4px;
   color: hsl(0deg 0% 25%);
   font-size: 14px;
@@ -41,7 +46,7 @@ button {
 }
 
 .google-search {
-  margin-right: 8px;
+  margin-right: 2px;
 }
 
 .google-search:hover,

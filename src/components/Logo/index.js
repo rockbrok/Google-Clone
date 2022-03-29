@@ -6,7 +6,7 @@ import './style.css';
 function Logo() {
   return (
     <>
-    <div class="logocontainer">
+    <div class="logo-container">
       <picture src="" alt="d" class="logo" />
 
     </div>

@@ -3,11 +3,12 @@ import './style.css';
 import { t } from 'i18next';
 import SettingsPanel from './../../components/SettingsPanel/index';
 
-export function TogglePanel() {
+export function TogglePanel(clickOutsideConfig) {
   const [show, setShow] = useState(true)
+
     return ( <>
       {
-        show?<SettingsPanel />:null
+        show?<SettingsPanel style={{zIndex:5}} />:null
       }
       <button onClick={() => setShow(!show)}><Settings /></button>
     </>)

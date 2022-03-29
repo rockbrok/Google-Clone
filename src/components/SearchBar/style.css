@@ -1,8 +1,10 @@
 .search-container {
   height: 44px;
-  width: auto;
-  padding: 26px 20px 0;
+  width: 100%;
+  padding: 26px 20px 10px 20px;
   margin: 0;
+  background: #fff;
+  z-index: 3;
 }
 
 .search-bar {
