@@ -1,6 +1,6 @@
 footer {
   position: absolute;
-  height: 94px;
+  max-height: 138px;
   width: stretch;
   bottom: 0;
   margin: 0;
@@ -16,6 +16,7 @@ footer p,
 footer a {
   color: hsl(0deg 0% 45%);
   margin: 0;
+  line-height: 16px;
 }
 
 footer p {
@@ -57,20 +58,20 @@ footer ul {
 .footer-content {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  height: 46px;
+  justify-content: space-between;
+  height: stretch;
   width: stretch;
   background-color: var(--background-color);
   padding: 0 20px;
   margin: 0;
   overflow: hidden;
   z-index: 1;
+  flex-wrap: wrap;
 }
 
-@media all and (min-width: 1200px) {
+@media only screen and (max-width: 1200px) {
   .footer-content {
-    display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
 }
 
@@ -81,7 +82,7 @@ footer ul {
 
   .footer-content {
     display: flex;
-    height: 92px;
+    height: stretch;
     width: 100%;
     flex-direction: column;
     margin: 0;
