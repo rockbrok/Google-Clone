@@ -1,6 +1,6 @@
 import React from 'react'
 import './style.css';
-import SettingsPanel from './../../components/SettingsPanel/index';
+import { TogglePanel } from './togglePanel';
 import { t } from 'i18next';
 
 function Footer() {
@@ -17,8 +17,7 @@ function Footer() {
             <ul>
                 <Privacy />
                 <Terms />
-                <Settings />
-                    <SettingsPanel />
+                <TogglePanel />
             </ul>
         </div>
     </footer>
@@ -76,14 +75,6 @@ const Terms = () => (
         <a href="https://policies.google.com/terms/" alt="Terms">
             {t('terms')}
         </a>
-    </li>
-);
-
-const Settings = () => (
-    <li>
-        <button class="settings" alt="Settings">
-            {t('settings')}
-        </button>
     </li>
 );
 
