@@ -24,7 +24,7 @@ export const darkTheme = {
   searchiconfill: 'hsl(217deg 7% 63%)',
   searchbariconfill: '#757b80',
   clearbuttondivider: '#5f6368',
-  searchbartextcolor: '#bdc1c6',
+  searchbartextcolor: '#e8eaed',
   searchbartexthighlight: '',
   searchbarinputbackground: '#303134',
   searchbarfocusbackground: '#303134',

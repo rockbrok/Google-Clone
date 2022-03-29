@@ -48,7 +48,7 @@ header a:hover {
 
 .gapps-icon-link:hover {
   background-color: hsl(240deg 3% 92%);
-  height: 24px;
+  height: 40px;
   border-radius: 50%;
   cursor: pointer;
 }
@@ -56,8 +56,12 @@ header a:hover {
 .sign-in {
   min-width: 96px;
   width: 48px;
-  height: 16px;
+  height: 36px;
   padding: 9px 17px;
+  outline: none;
+  font-style: normal;
+  filter: none;
+  display: inline-block;
   vertical-align: middle;
   text-align: center;
   border: 1px solid transparent;
@@ -65,7 +69,9 @@ header a:hover {
   margin: 0 8px 0 4px;
   color: #fff;
   font-size: 14px;
+  font-stretch: 100%;
   font-weight: 500;
+  font-family: Arial;
   letter-spacing: 0.25px;
   line-height: 16px;
   background: #1a73e8;
@@ -103,8 +109,8 @@ header a:hover {
   position: relative;
 }
 
-@media all and (min-width: 615px) {
+@media only screen and (min-width: 615px) {
   .sign-in {
-    padding: 9px 25px;
+    padding: 9px 23px;
   }
 }

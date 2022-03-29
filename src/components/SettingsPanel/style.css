@@ -30,7 +30,7 @@ ul.panel li button {
 }
 
 ul.panel li button {
-    color: #000;
+    color: hsl(0deg 0% 45%);
 }
 
 .panel_separator {
