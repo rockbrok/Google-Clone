@@ -38,6 +38,7 @@ export const darkTheme = {
   panelborder: '#868b90',
   panelseparator: '#3c4043',
   themeiconfill: '#9aa0a6',
+  panelbuttontextcolor: '#9aa0a6',
   // footer //
   footerbackground: '#171717',
   footertextcolor: '#9aa0a6',

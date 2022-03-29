@@ -43,7 +43,7 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.searchlanguagecolor};
   }
 
-  .search-language a {
+  .search-language button {
     color: ${({ theme }) => theme.searchlanguageacolor};
   }
 
@@ -102,12 +102,16 @@ export const GlobalStyles = createGlobalStyle`
     border-color: ${({ theme }) => theme.panelborder};
   }
 
+  ul.panel li button {
+    color: ${({ theme }) => theme.panelbuttontextcolor};
+  }
+
   .panel_separator {
     border-color: ${({ theme }) => theme.panelseparator};
   }
 
-  a.dark_off .sun-icon,
-  a.dark_on .moon-icon {
+  button.dark_off .sun-icon,
+  button.dark_on .moon-icon {
     fill: ${({ theme }) => theme.themeiconfill};
   }
 
@@ -116,7 +120,8 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   footer p,
-  footer a {
+  footer a,
+  button.settings {
     color: ${({ theme }) => theme.footertextcolor};
   }
 

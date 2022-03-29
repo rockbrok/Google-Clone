@@ -17,7 +17,8 @@ ul.panel li {
     padding: 0;
 }
 
-ul.panel li a {
+ul.panel li a,
+ul.panel li button {
     width: auto;
     display: block;
     padding: 15px;
@@ -28,6 +29,10 @@ ul.panel li a {
     width: auto;
 }
 
+ul.panel li button {
+    color: #000;
+}
+
 .panel_separator {
     display: blocl;
     border-top: 1px solid #ebebeb;
@@ -35,8 +40,8 @@ ul.panel li a {
     margin: 0;
 }
 
-a.dark_off .sun-icon,
-a.dark_on .moon-icon {
+button.dark_off .sun-icon,
+button.dark_on .moon-icon {
   height: 22px;
   width: 22px;
   fill: hsl(210deg 4% 46%);
@@ -46,12 +51,12 @@ a.dark_on .moon-icon {
   display: none;
 }
 
-a.dark_off:hover,
-a.dark_on:hover {
+button.dark_off:hover,
+button.dark_on:hover {
     text-decoration: none;
 }
 
-a.dark_off:hover .sun-icon,
-a.dark_on:hover .moon-icon  {
+button.dark_off:hover .sun-icon,
+button.dark_on:hover .moon-icon  {
     display: inline-block;
 }

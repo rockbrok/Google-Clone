@@ -20,9 +20,9 @@ const Language = () => (
     <div class="search-language-container">
         <div class="search-language">
             {t('google_language')}&nbsp;
-            <a onClick={() => changeLanguage("es" || "en")}>
+            <button onClick={() => changeLanguage("es" || "en")}>
                 {t('language_name')}
-            </a>
+            </button>
         </div>
     </div>
 );

@@ -17,19 +17,19 @@ export const Toggle = ({ theme, toggleTheme }) => {
 
 const DarkOff = () => (
   <li>
-    <a class="dark_off" role="menuitem" tabindex="-1" alt="Settings">
+    <button class="dark_off" role="menuitem" tabindex="-1" alt="Settings">
       {t('dark_theme.off')}
       <SunIcon className="sun-icon"/>
-    </a>
+    </button>
  </li>
 );
   
 const DarkOn = () => (
   <li>
-    <a class="dark_on" role="menuitem" tabindex="-1" alt="Settings">
+    <button class="dark_on" role="menuitem" tabindex="-1" alt="Settings">
       {t('dark_theme.on')}
       <MoonIcon className="moon-icon"/>
-    </a>
+    </button>
   </li>
 );
 
