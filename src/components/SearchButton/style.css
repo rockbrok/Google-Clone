@@ -29,10 +29,10 @@ button {
 
 .google-search,
 .lucky-search {
-  height: 34px;
+  height: 36px;
   width: min-content;
   padding: 0 16px;
-  margin: 11px 4px;
+  margin: 10px 4px;
   border-radius: 4px;
   color: hsl(0deg 0% 25%);
   font-size: 14px;
