@@ -11,6 +11,8 @@ export const darkTheme = {
   signincolor: '#202124;',
   signinborder: '',
   signinhoverborder: '#9fb8f4',
+  // logo //
+
   // search language //
   searchlanguagecolor: '#bdc1c6',
   searchlanguageacolor: '#8ab4f8',

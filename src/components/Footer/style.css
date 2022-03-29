@@ -74,7 +74,7 @@ footer ul {
   }
 }
 
-@media only screen and (max-width: 624px) {
+@media all and (max-width: 664px) {
   footer {
     height: 140px;
   }
@@ -84,7 +84,10 @@ footer ul {
     height: 92px;
     width: 100%;
     flex-direction: column;
-    justify-content: center;
-    align-content: center;
+    margin: 0;
+    margin-left: -20px;
+    justify-items: center;
+    align-items: center;
+
   }
 }

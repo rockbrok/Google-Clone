@@ -5,7 +5,12 @@ import './style.css';
 
 function Logo() {
   return (
-    <img src={logo} alt="logo" class="logo" />
+    <>
+    <div class="logocontainer">
+      <picture src="" alt="d" class="logo" />
+
+    </div>
+    </>
   )
 }
 

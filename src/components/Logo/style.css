@@ -1,9 +1,10 @@
 .logo {
-  display: flex;
-  flex-shrink: 0;
+  display: block;
+  margin: 0 auto;
   min-height: 92px;
-  width: auto;
-  margin: auto;
+  width: 272px;
+  background-image: url('googlelogo_white.png');
+  background-repeat: no-repeat;
 }
 
 @media only screen and (device-width: 100vw) {
