@@ -81,9 +81,9 @@ const Terms = () => (
 
 const Settings = () => (
     <li>
-        <a href="#" alt="Settings">
+        <button class="settings" alt="Settings">
             {t('settings')}
-        </a>
+        </button>
     </li>
 );
 
