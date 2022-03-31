@@ -37,7 +37,7 @@ button {
   height: 36px;
   width: min-content;
   padding: 0 16px 0 16px;
-  margin: 10px;
+  margin: 8px;
   border-radius: 4px;
   color: hsl(0deg 0% 25%);
   font-size: 14px;
@@ -46,7 +46,9 @@ button {
 }
 
 .google-search {
-  margin-right: 2px;
+  margin-right: 3px;
+  padding-right: 17px;
+  padding-left: 16px;
 }
 
 .google-search:hover,

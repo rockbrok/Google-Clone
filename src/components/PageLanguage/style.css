@@ -11,7 +11,6 @@
   width: auto;
   line-height: 28px;
   color: #3c4043;
-  letter-spacing: -0.05px;
   text-align: center;
   font-family: arial, sans-serif;
   font-size: 13px;
@@ -21,7 +20,7 @@
   color: #1a0dab;
   text-decoration: none;
   padding: 0 3px;
-  letter-spacing: -0.15px;
+  letter-spacing: -0.17px;
 }
 
 .search-language button:hover {
