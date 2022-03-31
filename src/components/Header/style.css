@@ -4,13 +4,14 @@ header {
   height: 48px;
   width: 100%;
   padding: 6px;
+  background: #fff;
   z-index: 3;
 }
 
 .header-container {
   padding: 6px;
   width: 100%;
-  background: #fff;
+
   display: flex;
   flex-direction: row;
   justify-content: flex-end;

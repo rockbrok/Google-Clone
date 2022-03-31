@@ -45,6 +45,7 @@ export const GlobalStyles = createGlobalStyle`
 
   .logo {
     background-color: ${({ theme }) => theme.logobackgroundcolor};
+    background-image: ${({ theme }) => theme.logobackgroundimage};
   }
 
   .search-language {
