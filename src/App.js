@@ -12,15 +12,16 @@ function App() {
   const { t } = useTranslation()
 
   return ( <>
-
     <Header />
       <main>
         <Logo />
-        <form>
-          <SearchBar />
-          <SearchButton />
-          <PageLanguage />
-        </form>
+        <div className="form-container">
+          <form>
+            <SearchBar />
+            <SearchButton />
+          </form>
+        </div>
+        <PageLanguage />
       </main>
     <Footer />
   </> );

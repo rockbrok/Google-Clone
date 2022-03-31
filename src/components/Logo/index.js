@@ -4,9 +4,8 @@ import './style.css';
 function Logo() {
   return (
     <>
-    <div class="logo-container">
-      <picture src="" alt="d" class="logo" />
-
+    <div className="logo-container">
+      <picture src="" alt="d" className="logo" />
     </div>
     </>
   )

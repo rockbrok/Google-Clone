@@ -12,7 +12,7 @@ function SettingsPanel() {
   const [theme, toggleTheme] = useTheme();
 
   return (
-    <ul class="panel" role="menu">
+    <ul className="panel" role="menu">
       <SearchSettings />
       <AdvancedSearch />
       <YourDataInSearch />
@@ -30,7 +30,7 @@ function SettingsPanel() {
 
 const SearchSettings = () => (
   <li>
-      <a class="panel" href="https://www.google.com/preferences" role="menuitem" tabindex="-1" alt="Search settings">
+      <a className="panel" href="https://www.google.com/preferences" role="menuitem" tabindex="-1" alt="Search settings">
           {t('search_settings')}
       </a>
   </li>
@@ -77,7 +77,7 @@ const SendFeedback = () => (
 );
 
 const Separator = () => (
-  <li class="panel-separator" role="separator" />
+  <li className="panel-separator" role="separator" />
 )
 
 export default SettingsPanel

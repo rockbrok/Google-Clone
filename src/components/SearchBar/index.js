@@ -6,15 +6,13 @@ import { XIcon } from '@heroicons/react/solid';
 
 function SearchBar() {
   return (
-    <div class="search-container">
-      <form>
-        <div class="search-bar">
-          <SearchIcon className="search-icon" />
-          <Input />
-          <ClearButton />
-          <VoiceButton />
-        </div>
-      </form>
+    <div className="search-container">
+      <div className="search-bar">
+        <SearchIcon className="search-icon" />
+        <Input />
+        <ClearButton />
+        <VoiceButton />
+      </div>
     </div>
   )
 }
@@ -32,7 +30,7 @@ const Input = () => (
 );
 
 const ClearButton = () => (
-  <div class="clear-button">
+  <div className="clear-button">
     <button className="clear" type="reset" title="Clear">
       <XIcon className="x-icon" />
     </button>

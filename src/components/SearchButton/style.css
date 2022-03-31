@@ -2,9 +2,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 20px 10px 20px;
+  padding: 12px 20px 0 20px;
   width: 100%;
-  margin-top: -1px;
+  margin-top: 0;
   height: 58px;
   background: #fff;
   z-index: 3;
@@ -13,7 +13,7 @@
 ul {
   display: inline-flex;
   margin: 0;
-  padding: 21px 0 0;
+  padding: 0;
 }
 
 li {

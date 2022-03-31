@@ -10,14 +10,10 @@ export function TogglePanel() {
       {
         show? null : <SettingsPanel style={{zIndex:5}} />
       }
-      <button onClick={() => setShow(!show)}><Settings /></button>
-    </> )
-}
-
-const Settings = () => (
-    <li>
-        <button class="settings" alt="Settings">
+      <li>
+        <button onClick={() => setShow(!show)} className="settings" alt="Settings">
             {t('settings')}
         </button>
-    </li>
-);
+      </li>
+    </> )
+}

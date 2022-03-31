@@ -4,7 +4,7 @@ import { t } from 'i18next';
 
 function SearchButton() {
   return (
-    <div class="google-search-container">
+    <div className="google-search-container">
         <ul>
             <GoogleSearch />
             <LuckySearch />
@@ -15,13 +15,13 @@ function SearchButton() {
 
 const GoogleSearch = () => (
     <li>
-        <button class="google-search" type="submit">{t('google_search')}</button>
+        <button className="google-search" type="submit">{t('google_search')}</button>
     </li>
 );
 
 const LuckySearch = () => (
     <li>
-        <button class="lucky-search" type="submit">{t('lucky_search')}</button>
+        <button className="lucky-search" type="submit">{t('lucky_search')}</button>
     </li>
 );
 
