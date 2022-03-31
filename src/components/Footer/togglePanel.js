@@ -7,13 +7,15 @@ export function TogglePanel() {
   const [show, setShow] = useState(true)
 
     return ( <>
-      {
-        show? null : <SettingsPanel style={{zIndex:5}} />
-      }
       <li>
-        <button onClick={() => setShow(!show)} className="settings" alt="Settings">
-            {t('settings')}
-        </button>
+        <div className="settings">
+          <button onClick={() => setShow(!show)} className="settings" alt="Settings">
+              {t('settings')}
+          </button>
+          {
+          show? null : <SettingsPanel/>
+          }
+        </div>
       </li>
     </> )
 }

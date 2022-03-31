@@ -6,7 +6,7 @@ footer {
   bottom: 0;
   margin: 0;
   padding: 0;
-
+  z-index: 0;
 
   --background-color: hsl(0deg 0% 95%);
 }
@@ -41,6 +41,8 @@ button.settings:hover {
   cursor: pointer;
 }
 
+
+
 footer li {
   line-height: 13px;
   list-style: none;
@@ -53,11 +55,7 @@ footer ul {
   display: inline-flex;
   margin: 0;
   padding: 0;
-}
-
-.footer-country,
-.footer-content {
-  z-index: 1;
+  position: relative;
 }
 
 .footer-country {
@@ -100,6 +98,5 @@ footer ul {
     margin-left: -20px;
     justify-items: center;
     align-items: center;
-
   }
 }

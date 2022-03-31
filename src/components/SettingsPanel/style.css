@@ -1,15 +1,16 @@
 ul.panel {
   position: absolute;
-  width: 200px;
+  min-width: 200px;
   height: auto;
   background: #fff;
   border: 1px solid #70757a;
-  z-index: 5;
-  bottom: 46px;
-  right: 20px;
+  bottom: 30px;
+  right: 0;
   display: block;
-
-  /* display: block; */
+  background-origin: padding-box;
+  background-clip: border-box;
+  background-attachment: scroll;
+  z-index: 10;
 }
 
 ul.panel li {
