@@ -1,11 +1,20 @@
 header {
+  display: flex;
+  margin: 0;
   height: 48px;
+  width: 100%;
   padding: 6px;
+  z-index: 3;
+}
+
+.header-container {
+  padding: 6px;
+  width: 100%;
   background: #fff;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  z-index: 100;
+  z-index: 3;
 }
 
 header ul {

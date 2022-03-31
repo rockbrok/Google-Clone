@@ -8,12 +8,14 @@ function Header() {
 
   return (
     <header>
+        <div class="header-container">
         <ul>
             <Gmail />
             <Images />
             <GoogleApps />
             <SignIn />
         </ul>
+        </div>
     </header>
   )
 }

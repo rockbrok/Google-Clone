@@ -8,7 +8,7 @@ export function TogglePanel() {
 
     return ( <>
       {
-        show?<SettingsPanel style={{zIndex:5}} /> : null
+        show? null : <SettingsPanel style={{zIndex:5}} />
       }
       <button onClick={() => setShow(!show)}><Settings /></button>
     </> )

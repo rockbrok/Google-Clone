@@ -1,14 +1,23 @@
 .logo-container {
-  background-color: #fff;
+  display: flex;
+  margin: 0;
+
+
+  width: 100%;
+  z-index: 3;
 }
 
 .logo {
-  display: block;
+  display: flex;
   margin: 0 auto;
   min-height: 92px;
-  width: 272px;
-  background-image: url("googlelogo_white.png");
+  width: 100%;
+  z-index: 3;
+  background-width: 272px;
+  background-color: #fff;
+  background-image: url("googlelogo_color.png");
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 @media only screen and (device-width: 100vw) {

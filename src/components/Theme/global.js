@@ -43,7 +43,7 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.gappsaftercolor};
   }
 
-  .logo-container {
+  .logo {
     background-color: ${({ theme }) => theme.logobackgroundcolor};
   }
 
