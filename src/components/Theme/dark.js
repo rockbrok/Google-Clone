@@ -13,8 +13,7 @@ export const darkTheme = {
   signinborder: '',
   signinhoverborder: '#9fb8f4',
   // logo //
-  logobackgroundcolor: '#202124',
-  logobackgroundimage: 'url("googlelogo_white.png")',
+  logobackgroundimage: 'url("./googlelogo_white.png")',
   // search language //
   searchlanguagecolor: '#bdc1c6',
   searchlanguageacolor: '#8ab4f8',
