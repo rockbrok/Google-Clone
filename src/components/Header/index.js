@@ -1,5 +1,6 @@
 import React from 'react'
 import './style.css';
+import { GoogleApps } from './../GoogleApps/index';
 import { t } from 'i18next';
 
 function Header() {
@@ -9,8 +10,9 @@ function Header() {
         <ul>
             <Gmail />
             <Images />
-            <GoogleApps />
+            <GApps />
             <SignIn />
+            <GoogleApps />
         </ul>
     </header>
   )
@@ -32,7 +34,7 @@ const Images = () => (
     </li>
 );
 
-const GoogleApps = () => (
+const GApps = () => (
     <li>
         <button className="gapps-icon-link" href="#" alt="Google apps" data-title="Google apps">
             <svg className="gapps-icon" focusable="false" viewBox="0 0 24 24">
