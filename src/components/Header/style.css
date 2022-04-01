@@ -2,24 +2,20 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  align-items: center;
-  margin: 0;
   height: 48px;
   width: calc(100% - 12px);
   padding: 6px;
   background: #fff;
-}
-
-header ul {
-  display: inline-flex;
-  align-items: center;
-  padding: 0 4px 0 15px;
   font-size: 13px;
 }
 
+header ul {
+  align-items: center;
+  padding-right: 4px;
+}
+
 header li {
-  list-style: none;
-  padding: 0 0 0 15px;
+  padding-left: 15px;
   margin-top: -1px;
 }
 
@@ -34,12 +30,13 @@ header a:hover {
 
 .gapps-icon-link,
 .gapps-icon {
-  display: flex;
   align-self: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
 }
 
 .gapps-icon-link {
-  justify-content: center;
   height: 40px;
   width: 40px;
   padding: 8px 0;
@@ -54,35 +51,23 @@ header a:hover {
 
 .gapps-icon-link:hover {
   background-color: hsl(240deg 3% 92%);
-  height: 40px;
   border-radius: 50%;
-  cursor: pointer;
 }
 
 .sign-in {
-  min-width: 96px;
-  width: 48px;
+  width: 96px;
   height: 36px;
   padding: 9px 17px;
-  outline: none;
-  font-style: normal;
-  filter: none;
   display: inline-block;
-  vertical-align: middle;
   text-align: center;
   border: 1px solid transparent;
   border-radius: 4px;
   margin: 0 8px 0 4px;
   color: #fff;
   font-size: 14px;
-  font-stretch: 100%;
-  font-weight: 500;
-  font-family: Arial;
   letter-spacing: 0.25px;
-  line-height: 16px;
   background: #1a73e8;
   box-sizing: border-box;
-  white-space: nowrap;
 }
 
 .sign-in:hover {
@@ -91,28 +76,26 @@ header a:hover {
   background: #4285f4;
 }
 
-[data-title="Google Apps"]::after {
+[data-title="Google apps"]::after {
   content: attr(data-title);
   position: absolute;
+  font-size: 12px;
   top: 45px;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 4px 8px;
+  height: auto;
+  margin-left: -58px;
+  padding: 5px 7px;
   color: hsl(240deg 3% 92%);
-  white-space: nowrap;
-  border-radius: 5px;
-  background-color: hsl(220deg 5% 39%);
+  letter-spacing: 0.5px;
+  word-spacing: 1.25px;
+  border-radius: 4px;
+  background-color: hsl(220deg 5% 32%);
   visibility: hidden;
 }
 
-[data-title="Google Apps"]:hover::after {
+[data-title="Google apps"]:hover::after {
   opacity: 1;
   transition: all 0.01s ease 0.5s;
   visibility: visible;
-}
-
-[data-title="Google Apps"] {
-  position: relative;
 }
 
 @media only screen and (min-width: 615px) {

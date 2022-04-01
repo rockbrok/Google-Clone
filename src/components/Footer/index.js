@@ -26,7 +26,7 @@ function Footer() {
 
 const FooterCountry = () => (
     <div className="footer-country">
-        <p>Argentina</p>
+        Argentina
     </div>
 );
 

@@ -1,7 +1,8 @@
 body {
   margin: 0;
+  padding: 0;
   overflow: hidden;
-  font-family: Roboto, sans-serif;
+  font-family: Arial, san-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
