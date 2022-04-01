@@ -2,16 +2,12 @@
   display: flex;
   margin: 0 auto;
   min-height: 92px;
-  margin-top: 16px;
-  width: 100%;
-  background-width: 272px;
-  background-color: #fff;
-  background-image: url("./../../../public/googlelogo_color.png");
+  background-image: url("googlelogo_color.png");
   background-repeat: no-repeat;
   background-position: center;
 }
 
-@media only screen and (device-width: 100vw) {
+@media all and (device-width: 100vw) {
   .logo {
     margin-top: 16px;
   }

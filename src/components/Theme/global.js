@@ -141,7 +141,7 @@ export const GlobalStyles = createGlobalStyle`
     --background-color: ${({ theme }) => theme.footerbackground};
   }
 
-  footer p,
+  .footer-country,
   footer a,
   button.settings {
     color: ${({ theme }) => theme.footertextcolor};

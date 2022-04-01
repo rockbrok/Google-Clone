@@ -80,12 +80,12 @@ header a:hover {
   content: attr(data-title);
   position: absolute;
   font-size: 12px;
-  top: 45px;
+  top: 44px;
   height: auto;
   margin-left: -58px;
   padding: 5px 7px;
-  color: hsl(240deg 3% 92%);
-  letter-spacing: 0.5px;
+  color: hsl(240deg 3% 100%);
+  letter-spacing: 0.675px;
   word-spacing: 1.25px;
   border-radius: 4px;
   background-color: hsl(220deg 5% 32%);
