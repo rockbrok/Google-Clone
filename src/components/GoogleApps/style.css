@@ -1,15 +1,15 @@
 .gapps-panel {
     display: block;
     position: absolute;
-    width: 310px;
-    height: 430px;
-    right: 20px;
-    top: 60px;
+    width: min-content;
+    height: 420px;
+    right: 18px;
+    top: 66px;
     background-color: black;
     overflow-y: scroll;
     overflow-x: hidden;
     border-radius: 10px;
-    padding: 12px 6px 12px 12px;
+    padding: 12px 0 8px 8px;
     flex: 1;
 }
 
@@ -19,7 +19,7 @@
 }
 
 .gapps-panel li {
-    margin: 10px;
+    margin: 8px;
     padding: 4px;
     background-color: red;
     height: 70px;
@@ -51,3 +51,17 @@
     background-color: white;
     cursor: pointer;
 }
+
+::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: black;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: red;
+    border-radius: 10px;
+  }
