@@ -1,34 +1,23 @@
 .search-language-container {
-  display: block;
-  flex-grow: 1;
-  flex-shrink: 0;
-  box-sizing: border-box;
   justify-content: center;
-  height: grow;
-  width: 100%;
-  padding: 0 20px 24px 20px;
+  width: calc(100% - 40px);
+  padding: 0 20px;
   margin: -1px 0 24px 0;
-  z-index: 2;
-  background-color: #fff;
 }
 
 .search-language {
-  width: auto;
   line-height: 28px;
   color: #3c4043;
   text-align: center;
-  font-family: arial, sans-serif;
   font-size: 13px;
 }
 
 .search-language button {
   color: #1a0dab;
-  text-decoration: none;
   padding: 0 3px;
   letter-spacing: -0.17px;
 }
 
 .search-language button:hover {
   text-decoration: underline;
-  cursor: pointer;
 }

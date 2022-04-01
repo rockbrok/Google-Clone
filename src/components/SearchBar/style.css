@@ -5,9 +5,6 @@
   height: 46px;
   width: 100%;
   padding: 6px 0;
-  margin: 0;
-  background: #fff;
-  z-index: 3;
 }
 
 .search-bar {
@@ -17,7 +14,6 @@
   border: 1px solid hsl(230deg 10% 89%);
   background-color: white;
   border-radius: 24px;
-  margin: 0;
 }
 
 .search-bar:hover,
@@ -30,29 +26,18 @@
   border-color: rgb(223 225 229 / 0%);
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-}
-
 .search-icon,
 .microphone-icon,
 .x-icon {
-  align-self: center;
-  margin: 0;
-  z-index: 2;
   flex-shrink: 0;
 }
 
 .search-icon {
   height: 18px;
   width: 18px;
-  padding: 13px 15px;
+  padding: 0 15px;
   fill: hsl(217deg 7% 63%);
+  align-self: center;
 }
 
 .microphone-icon,
@@ -73,13 +58,6 @@ form {
   margin-top: -8px;
 }
 
-button {
-  cursor: default;
-  background: none;
-  margin: 0;
-  padding: 0;
-}
-
 .clear-button {
   border-right: 1px solid hsl(230deg 9% 87%);
   height: 65%;
@@ -88,18 +66,9 @@ button {
 }
 
 input:focus,
-input[type="search"],
-button,
-.x-icon,
-.microphone-icon {
+input[type="search"] {
   outline: none;
   border: none;
-}
-
-.microphone-icon:hover,
-.x-icon:hover,
-.clear-button:hover {
-  cursor: pointer;
 }
 
 form input:placeholder-shown + div button,
@@ -118,7 +87,7 @@ input[type="search"]::-webkit-search-results-decoration {
 input[type="search"] {
   appearance: auto;
   box-sizing: border-box;
-  width: 600px;
+  width: stretch;
   align-self: center;
   height: 30px;
   padding: 0;

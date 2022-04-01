@@ -5,7 +5,6 @@ header {
   height: 48px;
   width: calc(100% - 12px);
   padding: 6px;
-  background: #fff;
   font-size: 13px;
 }
 
@@ -20,19 +19,13 @@ header li {
 }
 
 header a {
-  text-decoration: none;
   color: hsl(0deg 0% 22%);
-}
-
-header a:hover {
-  text-decoration: underline;
 }
 
 .gapps-icon-link,
 .gapps-icon {
   align-self: center;
   justify-content: center;
-  cursor: pointer;
   position: relative;
 }
 
@@ -57,6 +50,28 @@ header a:hover {
 .gapps-icon-link:active {
   background-color: hsl(240deg 3% 83%);
   border-radius: 50%;
+}
+
+[data-title="Google apps"]::after {
+  content: attr(data-title);
+  position: absolute;
+  font-size: 12px;
+  top: 44px;
+  height: auto;
+  margin-left: -58px;
+  padding: 5px 7px;
+  color: hsl(240deg 3% 100%);
+  letter-spacing: 0.675px;
+  word-spacing: 1.25px;
+  border-radius: 4px;
+  background-color: hsl(220deg 5% 32%);
+  visibility: hidden;
+}
+
+[data-title="Google apps"]:hover::after {
+  opacity: 1;
+  transition: all 0.01s ease 0.5s;
+  visibility: visible;
 }
 
 .sign-in {
@@ -84,28 +99,6 @@ header a:hover {
 .sign-in:active {
   border: 1px solid hsl(217, 89%, 66%);
   background: hsl(217, 89%, 66%);
-}
-
-[data-title="Google apps"]::after {
-  content: attr(data-title);
-  position: absolute;
-  font-size: 12px;
-  top: 44px;
-  height: auto;
-  margin-left: -58px;
-  padding: 5px 7px;
-  color: hsl(240deg 3% 100%);
-  letter-spacing: 0.675px;
-  word-spacing: 1.25px;
-  border-radius: 4px;
-  background-color: hsl(220deg 5% 32%);
-  visibility: hidden;
-}
-
-[data-title="Google apps"]:hover::after {
-  opacity: 1;
-  transition: all 0.01s ease 0.5s;
-  visibility: visible;
 }
 
 @media only screen and (max-width: 610px) {

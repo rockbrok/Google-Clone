@@ -3,8 +3,46 @@ body {
   padding: 0;
   overflow: hidden;
   font-family: Arial, san-serif;
+  font-size: 14px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  display: inline-flex;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  cursor: default;
+  background: none;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 @media only screen and (max-height: 505px) {

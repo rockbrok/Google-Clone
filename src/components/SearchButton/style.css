@@ -3,40 +3,15 @@
   justify-content: center;
   align-items: center;
   padding: 12px 20px 0 20px;
-  width: 100%;
-  margin-top: 0;
+  width: calc(100% - 40px);
   height: 58px;
-  background: #fff;
-  z-index: 3;
-}
-
-ul {
-  display: inline-flex;
-  margin: 0;
-  padding: 0;
-}
-
-li {
-  margin: 0;
-  list-style: none;
-  padding: 0;
-}
-
-button {
-  cursor: default;
-  background: none;
-  margin: 0;
-  padding: 0;
-  outline: none;
-  border: none;
-  white-space: nowrap;
 }
 
 .google-search,
 .lucky-search {
   height: 36px;
   width: min-content;
-  padding: 0 16px 0 16px;
+  padding: 0 16px;
   margin: 8px;
   border-radius: 4px;
   color: hsl(0deg 0% 25%);
@@ -54,5 +29,4 @@ button {
 .google-search:hover,
 .lucky-search:hover {
   border-color: hsl(230deg 9% 87%);
-  cursor: pointer;
 }
