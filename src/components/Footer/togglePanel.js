@@ -8,14 +8,12 @@ export function TogglePanel() {
 
     return ( <>
       <li>
-        <div className="settings">
-          <button onClick={() => setShow(!show)} className="settings" alt="Settings">
-              {t('settings')}
-          </button>
-          {
-          show? null : <SettingsPanel/>
-          }
-        </div>
+        <button onClick={() => setShow(!show)} className="settings" alt="Settings">
+          {t('settings')}
+        </button>
+        {
+        show? null : <SettingsPanel/>
+        }
       </li>
     </> )
 }

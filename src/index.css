@@ -8,6 +8,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+i {
+  font-style: normal;
+}
+
 a {
   text-decoration: none;
 }
