@@ -24,13 +24,36 @@
 .gapps-panel li {
     margin: 6px;
     padding: 4px;
-    background-color: gray;
+    background-color: transparent;
     border-radius: 8px;
     height: 76px;
     width: 76px;
     text-align: center;
-    line-height: 120px;
+    line-height: 10px;
     cursor: pointer;
+}
+
+.gapps-panel li:hover {
+    background-color: lightblue;
+}
+
+.gapps-panel a {
+    color: black;
+}
+
+.gapps-panel-icons {
+    background-image: url("./googleapps.png");
+    background-size: 64px 3100px;
+    display: inline-block;
+    height: 64px;
+    vertical-align: top;
+    width: 64px;
+
+}
+
+.gapps-icon-resize {
+    height: 50px;
+    width: 50px;
 }
 
 .gapps-panel .divider {
@@ -45,17 +68,19 @@
 }
 
 .more-from-google {
-    margin: 12px auto;
-    background-color: transparent;
-    border: 1px solid gray;
+    margin: 16px auto;
+    max-width: 265px;
+    width: auto;
+    background-color: white;
+    border: 1px solid #dadce0;
     border-radius: 4px;
-    padding: 10px 25px;
+    padding: 10px 24px;
     width: min-content;
     white-space: nowrap;
 }
 
 .more-from-google a {
-    color: blue;
+    color: #1a73e8;
 }
 
 .more-from-google a:hover {
@@ -63,7 +88,8 @@
 }
 
 .more-from-google:hover {
-    background-color: white;
+    background-color: rgb(232, 243, 247);
+    border: 1px solid #dadce0;
     cursor: pointer;
 }
 
