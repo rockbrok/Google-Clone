@@ -53,7 +53,9 @@ export function GoogleApps() {
 const Account = () => (
     <li>
         <a href="https://mail.google.com/mail/">
-            <span class="gapps-panel-icons" style={{'background-position': '0 -1587px',}} />
+            <div class="gapps-icons-transform">
+                <span class="gapps-panel-icons" style={{'background-position': '0 -1587px',}} />
+            </div>
             {t('account')}
         </a>
     </li>
@@ -62,7 +64,9 @@ const Account = () => (
 const Search = () => (
     <li>
         <a href="https://mail.google.com/mail/">
-            <span class="gapps-panel-icons" style={{'background-position': '0 -1794px'}} />
+            <div class="gapps-icons-transform">
+                <span class="gapps-panel-icons" style={{'background-position': '0 -1794px'}} />
+            </div>
             {t('search')}
         </a>
     </li>
@@ -71,7 +75,9 @@ const Search = () => (
 const Maps = () => (
     <li>
         <a href="https://mail.google.com/mail/">
-            <span class="gapps-panel-icons" style={{'background-position': '0 -483px'}} />
+            <div class="gapps-icons-transform">
+                <span class="gapps-panel-icons" style={{'background-position': '0 -483px'}} />
+            </div>
             {t('maps')}
         </a>
     </li>
@@ -80,7 +86,9 @@ const Maps = () => (
 const YouTube = () => (
     <li>
         <a href="https://mail.google.com/mail/">
-            <span class="gapps-panel-icons" style={{'background-position': '0 -2622px'}} />
+            <div class="gapps-icons-transform">
+                <span class="gapps-panel-icons" style={{'background-position': '0 -2622px'}} />
+            </div>
             {t('youtube')}
         </a>
     </li>
@@ -89,7 +97,9 @@ const YouTube = () => (
 const Play = () => (
     <li>
         <a href="https://mail.google.com/mail/">
-            <span class="gapps-panel-icons" style={{'background-position': '0 -207px'}} />
+            <div class="gapps-icons-transform">
+                <span class="gapps-panel-icons" style={{'background-position': '0 -207px'}} />
+            </div>
             {t('play')}
         </a>
     </li>
@@ -98,7 +108,9 @@ const Play = () => (
 const News = () => (
     <li>
         <a href="https://mail.google.com/mail/">
-            <span class="gapps-panel-icons" style={{'background-position': '0 -1311px'}} />
+            <div class="gapps-icons-transform">
+                <span class="gapps-panel-icons" style={{'background-position': '0 -1311px'}} />
+            </div>
             {t('news')}
         </a>
     </li>
@@ -107,7 +119,9 @@ const News = () => (
 const Gmail = () => (
     <li>
         <a href="https://mail.google.com/mail/">
-            <span class="gapps-panel-icons" style={{'background-position': '0 -2001px'}} />
+            <div class="gapps-icons-transform">
+                <span class="gapps-panel-icons" style={{'background-position': '0 -2001px'}} />
+            </div>
             {t('gmail')}
         </a>
     </li>
@@ -116,7 +130,9 @@ const Gmail = () => (
 const Meet = () => (
     <li>
         <a href="https://mail.google.com/mail/">
-            <span class="gapps-panel-icons" style={{'background-position': '0 -690px'}} />
+            <div class="gapps-icons-transform">
+                <span class="gapps-panel-icons" style={{'background-position': '0 -690px'}} />
+            </div>
             {t('meet')}
         </a>
     </li>
@@ -125,7 +141,9 @@ const Meet = () => (
 const Chat = () => (
     <li>
         <a href="https://mail.google.com/mail/">
-            <span class="gapps-panel-icons" style={{'background-position': '0 -1656px'}} />
+            <div class="gapps-icons-transform">
+                <span class="gapps-panel-icons" style={{'background-position': '0 -1656px'}} />
+            </div>
             {t('chat')}
         </a>
     </li>
@@ -134,7 +152,9 @@ const Chat = () => (
 const Contacts = () => (
     <li>
         <a href="https://mail.google.com/mail/">
-            <span class="gapps-panel-icons" style={{'background-position': '0 -2898px'}} />
+            <div class="gapps-icons-transform">
+                <span class="gapps-panel-icons" style={{'background-position': '0 -2898px'}} />
+            </div>
             {t('contacts')}
         </a>
     </li>
@@ -143,7 +163,9 @@ const Contacts = () => (
 const Drive = () => (
     <li>
         <a href="https://mail.google.com/mail/">
-            <span class="gapps-panel-icons" style={{'background-position': '0 -2967px'}} />
+            <div class="gapps-icons-transform">
+                <span class="gapps-panel-icons" style={{'background-position': '0 -2967px'}} />
+            </div>
             {t('drive')}
         </a>
     </li>
@@ -152,7 +174,9 @@ const Drive = () => (
 const Calendar = () => (
     <li>
         <a href="https://mail.google.com/mail/">
-            <span class="gapps-panel-icons" style={{'background-position': '0 -2553px'}} />
+            <div class="gapps-icons-transform">
+                <span class="gapps-panel-icons" style={{'background-position': '0 -2553px'}} />
+            </div>
             {t('calendar')}
         </a>
     </li>
@@ -161,7 +185,9 @@ const Calendar = () => (
 const Translate = () => (
     <li>
         <a href="https://mail.google.com/mail/">
-            <span class="gapps-panel-icons" style={{'background-position': '0 -1932px'}} />
+            <div class="gapps-icons-transform">
+                <span class="gapps-panel-icons" style={{'background-position': '0 -1932px'}} />
+            </div>
             {t('translate')}
         </a>
     </li>
@@ -170,7 +196,9 @@ const Translate = () => (
 const Photos = () => (
     <li>
         <a href="https://mail.google.com/mail/">
-            <span class="gapps-panel-icons" style={{'background-position': '0 -2829px'}} />
+            <div class="gapps-icons-transform">
+                <span class="gapps-panel-icons" style={{'background-position': '0 -2829px'}} />
+            </div>
             {t('photos')}
         </a>
     </li>
@@ -179,7 +207,9 @@ const Photos = () => (
 const Duo = () => (
     <li>
         <a href="https://mail.google.com/mail/">
-            <span class="gapps-panel-icons" style={{'background-position': '0 -2484px'}} />
+            <div class="gapps-icons-transform">
+                <span class="gapps-panel-icons" style={{'background-position': '0 -2484px'}} />
+            </div>
             {t('duo')}
         </a>
     </li>
@@ -192,7 +222,9 @@ const Divider = () => (
 const Finance = () => (
     <li>
         <a href="https://mail.google.com/mail/">
-            <span class="gapps-panel-icons" style={{'background-position': '0 -345px'}} />
+            <div class="gapps-icons-transform">
+                <span class="gapps-panel-icons" style={{'background-position': '0 -345px'}} />
+            </div>
             {t('finance')}
         </a>
     </li>
@@ -201,7 +233,9 @@ const Finance = () => (
 const Docs = () => (
     <li>
         <a href="https://mail.google.com/mail/">
-            <span class="gapps-panel-icons" style={{'background-position': '0 -1242px'}} />
+            <div class="gapps-icons-transform">
+                <span class="gapps-panel-icons" style={{'background-position': '0 -1242px'}} />
+            </div>
             {t('docs')}
         </a>
     </li>
@@ -210,7 +244,9 @@ const Docs = () => (
 const Sheets = () => (
     <li>
         <a href="https://images.google.com/">
-            <span class="gapps-panel-icons" style={{'background-position': '0 -2208px'}} />
+            <div class="gapps-icons-transform">
+                <span class="gapps-panel-icons" style={{'background-position': '0 -2208px'}} />
+            </div>
             {t('sheets')}
         </a>
     </li>
@@ -219,7 +255,9 @@ const Sheets = () => (
 const Slides = () => (
     <li>
         <a href="https://accounts.google.com/ServiceLogin?hl=en">
-            <span class="gapps-panel-icons" style={{'background-position': '0 -2277px'}} />
+            <div class="gapps-icons-transform">
+                <span class="gapps-panel-icons" style={{'background-position': '0 -2277px'}} />
+            </div>
             {t('slides')}
         </a>
     </li>
@@ -228,7 +266,9 @@ const Slides = () => (
 const Books = () => (
     <li>
         <a href="https://mail.google.com/mail/">
-            <span class="gapps-panel-icons" style={{'background-position': '0 -2760px'}} />
+            <div class="gapps-icons-transform">
+                <span class="gapps-panel-icons" style={{'background-position': '0 -2760px'}} />
+            </div>
             {t('books')}
         </a>
     </li>
@@ -237,7 +277,9 @@ const Books = () => (
 const Blogger = () => (
     <li>
         <a href="https://mail.google.com/mail/">
-            <span class="gapps-panel-icons" style={{'background-position': '0 -1863px'}} />
+            <div class="gapps-icons-transform">
+                <span class="gapps-panel-icons" style={{'background-position': '0 -1863px'}} />
+            </div>
             {t('blogger')}
         </a>
     </li>
@@ -246,7 +288,9 @@ const Blogger = () => (
 const Hangouts = () => (
     <li>
         <a href="https://mail.google.com/mail/">
-            <span class="gapps-panel-icons" style={{'background-position': '0 -2415px'}} />
+            <div class="gapps-icons-transform">
+                <span class="gapps-panel-icons" style={{'background-position': '0 -2415px'}} />
+            </div>
             {t('hangouts')}
         </a>
     </li>
@@ -255,7 +299,9 @@ const Hangouts = () => (
 const Keep = () => (
     <li>
         <a href="https://mail.google.com/mail/">
-            <span class="gapps-panel-icons" style={{'background-position': '0 -276px'}} />
+            <div class="gapps-icons-transform">
+                <span class="gapps-panel-icons" style={{'background-position': '0 -276px'}} />
+            </div>
             {t('keep')}
         </a>
     </li>
@@ -264,7 +310,9 @@ const Keep = () => (
 const Jamboard = () => (
     <li>
         <a href="https://mail.google.com/mail/">
-            <span class="gapps-panel-icons" style={{'background-position': '0 -2070px'}} />
+            <div class="gapps-icons-transform">
+                <span class="gapps-panel-icons" style={{'background-position': '0 -2070px'}} />
+            </div>
             {t('jamboard')}
         </a>
     </li>
@@ -273,7 +321,9 @@ const Jamboard = () => (
 const Classroom = () => (
     <li>
         <a href="https://mail.google.com/mail/">
-            <span class="gapps-panel-icons" style={{'background-position': '0 -966px'}} />
+            <div class="gapps-icons-transform">
+                <span class="gapps-panel-icons" style={{'background-position': '0 -966px'}} />
+            </div>
             {t('classroom')}
         </a>
     </li>
@@ -282,7 +332,9 @@ const Classroom = () => (
 const Earth = () => (
     <li>
         <a href="https://mail.google.com/mail/">
-            <span class="gapps-panel-icons" style={{'background-position': '0 -1380px'}} />
+            <div class="gapps-icons-transform">
+                <span class="gapps-panel-icons" style={{'background-position': '0 -1380px'}} />
+            </div>
             {t('earth')}
         </a>
     </li>
@@ -291,7 +343,9 @@ const Earth = () => (
 const Collections = () => (
     <li>
         <a href="https://mail.google.com/mail/">
-            <span class="gapps-panel-icons" style={{'background-position': '0 -621px'}} />
+            <div class="gapps-icons-transform">
+                <span class="gapps-panel-icons" style={{'background-position': '0 -621px'}} />
+            </div>
             {t('collections')}
         </a>
     </li>
@@ -300,7 +354,9 @@ const Collections = () => (
 const ArtsAndCulture = () => (
     <li>
         <a href="https://mail.google.com/mail/">
-            <span class="gapps-panel-icons" style={{'background-position': '0 -1518px'}} />
+            <div class="gapps-icons-transform">
+                <span class="gapps-panel-icons" style={{'background-position': '0 -1518px'}} />
+            </div>
             {t('arts_and_culture')}
         </a>
     </li>
@@ -309,7 +365,9 @@ const ArtsAndCulture = () => (
 const GoogleAds = () => (
     <li>
         <a href="https://mail.google.com/mail/">
-            <span class="gapps-panel-icons" style={{'background-position': '0 -414px'}} />
+            <div class="gapps-icons-transform">
+                <span class="gapps-panel-icons" style={{'background-position': '0 -414px'}} />
+            </div>
             {t('google_ads')}
         </a>
     </li>
@@ -318,7 +376,9 @@ const GoogleAds = () => (
 const Podcasts = () => (
     <li>
         <a href="https://mail.google.com/mail/">
-            <span class="gapps-panel-icons" style={{'background-position': '0 -552px'}} />
+            <div class="gapps-icons-transform">
+                <span class="gapps-panel-icons" style={{'background-position': '0 -552px'}} />
+            </div>
             {t('podcasts')}
         </a>
     </li>
@@ -327,7 +387,9 @@ const Podcasts = () => (
 const GoogleOne = () => (
     <li>
         <a href="https://mail.google.com/mail/">
-            <span class="gapps-panel-icons" style={{'background-position': '0 -2691px'}} />
+            <div class="gapps-icons-transform">
+                <span class="gapps-panel-icons" style={{'background-position': '0 -2691px'}} />
+            </div>
             {t('google_one')}
         </a>
     </li>
@@ -336,7 +398,9 @@ const GoogleOne = () => (
 const Travel = () => (
     <li>
         <a href="https://mail.google.com/mail/">
-            <span class="gapps-panel-icons" style={{'background-position': '0 -3036px'}} />
+            <div class="gapps-icons-transform">
+                <span class="gapps-panel-icons" style={{'background-position': '0 -3036px'}} />
+            </div>
             {t('travel')}
         </a>
     </li>
@@ -345,7 +409,9 @@ const Travel = () => (
 const Forms = () => (
     <li>
         <a href="https://mail.google.com/mail/">
-            <span class="gapps-panel-icons" style={{'background-position': '0 -2139px'}} />
+            <div class="gapps-icons-transform">
+                <span class="gapps-panel-icons" style={{'background-position': '0 -2139px'}} />
+            </div>
             {t('forms')}
         </a>
     </li>
