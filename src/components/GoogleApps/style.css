@@ -3,44 +3,59 @@
     position: absolute;
     width: min-content;
     height: 420px;
-    right: 18px;
+    right: 15px;
     top: 66px;
-    background-color: black;
+    background-color: white;
     overflow-y: scroll;
     overflow-x: hidden;
-    border-radius: 10px;
-    padding: 12px 0 8px 8px;
+    border-radius: 8px;
+    padding: 11px 0 8px 14px;
     flex: 1;
+    box-shadow: 0 1px 6px rgba(36, 37, 41, 0.568);
+    border-color: rgba(147, 149, 151, 0.712);
 }
 
 .gapps-panel ul {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    margin-right: -5px;
 }
 
 .gapps-panel li {
-    margin: 8px;
+    margin: 6px;
     padding: 4px;
-    background-color: red;
-    height: 70px;
-    width: 70px;
+    background-color: gray;
+    border-radius: 8px;
+    height: 76px;
+    width: 76px;
+    text-align: center;
+    line-height: 120px;
+    cursor: pointer;
 }
 
 .gapps-panel .divider {
     height: 1px;
     width: stretch;
-    margin: 12px -10px;
-    background-color: white;
+    margin: 12px -14px;
+    background-color: lightgray;
+}
+
+.gapps-panel a:hover {
+    text-decoration: none;
 }
 
 .more-from-google {
     margin: 12px auto;
     background-color: transparent;
-    border: 1px solid white;
+    border: 1px solid gray;
     border-radius: 4px;
     padding: 10px 25px;
     width: min-content;
     white-space: nowrap;
+}
+
+.more-from-google a {
+    color: blue;
 }
 
 .more-from-google a:hover {
@@ -53,15 +68,16 @@
 }
 
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 15px;
   }
 
   ::-webkit-scrollbar-track {
-    background: black;
-    border-radius: 10px;
+    background: white;
+    border-radius: 8px;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: red;
+    background: gray;
     border-radius: 10px;
+    border: 4px solid white;
   }
