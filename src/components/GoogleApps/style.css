@@ -2,7 +2,7 @@
     display: block;
     position: absolute;
     width: min-content;
-    height: 420px;
+    height: 418px;
     right: 15px;
     top: 66px;
     background-color: white;
@@ -18,7 +18,7 @@
 .gapps-panel ul {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    margin-right: -5px;
+    margin-right: -6px;
 }
 
 .gapps-panel li {
@@ -29,22 +29,25 @@
     height: 76px;
     width: 76px;
     text-align: center;
-    line-height: 10px;
+    line-height: 18px;
     cursor: pointer;
+    letter-spacing: +0.25px;
 }
 
 .gapps-panel li:hover {
-    background-color: rgba(224, 234, 238, 0.829);
+    background-color: #e9edff;
 }
 
 .gapps-panel a {
     color: black;
-    font-size: 15px;
+    font-size: 14px;
+
 }
 
 .gapps-icons-transform {
     height: 62px;
     transform: scale(calc(5/6));
+    margin-top: -4px;
 }
 
 .gapps-panel-icons {
@@ -91,7 +94,7 @@
 }
 
 ::-webkit-scrollbar {
-    width: 15px;
+    width: 16px;
   }
 
   ::-webkit-scrollbar-track {
@@ -100,7 +103,7 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background: gray;
+    background: #dadbe0;
     border-radius: 10px;
     border: 4px solid white;
   }
