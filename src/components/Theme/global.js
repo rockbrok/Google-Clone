@@ -23,6 +23,45 @@ export const GlobalStyles = createGlobalStyle`
     background: ${({ theme }) => theme.gappshover};
   }
 
+  .gapps-icon-link:active {
+    background: ${({ theme }) => theme.gappsactive};
+  }
+
+  .gapps-panel {
+    background-color: ${({ theme }) => theme.gappspanelbackground};
+    box-shadow: ${({ theme }) => theme.gappspanelboxshadow};
+    border-color: ${({ theme }) => theme.gappspanelborder};
+  }
+
+  .gapps-panel li:hover {
+    background-color: ${({ theme }) => theme.gappspanelitemhover};
+  }
+
+  .gapps-panel a {
+    color: ${({ theme }) => theme.searchbuttontextcolor};
+  }
+
+  .gapps-panel .divider {
+    background: ${({ theme }) => theme.gappspanelscrollbarthumbcolor};
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: ${({ theme }) => theme.gappspanelscrollbarthumbcolor};
+    border-color: ${({ theme }) => theme.gappspanelscrollbarthumbbackground};
+  }
+
+  .more-from-google {
+    border-color: ${({ theme }) => theme.gappspanelscrollbarthumbcolor};
+  }
+
+  .more-from-google a {
+    color: ${({ theme }) => theme.gappspanelsmorefromgoogletextcolor};
+  }
+
+  .more-from-google:hover {
+    background-color: ${({ theme }) => theme.gappspanelsmorefromgooglehover};
+  }
+
   .sign-in {
     background: ${({ theme }) => theme.signinbackground};
     color: ${({ theme }) => theme.signincolor};

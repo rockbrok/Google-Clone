@@ -4,6 +4,7 @@ export const darkTheme = {
   headertextcolor: 'white',
   gappsfill: 'rgba(255,255,255,0.87)',
   gappshover: '#313034',
+  gappsactive: '#353638',
   gappsafterbackground: '	#5e5e5e',
   gappsaftercolor: '#313034',
   signinbackground: '#8ab4f8',
@@ -11,6 +12,15 @@ export const darkTheme = {
   signincolor: '#202124',
   signinborder: '',
   signinhoverborder: '#9fb8f4',
+  // gapps panel //
+  gappspanelbackground: '#2d2e30',
+  gappspanelborder: '1px solid rgba(0,0,0,0.2)',
+  gappspanelitemhover: '#28282c',
+  gappspanelscrollbarthumbcolor: '#5f6268',
+  gappspanelscrollbarthumbbackground: '#2d2e30',
+  gappspanelboxshadow: '#000',
+  gappspanelsmorefromgoogletextcolor: '#8ab4f8',
+  gappspanelsmorefromgooglehover: '#3c3f43',
   // logo //
   logobackgroundimage: 'url("./googlelogo_white.png")',
   // search language //
