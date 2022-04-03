@@ -55,7 +55,7 @@ const Account = () => (
             <div className="gapps-icons-transform">
                 <span className="gapps-panel-icons" style={{'background-position': '0 -1587px',}} />
             </div>
-            {t('account')}
+            <span>{t('account')}</span>
         </a>
     </li>
 );
