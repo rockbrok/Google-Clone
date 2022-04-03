@@ -18,7 +18,7 @@ function Header() {
 }
 
 const Gmail = () => (
-    <li>
+    <li className="pl">
         <a href="https://mail.google.com/mail/">
             {t('gmail')}
         </a>
@@ -26,7 +26,7 @@ const Gmail = () => (
 );
 
 const Images = () => (
-    <li>
+    <li className="pl">
         <a href="https://images.google.com/">
             {t('images')}
         </a>

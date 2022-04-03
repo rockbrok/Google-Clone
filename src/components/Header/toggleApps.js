@@ -6,7 +6,7 @@ export function ToggleApps() {
   const [show, setShow] = useState(true)
 
     return ( <>
-      <li>
+      <li className="pl">
         <button onClick={() => setShow(!show)} alt="Google apps">
             <GApps />
         </button>

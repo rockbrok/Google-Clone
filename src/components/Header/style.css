@@ -13,7 +13,7 @@ header ul {
   padding-right: 4px;
 }
 
-header li {
+header li.pl {
   padding-left: 15px;
   margin-top: -1px;
 }
@@ -30,10 +30,10 @@ header a {
 }
 
 .gapps-icon-link {
-
+  display: flex;
   width: 40px;
   padding: 8px 0;
-  margin: 2 -7px 0 4px;
+  margin-left: 4px;
 }
 
 .gapps-icon {
@@ -58,7 +58,7 @@ header a {
   font-size: 12px;
   top: 44px;
   height: auto;
-  margin-left: -58px;
+
   padding: 5px 7px;
   color: hsl(240deg 3% 100%);
   letter-spacing: 0.675px;
@@ -82,7 +82,7 @@ header a {
   text-align: center;
   border: 1px solid transparent;
   border-radius: 4px;
-  margin: 0 8px 0 4px;
+  margin: 0 8px 0 12px;
   color: #fff;
   font-size: 14px;
   letter-spacing: 0.25px;
