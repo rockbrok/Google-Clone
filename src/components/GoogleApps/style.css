@@ -4,12 +4,12 @@
     width: min-content;
     height: 418px;
     right: 15px;
-    top: 66px;
+    top: 67px;
     background-color: white;
     overflow-y: scroll;
     overflow-x: hidden;
     border-radius: 8px;
-    padding: 11px 0 8px 14px;
+    padding: 10px 0 8px 14px;
     flex: 1;
     box-shadow: 0 1px 6px rgba(36, 37, 41, 0.568);
     border-color: rgba(147, 149, 151, 0.712);
@@ -22,48 +22,56 @@
 }
 
 .gapps-panel li {
-    margin: 6px;
-    padding: 4px;
-    background-color: transparent;
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    transition: transform .2s;
+    height: 84px;
+    width: 84px;
+    padding: 6px;
+}
+
+.gapps-link {
+    position: absolute;
     border-radius: 8px;
-    height: 76px;
-    width: 76px;
     text-align: center;
-    line-height: 18px;
-    cursor: pointer;
-    letter-spacing: +0.09px;
-    overflow: hidden;
-    white-space: nowrap;
-    word-break: normal;
-    text-overflow: ellipsis;
+    width: 84px;
 }
 
-.gapps-panel li:hover {
-    background-color: #e9edff;
-    word-break: break-word;
-    overflow: visible; 
-    white-space: normal;
-    height:auto;
+.gapps-link:hover {
+    background-color: #e8f0fe;
 }
 
-.gapps-panel a {
+.gapps-panel-labels {
     color: #202124;
+    display: inline-block;
     font-size: 14px;
+    letter-spacing: 0.09px;
     line-height: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 76px;
+}
+
+.gapps-link:hover .gapps-panel-labels {
+    overflow-wrap: break-word;
+    white-space: normal;
+    word-wrap: break-word;
+    background-color: #e8f0fe;
 }
 
 .gapps-icons-transform {
     height: 62px;
     transform: scale(calc(5/6));
-    margin-top: -4px;
 }
 
 .gapps-panel-icons {
+    display: inline-block;
     background-image: url("./googleapps.png");
     background-size: 64px 3100px;
-    display: inline-block;
-    height: 64px;
     vertical-align: top;
+    height: 64px;
     width: 64px;
 }
 
@@ -72,10 +80,6 @@
     width: stretch;
     margin: 12px -14px;
     background-color: lightgray;
-}
-
-.gapps-panel a:hover {
-    text-decoration: none;
 }
 
 .more-from-google {
@@ -105,13 +109,13 @@
     width: 16px;
   }
 
-  ::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
     background: transparent;
     border-radius: 8px;
-  }
+}
 
-  ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background: #dadbe0;
     border-radius: 10px;
     border: 4px solid white;
-  }
+}
