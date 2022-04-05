@@ -33,11 +33,11 @@ export const GlobalStyles = createGlobalStyle`
     border-color: ${({ theme }) => theme.gappspanelborder};
   }
 
-  .gapps-panel li:hover {
+  .gapps-link:hover {
     background-color: ${({ theme }) => theme.gappspanelitemhover};
   }
 
-  .gapps-panel a {
+  .gapps-panel-labels {
     color: ${({ theme }) => theme.searchbuttontextcolor};
   }
 
