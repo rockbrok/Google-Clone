@@ -1,5 +1,4 @@
 export const darkTheme = {
-  // body //
   backgroundcolor: 'hsl(225, 6%, 13%)',
   logo: 'url("./googlelogo_white.png")',
   scrollbarcolor: 'hsl(0, 0%, 26%)',
@@ -14,6 +13,7 @@ export const darkTheme = {
   textcolor2: 'hsl(216, 12%, 92%)',
   textcolor3: 'hsl(217, 89%, 76%)',
   textcolor4: 'hsl(213, 7%, 76%)',
+  textcolor5: 'hsl(217, 89%, 76%)',
   bordercolor1: 'hsl(213, 5%, 39%)',
   bordercolor2: 'hsl(206, 6%, 25%)',
   bordercolor3: 'hsl(220, 8%, 14%)',

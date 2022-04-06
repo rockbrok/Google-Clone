@@ -18,6 +18,7 @@ export const GlobalStyles = createGlobalStyle`
     --text-color-2: ${({ theme }) => theme.textcolor2};
     --text-color-3: ${({ theme }) => theme.textcolor3};
     --text-color-4: ${({ theme }) => theme.textcolor4};
+    --text-color-5: ${({ theme }) => theme.textcolor5};
     --border-color-1: ${({ theme }) => theme.bordercolor1};
     --border-color-2: ${({ theme }) => theme.bordercolor2};
     --border-color-3: ${({ theme }) => theme.bordercolor3};

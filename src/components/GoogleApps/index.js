@@ -419,7 +419,7 @@ const Forms = () => (
 
 const AllApps = () => (
     <div className="more-from-google">
-        <a href="https://mail.google.com/mail/">
+        <a href="https://about.google/products/">
             {t('more_from_google')}
         </a>
     </div>
