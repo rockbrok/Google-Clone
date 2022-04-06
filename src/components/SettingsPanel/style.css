@@ -4,7 +4,7 @@ ul.panel {
   min-width: 200px;
   height: auto;
   background: var(--background-color);
-  border: 1px solid #70757a;
+  border: 1px solid var(--text-color-1);
   bottom: 46px;
   right: 0;
 }

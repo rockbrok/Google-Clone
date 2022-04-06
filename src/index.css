@@ -1,19 +1,33 @@
 :root {
-  --logo: url("../public/googlelogo_color.png");
-  --scrollbar-color: #f1f1f1;
-  --scrollbar-thumb: #c1c1c1;
-  --gapp-background-color: #ffffff;
-  --gapp-thumb-color: #dadbe0;
+  --background-color:	hsl(0, 0%, 100%);
   --footer-background-color: hsl(0deg 0% 95%);
+  --logo: url("../public/googlelogo_color.png");
+  --scrollbar-color: hsl(0, 0%, 95%);
+  --scrollbar-thumb: hsl(0, 0%, 76%);
+  --gapp-icon-fill: hsl(220deg 5% 39%);
+  --gapp-icon-hover: hsl(240deg 3% 92%);
+  --gapp-icon-active: hsl(240deg 3% 83%);
+  --gapp-title: hsl(240deg 3% 100%);
+  --gapp-title-background: hsl(220deg 5% 32%);
+  --gapp-background-color: hsl(0, 0%, 100%);
+  --gapp-shadow: hsl(206deg 5% 25% / 35%);
+  --gapp-thumb-color: hsl(230, 9%, 87%);
+  --gapp-app-hover:	hsl(218, 92%, 95%);
+  --searchbar-hover: 	hsl(0, 0%, 100%);
+  --searchbar-border-hover: hsl(225deg 6% 13% / 23%);
   --searchbar-icon: hsl(216deg 4% 46%);
+  --searchbar-icon-2: hsl(217deg 7% 63%);
   --search-button-color: hsl(210deg 17% 98%);
   --search-button-hover: hsl(230deg 9% 87%);
   --text-color-1: hsl(0deg 0% 45%);
   --text-color-2: hsl(0deg 0% 25%);
-  --text-color-3: #1a73e8;
-  --background-color: #ffffff;
-  --border-color-1: #dadce0;
-  --border-color-2: rgb(232, 243, 247);
+  --text-color-3: hsl(214, 82%, 51%);
+  --text-color-4: hsl(206, 6%, 25%);
+  --border-color-1: hsl(220, 9%, 87%);
+  --border-color-2: hsl(196deg 48% 94%);
+  --border-color-3: hsl(230deg 9% 87%);
+  --button-hover: hsl(217, 89%, 61%);
+  --button-active: hsl(217, 89%, 66%);
 }
 
 body {

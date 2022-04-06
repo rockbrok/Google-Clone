@@ -7,7 +7,7 @@
 
 .search-language {
   line-height: 28px;
-  color: #3c4043;
+  color: var(--text-color-4);
   text-align: center;
   font-size: 13px;
 }

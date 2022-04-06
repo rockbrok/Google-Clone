@@ -20,12 +20,12 @@
 .search-bar:focus,
 input[type="search"]:hover,
 input[type="search"]:focus {
-  background-color: white;
+  background-color: var(--searchbar-hover);
 }
 
 .search-bar:hover {
-  box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
-  border-color: rgb(223 225 229 / 0%);
+  box-shadow: 0 1px 6px var(--searchbar-border-hover);
+  border-color: var(--searchbar-border-hover);
 }
 
 .search-icon,
@@ -38,7 +38,7 @@ input[type="search"]:focus {
   height: 18px;
   width: 18px;
   padding: 0 15px;
-  fill: hsl(217deg 7% 63%);
+  fill: var(--searchbar-icon-2);
   align-self: center;
 }
 

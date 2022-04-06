@@ -11,8 +11,8 @@
     border-radius: 8px;
     padding: 10px 0 8px 14px;
     flex: 1;
-    box-shadow: 0 1px 6px rgba(36, 37, 41, 0.568);
-    border-color: var(--footer-background-color);
+    border-color: var(--gapp-shadow);
+    box-shadow: 0px 1px 2px 0px var(--gapp-shadow), 0px 2px 6px 2px var(--gapp-shadow);
 }
 
 .gapps-panel ul {
@@ -39,7 +39,7 @@
 }
 
 .gapps-link:hover {
-    background-color: #e8f0fe;
+    background-color: var(--gapp-app-hover);
 }
 
 .gapps-panel-labels {
@@ -78,7 +78,7 @@
     height: 1px;
     width: stretch;
     margin: 12px -14px;
-    background-color: var(--gapp-thumb-color);
+    background-color: var(--border-color-1);
 }
 
 .more-from-google {
@@ -118,7 +118,7 @@
 .gapps-panel::-webkit-scrollbar-thumb,
 .gapps-panel::-webkit-scrollbar-thumb:hover,
 .gapps-panel::-webkit-scrollbar-thumb:active {
-    background: var(--gapp-thumb-color);
+    background: var(--border-color-1);
     border-radius: 10px;
     border: 4px solid var(--gapp-background-color);
 }

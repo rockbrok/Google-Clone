@@ -19,7 +19,7 @@ header li.pl {
 }
 
 header a {
-  color: hsl(0deg 0% 22%);
+  color: var(--text-color-2);
 }
 
 .gapps-icon-link,
@@ -39,16 +39,16 @@ header a {
 .gapps-icon {
   height: 24px;
   width: 24px;
-  fill: hsl(220deg 5% 39%);
+  fill: var(--gapp-icon-fill);
 }
 
 .gapps-icon-link:hover {
-  background-color: hsl(240deg 3% 92%);
+  background-color: var(--gapp-icon-hover);
   border-radius: 50%;
 }
 
 .gapps-icon-link:active {
-  background-color: hsl(240deg 3% 83%);
+  background-color: var(--gapp-icon-active);
   border-radius: 50%;
 }
 
@@ -59,11 +59,11 @@ header a {
   top: 44px;
   height: auto;
   padding: 5px 7px;
-  color: hsl(240deg 3% 100%);
+  color: var(--gapp-title);
   letter-spacing: 0.675px;
   word-spacing: 1.25px;
   border-radius: 4px;
-  background-color: hsl(220deg 5% 32%);
+  background-color: var(--gapp-title-background);
   visibility: hidden;
 }
 
@@ -91,13 +91,13 @@ header a {
 
 .sign-in:hover {
   text-decoration: none;
-  border: 1px solid #4285f4;
-  background: #4285f4;
+  border: 1px solid var(--button-hover);
+  background: var(--button-hover);
 }
 
 .sign-in:active {
-  border: 1px solid hsl(217, 89%, 66%);
-  background: hsl(217, 89%, 66%);
+  border: 1px solid var(--button-active);
+  background: var(--button-active);
 }
 
 @media only screen and (max-width: 610px) {

@@ -42,7 +42,7 @@ footer ul {
   padding: 16px 30px 15px 30px;
   font-size: 15px;
   background-color: var(--footer-background-color);
-  border-bottom: 1px solid hsl(230deg 9% 87%);
+  border-bottom: 1px solid var(--border-color-3);
 }
 
 .footer-content {

@@ -28,5 +28,5 @@
 
 .google-search:hover,
 .lucky-search:hover {
-  border-color: var(--search-button-hover);
+  border-color: var(--border-color-1);
 }
