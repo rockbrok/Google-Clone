@@ -13,7 +13,7 @@
 }
 
 .search-language button {
-  color: #1a0dab;
+  color: var(--text-color-3);
   padding: 0 3px;
   letter-spacing: -0.17px;
 }

@@ -3,14 +3,12 @@ footer {
   max-height: auto;
   width: stretch;
   bottom: 0;
-
-  --background-color: hsl(0deg 0% 95%);
 }
 
 .footer-country,
 footer a,
 button.settings {
-  color: hsl(0deg 0% 45%);
+  color: var(--text-color-1);
   line-height: 16px;
   font-weight: 400;
 }
@@ -43,7 +41,7 @@ footer ul {
   height: 16px;
   padding: 16px 30px 15px 30px;
   font-size: 15px;
-  background-color: var(--background-color);
+  background-color: var(--footer-background-color);
   border-bottom: 1px solid hsl(230deg 9% 87%);
 }
 
@@ -52,7 +50,7 @@ footer ul {
   justify-content: space-between;
   height: stretch;
   width: calc(100% - 40px);
-  background-color: var(--background-color);
+  background-color: var(--footer-background-color);
   padding: 0px 20px;
   flex-flow: row wrap;
 }

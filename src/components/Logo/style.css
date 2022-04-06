@@ -2,7 +2,7 @@
   display: flex;
   margin: 0 auto;
   min-height: 92px;
-  background-image: url("googlelogo_color.png");
+  background-image: var(--logo);
   background-repeat: no-repeat;
   background-position: center;
 }

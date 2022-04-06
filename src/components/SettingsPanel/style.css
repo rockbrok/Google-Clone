@@ -3,7 +3,7 @@ ul.panel {
   position: absolute;
   min-width: 200px;
   height: auto;
-  background: #fff;
+  background: var(--background-color);
   border: 1px solid #70757a;
   bottom: 46px;
   right: 0;
@@ -19,7 +19,7 @@ ul.panel li button {
   width: auto;
   height: auto;
   display: block;
-  color: hsl(0deg 0% 45%);
+  color: var(--text-color-1);
   font-size: 14px;
   line-height: 16px;
   padding: 15px;
@@ -29,7 +29,7 @@ ul.panel li button {
 }
 
 .panel-separator {
-  border-top: 1px solid #ebebeb;
+  border-top: 1px solid var(--border-color-2);
 }
 
 button.dark-off .sun-icon,
@@ -38,7 +38,7 @@ button.dark-on .moon-icon {
   display: none;
   height: 22px;
   width: 22px;
-  fill: hsl(210deg 4% 46%);
+  fill: var(--text-color-1);
   right: 15px;
   bottom: 13px;
 }

@@ -5,14 +5,14 @@
     height: 418px;
     right: 15px;
     top: 67px;
-    background-color: white;
+    background-color: var(--gapp-background-color);
     overflow-y: scroll;
     overflow-x: hidden;
     border-radius: 8px;
     padding: 10px 0 8px 14px;
     flex: 1;
     box-shadow: 0 1px 6px rgba(36, 37, 41, 0.568);
-    border-color: rgba(147, 149, 151, 0.712);
+    border-color: var(--footer-background-color);
 }
 
 .gapps-panel ul {
@@ -43,7 +43,7 @@
 }
 
 .gapps-panel-labels {
-    color: #202124;
+    color: var(--text-color-2);
     display: inline-block;
     font-size: 14px;
     letter-spacing: 0.09px;
@@ -78,7 +78,7 @@
     height: 1px;
     width: stretch;
     margin: 12px -14px;
-    background-color: lightgray;
+    background-color: var(--gapp-thumb-color);
 }
 
 .more-from-google {
@@ -86,7 +86,7 @@
     max-width: 265px;
     width: auto;
     background-color: transparent;
-    border: 1px solid #dadce0;
+    border: 1px solid var(--border-color-1);
     border-radius: 4px;
     padding: 10px 24px;
     width: min-content;
@@ -94,18 +94,18 @@
 }
 
 .more-from-google a {
-    color: #1a73e8;
+    color: var(--text-color-3);
 }
 
 .more-from-google:hover {
-    background-color: rgb(232, 243, 247);
-    border: 1px solid #dadce0;
+    background-color: var(--border-color-2);
+    border: 1px solid var(--border-color-1);
     cursor: pointer;
     text-decoration: none;
 }
 
 .gapps-panel::-webkit-scrollbar {
-    background-color: white;
+    background-color: var(--gapp-background-color);
     width: 16px;
     border-radius: 8px;
   }
@@ -115,10 +115,12 @@
     border-radius: 8px;
 }
 
-.gapps-panel::-webkit-scrollbar-thumb {
-    background: #dadbe0;
+.gapps-panel::-webkit-scrollbar-thumb,
+.gapps-panel::-webkit-scrollbar-thumb:hover,
+.gapps-panel::-webkit-scrollbar-thumb:active {
+    background: var(--gapp-thumb-color);
     border-radius: 10px;
-    border: 4px solid white;
+    border: 4px solid var(--gapp-background-color);
 }
 
 .gapps-panel::-webkit-scrollbar-button:single-button {

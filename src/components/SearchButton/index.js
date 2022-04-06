@@ -4,7 +4,7 @@ import { t } from 'i18next';
 
 function SearchButton() {
   return (
-    <div className="google-search-container">
+    <div className="search-button">
         <ul>
             <GoogleSearch />
             <LuckySearch />

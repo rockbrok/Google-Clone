@@ -82,10 +82,10 @@ header a {
   border: 1px solid transparent;
   border-radius: 4px;
   margin: 0 8px 0 12px;
-  color: #fff;
+  color: var(--background-color);
   font-size: 14px;
   letter-spacing: 0.25px;
-  background: #1a73e8;
+  background: var(--text-color-3);
   box-sizing: border-box;
 }
 
