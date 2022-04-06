@@ -7,6 +7,9 @@ export const lightTheme = {
   footerbackground: 'hsl(0deg 0% 95%)',
   searchbuttoncolor: 'hsl(210deg 17% 98%)',
   searchbuttonhover: 'hsl(230deg 9% 87%)',
+  searchbarhover: 'hsl(0deg 0% 100%)',
+  searchbarborderhover: 'hsl(220deg 10% 88%)',
+  searchbarshadowhover: 'hsl(225deg 6% 13%, 48%)',
   searchbaricon: 'hsl(216deg 4% 46%)',
   searchbaricon2: 'hsl(217deg 7% 63%)',
   textcolor1: 'hsl(0deg 0% 45%)',
@@ -24,5 +27,5 @@ export const lightTheme = {
   gappiconactive: 'hsl(240deg 3% 83%)',
   gapptitlebackground: 'hsl(220deg 5% 32%)',
   gappapphover: 'hsl(218deg 92% 95%)',
-  gappshadow: 'hsl(206deg 5% 25% 35%)',
+  gappshadow: 'hsl(206deg 5% 25%, 35%)',
 }

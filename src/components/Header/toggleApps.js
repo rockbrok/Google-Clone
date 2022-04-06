@@ -8,7 +8,7 @@ export function ToggleApps() {
     return ( <>
       <li className="pl">
         <button onClick={() => setShow(!show)} alt="Google apps">
-            <GApps />
+            <GApps/>
         </button>
         {
         show? null : <GoogleApps/>

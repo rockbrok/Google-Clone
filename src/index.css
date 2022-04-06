@@ -14,7 +14,8 @@
   --gapp-thumb-color: hsl(230deg 9% 87%);
   --gapp-app-hover: hsl(218deg 92% 95%);
   --searchbar-hover: hsl(0deg 0% 100%);
-  --searchbar-border-hover: hsl(225deg 6% 13% / 23%);
+  --searchbar-border-hover: hsl(220deg 10% 88%);
+  --searchbar-shadow-hover: hsl(225deg 6% 13% / 23%);
   --searchbar-icon: hsl(216deg 4% 46%);
   --searchbar-icon-2: hsl(217deg 7% 63%);
   --search-button-color: hsl(210deg 17% 98%);

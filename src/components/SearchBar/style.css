@@ -16,9 +16,10 @@
   border-radius: 24px;
 }
 
-.search-bar:hover {
+.search-bar:hover,
+.search-bar:focus-within {
   background-color: var(--searchbar-hover);
-  box-shadow: 0 1px 6px var(--searchbar-border-hover);
+  box-shadow: 0 1px 6px var(--searchbar-shadow-hover);
   border-color: var(--searchbar-border-hover);
 }
 

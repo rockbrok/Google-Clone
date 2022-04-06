@@ -42,12 +42,19 @@ header a {
   fill: var(--gapp-icon-fill);
 }
 
+.active, .btn:hover {
+  background-color: yellow;
+  color: red;
+  z-index: 10;
+}
+
 .gapps-icon-link:hover {
   background-color: var(--gapp-icon-hover);
   border-radius: 50%;
 }
 
-.gapps-icon-link:active {
+.gapps-icon-link:active,
+.gapps-icon-link:focus {
   background-color: var(--gapp-icon-active);
   border-radius: 50%;
 }
