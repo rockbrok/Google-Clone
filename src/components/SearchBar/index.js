@@ -20,12 +20,14 @@ function SearchBar() {
 const Input = () => (
   <input 
     type="search"
+    role="search"
     placeholder=" "
     maxLength="2048"
     autoComplete="off"
     autoCorrect="off"
     spellCheck="false"
-    aria-label="Search"
+    ariaLabel="Search"
+    name="q"
   />
 );
 
