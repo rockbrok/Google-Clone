@@ -1,56 +1,32 @@
-.google-search-container {
+.search-button {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 20px 10px 20px;
-  width: 100%;
-  margin-top: -1px;
+  padding: 12px 20px 0;
+  width: calc(100% - 40px);
   height: 58px;
-  background: #fff;
-  z-index: 3;
-}
-
-ul {
-  display: inline-flex;
-  margin: 0;
-  padding: 21px 0 0;
-}
-
-li {
-  margin: 0;
-  list-style: none;
-  padding: 0;
-}
-
-button {
-  cursor: default;
-  background: none;
-  margin: 0;
-  padding: 0;
-  outline: none;
-  border: none;
-  white-space: nowrap;
 }
 
 .google-search,
 .lucky-search {
   height: 36px;
   width: min-content;
-  padding: 0 16px 0 16px;
-  margin: 10px;
+  padding: 0 16px;
+  margin: 8px;
   border-radius: 4px;
-  color: hsl(0deg 0% 25%);
+  color: var(--text-color-2);
   font-size: 14px;
-  background-color: hsl(210deg 17% 98%);
+  background-color: var(--search-button-color);
   border: 1px solid transparent;
 }
 
 .google-search {
-  margin-right: 2px;
+  margin-right: 3px;
+  padding-right: 17px;
+  padding-left: 16px;
 }
 
 .google-search:hover,
 .lucky-search:hover {
-  border-color: hsl(230deg 9% 87%);
-  cursor: pointer;
+  border-color: var(--border-color-1);
 }

@@ -1,4 +1,3 @@
-import React from 'react'
 import './style.css';
 import { TogglePanel } from './togglePanel';
 import { t } from 'i18next';
@@ -7,7 +6,7 @@ function Footer() {
   return (
     <footer>
         <FooterCountry />
-        <div class="footer-content">
+        <div className="footer-content">
             <ul>
                 <About />
                 <Advertising />
@@ -25,8 +24,8 @@ function Footer() {
 }
 
 const FooterCountry = () => (
-    <div class="footer-country">
-        <p>Argentina</p>
+    <div className="footer-country">
+        Argentina
     </div>
 );
 

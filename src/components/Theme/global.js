@@ -1,167 +1,35 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
-  *,
-  *::after,
-  *::before {
-  }
-
-  body {
-    background: ${({ theme }) => theme.body};
-    color: ${({ theme }) => theme.color};
-  }
-
-  header {
-    background-color: ${({ theme }) => theme.headerbackgroundcolor};
-  }
-
-  header a {
-    color: ${({ theme }) => theme.headertextcolor};
-  }
-
-  .gapps-icon {
-    fill: ${({ theme }) => theme.gappsfill};
-  }
-
-  .gapps-icon-link:hover {
-    background: ${({ theme }) => theme.gappshover};
-  }
-
-  .sign-in {
-    background: ${({ theme }) => theme.signinbackground};
-    color: ${({ theme }) => theme.signincolor};
-    border-color: ${({ theme }) => theme.signinborder};
-  }
-
-  .sign-in:hover {
-    background: ${({ theme }) => theme.signinhoverbackground};
-    border-color: ${({ theme }) => theme.signinhoverborder};
-  }
-
-  [data-title="Google Apps"]::after {
-    background: ${({ theme }) => theme.gappsafterbackground};
-    color: ${({ theme }) => theme.gappsaftercolor};
-  }
-
-  .logo-container {
-    background-color: ${({ theme }) => theme.logobackgroundcolor};
-  }
-
-  .search-language {
-    color: ${({ theme }) => theme.searchlanguagecolor};
-  }
-
-  .search-language button {
-    color: ${({ theme }) => theme.searchlanguageacolor};
-  }
-
-  .search-container {
-    background-color: ${({ theme }) => theme.searchbarcontainerbackground};
-  }
-
-  .search-bar {
-    border-color: ${({ theme }) => theme.searchbarborder};
-    background-color: ${({ theme }) => theme.searchbarbackground};
-  }
-
-  .search-bar:hover {
-    box-shadow: ${({ theme }) => theme.searchbarhovershadow};
-    border-color: ${({ theme }) => theme.searchbarhoverborder};
-  }
-
-  .search-icon {
-    fill: ${({ theme }) => theme.searchiconfill};
-  }
-
-  .microphone-icon,
-  .x-icon {
-    fill: ${({ theme }) => theme.searchbariconfill};
-  }
-
-  .clear-button {
-    border-color: ${({ theme }) => theme.clearbuttondivider};
-  }
-
-  input[type="search"] {
-    color: ${({ theme }) => theme.searchbartextcolor};
-    -webkit-tap-highlight-color: ${({ theme }) => theme.searchbartexthighlight};
-  }
-
-  input[type="search"]:hover,
-  input[type="search"]:focus {
-    background-color: ${({ theme }) => theme.searchbarinputbackground};
-  }
-
-  .search-bar:hover,
-  .search-bar:focus {
-    background-color: ${({ theme }) => theme.searchbarfocusbackground};
-  }
-
-  .google-search-container {
-    background-color: ${({ theme }) => theme.searchbuttoncontainerbackground};
-  }
-
-  .google-search,
-  .lucky-search {
-    color: ${({ theme }) => theme.searchbuttontextcolor};
-    background: ${({ theme }) => theme.searchbuttonbackground};
-    border-color: ${({ theme }) => theme.searchbuttonborder};
-  }
-
-  .google-search:hover,
-  .lucky-search:hover {
-    border-color: ${({ theme }) => theme.searchbuttonhoverborder};
-  }
-
-  .search-language-container {
-    background-color: ${({ theme }) => theme.pagelanguagebackground};
-  }
-
-  ul.panel {
-    background: ${({ theme }) => theme.panel};
-    border-color: ${({ theme }) => theme.panelborder};
-  }
-  
-  ul.panel li a,
-  ul.panel li button {
-    color: ${({ theme }) => theme.panelbuttontextcolor};
-  }
-
-  .panel-separator {
-    border-color: ${({ theme }) => theme.panelseparator};
-  }
-
-  button.dark-off .sun-icon,
-  button.dark-on .moon-icon {
-    fill: ${({ theme }) => theme.themeiconfill};
-  }
-
-  footer {
-    --background-color: ${({ theme }) => theme.footerbackground};
-  }
-
-  footer p,
-  footer a,
-  button.settings {
-    color: ${({ theme }) => theme.footertextcolor};
-  }
-
-  .footer-country {
-    background-color: ${({ theme }) => theme.footerbackground};
-    border-color: ${({ theme }) => theme.footercountryborder};
-  }
-
-  .footer-content {
-    background-color: ${({ theme }) => theme.footerbackground};
-  }
-
-  small {
-  }
-
-  button {
-  }
-
-  a {
-    color: ${({ theme }) => theme.text};
+  :root {
+    --background-color: ${({ theme }) => theme.backgroundcolor};
+    --logo: ${({ theme }) => theme.logo};
+    --scrollbar-color: ${({ theme }) => theme.scrollbarcolor};
+    --scrollbar-thumb: ${({ theme }) => theme.scrollbarthumb};
+    --gapp-background-color: ${({ theme }) => theme.gappbackgroundcolor};
+    --footer-background-color: ${({ theme }) => theme.footerbackground};
+    --searchbar-hover: ${({ theme }) => theme.searchbarhover};
+    --searchbar-border-hover: ${({ theme }) => theme.searchbarborderhover};
+    --searchbar-shadow-hover: ${({ theme }) => theme.searchbarshadowhover};
+    --search-button-hover: ${({ theme }) => theme.searchbuttonhover};
+    --search-button-color: ${({ theme }) => theme.searchbuttoncolor};
+    --searchbar-icon: ${({ theme }) => theme.searchbaricon};
+    --searchbar-icon-2: ${({ theme }) => theme.searchbaricon2};
+    --text-color-1: ${({ theme }) => theme.textcolor1};
+    --text-color-2: ${({ theme }) => theme.textcolor2};
+    --text-color-3: ${({ theme }) => theme.textcolor3};
+    --text-color-4: ${({ theme }) => theme.textcolor4};
+    --text-color-5: ${({ theme }) => theme.textcolor5};
+    --border-color-1: ${({ theme }) => theme.bordercolor1};
+    --border-color-2: ${({ theme }) => theme.bordercolor2};
+    --border-color-3: ${({ theme }) => theme.bordercolor3};
+    --button-hover: ${({ theme }) => theme.buttonhover};
+    --button-active: ${({ theme }) => theme.buttonactive};
+    --gapp-icon-fill: ${({ theme }) => theme.gappsfill};
+    --gapp-icon-hover: ${({ theme }) => theme.gappiconhover};
+    --gapp-icon-active: ${({ theme }) => theme.gappiconactive};
+    --gapp-title-background: ${({ theme }) => theme.gapptitlebackground};
+    --gapp-app-hover: ${({ theme }) => theme.gappapphover};
+    --gapp-shadow: ${({ theme }) => theme.gappshadow};
   }
 `;

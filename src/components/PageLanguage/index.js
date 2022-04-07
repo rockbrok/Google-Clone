@@ -1,4 +1,3 @@
-import React from 'react'
 import './style.css';
 import i18n from 'i18next';
 import { useTranslation } from "react-i18next";
@@ -17,8 +16,8 @@ function PageLanguage() {
 }
 
 const Language = () => (
-    <div class="search-language-container">
-        <div class="search-language">
+    <div className="search-language-container">
+        <div className="search-language">
             {t('google_language')}&nbsp;
             <button onClick={() => changeLanguage("es" || "en")}>
                 {t('language_name')}

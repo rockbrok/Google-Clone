@@ -1,0 +1,130 @@
+.gapps-panel {
+  display: block;
+  position: absolute;
+  width: min-content;
+  height: 418px;
+  right: 15px;
+  top: 67px;
+  background-color: var(--gapp-background-color);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  border-radius: 8px;
+  padding: 10px 0 8px 14px;
+  flex: 1;
+  border-color: var(--gapp-shadow);
+  box-shadow: 0 1px 2px 0 var(--gapp-shadow), 0 2px 6px 2px var(--gapp-shadow);
+}
+
+.gapps-panel ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-right: -6px;
+}
+
+.gapps-panel li {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  transition: transform 0.2s;
+  height: 84px;
+  width: 84px;
+  padding: 6px;
+}
+
+.gapps-link {
+  position: absolute;
+  border-radius: 8px;
+  text-align: center;
+  width: 84px;
+}
+
+.gapps-link:hover {
+  background-color: var(--gapp-app-hover);
+}
+
+.gapps-panel-labels {
+  color: var(--text-color-2);
+  display: inline-block;
+  font-size: 14px;
+  letter-spacing: 0.09px;
+  line-height: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 76px;
+}
+
+.gapps-link:hover .gapps-panel-labels {
+  overflow-wrap: break-word;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+.gapps-icons-transform {
+  height: 62px;
+  transform: scale(calc(5 / 6));
+}
+
+.gapps-panel-icons {
+  display: inline-block;
+  background-image: url("./googleapps.png");
+  background-size: 64px 3100px;
+  vertical-align: top;
+  height: 64px;
+  width: 64px;
+}
+
+.gapps-panel .divider {
+  height: 1px;
+  width: stretch;
+  margin: 12px -14px;
+  background-color: var(--border-color-1);
+}
+
+.more-from-google {
+  margin: 16px auto;
+  max-width: 265px;
+  width: min-content;
+  background-color: transparent;
+  border: 1px solid var(--border-color-1);
+  border-radius: 4px;
+  padding: 10px 24px;
+  white-space: nowrap;
+}
+
+.more-from-google a {
+  color: var(--text-color-3);
+}
+
+.more-from-google a:hover {
+  text-decoration: none;
+}
+
+.more-from-google:hover {
+  background-color: var(--border-color-2);
+  border: 1px solid var(--border-color-1);
+  cursor: pointer;
+}
+
+.gapps-panel::-webkit-scrollbar {
+  background-color: var(--gapp-background-color);
+  width: 16px;
+  border-radius: 8px;
+}
+
+.gapps-panel::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 8px;
+}
+
+.gapps-panel::-webkit-scrollbar-thumb,
+.gapps-panel::-webkit-scrollbar-thumb:hover,
+.gapps-panel::-webkit-scrollbar-thumb:active {
+  background: var(--border-color-1);
+  border-radius: 10px;
+  border: 4px solid var(--gapp-background-color);
+}
+
+.gapps-panel::-webkit-scrollbar-button:single-button {
+  display: none;
+}

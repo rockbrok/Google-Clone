@@ -1,4 +1,3 @@
-import React from 'react';
 import Logo from './components/Logo/index';
 import Header from './components/Header/index';
 import SearchBar from './components/SearchBar/index';
@@ -12,18 +11,19 @@ function App() {
   const { t } = useTranslation()
 
   return ( <>
-
     <Header />
       <main>
         <Logo />
-        <form>
-          <SearchBar />
-          <SearchButton />
-          <PageLanguage />
-        </form>
+        <div className="form-container">
+          <form name="search" method="get" action="https://www.google.com/search">
+            <SearchBar />
+            <SearchButton />
+          </form>
+        </div>
+        <PageLanguage />
       </main>
     <Footer />
   </> );
 }
 
-export default App;
+export default App

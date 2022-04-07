@@ -1,30 +1,23 @@
 .search-language-container {
-  height: 44px;
-  width: 100%;
-  padding: 14px 20px 0;
+  justify-content: center;
+  width: calc(100% - 40px);
+  padding: 0 20px;
   margin: -1px 0 24px;
-  z-index: 2;
-  background-color: #fff;
 }
 
 .search-language {
-  width: auto;
   line-height: 28px;
-  color: #3c4043;
-  letter-spacing: -0.05px;
+  color: var(--text-color-4);
   text-align: center;
-  font-family: arial, sans-serif;
   font-size: 13px;
 }
 
 .search-language button {
-  color: #1a0dab;
-  text-decoration: none;
+  color: var(--text-color-5);
   padding: 0 3px;
-  letter-spacing: -0.15px;
+  letter-spacing: -0.17px;
 }
 
 .search-language button:hover {
   text-decoration: underline;
-  cursor: pointer;
 }
