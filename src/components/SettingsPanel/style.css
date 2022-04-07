@@ -28,6 +28,10 @@ ul.panel li button {
   white-space: nowrap;
 }
 
+.pl2 {
+  padding-right: 25px;
+}
+
 .panel-separator {
   border-top: 1px solid var(--border-color-2);
 }
