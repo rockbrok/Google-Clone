@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './style.css';
 import { t } from 'i18next';
 import SettingsPanel from './../../components/SettingsPanel/index';

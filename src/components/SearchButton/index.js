@@ -1,4 +1,3 @@
-import React from 'react'
 import './style.css';
 import { t } from 'i18next';
 
@@ -15,13 +14,13 @@ function SearchButton() {
 
 const GoogleSearch = () => (
     <li>
-        <button className="google-search" type="submit">{t('google_search')}</button>
+        <button className="google-search" name="btnK" value="Google Search" type="submit">{t('google_search')}</button>
     </li>
 );
 
 const LuckySearch = () => (
     <li>
-        <button className="lucky-search" type="submit">{t('lucky_search')}</button>
+        <button className="lucky-search" name="btnI" value="I'm Feeling Lucky" type="submit">{t('lucky_search')}</button>
     </li>
 );
 

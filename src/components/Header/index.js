@@ -1,4 +1,3 @@
-import React from 'react'
 import './style.css';
 import { ToggleApps } from './toggleApps.js';
 import { t } from 'i18next';

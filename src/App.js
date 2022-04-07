@@ -1,4 +1,3 @@
-import React from 'react';
 import Logo from './components/Logo/index';
 import Header from './components/Header/index';
 import SearchBar from './components/SearchBar/index';

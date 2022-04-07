@@ -1,4 +1,3 @@
-import React from 'react';
 import './style.css';
 import { SearchIcon } from '@heroicons/react/solid';
 import { MicrophoneIcon } from '@heroicons/react/solid';

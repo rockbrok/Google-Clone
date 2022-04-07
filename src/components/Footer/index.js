@@ -1,4 +1,3 @@
-import React from 'react';
 import './style.css';
 import { TogglePanel } from './togglePanel';
 import { t } from 'i18next';
