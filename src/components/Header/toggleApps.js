@@ -8,18 +8,14 @@ export function ToggleApps() {
 
     return ( <>
       <li className="pl">
-        <OutsideClickHandler 
-          onOutsideClick={() => {
-            setShow(false);
-          }}
-        >
-        <button onClick={() => setShow(!show)} alt="Google apps">
-            <GApps/>
-        </button>
+        <OutsideClickHandler onOutsideClick={() => {setShow(false);}}>
+          <button onClick={() => setShow(!show)} alt="Google apps">
+              <GApps/>
+          </button>
+          {
+          show? <GoogleApps/> : null
+          }
         </OutsideClickHandler>
-        {
-        show? <GoogleApps/> : null
-        }
       </li>
     </> )
 }
