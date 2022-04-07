@@ -15,7 +15,7 @@ function App() {
       <main>
         <Logo />
         <div className="form-container">
-          <form method="get" action="https://www.google.com/search">
+          <form name="search" method="get" action="https://www.google.com/search">
             <SearchBar />
             <SearchButton />
           </form>

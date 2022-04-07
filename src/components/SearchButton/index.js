@@ -14,13 +14,13 @@ function SearchButton() {
 
 const GoogleSearch = () => (
     <li>
-        <button className="google-search" name="btnK" value="Google Search" type="submit">{t('google_search')}</button>
+        <button className="google-search" name="" type="submit">{t('google_search')}</button>
     </li>
 );
 
 const LuckySearch = () => (
     <li>
-        <button className="lucky-search" name="btnI" value="I'm Feeling Lucky" type="submit">{t('lucky_search')}</button>
+        <button className="lucky-search" name="btnI" type="submit">{t('lucky_search')}</button>
     </li>
 );
 
