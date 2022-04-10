@@ -23,13 +23,15 @@ header a {
 }
 
 .gapps-icon-link,
+.gapps-icon-link-active,
 .gapps-icon {
   align-self: center;
   justify-content: center;
   position: relative;
 }
 
-.gapps-icon-link {
+.gapps-icon-link,
+.gapps-icon-link-active {
   display: flex;
   width: 40px;
   padding: 8px 0;
@@ -42,20 +44,14 @@ header a {
   fill: var(--gapp-icon-fill);
 }
 
-.active, .btn:hover {
-  background-color: yellow;
-  color: red;
-  z-index: 10;
-}
-
-.gapps-icon-link:hover {
-  background-color: var(--gapp-icon-hover);
+.gapps-icon-link-active.active {
+  background-color: var(--gapp-icon-active);
   border-radius: 50%;
 }
 
-.gapps-icon-link:active,
-.gapps-icon-link:focus {
-  background-color: var(--gapp-icon-active);
+.gapps-icon-link:hover {
+  width: 40px;
+  background-color: var(--gapp-icon-hover);
   border-radius: 50%;
 }
 
