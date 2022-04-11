@@ -51,11 +51,54 @@
   margin-top: -8px;
 }
 
+
+
 .clear-button {
   border-right: 1px solid var(--border-color-1);
   height: 65%;
   line-height: 44px;
   align-self: center;
+}
+
+.tip {
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
+.tip span {
+  display: none
+}
+
+.tip:hover span {
+  position: absolute;
+  display: block;
+  background-color: #000;
+  color: #fff;
+  font-size: 11px;
+  line-height: 12px;
+  font-weight: bold;
+  padding: 7px 9px;
+  white-space: nowrap;
+}
+
+.tip:hover span:before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  right: calc(50% - 8px);
+  height: 10px;
+  width: 10px;
+  background: #000;
+  transform: rotate(45deg) translate(-50%);
+}
+
+.tip:hover span.microphone {
+  top: 50px;
+}
+
+.tip:hover span.clear {
+  top: 42px;
 }
 
 input:focus,

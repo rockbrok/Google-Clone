@@ -8,7 +8,7 @@ export const Toggle = ({ theme, toggleTheme }) => {
   const isLight = theme === 'light';
 
   return (
-    <ToggleContainer lightTheme={isLight} onClick={toggleTheme}>
+    <ToggleContainer lightTheme={!isLight} onClick={toggleTheme}>
       <div className="pl2"><DarkOn /></div>
       <div className="pl2"><DarkOff /></div>
     </ToggleContainer>

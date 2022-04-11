@@ -10,20 +10,12 @@ import './App.css';
 function App() {
   const { t } = useTranslation()
 
-  function validateForm() {
-    var x = document.forms["myForm"]["fname"].value;
-    if (x === "") {
-      alert("Name must be filled out");
-      return false;
-    }
-  }
-
   return ( <>
     <Header />
       <main>
         <Logo />
         <div className="form-container">
-          <form name="search" onSubmit="return validateForm()" method="get" action="https://www.google.com/search" required>
+          <form name="search" method="get" action="https://www.google.com/search">
             <SearchBar />
             <SearchButton />
           </form>
