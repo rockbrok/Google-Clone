@@ -30,4 +30,9 @@
   .lucky-search:hover {
     border-color: var(--border-color-1);
   }
+
+  .google-search:active,
+  .lucky-search:active {
+    border-color: var(--border-color-4);
+  }
   
