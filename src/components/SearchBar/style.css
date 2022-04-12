@@ -65,7 +65,9 @@
 }
 
 .tip span {
-  display: none;
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
   margin: 1px 4px 0 0;
 }
 
@@ -75,11 +77,18 @@
   background-color: var(--tooltip-background-color);
   border: 1px solid var(--tooltip-border-color);
   color: var(--tooltip-text-color);
-  box-shadow: 0 1px 2px 1px var(--searchbar-shadow-hover);
+  box-sizing: border-box;
+  box-shadow: 0 1px 4px hsl(0, 0%, 0%, 20%);
   font-size: 11px;
+  line-height: 29px;
+  height: 29px;
+  text-align: center;
   font-weight: bold;
-  padding: 7px 10px;
+  padding: 0px 10px;
   white-space: nowrap;
+  transition: opacity 0.33s ease .13s;
+  visibility: visible;
+  opacity: 1;
 }
 
 .tip:hover span:before {
@@ -87,15 +96,18 @@
   position: absolute;
   top: 0;
   z-index: 1;
+  line-height: 0;
   height: 8px;
   width: 8px;
   background: var(--tooltip-background-color);
-  border-top: 1px solid var(--tooltip-border-arrow-color);
-  border-left: 1px solid var(--tooltip-border-arrow-color);
+  border-color: var(--tooltip-border-color) transparent;
+  border-top: 1px solid;
+  border-left: 1px solid;
   box-shadow: inherit;
   box-sizing: border-box;
   transform: rotate(45deg) translate(-85%);
   right: calc(50% - 9px);
+  opacity: 1;
 }
 
 .tip:hover span.microphone {

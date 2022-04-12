@@ -34,7 +34,7 @@ const Input = () => (
 
 const ClearButton = () => (
   <div className="clear-button">
-    <button className="clear tip" type="reset">
+    <button className="clear tip" type="reset" ariaLabel="clear">
       <XIcon className="x-icon" />
         <span className="clear">{t('clear')}</span>
     </button>

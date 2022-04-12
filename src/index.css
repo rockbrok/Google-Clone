@@ -30,7 +30,7 @@
   --border-color-3: hsl(230deg 9% 87%);
   --button-hover: hsl(217deg 89% 61%);
   --button-active: hsl(217deg 89% 66%);
-  --tooltip-background-color: hsl(0, 0%, 12%);
+  --tooltip-background-color: hsl(0, 0%, 18%);
   --tooltip-text-color: hsl(0, 0%, 100%);
   --tooltip-border-color: hsl(0, 0%, 95%);
   --tooltip-border-arrow-color: hsl(220deg 10% 98% / 100%);
