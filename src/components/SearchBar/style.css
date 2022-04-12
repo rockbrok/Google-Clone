@@ -86,7 +86,7 @@
   font-weight: bold;
   padding: 0px 10px;
   white-space: nowrap;
-  transition: opacity 0.33s ease .13s;
+  transition: visibility 0.2s ease 0.2s;
   visibility: visible;
   opacity: 1;
 }
