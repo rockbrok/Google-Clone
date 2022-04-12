@@ -56,7 +56,6 @@ header a {
 }
 
 [data-title="Google apps"]::after {
-  display: none;
   content: attr(data-title);
   position: absolute;
   font-size: 12px;
@@ -72,11 +71,9 @@ header a {
 }
 
 [data-title="Google apps"]:hover::after {
-  display: none;
   opacity: 1;
   transition: all 0.01s ease 0.5s;
   visibility: visible;
-
 }
 
 .sign-in {
