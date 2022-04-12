@@ -1,0 +1,33 @@
+.search-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 20px 0;
+    width: calc(100% - 40px);
+    height: 58px;
+  }
+  
+  .google-search,
+  .lucky-search {
+    height: 36px;
+    width: min-content;
+    padding: 0 16px;
+    margin: 8px;
+    border-radius: 4px;
+    color: var(--text-color-2);
+    font-size: 14px;
+    background-color: var(--search-button-color);
+    border: 1px solid transparent;
+  }
+  
+  .google-search {
+    margin-right: 3px;
+    padding-right: 17px;
+    padding-left: 16px;
+  }
+  
+  .google-search:hover,
+  .lucky-search:hover {
+    border-color: var(--border-color-1);
+  }
+  

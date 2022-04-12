@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import OutsideClickHandler from 'react-outside-click-handler';
 import './style.css';
-import GoogleApps from './../../components/GoogleApps/index';
+import GoogleApps from '../../components/GoogleApps/index';
 
 export function ToggleApps() {
   const [show, setShow] = useState(false)
@@ -21,7 +21,7 @@ export function ToggleApps() {
 }
 
 function showTitle(e) {
-  e.target.getAttribute('data-title').style.backgroundColor = 'red';
+  e.target.getAttribute('data-title')[1].style.display = 'block';
 }
 
 const GAppsInactive = () => (
