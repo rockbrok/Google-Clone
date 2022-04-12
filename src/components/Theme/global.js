@@ -34,6 +34,5 @@ export const GlobalStyles = createGlobalStyle`
     --tooltip-background-color: ${({ theme }) => theme.tooltipbackground};
     --tooltip-text-color: ${({ theme }) => theme.tooltiptextcolor};
     --tooltip-border-color: ${({ theme }) => theme.tooltipborder};
-    --tooltip-border-arrow-color: ${({ theme }) => theme.tooltiparrowborder};
   }
 `;

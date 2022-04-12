@@ -20,7 +20,7 @@ const GoogleSearch = () => (
 
 const LuckySearch = () => (
     <li>
-        <button className="lucky-search" novalidate name="btnI" type="submit">{t('lucky_search')}</button>
+        <button className="lucky-search" name="btnI" type="submit">{t('lucky_search')}</button>
     </li>
 );
 

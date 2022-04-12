@@ -31,5 +31,4 @@ export const darkTheme = {
   tooltipbackground: 'hsl(0, 0%, 18%)',
   tooltiptextcolor: 'hsl(0, 0%, 100%)',
   tooltipborder: 'hsl(0, 0%, 100%)',
-  tooltiparrowborder: 'hsl(210, 1%, 70%)',
   }

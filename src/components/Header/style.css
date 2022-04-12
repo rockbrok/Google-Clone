@@ -74,6 +74,7 @@ header a {
   opacity: 1;
   transition: all 0.01s ease 0.5s;
   visibility: visible;
+  display: block;
 }
 
 .sign-in {

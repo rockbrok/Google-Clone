@@ -21,7 +21,7 @@ export function ToggleApps() {
 }
 
 function showTitle(e) {
-  e.target.getAttribute('data-title').style.visibility = 'visible';
+  e.target.getAttribute('data-title').style.backgroundColor = 'red';
 }
 
 const GAppsInactive = () => (

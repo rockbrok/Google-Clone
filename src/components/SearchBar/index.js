@@ -34,7 +34,7 @@ const Input = () => (
 
 const ClearButton = () => (
   <div className="clear-button">
-    <button className="clear tip" type="reset" ariaLabel="clear">
+    <button className="clear tip" type="reset" aria-label="clear">
       <XIcon className="x-icon" />
         <span className="clear">{t('clear')}</span>
     </button>
@@ -42,7 +42,7 @@ const ClearButton = () => (
 );
 
 const VoiceButton = () => (
-  <a href="https://www.google.com/" type="" className="tip">
+  <a href="https://www.google.com/" type="" className="tip" aria-label="search by voice">
     <MicrophoneIcon className="microphone-icon" />
     <span className="microphone">{t('search_by_voice')}</span>
   </a>

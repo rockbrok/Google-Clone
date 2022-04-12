@@ -107,7 +107,6 @@
   box-sizing: border-box;
   transform: rotate(45deg) translate(-85%);
   right: calc(50% - 9px);
-  opacity: 1;
 }
 
 .tip:hover span.microphone {
@@ -137,7 +136,7 @@ input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
 
-input[type="search"] {
+input {
   appearance: auto;
   box-sizing: border-box;
   width: stretch;

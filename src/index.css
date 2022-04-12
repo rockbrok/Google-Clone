@@ -33,7 +33,6 @@
   --tooltip-background-color: hsl(0, 0%, 18%);
   --tooltip-text-color: hsl(0, 0%, 100%);
   --tooltip-border-color: hsl(0, 0%, 95%);
-  --tooltip-border-arrow-color: hsl(220deg 10% 98% / 100%);
 }
 
 body {
