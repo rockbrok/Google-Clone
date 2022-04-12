@@ -51,8 +51,6 @@
   margin-top: -8px;
 }
 
-
-
 .clear-button {
   border-right: 1px solid var(--border-color-1);
   height: 65%;
@@ -67,38 +65,45 @@
 }
 
 .tip span {
-  display: none
+  display: none;
+  margin: 1px 4px 0 0;
 }
 
 .tip:hover span {
   position: absolute;
   display: block;
-  background-color: #000;
-  color: #fff;
+  background-color: var(--tooltip-background-color);
+  border: 1px solid var(--tooltip-border-color);
+  color: var(--tooltip-text-color);
+  box-shadow: 0 1px 2px 1px var(--searchbar-shadow-hover);
   font-size: 11px;
-  line-height: 12px;
   font-weight: bold;
-  padding: 7px 9px;
+  padding: 7px 10px;
   white-space: nowrap;
 }
 
 .tip:hover span:before {
   content: "";
   position: absolute;
-  top: 1px;
-  right: calc(50% - 8px);
-  height: 10px;
-  width: 10px;
-  background: #000;
-  transform: rotate(45deg) translate(-50%);
+  top: 0;
+  z-index: 1;
+  height: 8px;
+  width: 8px;
+  background: var(--tooltip-background-color);
+  border-top: 1px solid var(--tooltip-border-arrow-color);
+  border-left: 1px solid var(--tooltip-border-arrow-color);
+  box-shadow: inherit;
+  box-sizing: border-box;
+  transform: rotate(45deg) translate(-85%);
+  right: calc(50% - 9px);
 }
 
 .tip:hover span.microphone {
-  top: 50px;
+  top: 47px;
 }
 
 .tip:hover span.clear {
-  top: 42px;
+  top: 39px;
 }
 
 input:focus,

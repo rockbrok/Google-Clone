@@ -28,4 +28,8 @@ export const darkTheme = {
   gapptitlebackground: 'hsl(223, 6%, 24%)',
   gappapphover: 'hsl(240, 5%, 16%)',
   gappshadow: 'hsl(0, 0%, 0%, 30%)',
+  tooltipbackground: 'hsl(0, 0%, 18%)',
+  tooltiptextcolor: 'hsl(0, 0%, 100%)',
+  tooltipborder: 'hsl(0, 0%, 100%)',
+  tooltiparrowborder: 'hsl(210, 1%, 70%)',
   }

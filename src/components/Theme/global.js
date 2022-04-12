@@ -31,5 +31,9 @@ export const GlobalStyles = createGlobalStyle`
     --gapp-title-background: ${({ theme }) => theme.gapptitlebackground};
     --gapp-app-hover: ${({ theme }) => theme.gappapphover};
     --gapp-shadow: ${({ theme }) => theme.gappshadow};
+    --tooltip-background-color: ${({ theme }) => theme.tooltipbackground};
+    --tooltip-text-color: ${({ theme }) => theme.tooltiptextcolor};
+    --tooltip-border-color: ${({ theme }) => theme.tooltipborder};
+    --tooltip-border-arrow-color: ${({ theme }) => theme.tooltiparrowborder};
   }
 `;

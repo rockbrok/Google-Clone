@@ -29,7 +29,6 @@ const Input = () => (
     spellCheck="false"
     ariaLabel="Search"
     name="q"
-    required
   />
 );
 
