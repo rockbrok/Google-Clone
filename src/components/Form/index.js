@@ -55,7 +55,7 @@ class Form extends Component {
             <SearchIcon className="search-icon" />
             <input
               type="search"
-              title={t('search')}
+              title={t('searchbar_title')}
               className="searchInput"
               name="q"
               role="search"

@@ -7,6 +7,14 @@ const changeLanguage = (language) => {
     i18n.changeLanguage(language);
 };
 
+function LanguageChange() {
+    if(i18n.language === "es"){
+        changeLanguage("en")
+    } else if(i18n.language === "en"){
+        changeLanguage("es")
+    }
+}
+
 function PageLanguage() {
     const { t } = useTranslation()
 
@@ -19,7 +27,7 @@ const Language = () => (
     <div className="search-language-container">
         <div className="search-language">
             {t('google_language')}&nbsp;
-            <button onClick={() => changeLanguage("es" || "en")}>
+            <button onClick={() => LanguageChange()}>
                 {t('language_name')}
             </button>
         </div>
