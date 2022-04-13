@@ -52,7 +52,7 @@ const Account = () => (
     <li>
         <a className="gapps-link" href="https://myaccount.google.com/">
             <div className="gapps-icons-transform">
-                <span className="gapps-panel-icons" style={{'background-position': '0 -1587px',}} />
+                <span className="gapps-panel-icons" style={{'backgroundPosition': '0 -1587px',}} />
             </div>
             <span className="gapps-panel-labels">{t('account')}</span>
         </a>
@@ -63,7 +63,7 @@ const Search = () => (
     <li>
         <a className="gapps-link" href="https://www.google.com/search/">
             <div className="gapps-icons-transform">
-                <span className="gapps-panel-icons" style={{'background-position': '0 -1794px'}} />
+                <span className="gapps-panel-icons" style={{'backgroundPosition': '0 -1794px'}} />
             </div>
             <span className="gapps-panel-labels">{t('search')}</span>
         </a>
@@ -74,7 +74,7 @@ const Maps = () => (
     <li>
         <a className="gapps-link" href="https://maps.google.com/maps/">
             <div className="gapps-icons-transform">
-                <span className="gapps-panel-icons" style={{'background-position': '0 -483px'}} />
+                <span className="gapps-panel-icons" style={{'backgroundPosition': '0 -483px'}} />
             </div>
             <span className="gapps-panel-labels">{t('maps')}</span>
         </a>
@@ -85,7 +85,7 @@ const YouTube = () => (
     <li>
         <a className="gapps-link" href="https://www.youtube.com/">
             <div className="gapps-icons-transform">
-                <span className="gapps-panel-icons" style={{'background-position': '0 -2622px'}} />
+                <span className="gapps-panel-icons" style={{'backgroundPosition': '0 -2622px'}} />
             </div>
             <span className="gapps-panel-labels">{t('youtube')}</span>
         </a>
@@ -96,7 +96,7 @@ const Play = () => (
     <li>
         <a className="gapps-link" href="https://play.google.com/">
             <div className="gapps-icons-transform">
-                <span className="gapps-panel-icons" style={{'background-position': '0 -207px'}} />
+                <span className="gapps-panel-icons" style={{'backgroundPosition': '0 -207px'}} />
             </div>
             <span className="gapps-panel-labels">{t('play')}</span>
         </a>
@@ -107,7 +107,7 @@ const News = () => (
     <li>
         <a className="gapps-link" href="https://news.google.com/">
             <div className="gapps-icons-transform">
-                <span className="gapps-panel-icons" style={{'background-position': '0 -1311px'}} />
+                <span className="gapps-panel-icons" style={{'backgroundPosition': '0 -1311px'}} />
             </div>
             <span className="gapps-panel-labels">{t('news')}</span>
         </a>
@@ -118,7 +118,7 @@ const Gmail = () => (
     <li>
         <a className="gapps-link" href="https://mail.google.com/mail/">
             <div className="gapps-icons-transform">
-                <span className="gapps-panel-icons" style={{'background-position': '0 -2001px'}} />
+                <span className="gapps-panel-icons" style={{'backgroundPosition': '0 -2001px'}} />
             </div>
             <span className="gapps-panel-labels">{t('gmail')}</span>
         </a>
@@ -129,7 +129,7 @@ const Meet = () => (
     <li>
         <a className="gapps-link" href="https://meet.google.com/">
             <div className="gapps-icons-transform">
-                <span className="gapps-panel-icons" style={{'background-position': '0 -690px'}} />
+                <span className="gapps-panel-icons" style={{'backgroundPosition': '0 -690px'}} />
             </div>
             <span className="gapps-panel-labels">{t('meet')}</span>
         </a>
@@ -140,7 +140,7 @@ const Chat = () => (
     <li>
         <a className="gapps-link" href="https://chat.google.com/">
             <div className="gapps-icons-transform">
-                <span className="gapps-panel-icons" style={{'background-position': '0 -1656px'}} />
+                <span className="gapps-panel-icons" style={{'backgroundPosition': '0 -1656px'}} />
             </div>
             <span className="gapps-panel-labels">{t('chat')}</span>
         </a>
@@ -151,7 +151,7 @@ const Contacts = () => (
     <li>
         <a className="gapps-link" href="https://contacts.google.com/">
             <div className="gapps-icons-transform">
-                <span className="gapps-panel-icons" style={{'background-position': '0 -2898px'}} />
+                <span className="gapps-panel-icons" style={{'backgroundPosition': '0 -2898px'}} />
             </div>
             <span className="gapps-panel-labels">{t('contacts')}</span>
         </a>
@@ -162,7 +162,7 @@ const Drive = () => (
     <li>
         <a className="gapps-link" href="https://drive.google.com/">
             <div className="gapps-icons-transform">
-                <span className="gapps-panel-icons" style={{'background-position': '0 -2967px'}} />
+                <span className="gapps-panel-icons" style={{'backgroundPosition': '0 -2967px'}} />
             </div>
             <span className="gapps-panel-labels">{t('drive')}</span>
         </a>
@@ -173,7 +173,7 @@ const Calendar = () => (
     <li>
         <a className="gapps-link" href="https://calendar.google.com/calendar/">
             <div className="gapps-icons-transform">
-                <span className="gapps-panel-icons" style={{'background-position': '0 -2553px'}} />
+                <span className="gapps-panel-icons" style={{'backgroundPosition': '0 -2553px'}} />
             </div>
             <span className="gapps-panel-labels">{t('calendar')}</span>
         </a>
@@ -184,7 +184,7 @@ const Translate = () => (
     <li>
         <a className="gapps-link" href="https://translate.google.com/">
             <div className="gapps-icons-transform">
-                <span className="gapps-panel-icons" style={{'background-position': '0 -1932px'}} />
+                <span className="gapps-panel-icons" style={{'backgroundPosition': '0 -1932px'}} />
             </div>
             <span className="gapps-panel-labels">{t('translate')}</span>
         </a>
@@ -195,7 +195,7 @@ const Photos = () => (
     <li>
         <a className="gapps-link" href="https://photos.google.com/">
             <div className="gapps-icons-transform">
-                <span className="gapps-panel-icons" style={{'background-position': '0 -2829px'}} />
+                <span className="gapps-panel-icons" style={{'backgroundPosition': '0 -2829px'}} />
             </div>
             <span className="gapps-panel-labels">{t('photos')}</span>
         </a>
@@ -206,7 +206,7 @@ const Duo = () => (
     <li>
         <a className="gapps-link" href="https://duo.google.com/">
             <div className="gapps-icons-transform">
-                <span className="gapps-panel-icons" style={{'background-position': '0 -2484px'}} />
+                <span className="gapps-panel-icons" style={{'backgroundPosition': '0 -2484px'}} />
             </div>
             <span className="gapps-panel-labels">{t('duo')}</span>
         </a>
@@ -221,7 +221,7 @@ const Finance = () => (
     <li>
         <a className="gapps-link" href="https://www.google.com/finance/">
             <div className="gapps-icons-transform">
-                <span className="gapps-panel-icons" style={{'background-position': '0 -345px'}} />
+                <span className="gapps-panel-icons" style={{'backgroundPosition': '0 -345px'}} />
             </div>
             <span className="gapps-panel-labels">{t('finance')}</span>
         </a>
@@ -232,7 +232,7 @@ const Docs = () => (
     <li>
         <a className="gapps-link" href="https://docs.google.com/document/">
             <div className="gapps-icons-transform">
-                <span className="gapps-panel-icons" style={{'background-position': '0 -1242px'}} />
+                <span className="gapps-panel-icons" style={{'backgroundPosition': '0 -1242px'}} />
             </div>
             <span className="gapps-panel-labels">{t('docs')}</span>
         </a>
@@ -243,7 +243,7 @@ const Sheets = () => (
     <li>
         <a className="gapps-link" href="https://docs.google.com/spreadsheets/">
             <div className="gapps-icons-transform">
-                <span className="gapps-panel-icons" style={{'background-position': '0 -2208px'}} />
+                <span className="gapps-panel-icons" style={{'backgroundPosition': '0 -2208px'}} />
             </div>
             <span className="gapps-panel-labels">{t('sheets')}</span>
         </a>
@@ -254,7 +254,7 @@ const Slides = () => (
     <li>
         <a className="gapps-link" href="https://docs.google.com/presentation">
             <div className="gapps-icons-transform">
-                <span className="gapps-panel-icons" style={{'background-position': '0 -2277px'}} />
+                <span className="gapps-panel-icons" style={{'backgroundPosition': '0 -2277px'}} />
             </div>
             <span className="gapps-panel-labels">{t('slides')}</span>
         </a>
@@ -265,7 +265,7 @@ const Books = () => (
     <li>
         <a className="gapps-link" href="https://books.google.com/">
             <div className="gapps-icons-transform">
-                <span className="gapps-panel-icons" style={{'background-position': '0 -2760px'}} />
+                <span className="gapps-panel-icons" style={{'backgroundPosition': '0 -2760px'}} />
             </div>
             <span className="gapps-panel-labels">{t('books')}</span>
         </a>
@@ -276,7 +276,7 @@ const Blogger = () => (
     <li>
         <a className="gapps-link" href="https://www.blogger.com/">
             <div className="gapps-icons-transform">
-                <span className="gapps-panel-icons" style={{'background-position': '0 -1863px'}} />
+                <span className="gapps-panel-icons" style={{'backgroundPosition': '0 -1863px'}} />
             </div>
             <span className="gapps-panel-labels">{t('blogger')}</span>
         </a>
@@ -287,7 +287,7 @@ const Hangouts = () => (
     <li>
         <a className="gapps-link" href="https://hangouts.google.com/">
             <div className="gapps-icons-transform">
-                <span className="gapps-panel-icons" style={{'background-position': '0 -2415px'}} />
+                <span className="gapps-panel-icons" style={{'backgroundPosition': '0 -2415px'}} />
             </div>
             <span className="gapps-panel-labels">{t('hangouts')}</span>
         </a>
@@ -298,7 +298,7 @@ const Keep = () => (
     <li>
         <a className="gapps-link" href="https://keep.google.com/">
             <div className="gapps-icons-transform">
-                <span className="gapps-panel-icons" style={{'background-position': '0 -276px'}} />
+                <span className="gapps-panel-icons" style={{'backgroundPosition': '0 -276px'}} />
             </div>
             <span className="gapps-panel-labels">{t('keep')}</span>
         </a>
@@ -309,7 +309,7 @@ const Jamboard = () => (
     <li>
         <a className="gapps-link" href="https://jamboard.google.com/">
             <div className="gapps-icons-transform">
-                <span className="gapps-panel-icons" style={{'background-position': '0 -2070px'}} />
+                <span className="gapps-panel-icons" style={{'backgroundPosition': '0 -2070px'}} />
             </div>
             <span className="gapps-panel-labels">{t('jamboard')}</span>
         </a>
@@ -320,7 +320,7 @@ const Classroom = () => (
     <li>
         <a className="gapps-link" href="https://classroom.google.com/">
             <div className="gapps-icons-transform">
-                <span className="gapps-panel-icons" style={{'background-position': '0 -966px'}} />
+                <span className="gapps-panel-icons" style={{'backgroundPosition': '0 -966px'}} />
             </div>
             <span className="gapps-panel-labels">{t('classroom')}</span>
         </a>
@@ -331,7 +331,7 @@ const Earth = () => (
     <li>
         <a className="gapps-link" href="https://earth.google.com/web/">
             <div className="gapps-icons-transform">
-                <span className="gapps-panel-icons" style={{'background-position': '0 -1380px'}} />
+                <span className="gapps-panel-icons" style={{'backgroundPosition': '0 -1380px'}} />
             </div>
             <span className="gapps-panel-labels">{t('earth')}</span>
         </a>
@@ -342,7 +342,7 @@ const Collections = () => (
     <li>
         <a className="gapps-link" href="https://www.google.com/save/">
             <div className="gapps-icons-transform">
-                <span className="gapps-panel-icons" style={{'background-position': '0 -621px'}} />
+                <span className="gapps-panel-icons" style={{'backgroundPosition': '0 -621px'}} />
             </div>
             <span className="gapps-panel-labels">{t('collections')}</span>
         </a>
@@ -354,7 +354,7 @@ const ArtsAndCulture = () => (
        
         <a className="gapps-link" href="https://artsandculture.google.com/">
             <div className="gapps-icons-transform">
-                <span className="gapps-panel-icons" style={{'background-position': '0 -1518px'}} />
+                <span className="gapps-panel-icons" style={{'backgroundPosition': '0 -1518px'}} />
             </div>
             <span className="gapps-panel-labels">{t('arts_and_culture')}</span>
         </a>
@@ -365,7 +365,7 @@ const GoogleAds = () => (
     <li>
         <a className="gapps-link" href="https://ads.google.com/home/">
             <div className="gapps-icons-transform">
-                <span className="gapps-panel-icons" style={{'background-position': '0 -414px'}} />
+                <span className="gapps-panel-icons" style={{'backgroundPosition': '0 -414px'}} />
             </div>
             <span className="gapps-panel-labels">{t('google_ads')}</span>
         </a>
@@ -376,7 +376,7 @@ const Podcasts = () => (
     <li>
         <a className="gapps-link" href="https://podcasts.google.com/">
             <div className="gapps-icons-transform">
-                <span className="gapps-panel-icons" style={{'background-position': '0 -552px'}} />
+                <span className="gapps-panel-icons" style={{'backgroundPosition': '0 -552px'}} />
             </div>
             <span className="gapps-panel-labels">{t('podcasts')}</span>
         </a>
@@ -387,7 +387,7 @@ const GoogleOne = () => (
     <li>
         <a className="gapps-link" href="https://one.google.com/">
             <div className="gapps-icons-transform">
-                <span className="gapps-panel-icons" style={{'background-position': '0 -2691px'}} />
+                <span className="gapps-panel-icons" style={{'backgroundPosition': '0 -2691px'}} />
             </div>
             <span className="gapps-panel-labels">{t('google_one')}</span>
         </a>
@@ -398,7 +398,7 @@ const Travel = () => (
     <li>
         <a className="gapps-link" href="https://www.google.com/travel/">
             <div className="gapps-icons-transform">
-                <span className="gapps-panel-icons" style={{'background-position': '0 -3036px'}} />
+                <span className="gapps-panel-icons" style={{'backgroundPosition': '0 -3036px'}} />
             </div>
             <span className="gapps-panel-labels">{t('travel')}</span>
         </a>
@@ -409,7 +409,7 @@ const Forms = () => (
     <li>
         <a className="gapps-link" href="https://docs.google.com/forms/">
             <div className="gapps-icons-transform">
-                <span className="gapps-panel-icons" style={{'background-position': '0 -2139px'}} />
+                <span className="gapps-panel-icons" style={{'backgroundPosition': '0 -2139px'}} />
             </div>
             <span className="gapps-panel-labels">{t('forms')}</span>
         </a>
