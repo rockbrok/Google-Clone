@@ -18,12 +18,12 @@ export default function PageNotFound() {
         </Link> 
         </picture>
         <p className="notfound-p">
-        <b>404. </b>
-        <ins>{t("thats_an_error")}</ins>
+          <b>404. </b>
+          <ins>{t("thats_an_error")}</ins>
         </p>
         <p className="notfound-p">
-        <span>{t("requested_url")}{window.location.pathname}{t("not_found_on_server")}</span>
-        <ins>{t("thats_all_we_know")}</ins>
+          <span>{t("requested_url")}{window.location.pathname}{t("not_found_on_server")}</span>
+          <ins>{t("thats_all_we_know")}</ins>
         </p>
       </div>
       <div className="right-container">

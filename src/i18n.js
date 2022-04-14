@@ -18,7 +18,8 @@ i18n
   .use(LanguageDetector)
   .init({
       resources,
-      lng: 'en',
+      supportedLngs: ['en', 'es'],
+      fallbackLng: 'en',
 
       keySeperator: false,
 
@@ -27,7 +28,7 @@ i18n
       },
 
       detection: {
-          order: ['cookie', 'htmlTag', 'localStorage', 'path'],
+          order: ['cookie', 'localStorage'],
           caches: ['cookie'],
       },
   });
