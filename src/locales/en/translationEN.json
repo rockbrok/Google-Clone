@@ -63,5 +63,11 @@
         "dark_theme": {
             "off": "Dark theme: Off",
             "on": "Dark theme: On"
-        }
+        },
+
+    "not_found_title": "Error 404 (Not Found)!!1",
+    "thats_an_error": "That's an error.",
+    "requested_url": "The requested URL ",
+    "not_found_on_server": " was not found on this server. ",
+    "thats_all_we_know": "That's all we know."
 }

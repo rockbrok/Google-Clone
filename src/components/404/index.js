@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import './style.css';
 
 export default function PageNotFound() {
+  const { t } = useTranslation()
   useEffect(() => {
-    document.title = "Error 404 (Not Found)!!1"
- }, []);
+    document.title = t('not_found_title') },);
 
   return (
     <div className="notfound-wrapper">
@@ -18,11 +19,11 @@ export default function PageNotFound() {
         </picture>
         <p className="notfound-p">
         <b>404. </b>
-        <ins>That's an error.</ins>
+        <ins>{t("thats_an_error")}</ins>
         </p>
         <p className="notfound-p">
-        <span>The requested URL {window.location.pathname} was not found on this server. </span>
-        <ins>That's all we know.</ins>
+        <span>{t("requested_url")}{window.location.pathname}{t("not_found_on_server")}</span>
+        <ins>{t("thats_all_we_know")}</ins>
         </p>
       </div>
       <div className="right-container">
