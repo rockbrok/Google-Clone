@@ -1,4 +1,56 @@
+.notfound-wrapper {
+  padding: 15px;
+}
+
 .notfound-container {
-    background-color: #fff;
-    z-index: 100;
+    display: flex;
+    flex-direction: row;
+    width: min(625px - 30px);
+    padding: clamp(0, 10%, 15%);
+    height: auto;
+    margin: 15px 0;
+    margin-inline: auto;
+    font-size: 15px;
+    color: rgb(34, 34, 34);
+    margin-top: 7%;
+
+}
+
+ins {
+  color: #777;
+  text-decoration: none;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.left-container {
+    flex-direction: column;
+    padding: 30px 0 15px 0;
+    width: 424px;
+
+}
+
+.notfound-p {
+  margin: 14px 0 22px 0;
+}
+
+.right-container {
+  display: flex;
+  flex-direction: row;
+  width: 200px;
+}
+
+.robot {
+  margin-top: 5px;
+  margin-left: 20px;
+}
+
+.notfound-logo {
+  margin-left: -5px;
+}
+
+@media screen and (max-width: 774px) {
+  .robot {
+    display: none;
+  }
 }
