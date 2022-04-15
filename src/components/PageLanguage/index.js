@@ -1,4 +1,3 @@
-import { useTranslation } from "react-i18next";
 import i18n, { t } from 'i18next';
 
 import './style.css';
@@ -16,8 +15,6 @@ function LanguageChange() {
 }
 
 export default function PageLanguage() {
-  const { t } = useTranslation()
-
   return (
     <Language />
   )
