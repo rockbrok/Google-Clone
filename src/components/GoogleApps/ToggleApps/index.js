@@ -1,26 +1,25 @@
-import React, { useState } from 'react';
 import OutsideClickHandler from 'react-outside-click-handler';
-import './style.css';
-import GoogleApps from '../../components/GoogleApps/index';
+import GoogleApps from '../../GoogleApps';
+import { useState } from 'react';
 
-export function ToggleApps() {
+import './style.css';
+
+export default function ToggleApps() {
   const [show, setShow] = useState(false)
 
-    return (
-      <>
-        <li className="pl">
-          <OutsideClickHandler onOutsideClick={() => {setShow(false);}}>
-              <button onClick={() => setShow(!show)} alt="Google apps">
-                { show ? <GAppsActive/> : <GAppsInactive/> }
-              </button>
-            { show ? <GoogleApps/> : null }
-          </OutsideClickHandler>
-        </li>
-      </>
-    )
+  return (
+    <li className="pl">
+      <OutsideClickHandler onOutsideClick={() => {setShow(false);}}>
+        <button onClick={() => setShow(!show)} alt="Google apps">
+          { show ? <GAppsActive/> : <GAppsInactive/> }
+        </button>
+        { show ? <GoogleApps/> : null }
+      </OutsideClickHandler>
+    </li>
+  )
 }
 
-const GAppsInactive = (e) => (
+const GAppsInactive = () => (
   <div 
     className="gapps-icon-link" alt="Google apps" data-title={`Google apps`}>
     <GApps/>

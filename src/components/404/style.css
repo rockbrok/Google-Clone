@@ -64,7 +64,7 @@ ins {
   }
 
   .left-container {
-    width: fill;
+    width: stretch;
   }
 
   .right-container {

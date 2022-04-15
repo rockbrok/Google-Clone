@@ -22,60 +22,6 @@ header a {
   color: var(--text-color-2);
 }
 
-.gapps-icon-link,
-.gapps-icon-link-active,
-.gapps-icon {
-  align-self: center;
-  justify-content: center;
-  position: relative;
-}
-
-.gapps-icon-link,
-.gapps-icon-link-active {
-  display: flex;
-  width: 40px;
-  padding: 8px 0;
-  margin-left: 4px;
-}
-
-.gapps-icon {
-  height: 24px;
-  width: 24px;
-  fill: var(--gapp-icon-fill);
-}
-
-.gapps-icon-link-active.active {
-  background-color: var(--gapp-icon-active);
-  border-radius: 50%;
-}
-
-.gapps-icon-link:hover {
-  width: 40px;
-  background-color: var(--gapp-icon-hover);
-  border-radius: 50%;
-}
-
-[data-title="Google apps"]::after {
-  content: attr(data-title);
-  position: absolute;
-  font-size: 12px;
-  top: 44px;
-  height: auto;
-  padding: 5px 7px;
-  color: var(--gapp-title);
-  letter-spacing: 0.675px;
-  word-spacing: 1.25px;
-  border-radius: 4px;
-  background-color: var(--gapp-title-background);
-  visibility: hidden;
-}
-
-[data-title="Google apps"]:hover::after {
-  opacity: 1;
-  transition: all 0.01s ease 0.5s;
-  visibility: visible;
-}
-
 .sign-in {
   width: 96px;
   height: 36px;

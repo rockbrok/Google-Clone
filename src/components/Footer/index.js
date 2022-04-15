@@ -1,48 +1,49 @@
-import './style.css';
-import { TogglePanel } from './togglePanel';
+import TogglePanel from '../SettingsPanel/TogglePanel';
 import { t } from 'i18next';
+
+import './style.css';
 
 function Footer() {
   return (
     <footer>
-        <FooterCountry />
-        <div className="footer-content">
-            <ul>
-                <About />
-                <Advertising />
-                <Business />
-                <HowSearchWorks />
-            </ul>
-            <ul>
-                <Privacy />
-                <Terms />
-                <TogglePanel />
-            </ul>
-        </div>
+      <FooterCountry />
+      <div className="footer-content">
+        <ul>
+          <About />
+          <Advertising />
+          <Business />
+          <HowSearchWorks />
+        </ul>
+        <ul>
+          <Privacy />
+          <Terms />
+          <TogglePanel />
+        </ul>
+      </div>
     </footer>
   )
 }
 
 const FooterCountry = () => (
-    <div className="footer-country">
-        Argentina
-    </div>
+  <div className="footer-country">
+    Argentina
+  </div>
 );
 
 const About = () => (
-    <li>
-        <a href="https://about.google/" alt="About">
-            {t('about')}
-        </a>
-    </li>
+  <li>
+    <a href="https://about.google/" alt="About">
+      {t('about')}
+    </a>
+  </li>
 );
 
 const Advertising = () => (
-    <li>
-        <a href="https://ads.google.com/" alt="Advertising">
-            {t('advertising')}
-        </a>
-    </li>
+  <li>
+    <a href="https://ads.google.com/" alt="Advertising">
+      {t('advertising')}
+    </a>
+  </li>
 );
 
 const Business = () => (

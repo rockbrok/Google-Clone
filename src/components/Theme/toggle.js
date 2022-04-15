@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { SunIcon } from '@heroicons/react/solid';
-import { MoonIcon } from '@heroicons/react/solid';
+import { SunIcon, MoonIcon } from '@heroicons/react/solid';
 import { t } from 'i18next';
+
 import './../SettingsPanel/style.css';
 
 export const Toggle = ({ theme, toggleTheme }) => {

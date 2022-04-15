@@ -6,21 +6,18 @@ footer {
 }
 
 .footer-country,
-footer a,
-button.settings {
+footer a {
   color: var(--text-color-1);
   line-height: 16px;
   font-weight: 400;
 }
 
-footer a,
-button.settings {
+footer a {
   text-decoration: none;
   font-size: 14px;
 }
 
-footer a:hover,
-button.settings:hover {
+footer a:hover {
   text-decoration: underline;
   cursor: pointer;
 }

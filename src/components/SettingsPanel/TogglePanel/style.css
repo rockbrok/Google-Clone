@@ -1,0 +1,15 @@
+button.settings {
+    color: var(--text-color-1);
+    line-height: 16px;
+    font-weight: 400;
+}
+
+button.settings {
+    text-decoration: none;
+    font-size: 14px;
+}
+
+button.settings:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}

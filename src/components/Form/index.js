@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
-import { SearchIcon } from '@heroicons/react/solid';
-import { MicrophoneIcon } from '@heroicons/react/solid';
-import { XIcon } from '@heroicons/react/solid';
+import { Component } from 'react';
+import { SearchIcon, MicrophoneIcon, XIcon } from '@heroicons/react/solid';
 import { t } from 'i18next';
+
 import './SearchButton/style.css';
 import './SearchBar/style.css';
 
