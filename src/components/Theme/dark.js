@@ -17,6 +17,8 @@ export const darkTheme = {
   textcolor3: 'hsl(217, 89%, 76%)',
   textcolor4: 'hsl(213, 7%, 76%)',
   textcolor5: 'hsl(217, 89%, 76%)',
+  textcolor6: 'hsl(216, 12%, 92%)',
+  textcolor7: 'hsl(210, 6%, 63%)',
   bordercolor1: 'hsl(213, 5%, 39%)',
   bordercolor2: 'hsl(206, 6%, 25%)',
   bordercolor3: 'hsl(220, 8%, 14%)',

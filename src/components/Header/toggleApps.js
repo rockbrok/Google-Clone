@@ -20,13 +20,8 @@ export function ToggleApps() {
     )
 }
 
-function showTitle(e) {
-  e.target.getAttribute('data-title').style.display = 'block';
-}
-
 const GAppsInactive = (e) => (
   <div 
-    onMouseEnter={showTitle}
     className="gapps-icon-link" alt="Google apps" data-title={`Google apps`}>
     <GApps/>
   </div>

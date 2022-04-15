@@ -2,6 +2,8 @@
   --background-color: hsl(0deg 0% 100%);
   --footer-background-color: hsl(0deg 0% 95%);
   --logo: url("../public/googlelogo_color.png");
+  --notfound-logo: url("../public/googlelogo_color_150x54dp.png");
+  --robot: url("../public/robot.png");
   --scrollbar-color: hsl(0deg 0% 95%);
   --scrollbar-thumb: hsl(0deg 0% 76%);
   --gapp-icon-fill: hsl(220deg 5% 39%);
@@ -25,6 +27,8 @@
   --text-color-3: hsl(214deg 82% 51%);
   --text-color-4: hsl(206deg 6% 25%);
   --text-color-5: hsl(245deg 86% 36%);
+  --text-color-6: hsl(0deg 0% 13%);
+  --text-color-7: hsl(0deg 0% 47%);
   --border-color-1: hsl(220deg 9% 87%);
   --border-color-2: hsl(196deg 48% 94%);
   --border-color-3: hsl(230deg 9% 87%);
@@ -47,20 +51,13 @@ body {
   overflow: hidden;
 }
 
+a,
 ins {
-  color: #777;
   text-decoration: none;
-  font-size: 15px;
-  font-weight: 400;
-
 }
 
 i {
   font-style: normal;
-}
-
-a {
-  text-decoration: none;
 }
 
 a:hover {
@@ -142,11 +139,4 @@ button:hover {
 ::-webkit-scrollbar-button:single-button:vertical:increment {
   background-position: 3px 3px;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(96, 96, 96)'><polygon points='0,0 100,0 50,50'/></svg>");
-}
-
-/* media queries */
-@media only screen and (max-height: 505px) {
-  body {
-    overflow-y: scroll;
-  }
 }
