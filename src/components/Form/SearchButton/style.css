@@ -1,38 +1,38 @@
 .search-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 12px 20px 0;
-    width: calc(100% - 40px);
-    height: 58px;
-  }
+  display: flex;
+  width: calc(100% - 40px);
+  height: 58px;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px 0;
+}
   
-  .google-search,
-  .lucky-search {
-    height: 36px;
-    width: min-content;
-    padding: 0 16px;
-    margin: 8px;
-    border-radius: 4px;
-    color: var(--text-color-2);
-    font-size: 14px;
-    background-color: var(--search-button-color);
-    border: 1px solid transparent;
-  }
+.google-search,
+.lucky-search {
+  width: min-content;
+  height: 36px;
+  padding: 0 16px;
+  border: 1px solid transparent;
+  margin: 8px;
+  background-color: var(--search-button-color);
+  border-radius: 4px;
+  color: var(--text-color-2);
+  font-size: 14px;
+}
   
-  .google-search {
-    margin-right: 3px;
-    padding-right: 17px;
-    padding-left: 16px;
-  }
+.google-search {
+  padding-right: 17px;
+  padding-left: 16px;
+  margin-right: 3px;
+}
   
-  .google-search:hover,
-  .lucky-search:hover {
-    border-color: var(--border-color-1);
-  }
+.google-search:hover,
+.lucky-search:hover {
+  border-color: var(--border-color-1);
+}
 
-  .google-search:active,
-  .lucky-search:active {
-    border-color: var(--border-color-4);
-  }
+.google-search:active,
+.lucky-search:active {
+  border-color: var(--border-color-4);
+}
   

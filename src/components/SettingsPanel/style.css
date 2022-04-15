@@ -1,12 +1,12 @@
 ul.panel {
-  display: block;
   position: absolute;
+  right: 0;
+  bottom: 46px;
+  display: block;
   min-width: 200px;
   height: auto;
-  background: var(--background-color);
   border: 1px solid var(--text-color-1);
-  bottom: 46px;
-  right: 0;
+  background: var(--background-color);
 }
 
 ul.panel li {
@@ -16,14 +16,14 @@ ul.panel li {
 
 ul.panel li a,
 ul.panel li button {
+  display: block;
   width: auto;
   height: auto;
-  display: block;
+  padding: 15px;
   color: var(--text-color-1);
+  cursor: pointer;
   font-size: 14px;
   line-height: 16px;
-  padding: 15px;
-  cursor: pointer;
   text-align: left;
   white-space: nowrap;
 }
@@ -39,12 +39,12 @@ ul.panel li button {
 button.dark-off .sun-icon,
 button.dark-on .moon-icon {
   position: absolute;
-  display: none;
-  height: 22px;
-  width: 22px;
-  fill: var(--text-color-1);
   right: 15px;
   bottom: 13px;
+  display: none;
+  width: 22px;
+  height: 22px;
+  fill: var(--text-color-1);
 }
 
 button.dark-off:hover,
