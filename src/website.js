@@ -8,23 +8,22 @@ import { useEffect } from 'react';
 
 import './App.css';
 
-function Website() {
+export default function Website() {
   const { t } = useTranslation();
 
   useEffect(() => {
     document.title = "Google"
   });
 
-  return ( <>
-    <Header />
+  return (
+    <>
+      <Header />
       <main>
         <Logo />
         <Form />
         <PageLanguage />
       </main>
-    <Footer />
+      <Footer />
     </>
-  );
+  )
 }
-
-export default Website

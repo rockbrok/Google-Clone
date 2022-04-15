@@ -68,7 +68,7 @@
 
 .gapps-panel-icons {
   display: inline-block;
-  background-image: url("./googleapps.png");
+  background-image: var(--google-apps);
   background-size: 64px 3100px;
   vertical-align: top;
   height: 64px;

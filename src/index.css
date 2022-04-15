@@ -2,6 +2,7 @@
   --background-color: hsl(0deg 0% 100%);
   --footer-background-color: hsl(0deg 0% 95%);
   --logo: url("../public/googlelogo_color.png");
+  --google-apps: url("../public/googleapps.png");
   --notfound-logo: url("../public/googlelogo_color_150x54dp.png");
   --robot: url("../public/robot.png");
   --scrollbar-color: hsl(0deg 0% 95%);
@@ -45,10 +46,11 @@ body {
   padding: 0;
   font-family: Arial, san-serif;
   font-size: 14px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   background-color: var(--background-color);
   overflow: hidden;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a,
