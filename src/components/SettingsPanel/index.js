@@ -1,9 +1,4 @@
-import { ThemeProvider } from 'styled-components';
-import { lightTheme } from '../Theme/light';
-import { darkTheme } from '../Theme/dark';
-import { GlobalStyles } from '../Theme/global';
-import { useTheme } from '../Theme/useTheme';
-import { Toggle } from '../Theme/toggle';
+import { darkTheme, lightTheme, GlobalStyles, Toggle, useTheme, ThemeProvider } from '../Theme';
 import { t } from 'i18next';
 
 import './style.css';
