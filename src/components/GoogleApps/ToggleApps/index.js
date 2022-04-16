@@ -1,5 +1,5 @@
 import OutsideClickHandler from 'react-outside-click-handler';
-import GoogleApps from '../../GoogleApps';
+import GoogleApps from '../../GoogleApps/index';
 import { useState } from 'react';
 
 import './style.css';
