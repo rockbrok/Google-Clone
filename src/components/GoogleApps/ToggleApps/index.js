@@ -23,7 +23,6 @@ export default function ToggleApps() {
 const GAppsButton = ({ show, showTitle, setShowTitle }) => (
   <div
     className={!show ? 'gapps-icon-link' : 'gapps-icon-link-active active'}
-    alt="Google apps"
     onMouseEnter={!show ? (e) => setShowTitle(true) : (e) => setShowTitle(false)}
     onMouseLeave={(e) => setShowTitle(false)}
     onClick={(e) => setShowTitle(false)}
@@ -34,7 +33,7 @@ const GAppsButton = ({ show, showTitle, setShowTitle }) => (
 );
 
 const Title = ({ showTitle }) => (
-  <div className="title" style={{ display: showTitle ? "block" : "none" }}>Google apps</div>
+  <div className="title fade-in" style={{ display: showTitle ? "block" : "none" }}>Google apps</div>
 );
 
 const GApps = () => (

@@ -11,7 +11,7 @@
   --gapp-icon-hover: hsl(240deg 3% 92%);
   --gapp-icon-active: hsl(240deg 3% 83%);
   --gapp-title: hsl(240deg 3% 100%);
-  --gapp-title-background: hsl(220deg 5% 32%);
+  --gapp-title-background: rgb(37, 38, 41);
   --gapp-background-color: hsl(0deg 0% 100%);
   --gapp-shadow: hsl(206deg 5% 25% / 35%);
   --gapp-thumb-color: hsl(230deg 9% 87%);
