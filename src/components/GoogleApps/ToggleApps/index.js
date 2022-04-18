@@ -6,12 +6,13 @@ import './style.css';
 
 export default function ToggleApps() {
   const [show, setShow] = useState(false)
+  const [showTitle, setShowTitle] = useState(false);
 
   return (
     <li className="pl">
-      <OutsideClickHandler onOutsideClick={() => {setShow(false);}}>
+      <OutsideClickHandler onOutsideClick={() => { setShow(false) }}>
         <button onClick={() => setShow(!show)} alt="Google apps">
-          { show ? <GAppsActive/> : <GAppsInactive/> }
+          <GAppsButton setShowTitle={setShowTitle} showTitle={showTitle} show={show} />
         </button>
         { show ? <GoogleApps/> : null }
       </OutsideClickHandler>
@@ -19,17 +20,21 @@ export default function ToggleApps() {
   )
 }
 
-const GAppsInactive = () => (
-  <div 
-    className="gapps-icon-link" alt="Google apps" data-title={`Google apps`}>
+const GAppsButton = ({ show, showTitle, setShowTitle }) => (
+  <div
+    className={!show ? 'gapps-icon-link' : 'gapps-icon-link-active active'}
+    alt="Google apps"
+    onMouseEnter={!show ? (e) => setShowTitle(true) : (e) => setShowTitle(false)}
+    onMouseLeave={(e) => setShowTitle(false)}
+    onClick={(e) => setShowTitle(false)}
+  >
     <GApps/>
+    <Title showTitle={showTitle} />
   </div>
 );
 
-const GAppsActive = () => (
-  <div className="gapps-icon-link-active active" alt="Google apps">
-    <GApps/>
-  </div>
+const Title = ({ showTitle }) => (
+  <div className="title" style={{ display: showTitle ? "block" : "none" }}>Google apps</div>
 );
 
 const GApps = () => (

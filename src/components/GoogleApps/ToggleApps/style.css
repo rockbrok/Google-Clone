@@ -31,7 +31,8 @@
   border-radius: 50%;
 }
 
-[data-title="Google apps"]::after {
+.title {
+  display: none;
   position: absolute;
   top: 44px;
   height: auto;
@@ -39,15 +40,8 @@
   background-color: var(--gapp-title-background);
   border-radius: 4px;
   color: var(--gapp-title);
-  content: attr(data-title);
   font-size: 12px;
   letter-spacing: 0.675px;
-  visibility: hidden;
   word-spacing: 1.25px;
-}
-
-[data-title="Google apps"]:hover::after {
-  opacity: 1;
   transition: all 0.01s ease 0.5s;
-  visibility: visible;
 }
