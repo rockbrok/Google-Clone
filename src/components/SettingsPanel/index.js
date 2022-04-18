@@ -1,9 +1,9 @@
-import { darkTheme, lightTheme, GlobalStyles, Toggle, useTheme, ThemeProvider } from '../Theme';
+import { Toggle, useTheme } from '../Theme';
 import { t } from 'i18next';
 
 import './style.css';
 
-export default function SettingsPanel() {
+export const SettingsPanel = () => {
   const [theme, toggleTheme] = useTheme();
 
   return (
@@ -15,10 +15,7 @@ export default function SettingsPanel() {
       <SearchHelp />
       <SendFeedback />
       <Separator />
-      <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
-        <GlobalStyles />
-        <Toggle theme={theme} toggleTheme={toggleTheme} />
-      </ThemeProvider>
+      <Toggle theme={theme} toggleTheme={toggleTheme} />
     </ul>
   )
 }

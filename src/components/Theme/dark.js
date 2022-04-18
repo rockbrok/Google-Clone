@@ -1,6 +1,8 @@
 export const darkTheme = {
   backgroundcolor: 'hsl(225, 6%, 13%)',
   logo: 'url("./googlelogo_white.png")',
+  notfoundlogo: 'url("./google_notfound_logo.png")',
+  robot: 'url("./robot_dark.png")',
   scrollbarcolor: 'hsl(0, 0%, 26%)',
   scrollbarthumb: 'hsl(0, 0%, 41%)',
   gappbackgroundcolor: 'hsl(220, 3%, 18%)',
@@ -22,6 +24,7 @@ export const darkTheme = {
   bordercolor1: 'hsl(213, 5%, 39%)',
   bordercolor2: 'hsl(206, 6%, 25%)',
   bordercolor3: 'hsl(220, 8%, 14%)',
+  bordercolor4: 'hsl(213, 5%, 39%)',
   buttonhover: 'hsl(217, 89%, 78%)',
   buttonactive: 'hsl(217, 88%, 80%)',
   gappsfill: 'hsl(0, 0%, 88%, 87%)',

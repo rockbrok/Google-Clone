@@ -4,6 +4,8 @@ export const GlobalStyles = createGlobalStyle`
   :root {
     --background-color: ${({ theme }) => theme.backgroundcolor};
     --logo: ${({ theme }) => theme.logo};
+    --notfound-logo: ${({ theme }) => theme.notfoundlogo};
+    --robot: ${({ theme }) => theme.robot};
     --scrollbar-color: ${({ theme }) => theme.scrollbarcolor};
     --scrollbar-thumb: ${({ theme }) => theme.scrollbarthumb};
     --gapp-background-color: ${({ theme }) => theme.gappbackgroundcolor};
@@ -25,6 +27,7 @@ export const GlobalStyles = createGlobalStyle`
     --border-color-1: ${({ theme }) => theme.bordercolor1};
     --border-color-2: ${({ theme }) => theme.bordercolor2};
     --border-color-3: ${({ theme }) => theme.bordercolor3};
+    --border-color-4: ${({ theme }) => theme.bordercolor4};
     --button-hover: ${({ theme }) => theme.buttonhover};
     --button-active: ${({ theme }) => theme.buttonactive};
     --gapp-icon-fill: ${({ theme }) => theme.gappsfill};

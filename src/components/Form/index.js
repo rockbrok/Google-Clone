@@ -5,7 +5,7 @@ import { t } from 'i18next';
 import './SearchButton/style.css';
 import './SearchBar/style.css';
 
-class Form extends Component {
+export default class Form extends Component {
   constructor (props) {
     super(props);
     this.state = {
@@ -46,7 +46,7 @@ class Form extends Component {
     this.setState({formValid: this.state.searchInputValid});
   }
 
-  render () {
+  render (validateField, validateForm, setState) {
     return (
       <form name="search" method="get" onReset={this.handleFormReset} action="https://www.google.com/search">
         <div className="search-container">
@@ -110,4 +110,4 @@ const VoiceButton = () => (
   </a>
 );
 
-export default Form;
+
