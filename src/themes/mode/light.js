@@ -9,7 +9,7 @@ export const lightTheme = {
   searchbuttonhover: 'hsl(230deg 9% 87%)',
   searchbarhover: 'hsl(0deg 0% 100%)',
   searchbarborderhover: 'hsl(220deg 10% 88%)',
-  searchbarshadowhover: 'hsl(225deg 6% 13%, 48%)',
+  searchbarshadowhover: 'hsl(225deg 6% 13% / 18%)',
   searchbaricon: 'hsl(216deg 4% 46%)',
   searchbaricon2: 'hsl(217deg 7% 63%)',
   textcolor1: 'hsl(0deg 0% 45%)',
