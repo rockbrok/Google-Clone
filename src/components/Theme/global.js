@@ -8,6 +8,7 @@ export const GlobalStyles = createGlobalStyle`
     --robot: ${({ theme }) => theme.robot};
     --scrollbar-color: ${({ theme }) => theme.scrollbarcolor};
     --scrollbar-thumb: ${({ theme }) => theme.scrollbarthumb};
+    --scrollbar-thumb-hover: ${({ theme }) => theme.scrollbarthumbhover};
     --gapp-background-color: ${({ theme }) => theme.gappbackgroundcolor};
     --footer-background-color: ${({ theme }) => theme.footerbackground};
     --searchbar-hover: ${({ theme }) => theme.searchbarhover};

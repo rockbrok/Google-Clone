@@ -5,6 +5,7 @@ export const darkTheme = {
   robot: 'url("./robot_dark.png")',
   scrollbarcolor: 'hsl(0, 0%, 26%)',
   scrollbarthumb: 'hsl(0, 0%, 41%)',
+  scrollbarthumbhover: 'hsl(0, 0%, 48%)',
   gappbackgroundcolor: 'hsl(220, 3%, 18%)',
   footerbackground: 'hsl(0, 0%, 9%)',
   searchbuttoncolor: 'hsl(225, 4%, 20%)',
