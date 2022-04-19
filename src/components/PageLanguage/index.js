@@ -24,7 +24,7 @@ const Language = () => (
   <div className="search-language-container">
     <div className="search-language">
       {t('google_language')}&nbsp;
-      <button onClick={() => LanguageChange()}>
+      <button onClickCapture={() => window.location.reload(false)} onClick={() => LanguageChange()}>
         {t('language_name')}
       </button>
     </div>
