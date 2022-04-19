@@ -9,15 +9,15 @@ export const Toggle = ({ theme, toggleTheme }) => {
 
   return (
     <ToggleContainer lightTheme={!isLight} onClick={toggleTheme}>
-      <div className="pl2"><DarkOn /></div>
-      <div className="pl2"><DarkOff /></div>
+      <div><DarkOn /></div>
+      <div><DarkOff /></div>
     </ToggleContainer>
   );
 };
 
 const DarkOff = () => (
   <li>
-    <button className="dark-off" role="menuitem" tabIndex="-1" alt="Settings">
+    <button className="dark-off" role="menuitem" tabIndex="-1" alt="Settings" onClick={() => window.location.reload(false)}>
       {t('dark_theme.off')}
       <SunIcon className="sun-icon"/>
     </button>
@@ -26,7 +26,7 @@ const DarkOff = () => (
   
 const DarkOn = () => (
   <li>
-    <button className="dark-on" role="menuitem" tabIndex="-1" alt="Settings">
+    <button className="dark-on" role="menuitem" tabIndex="-1" alt="Settings" onClick={() => window.location.reload(false)}>
       {t('dark_theme.on')}
       <MoonIcon className="moon-icon"/>
     </button>

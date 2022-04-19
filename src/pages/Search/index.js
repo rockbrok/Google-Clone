@@ -11,7 +11,7 @@ export default function Search() {
 
   useEffect(() => {
     document.title = "Google"
-  });
+  }, []);
 
   return (
     <>
@@ -21,7 +21,7 @@ export default function Search() {
         <Form />
         <PageLanguage />
       </main>
-      <Footer />
+      <Footer  />
     </>
   )
 }

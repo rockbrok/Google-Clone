@@ -17,9 +17,9 @@ ul.panel li {
 ul.panel li a,
 ul.panel li button {
   display: block;
-  width: auto;
+  width: 100%;
   height: auto;
-  padding: 15px;
+  padding: 15px 40px 15px 15px;
   color: var(--text-color-1);
   cursor: pointer;
   font-size: 14px;
@@ -28,12 +28,13 @@ ul.panel li button {
   white-space: nowrap;
 }
 
-.pl2 {
-  padding-right: 25px;
-}
-
 .panel-separator {
   border-top: 1px solid var(--border-color-2);
+}
+
+button.dark-off,
+button.dark-on {
+  min-width: 200px;
 }
 
 button.dark-off .sun-icon,

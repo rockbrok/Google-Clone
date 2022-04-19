@@ -1,6 +1,5 @@
 .search-button {
   display: flex;
-  width: calc(100% - 40px);
   height: 58px;
   align-items: center;
   justify-content: center;
@@ -12,19 +11,15 @@
   width: min-content;
   height: 36px;
   padding: 0 16px;
-  border: 1px solid transparent;
-  margin: 8px;
+  border: 1px solid var(--background-color);
+  margin: 8px 4.5px;
   background-color: var(--search-button-color);
   border-radius: 4px;
   color: var(--text-color-2);
   font-size: 14px;
 }
   
-.google-search {
-  padding-right: 17px;
-  padding-left: 16px;
-  margin-right: 3px;
-}
+
   
 .google-search:hover,
 .lucky-search:hover {
