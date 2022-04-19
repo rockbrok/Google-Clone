@@ -1,11 +1,11 @@
 import OutsideClickHandler from 'react-outside-click-handler';
-import { SettingsPanel } from './../../SettingsPanel';
+import { SettingsPanel } from '..';
 import { useState } from 'react';
 import { t } from 'i18next';
 
 import './style.css';
 
-export default function TogglePanel() {
+export default function ToggleSettings() {
   const [show, setShow] = useState(false);
 
   return (

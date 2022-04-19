@@ -1,7 +1,7 @@
 import './style.css';
 import { t } from 'i18next';
 
-export default function GoogleApps() {
+export default function AppsPanel() {
   return (
     <div className="gapps-panel">
       <ul>

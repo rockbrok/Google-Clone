@@ -1,4 +1,4 @@
-import TogglePanel from '../SettingsPanel/TogglePanel';
+import ToggleSettings from '../SettingsPanel/ToggleSettings';
 import { t } from 'i18next';
 
 import './style.css';
@@ -17,7 +17,7 @@ export default function Footer() {
         <ul>
           <Privacy />
           <Terms />
-          <TogglePanel />
+          <ToggleSettings />
         </ul>
       </div>
     </footer>

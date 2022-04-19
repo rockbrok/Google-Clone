@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { SunIcon, MoonIcon } from '@heroicons/react/solid';
 import { t } from 'i18next';
 
-import './../SettingsPanel/style.css';
+import './../../components/SettingsPanel/style.css'
 
 export const Toggle = ({ theme, toggleTheme }) => {
   const isLight = theme === 'light';

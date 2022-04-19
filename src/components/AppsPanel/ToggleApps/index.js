@@ -1,5 +1,5 @@
 import OutsideClickHandler from 'react-outside-click-handler';
-import GoogleApps from '../../GoogleApps/index';
+import AppsPanel from '../../AppsPanel/index';
 import { useState } from 'react';
 
 import './style.css';
@@ -14,7 +14,7 @@ export default function ToggleApps() {
         <button onClick={() => setShow(!show)} alt="Google apps">
           <GAppsButton setShowTitle={setShowTitle} showTitle={showTitle} show={show} />
         </button>
-        { show ? <GoogleApps/> : null }
+        { show ? <AppsPanel/> : null }
       </OutsideClickHandler>
     </li>
   )

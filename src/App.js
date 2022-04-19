@@ -1,6 +1,6 @@
 import PageNotFound from './pages/404';
 import Search from './pages/Search';
-import { darkTheme, lightTheme, GlobalStyles, ThemeProvider, useTheme } from './components/Theme';
+import { darkTheme, lightTheme, GlobalStyles, ThemeProvider, useTheme } from './themes';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 export default function App() {

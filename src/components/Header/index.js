@@ -1,4 +1,4 @@
-import ToggleApps from '../GoogleApps/ToggleApps';
+import ToggleApps from '../AppsPanel/ToggleApps';
 import { t } from 'i18next';
 
 import './style.css';
