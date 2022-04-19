@@ -27,5 +27,5 @@ export const lightTheme = {
   gappiconactive: 'hsl(240deg 3% 83%)',
   gapptitlebackground: 'hsl(220deg 5% 32%)',
   gappapphover: 'hsl(218deg 92% 95%)',
-  gappshadow: 'hsl(206deg 5% 25%, 35%)',
+  gappshadow: 'hsl(206deg 5% 25% / 35%)',
 }
