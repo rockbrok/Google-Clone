@@ -11,9 +11,14 @@ export default function ToggleSettings() {
   return (
     <li>
       <OutsideClickHandler onOutsideClick={() => { setShow(false); }}>
-        <button onClick={() => setShow(!show)} className="settings" alt="Settings">
+        <button
+          onClick={() => setShow(!show)}
+          className="settings"
+          alt="Settings"
+        >
           {t('settings')}
         </button>
+        
         { show ? <SettingsPanel/> : null }
       </OutsideClickHandler>
     </li>

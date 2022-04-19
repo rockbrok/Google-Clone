@@ -1,4 +1,4 @@
-import ToggleSettings from '../SettingsPanel/ToggleSettings';
+import ToggleSettings from './../SettingsPanel/ToggleSettings';
 import { t } from 'i18next';
 
 import './style.css';

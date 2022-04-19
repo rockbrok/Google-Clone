@@ -14,7 +14,7 @@ export const SettingsPanel = () => {
       <SearchHistory />
       <SearchHelp />
       <SendFeedback />
-      <Separator />
+      <li className="panel-separator" role="separator" />
       <Toggle theme={theme} toggleTheme={toggleTheme} />
     </ul>
   )
@@ -67,7 +67,3 @@ const SendFeedback = () => (
     </a>
   </li>
 );
-
-const Separator = () => (
-  <li className="panel-separator" role="separator" />
-)

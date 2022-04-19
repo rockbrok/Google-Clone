@@ -11,16 +11,14 @@ export default function PageNotFound() {
   }, []);
 
   return (
-    <section className="notfound">
-      <div className="notfound-container">
+      <section className="notfound-container">
         <div className="left-container">
           <Logo />
           <Error />
           <Url />
         </div>
         <Robot />
-      </div>
-    </section>
+      </section>
   )
 }
 

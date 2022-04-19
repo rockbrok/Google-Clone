@@ -1,5 +1,5 @@
 import OutsideClickHandler from 'react-outside-click-handler';
-import AppsPanel from '../index';
+import AppsPanel from './../';
 import { useState } from 'react';
 
 import './style.css';
