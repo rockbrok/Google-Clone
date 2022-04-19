@@ -14,14 +14,12 @@ export default function Search() {
   }, []);
 
   return (
-    <>
+    <main>
       <Header />
-      <main>
-        <Logo />
-        <Form />
-        <PageLanguage />
-      </main>
+      <Logo />
+      <Form />
+      <PageLanguage />
       <Footer  />
-    </>
+    </main>
   )
 }

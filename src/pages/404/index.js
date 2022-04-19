@@ -8,7 +8,7 @@ export default function PageNotFound() {
 
   useEffect(() => {
     document.title = t('not_found_title')
-  });
+  }, []);
 
   return (
     <section className="notfound">

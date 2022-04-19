@@ -42,7 +42,9 @@
 }
 
 body {
-  overflow: hidden;
+  overflow-x: hidden;
+  display: flex;
+  flex-flow: column;
   padding: 0;
   margin: 0;
   background-color: var(--background-color);
@@ -50,6 +52,12 @@ body {
   font-size: 14px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  display: flex;
+  flex-flow: column;
+  height: 100vh;
 }
 
 a,
@@ -94,11 +102,7 @@ button:hover {
   cursor: pointer;
 }
 
-@media all and (max-height: 550px) {
-  body {
-    overflow-y: scroll;
-  }
-}
+
 
 ::-webkit-scrollbar {
   width: 15px;

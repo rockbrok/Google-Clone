@@ -3,7 +3,7 @@ import { t } from 'i18next';
 
 import './style.css';
 
-function Footer() {
+export default function Footer() {
   return (
     <footer>
       <FooterCountry />
@@ -47,35 +47,33 @@ const Advertising = () => (
 );
 
 const Business = () => (
-    <li>
-        <a href="https://smallbusiness.withgoogle.com/" alt="Business">
-            {t('business')}
-        </a>
-    </li>
+  <li>
+    <a href="https://smallbusiness.withgoogle.com/" alt="Business">
+      {t('business')}
+    </a>
+  </li>
 );
 
 const HowSearchWorks = () => (
-    <li>
-        <a href="https://www.google.com/search/howsearchworks/" alt="How Search Works">
-            {t('how_search_works')}
-        </a>
-    </li>
+  <li>
+    <a href="https://www.google.com/search/howsearchworks/" alt="How Search Works">
+      {t('how_search_works')}
+    </a>
+  </li>
 );
 
 const Privacy = () => (
-    <li>
-        <a href="https://policies.google.com/privacy/" alt="Privacy">
-            {t('privacy')}
-        </a>
-    </li>
+  <li>
+    <a href="https://policies.google.com/privacy?hl=en/" alt="Privacy">
+      {t('privacy')}
+    </a>
+  </li>
 );
 
 const Terms = () => (
-    <li>
-        <a href="https://policies.google.com/terms/" alt="Terms">
-            {t('terms')}
-        </a>
-    </li>
+  <li>
+    <a href="https://policies.google.com/terms?hl=en/" alt="Terms">
+      {t('terms')}
+    </a>
+  </li>
 );
-
-export default Footer

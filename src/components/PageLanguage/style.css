@@ -1,4 +1,6 @@
 .search-language-container {
+  display: flex;
+  flex: 1 1 auto;
   width: calc(100% - 40px);
   justify-content: center;
   padding: 0 20px;
