@@ -20,6 +20,7 @@ export default function AppsPanel() {
         <Translate />
         <Photos />
         <Duo />
+        <Shopping />
       </ul>
       <Divider />
       <ul>
@@ -208,6 +209,17 @@ const Duo = () => (
           <span className="gapps-panel-icons" style={{'backgroundPosition': '0 -2484px'}} />
       </div>
       <span className="gapps-panel-labels">{t('duo')}</span>
+    </a>
+  </li>
+);
+
+const Shopping = () => (
+  <li>
+    <a className="gapps-link" href="https://shopping.google.com/">
+      <div className="gapps-icons-transform">
+          <span className="gapps-panel-icons" style={{'backgroundPosition': '0 -69px'}} />
+      </div>
+      <span className="gapps-panel-labels">{t('shopping')}</span>
     </a>
   </li>
 );
