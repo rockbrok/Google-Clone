@@ -1,16 +1,15 @@
-import { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { t } from 'i18next';
 
 import './style.css';
 
 export default function PageNotFound() {
-
-  useEffect(() => {
-    document.title = t('not_found_title')
-  }, []);
-
   return (
+    <>
+    <Helmet>
+      <title>{t('not_found_title')}</title>
+    </Helmet>
       <section className="notfound-container">
         <div className="left-container">
           <Logo />
@@ -19,6 +18,7 @@ export default function PageNotFound() {
         </div>
         <Robot />
       </section>
+    </>
   )
 }
 
