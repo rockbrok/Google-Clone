@@ -1,35 +1,32 @@
-import { Component } from 'react';
+import { useState } from 'react';
 import { SearchIcon, MicrophoneIcon, XIcon } from '@heroicons/react/solid';
 import { t } from 'i18next';
 
 import './SearchButton/style.css';
 import './SearchBar/style.css';
 
-export default class Form extends Component {
-  constructor (props) {
-    super(props);
-    this.state = {
-      searchInput: '',
-      searchInputValid: false,
-      formValid: false
-    }
-  }
-  state = this.initialState
-  initialState = { searchInput: '' }
+export default function Form() {
+  const [state, setState] = useState({
+    searchInput: '',
+    searchInputValid: false,
+    formValid: false
+  });
+  
+  const initialState = { searchInput: '' }
 
-  handleFormReset = () => {
-    this.setState(() => this.initialState)
+  const handleFormReset = () => {
+    setState(() => initialState)
   }
 
-  handleUserInput = (e) => {
+  const handleUserInput = (e) => {
     const name = e.target.className;
     const value = e.target.value;
-    this.setState({[name]: value},
-      () => { this.validateField(name, value.trim()) });
+    setState({[name]: value},
+      () => { validateField(name, value.trim()) });
   }
 
-  validateField(fieldName, value) {
-    let searchInputValid = this.state.searchInputValid;
+  const validateField = (fieldName, value) => {
+    let searchInputValid = state.searchInputValid;
 
     switch(fieldName) {
       case 'searchInput':
@@ -38,52 +35,50 @@ export default class Form extends Component {
       default:
         break;
     }
-    this.setState({searchInputValid: searchInputValid,
-    }, this.validateForm);
+    setState({searchInputValid: searchInputValid,
+    }, validateForm);
   }
 
-  validateForm() {
-    this.setState({formValid: this.state.searchInputValid});
+  const validateForm = () => {
+    setState({formValid: state.searchInputValid});
   }
 
-  render (validateField, validateForm, setState) {
-    return (
-      <form name="search" method="get" onReset={this.handleFormReset} action="https://www.google.com/search">
-        <div className="search-container">
-          <div className="search-bar">
-            <SearchIcon className="search-icon" />
-            <input
-              type="search"
-              title={t('searchbar_title')}
-              className="searchInput"
-              name="q"
-              role="search"
-              placeholder=" "
-              maxLength="2048"
-              autoComplete="off"
-              autoCorrect="off"
-              spellCheck="false"
-              aria-label="Search"
-              value={this.state.searchInput}
-              onChange={this.handleUserInput}
-            />
-            <ClearButton />
-            <VoiceButton />
-          </div>
+  return (
+    <form name="search" method="get" onReset={handleFormReset} action="https://www.google.com/search">
+      <div className="search-container">
+        <div className="search-bar">
+          <SearchIcon className="search-icon" />
+          <input
+            type="search"
+            title={t('searchbar_title')}
+            className="searchInput"
+            name="q"
+            role="search"
+            placeholder=" "
+            maxLength="2048"
+            autoComplete="off"
+            autoCorrect="off"
+            spellCheck="false"
+            aria-label="Search"
+            value={state.searchInput}
+            onChange={handleUserInput}
+          />
+          <ClearButton />
+          <VoiceButton />
         </div>
-        <div className="search-button">
-          <ul>
-            <li>
-              <button className="google-search" name="" type="submit" disabled={!this.state.formValid}>
-                {t('google_search')}
-              </button>
-            </li>
-            <LuckySearch />
-          </ul>
-        </div>
-      </form>
-    )
-  }
+      </div>
+      <div className="search-button">
+        <ul>
+          <li>
+            <button className="google-search" name="" type="submit" disabled={state.formValid}>
+              {t('google_search')}
+            </button>
+          </li>
+          <LuckySearch />
+        </ul>
+      </div>
+    </form>
+  )
 }
 
 const LuckySearch = () => (
@@ -109,5 +104,3 @@ const VoiceButton = () => (
     <span className="microphone">{t('search_by_voice')}</span>
   </a>
 );
-
-

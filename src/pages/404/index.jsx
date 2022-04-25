@@ -7,9 +7,9 @@ import './style.css';
 export default function PageNotFound() {
   return (
     <>
-    <Helmet>
-      <title>{t('not_found_title')}</title>
-    </Helmet>
+      <Helmet>
+        <title>{t('not_found_title')}</title>
+      </Helmet>
       <section className="notfound-container">
         <div className="left-container">
           <Logo />
