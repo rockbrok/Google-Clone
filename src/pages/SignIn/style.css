@@ -1,0 +1,207 @@
+.sign-wrapper {
+  display: flex;
+  min-height: 668px;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.flex-grow {
+  display: block;
+  flex-grow: 1;
+  min-height: 30px;
+  box-sizing: border-box;
+  content: "";
+  width: auto;
+  padding-top: 46.8px;
+}
+
+.sign-logo {
+  margin: 0 auto;
+  height: 24px;
+  width: 75px;
+}
+
+.note {
+  color: rgb(95, 99, 104);
+  margin-top: 32px;
+  padding: 8px 0 3px 0;
+  line-height: 20px;
+}
+
+.button-blue {
+  font-family: 'Roboto', arial, sans-serif;
+  font-size: 14px;
+  color: #1a73e8;
+  background-color: transparent;
+  border-radius: 4px;
+  font-weight: 500;
+  letter-spacing: .25px;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 8px 0 3px -3px;
+  padding: 3px;
+}
+
+.button-blue:focus {
+  background-color: #dee6fd;
+}
+
+.button-blue:hover {
+  text-decoration: none;
+}
+
+.button-blue:active {
+  background-color: #c9d5fb;
+}
+
+.heading,
+.sub-heading {
+  font-family: "Noto Sans Myanmar UI", arial, sans-serif;
+  color: rgb(32, 33, 36);
+  margin: 0;
+  text-align: center;
+  word-break: break-word;
+  font-weight: 400;
+}
+
+.heading {
+  padding: 16px 0 0 0;
+  font-size: 24px;
+  line-height: 31.9992px;
+}
+
+.sub-heading {
+  padding: 8px 0 0 0;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.sign-container {
+  display: block;
+  margin: 0 auto;
+  width: 368px;
+  height: 416px;
+  padding: 48px 40px 36px;
+  border-radius: 8px;
+  border: 1px solid rgb(218, 220, 224);
+}
+
+.email-form {
+  position: relative;
+  height: 56px;
+  white-space: normal;
+  vertical-align: top;
+  line-height: 20px;
+  margin: 32px 0 0 0;
+
+}
+
+.email-form input:focus {
+  border: 2px solid #1a73e8;
+  transition: 0.15s;
+}
+
+.email-form .input-placeholder {
+  color: rgb(95, 99, 104);
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  position: absolute;
+  top: 17px;
+  left: 16px;
+  transition: 0.15s;
+}
+
+.email-form input:focus ~ .input-placeholder {
+  transform: translateY(-26px) translateX(-8px);
+  font-size: 12px;
+  background-color: white;
+  padding: 0 6px;
+  color: #1a73e8;
+}
+
+.email-form .input-email {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.input-email {
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  border: 1px solid rgb(218, 220, 224);
+  border-radius: 4px;
+  color: rgb(32, 33, 36);
+  cursor: text;
+  flex-grow: 1;
+  flex-shrink: 1;
+  font-size: 14px;
+  line-height: 24px;
+  white-space: normal;
+  height: 56px;
+  margin-left: 0px;
+  padding: 13px 15px;
+}
+
+.flex-row {
+  margin: 24px 0 0 -8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: auto;
+  height: min-content;
+}
+
+.create-account {
+  font-family: 'Roboto', arial, sans-serif;
+  font-weight: 500;
+  margin: 6px 0;
+  padding: 0 8px;
+  align-items: center;
+  border-radius: 4px;
+  color: rgb(26, 115, 232);
+  font-size: 14px;
+  height: 36px;
+  line-height: 20px;
+  letter-spacing: 0.15px;
+  min-width: 64px;
+  vertical-align: middle;
+}
+
+.create-account:hover {
+  background-color: #f8f8fe;
+}
+
+.create-account:active {
+  background-color: #e3e1fc;
+}
+
+.next {
+  align-self: center;
+  font-family: 'Roboto', arial, sans-serif;
+  border-radius: 4px;
+  align-items: center;
+  background-color: rgb(26, 115, 232);
+  padding: 0 24px;
+  color: white;
+  font-size: 14px;
+  height: 36px;
+  line-height: 20px;
+  letter-spacing: 0.15px;
+  min-width: 64px;
+  vertical-align: middle;
+  transition-property: background-color;
+  transition-delay: 0.025s;
+}
+
+.next:hover {
+  background-color: rgb(26, 110, 232);
+  box-shadow: 0 1px 2px 0 rgba(60,64,67,.3), 0 1px 3px 1px rgba(60,64,67,.15);
+}
+
+.next:active {
+  background-color: rgb(26, 90, 225);
+  box-shadow: 0 1px 2px 0 rgba(60,64,67,.3), 0 1px 3px 1px rgba(60,64,67,.15);
+}

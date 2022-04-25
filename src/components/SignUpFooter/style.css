@@ -1,0 +1,53 @@
+.signup-footer {
+
+  display: block;
+
+  flex-grow: 1;
+  min-height: 64px;
+  content: "";
+  box-sizing: border-box;
+}
+
+.signup-footer-container {
+  display: flex;
+  font-family: 'Roboto', "Noto Sans Myanmar UI", arial, sans-serif;
+  font-size: 12px;
+  line-height: 16.8px;
+
+  padding-top: 24px;
+  margin: 0 auto;
+  width: 450px;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.signup-footer-language {
+  font-size: 12px;
+  letter-spacing: -0.10px;
+  display: flex;
+  white-space: nowrap;
+  color: rgb(32, 33, 36);
+  height: min-content;
+}
+
+.signup-footer-links {
+  font-family: 'Roboto';
+  color: rgb(117, 117, 117);
+  font-weight: 500;
+  display: inline-block;
+  margin: -1px -16px 0 0;
+  height: min-content;
+  display: flex;
+  justify-content: space-between;
+}
+
+.signup-footer-links li {
+  border-radius: 2px;
+  cursor: pointer;
+  padding: 6px 16px;
+  margin: -7px 0 0 0;
+}
+
+.signup-footer-links li:active {
+  background-color: rgb(224, 224, 224);
+}
