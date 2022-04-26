@@ -1,0 +1,21 @@
+.heading,
+.sub-heading {
+  font-family: "Noto Sans Myanmar UI", arial, sans-serif;
+  color: rgb(32, 33, 36);
+  margin: 0;
+  text-align: center;
+  word-break: break-word;
+  font-weight: 400;
+}
+
+.heading {
+  padding: 12px 0 0 0;
+  font-size: 24px;
+  line-height: 31.9992px;
+}
+
+.sub-heading {
+  padding: 8px 0 1px 0;
+  font-size: 16px;
+  line-height: 24px;
+}

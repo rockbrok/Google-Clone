@@ -70,5 +70,19 @@
     "thats_an_error": "That's an error.",
     "requested_url": "The requested URL ",
     "not_found_on_server": " was not found on this server. ",
-    "thats_all_we_know": "That's all we know."
+    "thats_all_we_know": "That's all we know.",
+
+    "sign_in_title": "Sign in - Google Accounts",
+    "sign_in_heading": "Sign in",
+    "sign_in_subheading": "Use your Google Account",
+    "sign_in_form_placeholder": "Email or phone",
+    "sign_in_forgot_email": "Forgot email?",
+    "sign_in_note": "Not your computer? Use Guest mode to sign in privately.",
+    "sign_in_learn_more": "Learn more",
+    "sign_in_create_account": "Create account",
+
+    "next": "Next",
+
+    "signpage_footer_help": "Help"
+
 }

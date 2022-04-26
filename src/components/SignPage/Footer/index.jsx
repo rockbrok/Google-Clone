@@ -1,6 +1,8 @@
+import { t } from 'i18next';
+
 import './style.css'
 
-export default function SignUpFooter() {
+export default function SignPageFooter() {
   return (
     <section className="signup-footer" >
       <div className="signup-footer-container">
@@ -19,8 +21,8 @@ const LanguageSelector = () => (
   
 const Links = () => (
   <ul className="signup-footer-links">
-    <li>Help</li>
-    <li>Privacy</li>
-    <li>Terms</li>
+    <li>{t('signpage_footer_help')}</li>
+    <li>{t('privacy')}</li>
+    <li>{t('terms')}</li>
   </ul>
 );

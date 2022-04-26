@@ -70,5 +70,19 @@
     "thats_an_error": "Eso es un error.",
     "requested_url": "La URL solicitada ",
     "not_found_on_server": " se encontró en este servidor. ",
-    "thats_all_we_know": "Eso es todo lo que sabemos."
+    "thats_all_we_know": "Eso es todo lo que sabemos.",
+
+    "sign_in_title": "Acceso: Cuentas de Google",
+    "sign_in_heading": "Acceder",
+    "sign_in_subheading": "Usa tu Cuenta de Google",
+    "sign_in_form_placeholder": "Correo electrónico o teléfono",
+    "sign_in_forgot_email": "¿Olvidaste el correo electrónico?",
+    "sign_in_note": "¿Esta no es tu computadora? Usa el modo de invitado para navegar de forma privada.",
+    "sign_in_learn_more": "Más información",
+    "sign_in_create_account": "Crear cuenta",
+
+    "next": "Siguiente",
+
+    "signpage_footer_help": "Ayuda"
+
 }
