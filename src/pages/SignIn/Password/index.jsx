@@ -1,15 +1,16 @@
-import SignPageFooter from '../../components/SignPage/Footer';
-import SignPageHeader from '../../components/SignPage/Header';
+import SignPageFooter from '../../../components/SignPage/Footer';
+import SignPageHeader from '../../../components/SignPage/Header';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { t } from 'i18next';
 
 import './style.css';
-import './../../components/SignPage/Container/style.css'
-import './../../components/SignPage/NextButton/style.css'
-import './../../components/SignPage/Heading/style.css'
+import './../../../components/SignPage/Container/style.css';
+import './../../../components/SignPage/NextButton/style.css';
+import './../../../components/SignPage/Heading/style.css';
+import './../../../components/SignPage/SignInForm/style.css';
 
-export default function SignIn() {
+export default function SignInPassword() {
   return (
     <>
       <Helmet>
@@ -22,10 +23,9 @@ export default function SignIn() {
             <Logo />
             <Heading />
             <Input />
-            <Forgot />
-            <Note />
+            <ShowPassword />
             <div className="flex-row">
-              <CreateAccount />
+              <Forgot />
               <Next />
             </div>
           </div>
@@ -51,42 +51,42 @@ const Logo = () => (
 
 const Heading = () => (
   <>
-    <center><h1 className="heading">{t('sign_in_heading')}</h1></center>
-    <h4 className="sub-heading">{t('sign_in_subheading')}</h4>
+    <center><h1 className="heading">Hi Name</h1></center>
+    <center><div className="email-name">email@gmail.com</div></center>
   </>
 );
 
 const Input = () => (
-  <div className="email-form">
-    <form>
-      <input className="input-email" required autocomplete="off" minLength="1" spellCheck="false" dir="ltr" />
-      <span className="input-placeholder">{t('sign_in_form_placeholder')}</span>
-    </form>
+  <form className="signin-form pass-form">
+    <input className="input-email" type="password" id="password" required autocomplete="off" minLength="1" spellCheck="false" dir="ltr" />
+    <span className="input-placeholder">Enter your password</span>
+  </form>
+);
+
+function showPassword() {
+  var x = document.getElementById("password");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+
+const ShowPassword = () => (
+  <div>
+    <label className="pass-container" onClick={showPassword}>Show password
+      <span className="checkmark-bg">
+        <input className="password-checkbox" type="checkbox" onClick={showPassword}/>
+        <span class="checkmark"/>
+      </span>
+    </label>
   </div>
 );
 
 const Forgot = () => (
-  <Link to="/signin/usernamerecovery/">
-    <button className="button-blue">
-      {t('sign_in_forgot_email')}
-    </button>
-  </Link>
-);
-
-const Note = () => (
-  <div className="note">
-    {t('sign_in_note')} 
-    <br/>
-    <a className="button-blue" href="https://support.google.com/chrome/answer/6130773?hl=en" rel="noreferrer" target="_blank">
-      {t('sign_in_learn_more')}
-    </a>
-  </div>
-);
-
-const CreateAccount = () => (
-  <Link to="/signup/">
+  <Link to="/signin/passwordrecovery/">
     <button className="create-account">
-      {t('sign_in_create_account')}
+      Forgot password?
     </button>
   </Link>
 );

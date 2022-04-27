@@ -35,7 +35,7 @@ const Images = () => (
 
 const SignIn = () => (
   <li>
-    <Link to="/signin/">
+    <Link to="/signin/identifier/">
       <button className="sign-in" target="_top">
         {t('sign_in')}
       </button>

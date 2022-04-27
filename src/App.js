@@ -1,6 +1,7 @@
 import PageNotFound from './pages/404';
-import SignIn from './pages/SignIn';
-import UsernameRecovery from './pages/UsernameRecovery';
+import SignInEmail from './pages/SignIn/Email';
+import SignInPassword from './pages/SignIn/Password';
+import PasswordRecovery from './pages/PasswordRecovery';
 import SignUp from './pages/SignUp';
 import Search from './pages/Search';
 import { darkTheme, lightTheme, GlobalStyles, ThemeProvider, useTheme } from './themes';
@@ -20,8 +21,9 @@ export default function App() {
       <Router>
         <Routes>
           <Route exact path="/" element={<Search />}/>
-          <Route path="/signin/" element={<SignIn />} />
-          <Route path="/signin/usernamerecovery/" element={<UsernameRecovery />} />
+          <Route path="/signin/identifier/" element={<SignInEmail />} />
+          <Route path="/signin/challenge/" element={<SignInPassword />} />
+          <Route path="/signin/passwordrecovery/" element={<PasswordRecovery />} />
           <Route path="/signup/" element={<SignUp />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
