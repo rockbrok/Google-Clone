@@ -33,7 +33,7 @@ export default function SignUp() {
               <Password />
               <ConfirmPassword />
             </div>
-            <p className="signup-note">Use 8 or more characters with a mix of letters, numbers & &nbsp; symbols</p>
+            <p className="signup-note">{t("sign_up_password_note")}</p>
             <ShowPassword />
             <section className="flex-row">
               <SignInInstead />
@@ -61,21 +61,21 @@ const Logo = () => (
 
 const Heading = () => (
   <div>
-    <h1 className="heading">Create your Google Account</h1>
+    <h1 className="heading">{t("sign_up_heading")}</h1>
   </div>
 );
 
 const FirstName = () => (
   <form className="signup-form">
     <input className="signup-input" required autocomplete="off" minLength="1" spellCheck="false" dir="ltr" />
-    <span className="signup-input-placeholder">First name</span>
+    <span className="signup-input-placeholder">{t("sign_up_first_name")}</span>
   </form>
 );
 
 const LastName = () => (
   <form className="signup-form">
     <input className="signup-input" required autocomplete="off" minLength="1" spellCheck="false" dir="ltr" />
-    <span className="signup-input-placeholder">Last name</span>
+    <span className="signup-input-placeholder">{t("sign_up_last_name")}</span>
   </form>
 );
 
@@ -83,37 +83,36 @@ const InputEmail = () => (
   <>
     <form className="signup-form">
       <input className="signup-input" required autocomplete="off" minLength="1" spellCheck="false" dir="ltr" />
-      <span className="signup-input-placeholder">Your email address</span>
+      <span className="signup-input-placeholder">{t("sign_up_email")}</span>
     </form>
-    <p className="signup-note">You'll need to confirm that this email belongs to you.</p>
   </>
 );
 
 const Password = () => (
   <form className="signup-form">
     <input className="signup-input" type="password" id="password" required autocomplete="off" minLength="1" spellCheck="false" dir="ltr" />
-    <span className="signup-input-placeholder">Password</span>
+    <span className="signup-input-placeholder">{t("sign_up_password")}</span>
   </form>
 );
 
 const ConfirmPassword = () => (
   <form className="signup-form">
     <input className="signup-input" type="password" id="password2" required autocomplete="off" minLength="1" spellCheck="false" dir="ltr" />
-    <span className="signup-input-placeholder">Confirm</span>
+    <span className="signup-input-placeholder">{t("sign_up_confirm")}</span>
   </form>
 );
 
 const SignInInstead = () => (
   <Link to="/signin/identifier/">
     <button className="create-account">
-       Sign in instead
+      {t("sign_up_sign_in")}
     </button>
   </Link>
 );
 
 const Next = () => (
   <button className="next">
-    Next
+    {t('next')}
   </button>
 );
 
@@ -121,7 +120,7 @@ const AccountLogo = () => (
   <section className="account-app-icon">
   <figure className="account-app-figure">
     <img src="https://ssl.gstatic.com/accounts/signup/glif/account.svg" alt="" width="244" height="244" />
-    <figcaption className="fig-heading">One account. All of Google working for you.</figcaption>
+    <figcaption className="fig-heading">{t("sign_up_figure_caption")}</figcaption>
   </figure>
   </section>
 );

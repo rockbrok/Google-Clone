@@ -81,6 +81,16 @@
     "sign_in_learn_more": "Más información",
     "sign_in_create_account": "Crear cuenta",
 
+    "sign_up_heading": "Crear tu cuenta de Google",
+    "sign_up_first_name" : "Nombre",
+    "sign_up_last_name" : "Apellido",
+    "sign_up_email" : "Tu dirección de correo electrónico",
+    "sign_up_password": "Contraseña",
+    "sign_up_confirm": "Confirmación",
+    "sign_up_password_note": "Usa 8 o más caracteres con una combinación de letras, números y símbolos",
+    "sign_up_sign_in" : "Acceder a tu cuenta en su lugar",
+    "sign_up_figure_caption": "Una cuenta. Todos los servicios de Google a tu disposición.",
+
     "password_recovery_heading" : "Recuperación de la cuenta",
     "password_recovery_subheading" : "Para proteger tu cuenta, Google quiere asegurarse de que realmente seas tú la persona que intenta acceder",
     "password_recovery_note" : "Ingresa el código de 6 dígitos que Google acaba de enviar a tu correo",
