@@ -1,5 +1,6 @@
 import SignPageFooter from '../../../components/SignPage/Footer';
 import SignPageHeader from '../../../components/SignPage/Header';
+import { ShowPassword } from '../../../components/SignPage/ShowPassword';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { t } from 'i18next';
@@ -9,6 +10,7 @@ import './../../../components/SignPage/Container/style.css';
 import './../../../components/SignPage/NextButton/style.css';
 import './../../../components/SignPage/Heading/style.css';
 import './../../../components/SignPage/SignInForm/style.css';
+import './../../../components/SignPage/ShowPassword/style.css';
 
 export default function SignInPassword() {
   return (
@@ -63,25 +65,6 @@ const Input = () => (
   </form>
 );
 
-function showPassword() {
-  var x = document.getElementById("password");
-  if (x.type === "password") {
-    x.type = "text";
-  } else {
-    x.type = "password";
-  }
-}
-
-const ShowPassword = () => (
-  <div>
-    <label className="pass-container" onClick={showPassword}>{t("password_show")}
-      <span className="checkmark-bg">
-        <input className="password-checkbox" type="checkbox" onClick={showPassword}/>
-        <span class="checkmark"/>
-      </span>
-    </label>
-  </div>
-);
 
 const Forgot = () => (
   <Link to="/signin/challenge/recovery/">

@@ -52,7 +52,7 @@ const Logo = () => (
 const Heading = () => (
   <>
     <center><h1 className="heading">{t('sign_in_heading')}</h1></center>
-    <h4 className="sub-heading">{t('sign_in_subheading')}</h4>
+    <center><h4 className="sub-heading">{t('sign_in_subheading')}</h4></center>
   </>
 );
 

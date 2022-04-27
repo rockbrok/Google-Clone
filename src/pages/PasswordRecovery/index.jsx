@@ -50,7 +50,7 @@ const Logo = () => (
 const Heading = () => (
   <>
     <center><h1 className="heading">{t("password_recovery_heading")}</h1></center>
-    <h4 className="sub-heading">{t("password_recovery_subheading")}</h4>
+    <center><h4 className="sub-heading">{t("password_recovery_subheading")}</h4></center>
     <center><div className="email-name">email@gmail.com</div></center>
     <p>{t("password_recovery_note")}</p>
   </>
@@ -59,7 +59,7 @@ const Heading = () => (
 const Input = () => (
   <div className="signin-form email-form">
     <form>
-      <input className="input-email" required autocomplete="off" minLength="1" spellCheck="false" dir="ltr" />
+      <input className="input-email" required autocomplete="off" maxLength="6" spellCheck="false" dir="ltr" />
       <span className="input-placeholder">{t("password_recovery_form_placeholder")}</span>
     </form>
   </div>
