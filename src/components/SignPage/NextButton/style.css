@@ -14,6 +14,7 @@
   vertical-align: middle;
   transition-property: background-color;
   transition-delay: 0.025s;
+  margin: 6px 0;
 }
 
 .next:hover {

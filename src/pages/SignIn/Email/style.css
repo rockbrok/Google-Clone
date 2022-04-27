@@ -53,9 +53,12 @@
 
 .flex-row {
   margin: 0 0 0 -8px;
+  padding-bottom: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-self: flex-end;
+  align-content: flex-end;
   width: auto;
   height: min-content;
   margin-top: 26px !important;

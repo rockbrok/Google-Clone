@@ -51,7 +51,7 @@ const Logo = () => (
 
 const Heading = () => (
   <>
-    <center><h1 className="heading">Hi Name</h1></center>
+    <center><h1 className="heading">{t("password_heading")} Name</h1></center>
     <center><div className="email-name">email@gmail.com</div></center>
   </>
 );
@@ -59,7 +59,7 @@ const Heading = () => (
 const Input = () => (
   <form className="signin-form pass-form">
     <input className="input-email" type="password" id="password" required autocomplete="off" minLength="1" spellCheck="false" dir="ltr" />
-    <span className="input-placeholder">Enter your password</span>
+    <span className="input-placeholder">{t("password_form_placeholder")}</span>
   </form>
 );
 
@@ -74,7 +74,7 @@ function showPassword() {
 
 const ShowPassword = () => (
   <div>
-    <label className="pass-container" onClick={showPassword}>Show password
+    <label className="pass-container" onClick={showPassword}>{t("password_show")}
       <span className="checkmark-bg">
         <input className="password-checkbox" type="checkbox" onClick={showPassword}/>
         <span class="checkmark"/>
@@ -86,7 +86,7 @@ const ShowPassword = () => (
 const Forgot = () => (
   <Link to="/signin/challenge/recovery/">
     <button className="create-account">
-      Forgot password?
+      {t("password_forgot")}
     </button>
   </Link>
 );

