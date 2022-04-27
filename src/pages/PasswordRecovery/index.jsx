@@ -1,13 +1,13 @@
 import SignPageFooter from '../../components/SignPage/Footer';
 import SignPageHeader from '../../components/SignPage/Header';
 import { Helmet } from 'react-helmet';
-import { Link } from 'react-router-dom';
 import { t } from 'i18next';
 
 import './style.css';
-import './../../components/SignPage/Container/style.css'
-import './../../components/SignPage/NextButton/style.css'
-import './../../components/SignPage/Heading/style.css'
+import './../../components/SignPage/Container/style.css';
+import './../../components/SignPage/NextButton/style.css';
+import './../../components/SignPage/Heading/style.css';
+import './../../components/SignPage/SignInForm/style.css';
 
 export default function PasswordRecovery() {
   return (
@@ -22,10 +22,8 @@ export default function PasswordRecovery() {
             <Logo />
             <Heading />
             <Input />
-            <Forgot />
-            <Note />
             <div className="flex-row">
-              <CreateAccount />
+              <div />
               <Next />
             </div>
           </div>
@@ -51,44 +49,20 @@ const Logo = () => (
 
 const Heading = () => (
   <>
-    <center><h1 className="heading">{t('sign_in_heading')}</h1></center>
-    <h4 className="sub-heading">{t('sign_in_subheading')}</h4>
+    <center><h1 className="heading">Account recovery</h1></center>
+    <h4 className="sub-heading">To help keep your account safe, Google wants to make sure it’s really you trying to sign in</h4>
+    <center><div className="email-name">email@gmail.com</div></center>
+    <p>Enter the 6-digit code Google just sent to your email</p>
   </>
 );
 
 const Input = () => (
-  <div className="email-form">
+  <div className="signin-form email-form">
     <form>
       <input className="input-email" required autocomplete="off" minLength="1" spellCheck="false" dir="ltr" />
-      <span className="input-placeholder">{t('sign_in_form_placeholder')}</span>
+      <span className="input-placeholder">Enter code</span>
     </form>
   </div>
-);
-
-const Forgot = () => (
-  <Link to="/signin/usernamerecovery/">
-    <button className="button-blue">
-      {t('sign_in_forgot_email')}
-    </button>
-  </Link>
-);
-
-const Note = () => (
-  <div className="note">
-    {t('sign_in_note')} 
-    <br/>
-    <a className="button-blue" href="https://support.google.com/chrome/answer/6130773?hl=en" rel="noreferrer" target="_blank">
-      {t('sign_in_learn_more')}
-    </a>
-  </div>
-);
-
-const CreateAccount = () => (
-  <Link to="/signup/">
-    <button className="create-account">
-      {t('sign_in_create_account')}
-    </button>
-  </Link>
 );
 
 const Next = () => (

@@ -23,7 +23,7 @@ export default function App() {
           <Route exact path="/" element={<Search />}/>
           <Route path="/signin/identifier/" element={<SignInEmail />} />
           <Route path="/signin/challenge/" element={<SignInPassword />} />
-          <Route path="/signin/passwordrecovery/" element={<PasswordRecovery />} />
+          <Route path="/signin/challenge/recovery/" element={<PasswordRecovery />} />
           <Route path="/signup/" element={<SignUp />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>

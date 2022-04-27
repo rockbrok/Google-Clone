@@ -84,7 +84,7 @@ const ShowPassword = () => (
 );
 
 const Forgot = () => (
-  <Link to="/signin/passwordrecovery/">
+  <Link to="/signin/challenge/recovery/">
     <button className="create-account">
       Forgot password?
     </button>
