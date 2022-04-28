@@ -5,6 +5,7 @@ import PasswordRecovery from './pages/PasswordRecovery';
 import SignUp from './pages/SignUp';
 import Account from './pages/MyAccount/Home';
 import Search from './pages/Search';
+import Register from './components/Register.jsx';
 import { darkTheme, lightTheme, GlobalStyles, ThemeProvider, useTheme } from './themes';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
@@ -27,6 +28,7 @@ export default function App() {
           <Route path="/signin/challenge/recovery/" element={<PasswordRecovery />} />
           <Route path="/signup/" element={<SignUp />} />
           <Route path="/myaccount/" element={<Account />} />
+          <Route path="/register/" element={<Register />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </Router>

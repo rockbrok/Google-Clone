@@ -67,7 +67,14 @@ const Heading = () => (
 
 const FirstName = () => (
   <form className="signup-form">
-    <input className="signup-input" required autocomplete="off" minLength="1" spellCheck="false" dir="ltr" />
+    <input
+      type="text"
+      className="signup-input"
+      required
+      autoComplete="off"
+      spellCheck="false"
+      dir="ltr"
+    />
     <span className="signup-input-placeholder">{t("sign_up_first_name")}</span>
   </form>
 );
