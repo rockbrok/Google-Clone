@@ -3,6 +3,7 @@
   position: relative;
   cursor: pointer;
   user-select: none;
+  margin-top: 8px;
   padding: 10px 0 0 40px;
   line-height: 20px;
   color: rgb(32, 33, 36);
