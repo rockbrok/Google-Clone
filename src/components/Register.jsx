@@ -1,40 +1,34 @@
 import { useRef, useState, useEffect } from "react";
 import { t } from 'i18next';
+import { validate } from "schema-utils";
 
 const NAME_REGEX = /^[a-z,A-Z ,.'-]{2,16}$/;
 const EMAIL_REGEX =/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
-const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
+const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z]){8,24}$/;
+
+export const EMAIL1_REGEX = /@\w+([.-]?\w+)*(\.\w{2,3})+$/;
 
 export default function Register () {
-  const userRef = useRef();
   const errRef = useRef();
 
   const [firstName, setFirstName] = useState('');
   const [validFirstName, setValidFirstName] = useState(false);
-  const [firstNameFocus, setFirstNameFocus] = useState(false);
 
   const [lastName, setLastName] = useState('');
   const [validLastName, setValidLastName] = useState(false);
-  const [lastNameFocus, setLastNameFocus] = useState(false);
 
   const [email, setEmail] = useState('');
   const [validEmail, setValidEmail] = useState(false);
-  const [emailFocus, setEmailFocus] = useState(false);
+  const [validEmail1, setValidEmail1] = useState(false);
 
   const [pwd, setPwd] = useState('');
   const [validPwd, setValidPwd] = useState(false);
-  const [pwdFocus, setPwdFocus] = useState(false);
 
   const [matchPwd, setMatchPwd] = useState('');
   const [validMatch, setValidMatch] = useState(false);
-  const [matchFocus, setMatchFocus] = useState(false);
 
   const [errMsg, setErrMsg] = useState('');
   const [success, setSuccess] = useState(false);
-
-  useEffect(() => {
-    userRef.current.focus();
-  }, [])
 
   useEffect(() => {
     const result = NAME_REGEX.test(firstName);
@@ -58,6 +52,11 @@ export default function Register () {
   }, [email])
 
   useEffect(() => {
+    const result = EMAIL1_REGEX.test(email);
+    setValidEmail1(result);
+  }, [email])
+
+  useEffect(() => {
     const result = PWD_REGEX.test(pwd);
     console.log(result);
     console.log(pwd);
@@ -70,200 +69,230 @@ export default function Register () {
     setErrMsg('');
   }, [firstName, lastName, email, pwd, matchPwd])
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const v1 = NAME_REGEX.test(firstName, lastName);
+    const v2 = EMAIL_REGEX.test(email);
+    const v3 = PWD_REGEX.test(pwd, matchPwd);
+    if (!v1 || !v2 || !v3) {
+      setErrMsg("Invalid Entry");
+      return;
+    }
+    console.log(firstName, lastName, email, pwd);
+    setSuccess(true);
+  }
+
   return (
     <>
-      <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
+      { success ? (
+        <section>
+          <center><h1>Thanks, {firstName}</h1></center>
+          <span><b>Email</b></span>
+          <p>{email}</p>
+          <span><b>Password</b></span>
+          <p type="password">{pwd}</p>
+          <br/>
+          <p>Your Google Account comes with access to everything Google: apps, music, games, and more</p>
+          <button>Next</button>
+        </section>
+      ) : (
       <section className="signpage-container">
+        <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
         <section className="form-container">
-          <form className="signup-form">
-            <FirstName
-              userRef={userRef}
-              firstName={firstName}
-              setFirstName={setFirstName}
-              validFirstName={validFirstName}
-              setFirstNameFocus={setFirstNameFocus}
-              firstNameFocus={firstNameFocus}
-            />
-            <LastName
-              userRef={userRef}
-              lastName={lastName}
-              setLastName={setLastName}
-              validLastName={validLastName}
-              setLastNameFocus={setLastNameFocus}
-              lastNameFocus={lastNameFocus} 
-            />
+          <form onSubmit={handleSubmit} className="signup-form">
+            <div className="name-row">
+              <FirstName
+                firstName={firstName}
+                setFirstName={setFirstName}
+                validFirstName={validFirstName}
+                lastName={lastName}
+                validLastName={validLastName}
+              />
+              <LastName
+                lastName={lastName}
+                setLastName={setLastName}
+                validLastName={validLastName}
+              />
+            </div>
             <Email
-              userRef={userRef}
               email={email}
               setEmail={setEmail}
               validEmail={validEmail}
-              setEmailFocus={setEmailFocus}
-              emailFocus={emailFocus}
+              validEmail1={validEmail1}
             />
-            <Password
-              userRef={userRef}
-              pwd={pwd}
-              setPwd={setPwd}
-              validPwd={validPwd}
-              setPwdFocus={setPwdFocus}
-              pwdFocus={pwdFocus}
-            />
-            <PasswordConfirm
-              userRef={userRef}
-              matchPwd={matchPwd}
-              setMatchPwd={setMatchPwd}
-              validMatch={validMatch}
-              setMatchFocus={setMatchFocus}
-              matchFocus={matchFocus}
-            />
+            <div className="name-row">
+              <Password
+                pwd={pwd}
+                setPwd={setPwd}
+                validPwd={validPwd}
+              />
+              <PasswordConfirm
+                matchPwd={matchPwd}
+                setMatchPwd={setMatchPwd}
+                validMatch={validMatch}
+              />
+            </div>
             <button>
               Sign Up
             </button>
           </form>
         </section>
       </section>
+      )}
     </>
   )
 }
 
-const FirstName = ({ userRef, firstName, setFirstName, validFirstName, setFirstNameFocus, firstNameFocus }) => (
-  <div className="rel3">
+const FirstName = ({ firstName, setFirstName, validFirstName, lastName, validLastName }) => (
+  <div className="input-container">
     <input
       id="firstname"
       type="text"
       autoComplete="off"
       spellCheck="false"
       dir="ltr"
-      ref={userRef}
       value={firstName}
       onChange={(e) => setFirstName(e.target.value)}
-      className="signup-input"
+      className={!validFirstName ? "signup-input-error" : "signup-input"}
       required
       aria-describedby="firstnamenote"
       aria-invalid={validFirstName ? "false" : "true"}
-      onFocus={() => setFirstNameFocus(true)}
-      onBlur={() => setFirstNameFocus(false)}
+
     />
     <span className="signup-input-placeholder">
       {t("sign_up_first_name")}
     </span>
-    <div id="firstnamenote" className={firstNameFocus && firstName && !validFirstName ? "invalid" : "offscreen"} >
+    <div id="firstnamenote" className={firstName === '' ? "invalid" : "offscreen"} >
       <ErrorLogo/>
-      Enter first name
+      <p className="invalidtext">Enter first name</p>
+    </div>
+    <div id="firstnamenote" className={firstName && lastName && (!validFirstName || !validLastName) ? "invalid" : "offscreen"} >
+      <ErrorLogo/>
+      <p className="invalidtext">Are you sure you entered your name correctly?</p>
     </div>
   </div>
 )
 
-const LastName = ({ userRef, lastName, setLastName, validLastName, setLastNameFocus, lastNameFocus }) => (
-  <div className="rel3">
+const LastName = ({ lastName, setLastName, validLastName }) => (
+  <div className="input-container">
   <input
     id="lastname"
     type="text"
     autoComplete="off"
     spellCheck="false"
     dir="ltr"
-    ref={userRef}
     value={lastName}
     onChange={(e) => setLastName(e.target.value)}
-    className="signup-input"
+    className={!validLastName ? "signup-input-error" : "signup-input"}
     required
     aria-describedby="lastnamenote"
     aria-invalid={validLastName ? "false" : "true"}
-    onFocus={() => setLastNameFocus(true)}
-    onBlur={() => setLastNameFocus(false)}
   />
   <span className="signup-input-placeholder">
     {t("sign_up_last_name")}
   </span>
-  <div id="lastnamenote" className={lastNameFocus && lastName && !validLastName ? "invalid" : "offscreen"}>
+  <div id="lastnamenote" className={lastName === '' ? "invalid" : "offscreen"}>
     <ErrorLogo/>
-    Enter last name
+    <p className="invalidtext">Enter last name</p>
   </div>
 </div>
 )
 
-const Email = ({ userRef, email, setEmail, validEmail, setEmailFocus, emailFocus }) => (
-  <div className="rel3">
+const Email = ({ email, setEmail, validEmail, validEmail1 }) => (
+  <div className="input-container">
   <input
     autoComplete="off"
     spellCheck="false"
     dir="ltr"
-    ref={userRef}
     value={email}
     onChange={(e) => setEmail(e.target.value)}
-    className="signup-input"
+    className={!validEmail ? "signup-input-error" : "signup-input"}
     required
     aria-describedby="emailnote"
     aria-invalid={validEmail ? "false" : "true"}
-    onFocus={() => setEmailFocus(true)}
-    onBlur={() => setEmailFocus(false)}
   />
   <span className="signup-input-placeholder">
     {t("sign_up_email")}
   </span>
-  <div id="emailnote" className={emailFocus && email && !validEmail ? "invalid" : "offscreen"}>
+  <div id="emailnote" className={email === '' ? "invalid" : "offscreen"}>
     <ErrorLogo/>
-    Enter your email address
+    <p className="invalidtext">Enter your email address</p>
+  </div>
+
+  <div id="emailnote" className={email && validEmail1 ? "invalid" : "offscreen"}>
+    <ErrorLogo/>
+    <p className="invalidtext">Enter a user name before the '@'.</p>
+  </div>
+
+  <div id="emailnote" className={email && !validEmail && !validEmail1 ? "invalid" : "offscreen"}>
+    <ErrorLogo/>
+    <p className="invalidtext">This email address is not valid.</p>
+  </div>
+  <div id="emailnote" className={email && validEmail ? "invalid" : "offscreen"}>
+    <ErrorLogo/>
+    <p className="invalidtext">This email address is valid.</p>
   </div>
 </div>
 )
 
-const Password = ({ userRef, pwd, setPwd, validPwd, setPwdFocus, pwdFocus }) => (
-  <div className="rel3">
+const Password = ({ pwd, setPwd, validPwd }) => (
+  <div className="input-container">
   <input 
     type="password"
-    autoComplete="off"
     spellCheck="false"
     dir="ltr"
-    ref={userRef}
     value={pwd}
     onChange={(e) => setPwd(e.target.value)}
-    className="signup-input"
+    className={!validPwd ? "signup-input-error" : "signup-input"}
     required
     aria-describedby="pwdnote"
     aria-invalid={validPwd ? "false" : "true"}
-    onFocus={() => setPwdFocus(true)}
-    onBlur={() => setPwdFocus(false)}
   />
   <span className="signup-input-placeholder">
     {t("sign_up_password")}
   </span>
-  <div id="pwdnote" className={pwdFocus && pwd && !validPwd ? "invalid" : "offscreen"}>
+  <div id="pwdnote" className={pwd === '' ? "invalid" : "offscreen"}>
     <ErrorLogo/>
-    Enter a password
+    <p className="invalidtext">Enter a password</p>
+  </div>
+  <div id="pwdnote" className={pwd && !validPwd ? "invalid" : "offscreen"}>
+    <ErrorLogo/>
+    <p className="invalidtext">Use 8 characters or more for your password</p>
   </div>
 </div>
 )
 
-const PasswordConfirm = ({ userRef, matchPwd, setMatchPwd, validMatch, setMatchFocus, matchFocus }) => (
-  <div className="rel3">
+const PasswordConfirm = ({ matchPwd, setMatchPwd, validMatch }) => (
+  <div className="input-container">
   <input 
     type="password"
-    autoComplete="off"
     spellCheck="false"
     dir="ltr"
-    ref={userRef}
     value={matchPwd}
     onChange={(e) => setMatchPwd(e.target.value)}
-    className="signup-input"
+    className={!validMatch ? "signup-input-error" : "signup-input"}
     required
     aria-describedby="pwdmatchnote"
     aria-invalid={validMatch ? "false" : "true"}
-    onFocus={() => setMatchFocus(true)}
-    onBlur={() => setMatchFocus(false)}
   />
   <span className="signup-input-placeholder">
     {t("sign_up_confirm")}
   </span>
-  <div id="pwdmatchnote" className={matchFocus && matchPwd && !validMatch ? "invalid" : "offscreen"}>
+  <div id="pwdmatchnote" className={matchPwd === '' ? "invalid" : "offscreen"}>
     <ErrorLogo/>
-    Confirm your password
+    <p className="invalidtext">Confirm your password</p>
+  </div>
+  <div id="pwdmatchnote" className={matchPwd && !validMatch ? "invalid" : "offscreen"}>
+    <ErrorLogo/>
+    <p className="invalidtext">Those passwords didn’t match. Try again.</p>
   </div>
 </div>
 )
 
 const ErrorLogo = () => (
-  <svg aria-hidden="true" fill="currentColor" focusable="false" width="16px" height="16px" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg">
-    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path>
-  </svg>
+  <div className="invalidlogo">
+    <svg aria-hidden="true" fill="currentColor" focusable="false" width="16px" height="16px" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg">
+      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path>
+    </svg>
+  </div>
 )

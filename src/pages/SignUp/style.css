@@ -34,9 +34,9 @@
   justify-content: space-between;
 }
 
-.rel3 {
+.input-container {
   position: relative;
-  margin: 12px 0;
+  margin: 20px 0;
 }
 
 .signup-form {
@@ -45,7 +45,6 @@
   position: relative;
   height: 32px;
   white-space: normal;
-
   line-height: 24px;
   margin: 32px 0 0 0;
   align-content: space-between;
@@ -56,7 +55,12 @@
   transition: 0.15s;
 }
 
-.rel3 .signup-input-placeholder {
+.signup-form input.signup-input-error:focus {
+  border: 2px solid red;
+  transition: 0.15s;
+}
+
+.input-container .signup-input-placeholder {
   color: rgb(95, 99, 104);
   font-family: 'Roboto', Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -75,7 +79,8 @@
 }
 
 
-.rel3 .signup-input {
+.input-container .signup-input,
+.input-container .signup-input-error {
   display: inline-block;
   position: relative;
   font-family: 'Roboto', Helvetica, Arial, sans-serif;
@@ -92,7 +97,11 @@
   background-color: transparent;
 }
 
-.rel3 input:focus ~ .signup-input-placeholder {
+.input-container .signup-input-error {
+  border: 1px solid red;
+}
+
+.input-container input:focus ~ .signup-input-placeholder {
   transform: translateY(-12px) translateX(-6px);
   font-size: 10px;
   line-height: 10px;
@@ -103,7 +112,18 @@
   cursor: text;
 }
 
-.rel3 input:valid ~ span {
+.input-container input.signup-input-error:focus ~ .signup-input-placeholder {
+  transform: translateY(-12px) translateX(-6px);
+  font-size: 10px;
+  line-height: 10px;
+  background-color: white;
+  padding: 0 4px;
+  z-index: 1;
+  cursor: text;
+  color: red;
+}
+
+.input-container input:valid ~ span {
   transform: translateY(-12px) translateX(-6px);
   font-size: 10px;
   background-color: white;
@@ -115,6 +135,18 @@
   cursor: text;
 }
 
+.input-container input.signup-input-error:valid ~ span {
+  transform: translateY(-12px) translateX(-6px);
+  font-size: 10px;
+  background-color: white;
+  line-height: 10px;
+  margin: 0;
+  padding: 0 4px;
+  color: red;
+  z-index: 1;
+  cursor: text;
+}
+
 .offscreen {
   position: absolute;
   left: -9999px;
@@ -122,9 +154,19 @@
 
 .invalid {
   font-size: 0.75rem;
-  border-radius: 0.5rem;
   color: red;
-  padding: 0.25rem;
-  margin: 0;
+  margin: 5px 0 0 0;
   position: absolute;
+  white-space: nowrap;
+}
+
+.invalidlogo {
+  display: inline-block;
+  position: absolute;
+}
+
+.invalidtext {
+  position: relative;
+  margin-top: -4px;
+  margin-left: 25px;
 }
