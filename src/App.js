@@ -3,6 +3,7 @@ import SignInEmail from './pages/SignIn/Email';
 import SignInPassword from './pages/SignIn/Password';
 import PasswordRecovery from './pages/PasswordRecovery';
 import SignUp from './pages/SignUp';
+import Register from './components/register'
 import Account from './pages/MyAccount/Home';
 import Search from './pages/Search';
 import { darkTheme, lightTheme, GlobalStyles, ThemeProvider, useTheme } from './themes';
@@ -26,6 +27,7 @@ export default function App() {
           <Route path="/signin/challenge/" element={<SignInPassword />} />
           <Route path="/signin/challenge/recovery/" element={<PasswordRecovery />} />
           <Route path="/signup/" element={<SignUp />} />
+          <Route path="/register/" element={<Register />} />
           <Route path="/myaccount/" element={<Account />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>

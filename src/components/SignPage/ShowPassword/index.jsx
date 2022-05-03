@@ -19,10 +19,15 @@ function showPassword() {
 
 export const ShowPassword = () => (
   <div>
-    <label className="pass-container" onClick={showPassword}>{t("password_show")}
+    <label className="pass-container" onClick={showPassword}>
+      {t("password_show")}
       <span className="checkmark-bg">
-        <input className="password-checkbox" type="checkbox" onClick={showPassword}/>
-        <span class="checkmark"/>
+        <input
+          className="password-checkbox"
+          type="checkbox"
+          onClick={showPassword}
+        />
+        <span className="checkmark"/>
       </span>
     </label>
   </div>
