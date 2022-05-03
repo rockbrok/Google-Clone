@@ -9,7 +9,7 @@ function showPassword() {
   } else {
     x.type = "password";
   }
-  var y = document.getElementById("password2");
+  var y = document.getElementById("passwordConfirm");
   if (y.type === "password") {
     y.type = "text";
   } else {
