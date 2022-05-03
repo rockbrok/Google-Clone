@@ -1,7 +1,6 @@
 import { ShowPassword } from './SignPage/ShowPassword';
 import { SignInInstead, ErrorLogo, Next } from '../pages/SignUp';
 import { useForm } from 'react-hook-form';
-import { t } from 'i18next';
 
 export default function Register() {
   const { register, watch, handleSubmit, formState: { errors } } = useForm({
@@ -9,6 +8,8 @@ export default function Register() {
       firstName: '',
       lastName: '',
       email: '',
+      password: '',
+      passwordConfirm: ''
     },
     mode: 'onSubmit',
     reValidateMode: 'onChange',
@@ -18,6 +19,7 @@ export default function Register() {
   const onSubmit = data => console.log(data);
   console.log(watch());
 
+  const validPasswordRegex =  /^(?=.*?[A-Z,a-z]).{8,}$/;
   const validEmailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/; // user@domain.com //
   const noUsernameRegex = /^@\w+([.-]?\w+)*$/; // @hello //
   const noUsernameDotRegex = /^@\w+([.-]?\w+)*(\.)$/; // @domain. //
@@ -121,7 +123,10 @@ export default function Register() {
           <input 
             {...register("password", {
               required: true,
+              minLength: 8,
               validate: {
+                emptyString: (value) => emptyStringRegex.test(value) ? false : true, // ' ' //
+                validPassword: (value) => validPasswordRegex.test(value) ? false : true
               }
             })}
             autoComplete="off"
@@ -131,11 +136,16 @@ export default function Register() {
             aria-invalid={errors.password ? "true" : "false"}
           />
         </div>
+
         <div className="input-container">
           <input 
             {...register("passwordConfirm", {
               required: true,
+              minLength: 8,
               validate: {
+                emptyString: (value) => emptyStringRegex.test(value) ? false : true, // ' ' //
+                passwordConfirm: (value) => value === watch('password') ? false : true,
+                validPassword: (value) => validPasswordRegex.test(value) ? false : true
               }
             })}
             autoComplete="off"
@@ -244,5 +254,39 @@ const EmailErrors = ({ errors }) => {
 }
 
 const PasswordErrors = ({ errors }) => {
-  <div></div>
+  if ((errors.password?.type === "required") || 
+    (errors.password?.type === "required" && 
+    errors.passwordConfirm?.type === "required")) {
+    return (
+      <div className="invalid">
+        <ErrorLogo/>
+        <p className="invalidtext">Enter a password</p>
+      </div>
+    )
+  } else if (errors.password?.type === "minLength") {
+    return (
+      <div className="invalid">
+        <ErrorLogo/>
+        <p className="invalidtext">Use 8 characters or more for your password</p>
+      </div>
+    )
+  } else if (errors.password?.type === "validPassword" &&
+    errors.password?.type !== "minLength" &&
+    errors.passwordConfirm?.type === "required") {
+    return (
+      <div className="invalid">
+        <ErrorLogo/>
+        <p className="invalidtext">Confirm your password</p>
+      </div>
+    )
+  } else if (errors.password?.type === "validPassword" &&
+    errors.passwordConfirm?.type !== "required" &&
+    errors.passwordConfirm?.type !== "passwordConfirm") {
+    return (
+      <div className="invalid">
+        <ErrorLogo/>
+        <p className="invalidtext">Those passwords didn't match. Try again.</p>
+      </div>
+    )
+  }
 }
