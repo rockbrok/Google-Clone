@@ -28,6 +28,7 @@ export default function Register() {
   const noAtRegex = /^\w+([.-]?\w+)*(\.)+$/; // user. //
   const noAtWithTopDomainRegex = /^\w+([.-]?\w+)*(\.\w{2,3})+$/; // user.com //
   const emptyStringRegex = /^(?![\s\S])/; // '' //
+  const noSpaceStartOrEndRegex = /^[^\s].+[^\s]$/;
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="signup-form" noValidate>
@@ -102,16 +103,15 @@ export default function Register() {
           autoComplete="off"
           name="email"
           type="email"
-          className={(
-            errors.email?.type === "noUsername" ||
-            errors.email?.type === "noUsernameDot" ||
-            errors.email?.type === "onlyCharacters" ||
-            errors.email?.type === "noDomain" ||
-            errors.email?.type === "required" ||
-            errors.email?.type === "noAt" ||
-            errors.email?.type === "emptyString" ||
-            errors.email?.type === "noAtWithTopDomain" ||
-            errors.email?.type !== "validEmail")
+          className={errors.email?.type !== "validEmail" && (
+            errors.email?.type !== "noUsername" ||
+            errors.email?.type !== "noUsernameDot" ||
+            errors.email?.type !== "onlyCharacters" ||
+            errors.email?.type !== "noDomain" ||
+            errors.email?.type !== "required" ||
+            errors.email?.type !== "noAt" ||
+            errors.email?.type !== "emptyString" ||
+            errors.email?.type !== "noAtWithTopDomain")
             ? "signup-input-error" : "signup-input"
           }
           aria-invalid={errors.firstName ? "true" : "false"}
@@ -126,6 +126,7 @@ export default function Register() {
               minLength: 8,
               validate: {
                 emptyString: (value) => emptyStringRegex.test(value) ? false : true, // ' ' //
+                noSpaceStartOrEnd: (value) => noSpaceStartOrEndRegex.test(value) ? true : false,
                 validPassword: (value) => validPasswordRegex.test(value) ? false : true
               }
             })}
@@ -133,6 +134,12 @@ export default function Register() {
             name="password"
             id="password"
             type="password"
+            className={(
+              errors.password?.type === "minLength" ||
+              errors.password?.type === "required" ||
+              errors.password?.type === "noSpaceStartOrEnd")
+              ? "signup-input-error" : "signup-input"
+            }
             aria-invalid={errors.password ? "true" : "false"}
           />
         </div>
@@ -152,7 +159,12 @@ export default function Register() {
             name="passwordConfirm"
             id="passwordConfirm"
             type="password"
-            className={errors.passwordConfirm ? "signup-input-error" : "signup-input"}
+            className={errors.password && (
+              errors.passwordConfirm?.type === "minLength" ||
+              errors.passwordConfirm?.type === "required" ||
+              errors.passwordConfirm?.type !== "passwordConfirm")
+              ? "signup-input-error" : "signup-input"
+            }
             aria-invalid={errors.passwordConfirm ? "true" : "false"}
           />
         </div>
@@ -203,25 +215,25 @@ const NameErrors = ({ errors }) => {
 }
 
 const EmailErrors = ({ errors }) => {
-  if ((errors.email?.type === "required") ||
-    (errors.email?.type === "emptyString")) {
+  if (errors.email?.type === "required" ||
+    errors.email?.type === "emptyString") {
     return (
       <div className="invalid">
         <ErrorLogo/>
         <p className="invalidtext">Enter your email address</p>
       </div>
     )
-  } else if ((errors.email?.type === "noUsername") || 
-    (errors.email?.type === "noUsernameDot")) {
+  } else if (errors.email?.type === "noUsername" || 
+    errors.email?.type === "noUsernameDot") {
     return (
       <div className="invalid">
         <ErrorLogo/>
         <p className="invalidtext">Enter a username before the '@'.</p>
       </div>
     )
-  } else if ((errors.email?.type === "onlyCharacters") ||
-    (errors.email?.type === "noAt") ||
-    (errors.email?.type === "noAtWithTopDomain")) {
+  } else if (errors.email?.type === "onlyCharacters" ||
+    errors.email?.type === "noAt" ||
+    errors.email?.type === "noAtWithTopDomain") {
     return (
       <div className="invalid">
         <ErrorLogo/>
@@ -235,15 +247,13 @@ const EmailErrors = ({ errors }) => {
         <p className="invalidtext">Enter a domain after '@'.</p>
       </div>
     )
-  } else if ((errors.email?.type !== "validEmail") &&
-    (errors.email?.type !== "noUsername") &&
-    (errors.email?.type !== "noUsernameDot") &&
-    (errors.email?.type !== "onlyCharacters") &&
-    (errors.email?.type !== "noDomain") &&
-    (errors.email?.type !== "noAt") &&
-    (errors.email?.type !== "noAtWithTopDomain") &&
-    (errors.email?.type !== "emptyString") &&
-    (errors.email?.type !== "required")) {
+  } else if (errors.email?.type !== "validEmail" && (
+    errors.email?.type !== "noUsername" ||
+    errors.email?.type !== "noUsernameDot" ||
+    errors.email?.type !== "onlyCharacters" ||
+    errors.email?.type !== "noDomain" ||
+    errors.email?.type !== "noAt" ||
+    errors.email?.type !== "noAtWithTopDomain")) {
     return (
       <div className="invalid">
         <ErrorLogo/>
@@ -263,13 +273,6 @@ const PasswordErrors = ({ errors }) => {
         <p className="invalidtext">Enter a password</p>
       </div>
     )
-  } else if (errors.password?.type === "minLength") {
-    return (
-      <div className="invalid">
-        <ErrorLogo/>
-        <p className="invalidtext">Use 8 characters or more for your password</p>
-      </div>
-    )
   } else if (errors.password?.type === "validPassword" &&
     errors.password?.type !== "minLength" &&
     errors.passwordConfirm?.type === "required") {
@@ -286,6 +289,20 @@ const PasswordErrors = ({ errors }) => {
       <div className="invalid">
         <ErrorLogo/>
         <p className="invalidtext">Those passwords didn't match. Try again.</p>
+      </div>
+    )
+  } else if (errors.password?.type === "noSpaceStartOrEnd") {
+    return (
+      <div className="invalid">
+        <ErrorLogo/>
+        <p className="invalidtext">Your password can't start or end with a blank space</p>
+      </div>
+    )
+  } else if (errors.password?.type === "minLength") {
+    return (
+      <div className="invalid">
+        <ErrorLogo/>
+        <p className="invalidtext">Use 8 characters or more for your password</p>
       </div>
     )
   }
