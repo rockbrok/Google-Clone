@@ -10,7 +10,7 @@
   color: rgb(95, 99, 104);
   font-size: 12px;
   line-height: 17px;
-  margin: 6px 0 0 10px;
+  margin: -15px 0 0 10px;
   padding-right: 15px;
   white-space: normal;
 }
@@ -165,7 +165,7 @@
 .invalid {
   font-size: 0.75rem;
   color: rgb(217, 48, 37);
-  margin: 5px 0 0 0;
+  margin: -15px 0 -10px 0;
   white-space: nowrap;
 }
 

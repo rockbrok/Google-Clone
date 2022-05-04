@@ -22,5 +22,5 @@
   margin: auto auto;
   width: 354px;
   min-height: 416px;
-  max-height: min-content;
+  height: min-content;
 }
