@@ -47,7 +47,6 @@
 .input-container {
   position: relative;
   margin: 20px 0;
-
 }
 
 .signup-form {
@@ -70,7 +69,7 @@
   transition: 0.15s;
 }
 
-.input-container .signup-input-placeholder {
+.input-container span {
   color: rgb(95, 99, 104);
   font-family: 'Roboto', Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -87,7 +86,6 @@
   -webkit-user-select: none;
   -webkit-tap-highlight-color: transparent;
 }
-
 
 .input-container .signup-input,
 .input-container .signup-input-error {
@@ -107,59 +105,39 @@
   background-color: transparent;
 }
 
+.input-container input:focus ~ span,
+.input-container input:valid ~ span {
+  transform: translateY(-12px) translateX(-6px);
+  font-size: 10px;
+  line-height: 10px;
+  background-color: white;
+  padding: 0 4px;
+  z-index: 1;
+  cursor: text;
+}
+
+.input-container input:focus ~ span {
+  color: #1a73e8;
+}
+
+.input-container input ~ span {
+  color: gray;
+}
+
 .input-container .signup-input-error {
   border: 1px solid rgb(217, 48, 37);
 }
 
-.input-container input:focus ~ .signup-input-placeholder {
-  transform: translateY(-12px) translateX(-6px);
-  font-size: 10px;
-  line-height: 10px;
-  background-color: white;
-  padding: 0 4px;
-  color: #1a73e8;
-  z-index: 1;
-  cursor: text;
-}
-
-.input-container input.signup-input-error:focus ~ .signup-input-placeholder {
-  transform: translateY(-12px) translateX(-6px);
-  font-size: 10px;
-  line-height: 10px;
-  background-color: white;
-  padding: 0 4px;
-  z-index: 1;
-  cursor: text;
-  color: rgb(217, 48, 37);
-}
-
-.input-container input:valid ~ span {
-  transform: translateY(-12px) translateX(-6px);
-  font-size: 10px;
-  background-color: white;
-  line-height: 10px;
-  margin: 0;
-  padding: 0 4px;
-  color: gray;
-  z-index: 1;
-  cursor: text;
-}
-
+.input-container input.signup-input-error:focus ~ span,
 .input-container input.signup-input-error:valid ~ span {
   transform: translateY(-12px) translateX(-6px);
   font-size: 10px;
-  background-color: white;
   line-height: 10px;
-  margin: 0;
+  background-color: white;
   padding: 0 4px;
-  color: rgb(217, 48, 37);
   z-index: 1;
   cursor: text;
-}
-
-.offscreen {
-  position: absolute;
-  left: -9999px;
+  color: rgb(217, 48, 37);
 }
 
 .invalid {

@@ -3,7 +3,6 @@
   display: block;
   min-height: 64px;
   flex: 1 1 0px;
-  
   content: "";
   box-sizing: border-box;
 }
@@ -17,7 +16,6 @@
   font-family: 'Roboto', "Noto Sans Myanmar UI", arial, sans-serif;
   font-size: 12px;
   line-height: 16.8px;
-
   padding-top: 24px;
   margin: 0 auto;
   width: 450px;

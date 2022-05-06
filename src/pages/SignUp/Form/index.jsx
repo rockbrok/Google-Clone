@@ -1,7 +1,21 @@
 import { ShowPassword } from '../../../components/SignPage/ShowPassword';
-import { SignInInstead, ErrorLogo, Next } from '..';
+import { SignInInstead, ErrorLogo } from '..';
 import { useForm } from 'react-hook-form';
+import axios from 'axios';
 import { t } from 'i18next';
+
+var express = require('express')
+var cors = require('cors')
+var app = express()
+ 
+app.use(cors())
+
+axios.create({
+  baseURL:"http://localhost:5000/",
+  headers: {
+    "Content-Type": "application/json"
+  }
+});
 
 export default function Form() {
   const { register, watch, handleSubmit, formState: { errors } } = useForm({
@@ -17,7 +31,21 @@ export default function Form() {
     delayError: 1000,
   });
 
-  const onSubmit = data => console.log(data);
+  const onSubmit = async (e) => {
+    e.preventDefault();
+    const userData = {
+      ...register
+    };
+
+    await axios.post("http://localhost:5000/users", userData)
+      .then((result) => {
+        console.log(result);
+      })
+      .catch(error => {
+        console.log(error)
+      })
+  };
+
   console.log(watch());
 
   const validPasswordRegex =  /^(?=.*?[A-Z,a-z]).{8,}$/;
@@ -32,7 +60,7 @@ export default function Form() {
   const noSpaceStartOrEndRegex = /^[^\s].+[^\s]$/;
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="signup-form" noValidate>
+    <form onSubmit={(e) => handleSubmit(onSubmit(e))} className="signup-form" noValidate>
       <div className="name-row">
         <div className="input-container">
           <input 
@@ -48,6 +76,7 @@ export default function Form() {
             autoComplete="off"
             name="firstName"
             type="text"
+            value={register.firstName}
             className={(
               errors.firstName?.type === "pattern" ||
               errors.firstName?.type === "minLength" ||
@@ -76,6 +105,7 @@ export default function Form() {
             autoComplete="off"
             name="lastName"
             type="text"
+            value={register.lastName}
             className={(
               errors.lastName?.type === "pattern" ||
               errors.lastName?.type === "minLength" ||
@@ -110,6 +140,7 @@ export default function Form() {
           autoComplete="off"
           name="email"
           type="email"
+          value={register.email}
           className={errors.email?.type !== "validEmail" && (
             errors.email?.type !== "noUsername" ||
             errors.email?.type !== "noUsernameDot" ||
@@ -121,7 +152,7 @@ export default function Form() {
             errors.email?.type !== "noAtWithTopDomain")
             ? "signup-input-error" : "signup-input"
           }
-          aria-invalid={errors.firstName ? "true" : "false"}
+          aria-invalid={errors.email ? "true" : "false"}
         />
         <span className="signup-input-placeholder">
           {t("sign_up_email")}
@@ -144,6 +175,7 @@ export default function Form() {
             name="password"
             id="password"
             type="password"
+            value={register.password}
             className={(
               errors.password?.type === "minLength" ||
               errors.password?.type === "required" ||
@@ -156,7 +188,6 @@ export default function Form() {
             {t("sign_up_password")}
           </span>
         </div>
-
         <div className="input-container">
           <input 
             {...register("passwordConfirm", {
@@ -190,7 +221,7 @@ export default function Form() {
       <ShowPassword />
       <div className="button-row">
         <SignInInstead />
-        <Next />
+        <Next/>
       </div>
     </form>
   )
@@ -267,7 +298,7 @@ const EmailErrors = ({ errors }) => {
         <p className="invalidtext">Enter a domain after '@'.</p>
       </div>
     )
-  } else if (errors.email?.type !== "validEmail" && (
+  } else if (errors.email?.type !== "validEmail" & ( 
     errors.email?.type !== "noUsername" ||
     errors.email?.type !== "noUsernameDot" ||
     errors.email?.type !== "onlyCharacters" ||
@@ -328,12 +359,15 @@ const PasswordErrors = ({ errors }) => {
   }
 }
 
-const PasswordNote = ({ errors }) => {
-  if (!errors.password) {
-    return (
-      <div className="signup-note">
-        Use 8 or more characters with a mix of letters, numbers & symbols
-      </div>
-    )
-  }
-}
+const PasswordNote = ({ errors }) => (
+  (!errors.password) ?
+    <div className="signup-note">
+      Use 8 or more characters with a mix of letters, numbers & symbols
+    </div> : ''
+);
+
+const Next = ({ show, setShow }) => (
+  <button type="submit" className="next">
+    {t('next')}
+  </button>
+);

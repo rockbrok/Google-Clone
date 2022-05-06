@@ -9,6 +9,7 @@
     "@hookform/resolvers": "^2.8.8",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",
     "@svgr/webpack": "^6.2.1",
+    "axios": "^0.27.2",
     "babel-jest": "^27.4.2",
     "babel-loader": "^8.2.3",
     "babel-preset-react-app": "^10.0.1",
@@ -33,6 +34,7 @@
     "jest": "^27.4.3",
     "jest-resolve": "^27.4.2",
     "jest-watch-typeahead": "^1.0.0",
+    "json-server": "^0.17.0",
     "mini-css-extract-plugin": "^2.4.5",
     "postcss": "^8.4.4",
     "postcss-flexbugs-fixes": "^5.0.2",
@@ -64,7 +66,8 @@
     "webpack-dev-server": "^4.6.0",
     "webpack-manifest-plugin": "^4.0.2",
     "workbox-webpack-plugin": "^6.3.0",
-    "yup": "^0.32.11"
+    "yup": "^0.32.11",
+    "zlib": "^1.0.5"
   },
   "scripts": {
     "start": "node scripts/start.js",
@@ -73,7 +76,8 @@
     "lint": "eslint src/**/*.js",
     "lint-fix": "eslint src/**/*.js --fix",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "json-start": "json-server -p 5000 -w db.json"
   },
   "eslintConfig": {
     "extends": [
