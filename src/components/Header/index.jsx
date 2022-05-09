@@ -1,5 +1,6 @@
 import ToggleApps from './../AppsPanel/ToggleApps';
 import { t } from 'i18next';
+import { Link } from 'react-router-dom';
 
 import './style.css';
 
@@ -34,8 +35,10 @@ const Images = () => (
 
 const SignIn = () => (
   <li>
-    <a className="sign-in" href="https://accounts.google.com/ServiceLogin?hl=en" target="_top">
-      {t('sign_in')}
-    </a>
+    <Link to="/signin/identifier/">
+      <button className="sign-in" target="_top">
+        {t('sign_in')}
+      </button>
+    </Link> 
   </li>
 );

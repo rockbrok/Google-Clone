@@ -1,0 +1,8 @@
+.signin-header {
+  display: flex;
+  flex: 1 1 0px;
+  min-height: 30px;
+  box-sizing: border-box;
+  content: "";
+  width: auto;
+}

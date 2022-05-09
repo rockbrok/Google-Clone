@@ -17,6 +17,7 @@
     "translate": "Traductor",
     "photos": "Fotos",
     "duo": "Duo",
+    "shopping": "Shopping",
     "finance": "Finance",
     "docs": "Documentos",
     "sheets": "Hojas de cálculo",
@@ -69,5 +70,39 @@
     "thats_an_error": "Eso es un error.",
     "requested_url": "La URL solicitada ",
     "not_found_on_server": " se encontró en este servidor. ",
-    "thats_all_we_know": "Eso es todo lo que sabemos."
+    "thats_all_we_know": "Eso es todo lo que sabemos.",
+
+    "sign_in_title": "Acceso: Cuentas de Google",
+    "sign_in_heading": "Acceder",
+    "sign_in_subheading": "Usa tu Cuenta de Google",
+    "sign_in_form_placeholder": "Correo electrónico o teléfono",
+    "sign_in_forgot_email": "¿Olvidaste el correo electrónico?",
+    "sign_in_note": "¿Esta no es tu computadora? Usa el modo de invitado para navegar de forma privada.",
+    "sign_in_learn_more": "Más información",
+    "sign_in_create_account": "Crear cuenta",
+
+    "sign_up_heading": "Crear tu cuenta de Google",
+    "sign_up_first_name" : "Nombre",
+    "sign_up_last_name" : "Apellido",
+    "sign_up_email" : "Tu dirección de correo electrónico",
+    "sign_up_password": "Contraseña",
+    "sign_up_confirm": "Confirmación",
+    "sign_up_password_note": "Usa 8 o más caracteres con una combinación de letras, números y símbolos",
+    "sign_up_sign_in" : "Acceder a tu cuenta en su lugar",
+    "sign_up_figure_caption": "Una cuenta. Todos los servicios de Google a tu disposición.",
+
+    "password_recovery_heading" : "Recuperación de la cuenta",
+    "password_recovery_subheading" : "Para proteger tu cuenta, Google quiere asegurarse de que realmente seas tú la persona que intenta acceder",
+    "password_recovery_note" : "Ingresa el código de 6 dígitos que Google acaba de enviar a tu correo",
+    "password_recovery_form_placeholder": "Ingresa el código",
+
+    "password_heading": "Hola ",
+    "password_form_placeholder": "Ingresa tu contraseña",
+    "password_show": "Mostrar contraseña",
+    "password_forgot" : "¿Olvidaste la contraseña?",
+
+    "next": "Siguiente",
+
+    "signpage_footer_help": "Ayuda"
+
 }

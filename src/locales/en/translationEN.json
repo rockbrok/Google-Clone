@@ -17,6 +17,7 @@
     "translate": "Translate",
     "photos": "Photos",
     "duo": "Duo",
+    "shopping": "Shopping",
     "finance": "Finance",
     "docs": "Docs",
     "sheets": "Sheets",
@@ -69,5 +70,39 @@
     "thats_an_error": "That's an error.",
     "requested_url": "The requested URL ",
     "not_found_on_server": " was not found on this server. ",
-    "thats_all_we_know": "That's all we know."
+    "thats_all_we_know": "That's all we know.",
+
+    "sign_in_title": "Sign in - Google Accounts",
+    "sign_in_heading": "Sign in",
+    "sign_in_subheading": "Use your Google Account",
+    "sign_in_form_placeholder": "Email or phone",
+    "sign_in_forgot_email": "Forgot email?",
+    "sign_in_note": "Not your computer? Use Guest mode to sign in privately.",
+    "sign_in_learn_more": "Learn more",
+    "sign_in_create_account": "Create account",
+
+    "sign_up_heading": "Create your Google Account",
+    "sign_up_first_name" : "First name",
+    "sign_up_last_name" : "Last name",
+    "sign_up_email" : "Your email address",
+    "sign_up_password": "Password",
+    "sign_up_confirm": "Confirm",
+    "sign_up_password_note": "Use 8 or more characters with a mix of letters, numbers & symbols",
+    "sign_up_sign_in" : "Sign in instead",
+    "sign_up_figure_caption": "One account. All of Google working for you.",
+
+    "password_recovery_heading" : "Account recovery",
+    "password_recovery_subheading" : "To help keep your account safe, Google wants to make sure it’s really you trying to sign in",
+    "password_recovery_note" : "Enter the 6-digit code Google just sent to your email",
+    "password_recovery_form_placeholder": "Enter code",
+
+    "password_heading": "Hi ",
+    "password_form_placeholder": "Enter your password",
+    "password_show": "Show password",
+    "password_forgot" : "Forgot password?",
+
+    "next": "Next",
+
+    "signpage_footer_help": "Help"
+
 }
