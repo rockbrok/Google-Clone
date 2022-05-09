@@ -67,12 +67,6 @@ export const SignInInstead = () => (
   </Link>
 );
 
-export const Next = () => (
-  <button type="submit" className="next">
-    {t('next')}
-  </button>
-);
-
 const AccountLogo = () => (
   <section className="account-app-icon">
     <figure className="account-app-figure">
