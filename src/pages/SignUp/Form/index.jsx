@@ -4,6 +4,8 @@ import { useForm } from 'react-hook-form';
 import { t } from 'i18next';
 import axios from 'axios';
 
+const baseURL = "http://localhost:5000/users";
+
 export default function Form() {
   const { register, watch, handleSubmit, formState: { errors } } = useForm({
     defaultValues: {
@@ -18,20 +20,20 @@ export default function Form() {
     delayError: 1000,
   });
 
-  const onSubmit = async () => {
+  const onSubmit = (e) => {
     e.preventDefault();
     const userData = {
       ...register
-    };
-
-    await axios.post("http://localhost:5000/users", userData)
-      .then((result) => {
-        console.log(result);
+    }
+    axios.post(baseURL, userData)
+      .then((response) => {
+      console.log(response.status);
+      console.log(response.data.token);
       })
       .catch(error => {
-        console.log(error)
+        console.log(error.response.data)
       })
-  };
+  }
 
   console.log(watch());
 
@@ -47,7 +49,7 @@ export default function Form() {
   const noSpaceStartOrEndRegex = /^[^\s].+[^\s]$/;
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="signup-form" noValidate>
+    <form onSubmit={onSubmit} className="signup-form" noValidate>
       <div className="name-row">
         <div className="input-container">
           <input 

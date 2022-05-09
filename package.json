@@ -70,10 +70,11 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "lint": "eslint src/**/*.js",
     "lint-fix": "eslint src/**/*.js --fix",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "json-start": "json-server -p 5000 -w db.json"
   },
   "eslintConfig": {
     "extends": [
