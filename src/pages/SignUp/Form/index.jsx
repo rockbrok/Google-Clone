@@ -18,7 +18,7 @@ export default function Form() {
     delayError: 1000,
   });
 
-  const onSubmit = async (e) => {
+  const onSubmit = async () => {
     e.preventDefault();
     const userData = {
       ...register
