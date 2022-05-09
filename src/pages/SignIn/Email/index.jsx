@@ -58,7 +58,7 @@ const Heading = () => (
 
 const Input = () => (
   <form className="signin-form email-form">
-    <input className="input-email" required autocomplete="off" minLength="1" spellCheck="false" dir="ltr" />
+    <input className="input-email" required autoComplete="off" minLength="1" spellCheck="false" dir="ltr" />
     <span className="input-placeholder">{t('sign_in_form_placeholder')}</span>
   </form>
 );

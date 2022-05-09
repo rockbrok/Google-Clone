@@ -3,6 +3,9 @@ import { SignInInstead, ErrorLogo } from '..';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import { t } from 'i18next';
+import axios from 'axios';
+
+const baseURL = "http://localhost:5000/users";
 
 var express = require('express')
 var cors = require('cors')
@@ -31,20 +34,20 @@ export default function Form() {
     delayError: 1000,
   });
 
-  const onSubmit = async (e) => {
+  const onSubmit = (e) => {
     e.preventDefault();
     const userData = {
       ...register
-    };
-
-    await axios.post("http://localhost:5000/users", userData)
-      .then((result) => {
-        console.log(result);
+    }
+    axios.post(baseURL, userData)
+      .then((response) => {
+      console.log(response.status);
+      console.log(response.data.token);
       })
       .catch(error => {
-        console.log(error)
+        console.log(error.response.data)
       })
-  };
+  }
 
   console.log(watch());
 
@@ -60,7 +63,7 @@ export default function Form() {
   const noSpaceStartOrEndRegex = /^[^\s].+[^\s]$/;
 
   return (
-    <form onSubmit={(e) => handleSubmit(onSubmit(e))} className="signup-form" noValidate>
+    <form onSubmit={onSubmit} className="signup-form" noValidate>
       <div className="name-row">
         <div className="input-container">
           <input 
