@@ -8,60 +8,18 @@
       "id": 1
     },
     {
-      "firstName": "Joe",
-      "lastName": "Smith",
-      "email": "jsmith@gmail.com",
+      "firstName": "Test",
+      "lastName": "Gooo",
+      "email": "Testgo@gogo.com",
       "password": "asdfasdfasdf",
       "id": 2
     },
     {
-      "firstName": "J",
-      "lastName": "Smith",
-      "email": "jsmith@gmail.com",
+      "firstName": "Tom",
+      "lastName": "Yes",
+      "email": "asdf@asdf.com",
       "password": "asdfasdfasdf",
       "id": 3
-    },
-    {
-      "firstName": "J",
-      "lastName": "Smith",
-      "email": "jsmith@gmail.com",
-      "password": "asdfasdfasdf",
-      "id": 4
-    },
-    {
-      "firstName": "ddd",
-      "lastName": "dda",
-      "email": "",
-      "password": "",
-      "id": 5
-    },
-    {
-      "firstName": "ddd",
-      "lastName": " dda",
-      "email": "asdf",
-      "password": "d",
-      "id": 6
-    },
-    {
-      "firstName": "ddd",
-      "lastName": " dda",
-      "email": "asdf",
-      "password": "d",
-      "id": 7
-    },
-    {
-      "firstName": "ddd",
-      "lastName": " dda",
-      "email": "",
-      "password": "",
-      "id": 8
-    },
-    {
-      "firstName": "ddd",
-      "lastName": " dda",
-      "email": "",
-      "password": "",
-      "id": 9
     }
   ]
 }

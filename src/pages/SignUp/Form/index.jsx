@@ -1,8 +1,8 @@
 import { ShowPassword } from '../../../components/SignPage/ShowPassword';
 import { SignInInstead, ErrorLogo } from '..';
 import { useForm } from 'react-hook-form';
-import { t } from 'i18next';
 import { useState } from 'react';
+import { t } from 'i18next';
 import axios from 'axios';
 
 export default function Form() {
@@ -13,7 +13,7 @@ export default function Form() {
     password: ''
   })
 
-  const { register, watch, handleSubmit, formState: { errors } } = useForm({
+  const {register, watch, handleSubmit, formState: { errors }} = useForm({
     defaultValues: {
       firstName: '',
       lastName: '',
@@ -26,8 +26,7 @@ export default function Form() {
     delayError: 1000,
   });
 
-  const onSubmit = async(e) => {
-    e.preventDefault();
+  const onSubmit = async() => {
     try {
       const response = await axios({
         method: "post",
@@ -52,7 +51,7 @@ export default function Form() {
     });
   }
 
-  console.log(watch());
+  console.log(errors);
 
   const validPasswordRegex =  /^(?=.*?[A-Z,a-z]).{8,}$/;
   const validEmailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/; // user@domain.com //
@@ -138,7 +137,7 @@ export default function Form() {
               noUsername: (value) => noUsernameRegex.test(value) ? false : true, // @domain //
               noUsernameDot: (value) => noUsernameDotRegex.test(value) ? false : true, // @domain. //
               onlyCharacters: (value) => onlyCharactersRegex.test(value) ? false : true, // abcdefg //
-              validEmail: (value) => validEmailRegex.test(value) ? false : true, // user@domain.com //
+              validEmail: (value) => validEmailRegex.test(value) ? true : false, // user@domain.com //
               noDomain: (value) => noDomainRegex.test(value) ? false : true, // user@ //
               noAt: (value) => noAtRegex.test(value) ? false : true, // user. //
               noAtWithTopDomain : (value) => noAtWithTopDomainRegex.test(value) ? false : true, // user.com // 
@@ -177,7 +176,7 @@ export default function Form() {
               validate: {
                 emptyString: (value) => emptyStringRegex.test(value) ? false : true, // ' ' //
                 noSpaceStartOrEnd: (value) => noSpaceStartOrEndRegex.test(value) ? true : false,
-                validPassword: (value) => validPasswordRegex.test(value) ? false : true
+                validPassword: (value) => validPasswordRegex.test(value) ? true : false
               }
             })}
             autoComplete="off"
@@ -205,8 +204,8 @@ export default function Form() {
               minLength: 8,
               validate: {
                 emptyString: (value) => emptyStringRegex.test(value) ? false : true, // ' ' //
-                passwordConfirm: (value) => value === watch('password') ? false : true,
-                validPassword: (value) => validPasswordRegex.test(value) ? false : true
+                passwordConfirm: (value) => value === watch('password') ? true : false,
+                validPassword: (value) => validPasswordRegex.test(value) ? true : false
               }
             })}
             autoComplete="off"
