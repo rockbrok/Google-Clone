@@ -2,12 +2,18 @@ import { ShowPassword } from '../../../components/SignPage/ShowPassword';
 import { SignInInstead, ErrorLogo } from '..';
 import { useForm } from 'react-hook-form';
 import { t } from 'i18next';
+import { useState } from 'react';
 import axios from 'axios';
 
-const baseURL = "http://localhost:5000/users";
-
 export default function Form() {
-  const { register, watch, handleSubmit, formState: { errors } } = useForm({
+  const [value, setValue] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    password: ''
+  })
+
+  const { register, watch, formState: { errors } } = useForm({
     defaultValues: {
       firstName: '',
       lastName: '',
@@ -20,22 +26,35 @@ export default function Form() {
     delayError: 1000,
   });
 
-  const onSubmit = (e) => {
+  const onSubmit = async(e) => {
     e.preventDefault();
-    const userData = {
-      ...register
+    try {
+      const response = await axios({
+        method: "post",
+        url: "http://localhost:5000/users",
+        data: {
+          firstName: value.firstName,
+          lastName: value.lastName,
+          email: value.email,
+          password: value.password,
+        },
+        headers: { "Content-Type": "application/json"},
+      });
+    } catch(error) {
+      console.log(error.response.data)
     }
-    axios.post(baseURL, userData)
-      .then((response) => {
-      console.log(response.status);
-      console.log(response.data.token);
-      })
-      .catch(error => {
-        console.log(error.response.data)
-      })
+  }
+
+  const handleChange = (event) => {
+    setValue({
+      ...value,
+      [event.target.name]: event.target.value
+    });
   }
 
   console.log(watch());
+
+  
 
   const validPasswordRegex =  /^(?=.*?[A-Z,a-z]).{8,}$/;
   const validEmailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/; // user@domain.com //
@@ -65,7 +84,8 @@ export default function Form() {
             autoComplete="off"
             name="firstName"
             type="text"
-            value={register.firstName}
+            value={value.firstName}
+            onChange={handleChange}
             className={(
               errors.firstName?.type === "pattern" ||
               errors.firstName?.type === "minLength" ||
@@ -94,7 +114,8 @@ export default function Form() {
             autoComplete="off"
             name="lastName"
             type="text"
-            value={register.lastName}
+            value={value.lastName}
+            onChange={handleChange}
             className={(
               errors.lastName?.type === "pattern" ||
               errors.lastName?.type === "minLength" ||
@@ -129,7 +150,8 @@ export default function Form() {
           autoComplete="off"
           name="email"
           type="email"
-          value={register.email}
+          value={value.email}
+          onChange={handleChange}
           className={errors.email?.type !== "validEmail" && (
             errors.email?.type !== "noUsername" ||
             errors.email?.type !== "noUsernameDot" ||
@@ -164,7 +186,8 @@ export default function Form() {
             name="password"
             id="password"
             type="password"
-            value={register.password}
+            value={value.password}
+            onChange={handleChange}
             className={(
               errors.password?.type === "minLength" ||
               errors.password?.type === "required" ||
