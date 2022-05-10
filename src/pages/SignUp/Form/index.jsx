@@ -13,7 +13,7 @@ export default function Form() {
     password: ''
   })
 
-  const { register, watch, formState: { errors } } = useForm({
+  const { register, watch, handleSubmit, formState: { errors } } = useForm({
     defaultValues: {
       firstName: '',
       lastName: '',
@@ -45,16 +45,14 @@ export default function Form() {
     }
   }
 
-  const handleChange = (event) => {
+  const handleChange = (e) => {
     setValue({
       ...value,
-      [event.target.name]: event.target.value
+      [e.target.name]: e.target.value
     });
   }
 
   console.log(watch());
-
-  
 
   const validPasswordRegex =  /^(?=.*?[A-Z,a-z]).{8,}$/;
   const validEmailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/; // user@domain.com //
@@ -68,7 +66,7 @@ export default function Form() {
   const noSpaceStartOrEndRegex = /^[^\s].+[^\s]$/;
 
   return (
-    <form onSubmit={onSubmit} className="signup-form" noValidate>
+    <form onSubmit={handleSubmit(onSubmit)} className="signup-form" noValidate>
       <div className="name-row">
         <div className="input-container">
           <input 
@@ -186,7 +184,7 @@ export default function Form() {
             name="password"
             id="password"
             type="password"
-            value={value.password}
+
             onChange={handleChange}
             className={(
               errors.password?.type === "minLength" ||
