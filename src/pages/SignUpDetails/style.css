@@ -1,0 +1,8 @@
+.birthday-row {
+  display: inline-grid;
+  grid-template-columns: 108px 108px 108px;
+  padding: 0;
+  width: stretch;
+  flex-direction: row;
+  justify-content: space-between;
+}
