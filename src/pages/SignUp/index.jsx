@@ -1,6 +1,6 @@
 import SignPageFooter from '../../components/SignPage/Footer';
 import SignPageHeader from '../../components/SignPage/Header';
-import Form from './Form';
+import {Form} from './Form';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { t } from 'i18next';
@@ -12,7 +12,7 @@ import './../../components/SignPage/Heading/style.css';
 import './../../components/SignPage/SignInForm/style.css';
 import './../../components/SignPage/ShowPassword/style.css';
 
-export default function SignUp() {
+export default function SignUp({value, setValue, errors, handleSubmit, register, watch, check}) {
   return (
     <>
       <Helmet>
@@ -24,7 +24,7 @@ export default function SignUp() {
           <main className="form-container">
             <Logo />
             <Heading />
-            <Form />
+            <Form value={value} setValue={setValue} check={check} watch={watch} register={register} handleSubmit={handleSubmit} errors={errors}/>
           </main>
           <AccountLogo />
         </section>

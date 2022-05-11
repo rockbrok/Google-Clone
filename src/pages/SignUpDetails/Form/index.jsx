@@ -12,6 +12,8 @@ export default function Form() {
     password: '',
     month: '',
     gender: '',
+    day: '',
+    year: ''
   })
 
   const {register, watch, handleSubmit, formState: { errors }} = useForm({
@@ -21,10 +23,10 @@ export default function Form() {
       email: '',
       password: '',
       passwordConfirm: '',
-      month: {},
+      month: '',
       day: '',
       year: '',
-      gender: {}
+      gender: ''
     },
     mode: 'onSubmit',
     reValidateMode: 'onChange',
@@ -67,23 +69,26 @@ export default function Form() {
       <div className="birthday-row">
         <div className="input-container">
           <select 
-            {...register("month")}
+            {...register("month", {
+              required: true
+            })}
             className="signup-input" 
             name="month"
             size="1"
+            value={value.month}
           >
-            <option value={value.month}>January</option>
-            <option value={value.january}>February</option>
-            <option value={value.january}>March</option>
-            <option value={value.january}>April</option>
-            <option value={value.january}>May</option>
-            <option value={value.january}>June</option>
-            <option value={value.january}>July</option>
-            <option value={value.january}>August</option>
-            <option value={value.january}>September</option>
-            <option value={value.january}>October</option>
-            <option value={value.january}>November</option>
-            <option value={value.january}>December</option>
+            <option>January</option>
+            <option>February</option>
+            <option>March</option>
+            <option>April</option>
+            <option>May</option>
+            <option>June</option>
+            <option>July</option>
+            <option>August</option>
+            <option>September</option>
+            <option>October</option>
+            <option>November</option>
+            <option>December</option>
           </select>
           <span className="signup-input-placeholder">
             ''
@@ -141,14 +146,17 @@ export default function Form() {
       <BirthdayNote errors={errors}/>
       <div className="input-container">
         <select 
-          {...register("gender")}
+          {...register("gender", {
+            required: true
+          })}
           className="signup-input"
           name="gender"
           size="1"
+          value={value.gender}
         >
-          <option value={value.gender}>Male</option>
-          <option value={value.gender}>Female</option>
-          <option value={value.gender}>Other</option>
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
         </select>
         <span className="signup-input-placeholder">
           ''
@@ -163,14 +171,13 @@ export default function Form() {
   )
 }
 
-const BirthdayNote = ({ errors }) => (
-  (!errors.password) ?
-    <div className="signup-note">
-      Your birthday
-    </div> : ''
+const BirthdayNote = () => (
+  <div className="signup-note">
+    Your birthday
+  </div>
 );
 
-const Next = ({ show, setShow }) => (
+const Next = () => (
   <button type="submit" className="next">
     {t('next')}
   </button>

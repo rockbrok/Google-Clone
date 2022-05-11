@@ -1,31 +1,9 @@
 import { ShowPassword } from '../../../components/SignPage/ShowPassword';
 import { SignInInstead, ErrorLogo } from '..';
-import { useForm } from 'react-hook-form';
-import { useState } from 'react';
 import { t } from 'i18next';
 import axios from 'axios';
 
-export default function Form() {
-  const [value, setValue] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    password: ''
-  })
-
-  const {register, watch, handleSubmit, formState: { errors }} = useForm({
-    defaultValues: {
-      firstName: '',
-      lastName: '',
-      email: '',
-      password: '',
-      passwordConfirm: ''
-    },
-    mode: 'onSubmit',
-    reValidateMode: 'onChange',
-    delayError: 1000,
-  });
-
+export const Form = ({ value, setValue, register, handleSubmit, errors, watch, check }) => {
   const onSubmit = async() => {
     try {
       const response = await axios({
@@ -51,7 +29,7 @@ export default function Form() {
     });
   }
 
-  console.log(errors);
+  console.log(watch());
 
   const validPasswordRegex =  /^(?=.*?[A-Z,a-z]).{8,}$/;
   const validEmailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/; // user@domain.com //
@@ -65,7 +43,7 @@ export default function Form() {
   const noSpaceStartOrEndRegex = /^[^\s].+[^\s]$/;
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="signup-form" noValidate>
+    <form onSubmit={handleSubmit(onSubmit, check)} className="signup-form" noValidate>
       <div className="name-row">
         <div className="input-container">
           <input 
@@ -375,7 +353,7 @@ const PasswordNote = ({ errors }) => (
     </div> : ''
 );
 
-const Next = ({ show, setShow }) => (
+const Next = () => (
   <button type="submit" className="next">
     {t('next')}
   </button>

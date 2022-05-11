@@ -4,6 +4,7 @@ import SignInPassword from './pages/SignIn/Password';
 import PasswordRecovery from './pages/PasswordRecovery';
 import SignUp from './pages/SignUp';
 import SignUpDetails from './pages/SignUpDetails';
+import SignUpMain from './pages/SignUpMain';
 import Account from './pages/MyAccount/Home';
 import Search from './pages/Search';
 import { darkTheme, lightTheme, GlobalStyles, ThemeProvider, useTheme } from './themes';
@@ -28,6 +29,7 @@ export default function App() {
           <Route path="/signin/challenge/recovery/" element={<PasswordRecovery />} />
           <Route path="/signup/" element={<SignUp />} />
           <Route path="/signup/webpersonaldetails/" element={<SignUpDetails />} />
+          <Route path="/signupmain/" element={<SignUpMain />} />
           <Route path="/myaccount/" element={<Account />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
