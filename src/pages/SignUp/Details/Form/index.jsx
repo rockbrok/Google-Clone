@@ -47,9 +47,12 @@ export default function Form({ value, setValue, register, handleSubmit, errors, 
             })}
             className="signup-input" 
             name="month"
+            type="month"
             size="1"
+            onChange={handleChange}
             value={value.month}
           >
+            <option value="" className="signup-input-placeholder" selected disabled hidden />
             <option>January</option>
             <option>February</option>
             <option>March</option>
@@ -125,8 +128,10 @@ export default function Form({ value, setValue, register, handleSubmit, errors, 
           className="signup-input"
           name="gender"
           size="1"
+          onChange={handleChange}
           value={value.gender}
         >
+          <option value="" className="signup-input-placeholder" selected disabled hidden />
           <option>Male</option>
           <option>Female</option>
           <option>Other</option>
