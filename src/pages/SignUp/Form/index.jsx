@@ -1,27 +1,8 @@
 import { ShowPassword } from '../../../components/SignPage/ShowPassword';
 import { SignInInstead, ErrorLogo } from '..';
 import { t } from 'i18next';
-import axios from 'axios';
 
-export const Form = ({ value, setValue, register, handleSubmit, errors, watch, check }) => {
-  const onSubmit = async() => {
-    try {
-      const response = await axios({
-        method: "post",
-        url: "http://localhost:5000/users",
-        data: {
-          firstName: value.firstName,
-          lastName: value.lastName,
-          email: value.email,
-          password: value.password,
-        },
-        headers: { "Content-Type": "application/json"},
-      });
-    } catch(error) {
-      console.log(error.response.data)
-    }
-  }
-
+export default function Form({ value, setValue, register, handleSubmit, errors, watch, onSubmit }) {
   const handleChange = (e) => {
     setValue({
       ...value,
@@ -43,7 +24,7 @@ export const Form = ({ value, setValue, register, handleSubmit, errors, watch, c
   const noSpaceStartOrEndRegex = /^[^\s].+[^\s]$/;
 
   return (
-    <form onSubmit={handleSubmit(onSubmit, check)} className="signup-form" noValidate>
+    <form onSubmit={handleSubmit(onSubmit)} className="signup-form" noValidate>
       <div className="name-row">
         <div className="input-container">
           <input 

@@ -1,38 +1,8 @@
 import { Information, Back } from '..';
-import { useForm } from 'react-hook-form';
-import { useState } from 'react';
 import { t } from 'i18next';
 import axios from 'axios';
 
-export default function Form() {
-  const [value, setValue] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    password: '',
-    month: '',
-    gender: '',
-    day: '',
-    year: ''
-  })
-
-  const {register, watch, handleSubmit, formState: { errors }} = useForm({
-    defaultValues: {
-      firstName: '',
-      lastName: '',
-      email: '',
-      password: '',
-      passwordConfirm: '',
-      month: '',
-      day: '',
-      year: '',
-      gender: ''
-    },
-    mode: 'onSubmit',
-    reValidateMode: 'onChange',
-    delayError: 1000,
-  });
-
+export default function Form({ value, setValue, register, handleSubmit, errors, watch }) {
   const onSubmit = async() => {
     try {
       const response = await axios({

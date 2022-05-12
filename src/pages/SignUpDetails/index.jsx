@@ -5,7 +5,6 @@ import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { t } from 'i18next';
 
-
 import './style.css';
 import './../../components/SignPage/Container/style.css';
 import './../../components/SignPage/NextButton/style.css';
@@ -13,7 +12,7 @@ import './../../components/SignPage/Heading/style.css';
 import './../../components/SignPage/SignInForm/style.css';
 import './../../components/SignPage/ShowPassword/style.css';
 
-export default function SignUpDetails() {
+export default function SignUpDetails({ value, setValue, register, handleSubmit, errors, watch }) {
   return (
     <>
       <Helmet>
@@ -25,7 +24,7 @@ export default function SignUpDetails() {
           <main className="form-container">
             <Logo />
             <Heading />
-            <Form />
+            <Form value={value} setValue={setValue} register={register} handleSubmit={handleSubmit} errors={errors} watch={watch} />
           </main>
           <AccountLogo />
         </section>
@@ -69,7 +68,7 @@ export const ErrorLogo = () => (
 )
 
 export const Information = () => (
-  <a target="_blank" href="https://support.google.com/accounts/answer/1733224?hl=en" className="create-account">
+  <a target="_blank" rel="noreferrer" href="https://support.google.com/accounts/answer/1733224?hl=en" className="create-account">
     Why we ask for this information
   </a>
 );

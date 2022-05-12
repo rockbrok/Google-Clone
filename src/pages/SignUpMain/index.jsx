@@ -12,7 +12,11 @@ export default function SignUpMain() {
       lastName: '',
       email: '',
       password: '',
-      passwordConfirm: ''
+      passwordConfirm: '',
+      month: '',
+      gender: '',
+      day: '',
+      year: '',
     },
     mode: 'onSubmit',
     reValidateMode: 'onChange',
@@ -23,20 +27,30 @@ export default function SignUpMain() {
     firstName: '',
     lastName: '',
     email: '',
-    password: ''
+    password: '',
+    month: '',
+    gender: '',
+    day: '',
+    year: '',
   })
 
-  function check() {
-    if (value.firstName && value.lastName && value.email && value.password) {
-      console.log("error");
-      return;
-    }
+  const onSubmit = async () => {
     setSuccess(true);
   }
 
   return (
     <>
-      { success ? <SignUpDetails /> : 
+      { success ? 
+        <SignUpDetails 
+          handleSubmit={handleSubmit} 
+          value={value}
+          setValue={setValue}
+          register={register}
+          errors={errors}
+          watch={watch}
+          onSubmit={onSubmit}
+        /> 
+        : 
         <SignUp 
           handleSubmit={handleSubmit} 
           value={value}
@@ -44,7 +58,7 @@ export default function SignUpMain() {
           register={register}
           errors={errors}
           watch={watch}
-          check={check}
+          onSubmit={onSubmit}
         />
       }
     </>
