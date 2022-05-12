@@ -2,7 +2,7 @@ import { Information, Back } from '..';
 import { t } from 'i18next';
 import axios from 'axios';
 
-export default function Form({ value, setValue, register, handleSubmit, errors, watch }) {
+export default function Form({ value, setValue, register, handleSubmit, errors, watch, Next }) {
   const onSubmit = async() => {
     try {
       const response = await axios({
@@ -20,6 +20,9 @@ export default function Form({ value, setValue, register, handleSubmit, errors, 
         },
         headers: { "Content-Type": "application/json"},
       });
+      setTimeout(function () {
+        window.location.href = "http://localhost:3000/";
+      }, 250);
     } catch(error) {
       console.log(error.response.data)
     }
@@ -145,10 +148,4 @@ const BirthdayNote = () => (
   <div className="signup-note">
     Your birthday
   </div>
-);
-
-const Next = () => (
-  <button type="submit" className="next">
-    {t('next')}
-  </button>
 );

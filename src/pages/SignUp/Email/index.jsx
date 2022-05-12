@@ -1,36 +1,39 @@
-import SignPageFooter from '../../components/SignPage/Footer';
-import SignPageHeader from '../../components/SignPage/Header';
+import SignPageFooter from '../../../components/SignPage/Footer';
+import SignPageHeader from '../../../components/SignPage/Header';
 import Form from './Form';
-import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { t } from 'i18next';
 
 import './style.css';
-import './../../components/SignPage/Container/style.css';
-import './../../components/SignPage/NextButton/style.css';
-import './../../components/SignPage/Heading/style.css';
-import './../../components/SignPage/SignInForm/style.css';
-import './../../components/SignPage/ShowPassword/style.css';
+import '../../../components/SignPage/Container/style.css';
+import '../../../components/SignPage/NextButton/style.css';
+import '../../../components/SignPage/Heading/style.css';
+import '../../../components/SignPage/SignInForm/style.css';
+import '../../../components/SignPage/ShowPassword/style.css';
 
-export default function SignUpDetails({ value, setValue, register, handleSubmit, errors, watch }) {
+export default function SignUpEmail({value, setValue, errors, handleSubmit, register, watch, onSubmit, Next}) {
   return (
-    <>
-      <Helmet>
-        <title>Create your Google Account</title>
-      </Helmet>
-      <section className="flex-container">
-        <SignPageHeader />
-        <section className="signpage-container">
-          <main className="form-container">
-            <Logo />
-            <Heading />
-            <Form value={value} setValue={setValue} register={register} handleSubmit={handleSubmit} errors={errors} watch={watch} />
-          </main>
-          <AccountLogo />
-        </section>
-        <SignPageFooter />
+    <section className="flex-container">
+      <SignPageHeader />
+      <section className="signpage-container">
+        <main className="form-container">
+          <Logo />
+          <Heading />
+          <Form
+            value={value}
+            Next={Next} 
+            setValue={setValue} 
+            onSubmit={onSubmit} 
+            watch={watch} 
+            register={register} 
+            handleSubmit={handleSubmit} 
+            errors={errors}
+          />
+        </main>
+        <AccountLogo />
       </section>
-    </>
+      <SignPageFooter />
+    </section>
   )
 }
 
@@ -45,18 +48,10 @@ const Logo = () => (
   </svg>
 );
 
-const Heading = ({firstName, email}) => (
-  <>
+const Heading = () => (
   <h1 className="heading">
-    Kai{firstName}, welcome to Google
+    {t("sign_up_heading")}
   </h1>
-  <p>
-    <svg aria-hidden="true" fill="currentColor" focusable="false" width="22px" height="22px" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg">
-      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm6.36 14.83c-1.43-1.74-4.9-2.33-6.36-2.33s-4.93.59-6.36 2.33C4.62 15.49 4 13.82 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8c0 1.82-.62 3.49-1.64 4.83zM12 6c-1.94 0-3.5 1.56-3.5 3.5S10.06 13 12 13s3.5-1.56 3.5-3.5S13.94 6 12 6z"></path>
-    </svg>
-    kailemon@yahoo.com{email}
-  </p>
-  </>
 );
 
 export const ErrorLogo = () => (
@@ -67,16 +62,10 @@ export const ErrorLogo = () => (
   </div>
 )
 
-export const Information = () => (
-  <a target="_blank" rel="noreferrer" href="https://support.google.com/accounts/answer/1733224?hl=en" className="create-account">
-    Why we ask for this information
-  </a>
-);
-
-export const Back = () => (
-  <Link to="/signup/">
+export const SignInInstead = () => (
+  <Link to="/signin/identifier/">
     <button className="create-account">
-      Back
+      {t("sign_up_sign_in")}
     </button>
   </Link>
 );
@@ -84,9 +73,9 @@ export const Back = () => (
 const AccountLogo = () => (
   <section className="account-app-icon">
     <figure className="account-app-figure">
-      <img src="https://ssl.gstatic.com/accounts/signup/glif/personal.svg" alt="" width="244" height="244" />
+      <img src="https://ssl.gstatic.com/accounts/signup/glif/account.svg" alt="" width="244" height="244" />
       <figcaption className="fig-heading">
-        Your personal info is private & safe
+        {t("sign_up_figure_caption")}
       </figcaption>
     </figure>
   </section>

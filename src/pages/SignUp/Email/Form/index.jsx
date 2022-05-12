@@ -1,8 +1,8 @@
-import { ShowPassword } from '../../../components/SignPage/ShowPassword';
+import { ShowPassword } from '../../../../components/SignPage/ShowPassword';
 import { SignInInstead, ErrorLogo } from '..';
 import { t } from 'i18next';
 
-export default function Form({ value, setValue, register, handleSubmit, errors, watch, onSubmit }) {
+export default function Form({ value, setValue, register, handleSubmit, errors, watch, onSubmit, Next }) {
   const handleChange = (e) => {
     setValue({
       ...value,
@@ -332,10 +332,4 @@ const PasswordNote = ({ errors }) => (
     <div className="signup-note">
       Use 8 or more characters with a mix of letters, numbers & symbols
     </div> : ''
-);
-
-const Next = () => (
-  <button type="submit" className="next">
-    {t('next')}
-  </button>
 );
