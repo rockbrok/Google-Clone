@@ -1,15 +1,13 @@
 {
   "users": [
     {
-      "firstName": "James",
+      "firstName": "Kevin",
       "lastName": "Smith",
-      "email": "jamesmith@yahoo.net",
+      "email": "ksmith@yahoo.com",
       "password": "asdfasdfasdf",
-      "month": "February",
-      "day": "13",
-      "year": "1908",
-      "gender": "Female",
-      "id": 1
+      "gender": "male",
+      "dateOfBirth": "06/18/2002",
+      "id": 4
     }
   ]
 }

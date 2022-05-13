@@ -13,10 +13,8 @@ export default function Form({ value, setValue, register, handleSubmit, errors, 
           lastName: value.lastName,
           email: value.email,
           password: value.password,
-          month: value.month,
-          day: value.day,
-          year: value.year,
           gender: value.gender,
+          dateOfBirth: value.month + '/' + value.day + '/' + value.year,
         },
         headers: { "Content-Type": "application/json"},
       });
@@ -52,19 +50,19 @@ export default function Form({ value, setValue, register, handleSubmit, errors, 
             onChange={handleChange}
             value={value.month}
           >
-            <option value="" className="signup-input-placeholder" selected disabled hidden />
-            <option>January</option>
-            <option>February</option>
-            <option>March</option>
-            <option>April</option>
-            <option>May</option>
-            <option>June</option>
-            <option>July</option>
-            <option>August</option>
-            <option>September</option>
-            <option>October</option>
-            <option>November</option>
-            <option>December</option>
+            <option value="" className="signup-input-placeholder" defaultValue disabled hidden />
+            <option value="01">January</option>
+            <option value="02">February</option>
+            <option value="03">March</option>
+            <option value="04">April</option>
+            <option value="05">May</option>
+            <option value="06">June</option>
+            <option value="07">July</option>
+            <option value="08">August</option>
+            <option value="09">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
           </select>
           <span className="signup-input-placeholder">
             ''
@@ -131,10 +129,10 @@ export default function Form({ value, setValue, register, handleSubmit, errors, 
           onChange={handleChange}
           value={value.gender}
         >
-          <option value="" className="signup-input-placeholder" selected disabled hidden />
-          <option>Male</option>
-          <option>Female</option>
-          <option>Other</option>
+          <option value="" className="signup-input-placeholder" defaultValue disabled hidden />
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
         </select>
         <span className="signup-input-placeholder">
           ''
