@@ -7,7 +7,7 @@ import '../../../components/SignPage/Container/style.css';
 import '../../../components/SignPage/Heading/style.css';
 import '../../../components/SignPage/ShowPassword/style.css';
 
-export default function SignUpEmail({value, setValue, errors, handleSubmit, register, watch, onSubmit, Next, Logo}) {
+export default function SignUpEmail({value, setValue, errors, handleSubmit, checkEmail, register, watch, Next, onSubmit, Logo}) {
   return (
     <>
       <main className="form-container">
@@ -17,11 +17,12 @@ export default function SignUpEmail({value, setValue, errors, handleSubmit, regi
           value={value}
           Next={Next} 
           setValue={setValue} 
-          onSubmit={onSubmit} 
           watch={watch} 
           register={register} 
           handleSubmit={handleSubmit} 
+          onSubmit={onSubmit}
           errors={errors}
+          checkEmail={checkEmail}
         />
       </main>
       <AccountLogo />

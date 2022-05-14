@@ -1,9 +1,19 @@
 import { Information, Back } from '..';
 import { t } from 'i18next';
 import axios from 'axios';
+import { useContext } from 'react';
+import { UserContext } from '../../../../usercontext';
 
 export default function Form({ value, setValue, register, handleSubmit, errors, watch, Next }) {
-  const onSubmit = async() => {
+  const { user, setUser } = useContext(UserContext);
+
+  const currentUser = async () => {
+    let URL = "http://localhost:5000/users?email=" + value.email;
+    let response = await axios.get(URL);
+    return response.data;
+  };
+
+  const onSubmit = async(formData) => {
     try {
       const response = await axios({
         method: "post",
@@ -18,12 +28,12 @@ export default function Form({ value, setValue, register, handleSubmit, errors, 
         },
         headers: { "Content-Type": "application/json"},
       });
-      setTimeout(function () {
-        window.location.href = "http://localhost:3000/";
-      }, 250);
+
     } catch(error) {
       console.log(error.response.data)
     }
+    const user = await currentUser();
+      setUser(user);
   }
 
   const handleChange = (e) => {
@@ -152,3 +162,5 @@ const BirthdayNote = () => (
     Your birthday
   </div>
 );
+
+export let currentUserURL = ({ value }) => "http://localhost:5000/users?email=" + value.email;

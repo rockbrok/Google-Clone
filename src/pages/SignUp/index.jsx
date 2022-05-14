@@ -3,15 +3,19 @@ import SignUpEmail from "./Email";
 import SignPageHeader from "../../components/SignPage/Header";
 import SignPageFooter from "../../components/SignPage/Footer";
 import { Helmet } from 'react-helmet';
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { UserContext } from "../../usercontext";
 import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
 import { t } from 'i18next';
+import axios from "axios";
 
 import '../../components/SignPage/Container/style.css';
 import '../../components/SignPage/NextButton/style.css';
 
 export default function SignUp() {
   const [success, setSuccess] = useState(false);
+  const user = useContext(UserContext);
 
   const {register, handleSubmit, watch, formState: { errors }} = useForm({
     defaultValues: {
@@ -52,6 +56,9 @@ export default function SignUp() {
       </Helmet>
       <section className="flex-container">
         <SignPageHeader />
+        { user ? (<pre>{JSON.stringify(user, null, 2)}</pre>) : ('') }
+        <Link to="/">Hi</Link>
+        <Link to="/delete/">Delete user</Link>
         <section className="signpage-container">
           { success ? 
             <SignUpDetails 
@@ -72,9 +79,10 @@ export default function SignUp() {
               register={register}
               errors={errors}
               watch={watch}
-              onSubmit={onSubmit}
               Next={Next}
               Logo={Logo}
+              onSubmit={onSubmit}
+
             />
           }
         </section>

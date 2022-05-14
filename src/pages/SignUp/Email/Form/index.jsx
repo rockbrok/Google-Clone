@@ -2,7 +2,7 @@ import { ShowPassword } from '../../../../components/SignPage/ShowPassword';
 import { SignInInstead, ErrorLogo } from '..';
 import { t } from 'i18next';
 
-export default function Form({ value, setValue, register, handleSubmit, errors, watch, onSubmit, Next }) {
+export default function Form({ value, setValue, register, handleSubmit, checkEmail, errors, watch, onSubmit, Next }) {
   const handleChange = (e) => {
     setValue({
       ...value,
