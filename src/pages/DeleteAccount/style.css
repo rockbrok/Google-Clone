@@ -1,8 +1,8 @@
 .profile-icons {
-    display: inline-block;
-    width: 32px;
-    height: 32px;
-    background-image: url("../../../public/allletters.png");
-    background-size: 32px 832px;
-    vertical-align: top;
-  }
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background-image: url("../../../public/allletters.png");
+  background-size: 32px 832px;
+  vertical-align: top;
+}

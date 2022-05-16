@@ -1,4 +1,3 @@
-import { currentUserURL } from "../SignUp/Details/Form";
 import { useContext } from "react";
 import { UserContext } from "../../usercontext";
 import axios from "axios";
@@ -24,12 +23,11 @@ export default function DeleteAccount() {
     return;
   }
 
-
   return (
     <>
     { user ? 
       <>
-        <A />
+        <B id={letter} />
         <p>{letter}</p>
         <p>Name: {firstName} {lastName}</p>
         <p>Email: {email}</p>
@@ -37,10 +35,13 @@ export default function DeleteAccount() {
         <p>Password: {password}</p>
       </>
       : ('') }
-      <button onClick={() => deleteUser()}>
+      <button className="create-account" onClick={() => deleteUser()}>
         Delete account
       </button>
-      
+      <br />
+      <button className="create-account">
+        Edit account
+      </button>
     </>
  
   )
