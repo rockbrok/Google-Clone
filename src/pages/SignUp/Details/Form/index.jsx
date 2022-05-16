@@ -162,5 +162,3 @@ const BirthdayNote = () => (
     Your birthday
   </div>
 );
-
-export let currentUserURL = ({ value }) => "http://localhost:5000/users?email=" + value.email;
