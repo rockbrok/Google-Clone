@@ -6,16 +6,13 @@ import SignUp from './pages/SignUp';
 import Account from './pages/MyAccount/Home';
 import Search from './pages/Search';
 import DeleteAccount from './pages/DeleteAccount';
+import UserContextProvider from './usercontext';
 import { darkTheme, lightTheme, GlobalStyles, ThemeProvider, useTheme } from './themes';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-import { useState, useMemo } from 'react';
-import { UserContext } from './usercontext';
 
 export default function App() {
   const [theme] = useTheme();
-  const [user, setUser] = useState(null);
-  const value = useMemo(() => ({ user, setUser }), [user, setUser]);
 
   return (
     <>
@@ -24,7 +21,7 @@ export default function App() {
     </Helmet>
     <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
     <GlobalStyles />
-    <UserContext.Provider value={value}>
+    <UserContextProvider>
       <Router>
         <Routes>
           <Route exact path="/" element={<Search />}/>
@@ -37,7 +34,7 @@ export default function App() {
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </Router>
-      </UserContext.Provider>
+      </UserContextProvider>
     
     </ThemeProvider>
     </>
