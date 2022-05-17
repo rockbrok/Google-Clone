@@ -21,8 +21,12 @@ export default function UserPanel() {
     <div className="user-panel">
       <LargeProfileIcon letter={letter} />
       <div className="user-info">
-        <div className="user-info-name">{firstName} {lastName}</div>
-        <div className="user-info-email">{email}</div>
+        <div className="user-info-name">
+          {firstName}&nbsp;{lastName}
+        </div>
+        <div className="user-info-email">
+          {email}
+        </div>
       </div>
       <button className="manage-account-button">
         <Link to="/myaccount/">

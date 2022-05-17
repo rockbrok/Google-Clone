@@ -24,6 +24,7 @@
   width: 80px;
   height: 80px;
   background-color: #9900c8;
+  box-sizing: border-box;
   font-size: 36px;
   font-family: Roboto;
   font-weight: 500;
@@ -48,22 +49,53 @@
   width: 32px;
   height: 32px;
   background-color: #9900c8;
+  box-sizing: border-box;
   font-size: 15px;
   font-weight: 500;
   font-family: Roboto;
   text-transform: capitalize;
   text-align: center;
-  vertical-align: middle;
+
   color: #fff;
   border-radius: 50%;
   align-self: center;
   justify-content: center;
+
   align-items: center;
   line-height: 32px;
   -webkit-user-select: none;        
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.user-icon-1-link {
+  position: relative;
+  align-self: center;
+  justify-content: center;
+  display: flex;
+  width: 40px;
+  height: 40px;
+}
+
+.user-icon-1-link:hover {
+  width: 40px;
+  height: 40px;
+  background-color: var(--gapp-icon-hover);
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.user-icon-1-link-active.active {
+  width: 40px;
+  height: 40px;
+  background-color: var(--gapp-icon-active);
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.user-icon-1-link-active.active .user-icon-1 {
+  margin-top: 4px;
 }
 
 .user-info {
@@ -172,4 +204,24 @@
 
 .user-panel a:hover {
   text-decoration: none;
+}
+
+.user-panel-title {
+  display: none;
+  position: absolute;
+  top: 44px;
+  right: -10px;
+  height: auto;
+  text-align: left;
+  padding: 5px 7px;
+  background-color: var(--gapp-title-background);
+  border-radius: 4px;
+  color: var(--gapp-title);
+  font-size: 12px;
+  letter-spacing: 0.675px;
+  word-spacing: 1.25px;
+}
+
+.user-panel-title-text {
+  color: rgb(184, 184, 184);
 }

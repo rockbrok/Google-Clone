@@ -17,7 +17,14 @@ export default function ToggleUser() {
     <li className="pl">
       <OutsideClickHandler onOutsideClick={() => { setShow(false) }}>
         <button onClick={() => setShow(!show)} alt="Google account">
-          <AccountButton setShowTitle={setShowTitle} showTitle={showTitle} show={show} letter={letter} firstName={firstName} lastName={lastName} email={email}/>
+          <AccountButton 
+            setShowTitle={setShowTitle} 
+            showTitle={showTitle} 
+            show={show} 
+            letter={letter} 
+            firstName={firstName} 
+            lastName={lastName} 
+            email={email}/>
         </button>
         { show ? <UserPanel/> : null }
       </OutsideClickHandler>
@@ -27,21 +34,23 @@ export default function ToggleUser() {
 
 const AccountButton = ({ show, showTitle, setShowTitle, firstName, lastName, email, letter }) => (
   <div className="header-user-icon">
-    <ProfileIcon letter={letter}
+    <div
+      className={!show ? 'user-icon-1-link' : 'user-icon-1-link-active active'}
       onMouseEnter={!show ? (e) => setShowTitle(true) : (e) => setShowTitle(false)}
       onMouseLeave={(e) => setShowTitle(false)}
       onClick={(e) => setShowTitle(false)}
       >
+      <ProfileIcon letter={letter} />
       <Title showTitle={showTitle} firstName={firstName} lastName={lastName} email={email}/>
-    </ProfileIcon>
+    </div>
   </div>
 );
 
 const Title = ({ showTitle, firstName, lastName, email }) => (
-  <div className="title fade-in" style={{ display: showTitle ? "block" : "none" }}>
+  <div className="user-panel-title fade-in" style={{ display: showTitle ? "block" : "none" }}>
     Google Account<br />
-    {firstName} {lastName}<br />
-    {email}
+    <span className="user-panel-title-text">{firstName} {lastName}</span><br />
+    <span className="user-panel-title-text">{email}</span>
   </div>
 );
 
