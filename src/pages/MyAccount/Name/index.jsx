@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
+import { BackArrow } from "../Home";
+import AccountHeader from "../Header";
 
 export default function Name() {
   const {register, handleSubmit, watch, formState: { errors }} = useForm({
@@ -47,12 +49,8 @@ export default function Name() {
 
   return (
     <>
-    <button>
-      <Link to="/myaccount/personalinfo/">
-        Back
-      </Link>
-    </button>
-    <h1>Name</h1>
+    <AccountHeader />
+    <SubHeading />
     <p>Changes to your name will be reflected across your Google Account.
       &nbsp;<a>Learn more</a>
     </p>
@@ -132,3 +130,10 @@ export default function Name() {
     </>
   )
 }
+
+const SubHeading = () => (
+  <div className="account-subhead">
+    <BackArrow />
+  <div className="account-subhead-text">Name</div>
+</div>
+)

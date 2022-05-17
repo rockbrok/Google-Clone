@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import { useForm } from "react-hook-form";
+import AccountHeader from "../Header";
 
 export default function DeleteAccount() {
   const {register, handleSubmit, watch, formState: { errors }} = useForm({
@@ -22,6 +23,7 @@ export default function DeleteAccount() {
 
   return (
     <>
+    <AccountHeader />
     <h1>Delete your Google Account</h1>
     <h3>Please read this carefully. It’s not the usual yada yada.</h3>
     <p>You’re trying to delete your Google Account, which provides access to various Google services. You’ll no longer be able to use any of those services, and your account and data will be lost.</p>

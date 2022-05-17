@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
+import AccountHeader from "../Header";
+import { BackArrow } from "../Home";
 
 export default function Birthday() {
   const {register, handleSubmit, watch, formState: { errors }} = useForm({
@@ -47,12 +49,8 @@ export default function Birthday() {
 
   return (
     <>
-    <button>
-      <Link to="/myaccount/personalinfo/">
-        Back
-      </Link>
-    </button>
-    <h1>Birthday</h1>
+    <AccountHeader />
+    <SubHeading />
     <p>Your birthday may be used for account security and personalization across Google services. If this Google Account is for a business or organization, use the birthday of the person who manages the account.
       &nbsp;<a>Learn more</a>
     </p>
@@ -149,3 +147,14 @@ export default function Birthday() {
     </>
   )
 }
+
+const SubHeading = () => (
+  <div className="account-subhead">
+    <div className="account-main-wrap">
+      <div className="subhead-wrap">
+        <BackArrow />
+        <div className="account-subhead-text">Birthday</div>
+      </div>
+    </div>
+</div>
+)

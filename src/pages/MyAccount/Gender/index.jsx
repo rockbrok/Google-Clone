@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
+import { BackArrow } from "../Home";
+import AccountHeader from "../Header";
 
 export default function Gender() {
   const {register, handleSubmit, watch, formState: { errors }} = useForm({
@@ -47,12 +49,8 @@ export default function Gender() {
 
   return (
     <>
-    <button>
-      <Link to="/myaccount/personalinfo/">
-        Back
-      </Link>
-    </button>
-    <h1>Gender</h1>
+    <AccountHeader />
+    <SubHeading />
     <p>Your gender may be used for personalization across Google services, including how we refer to you.
       &nbsp;<a>Learn more</a>
     </p>
@@ -89,3 +87,10 @@ export default function Gender() {
     </>
   )
 }
+
+const SubHeading = () => (
+  <div className="account-subhead">
+    <BackArrow />
+  <div className="account-subhead-text">Gender</div>
+</div>
+)

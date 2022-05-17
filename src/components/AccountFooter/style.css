@@ -1,0 +1,21 @@
+.account-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: inline-flex;
+  height: 48px;
+  align-items: center;
+  flex-direction: row;
+  margin-left: 20px;
+}
+
+.account-footer-items {
+  padding: 10px;
+  color: rgb(95,99,104);
+  cursor: pointer;
+  font-family: Roboto;
+  font-size: 12px;
+  letter-spacing: 0.4px;
+  line-height: 20px;
+  text-align: center;
+}

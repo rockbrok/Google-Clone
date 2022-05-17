@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
+import AccountHeader from "../Header";
+import { BackArrow } from "../Home";
 
 export default function Password() {
   const {register, handleSubmit, watch, formState: { errors }} = useForm({
@@ -53,12 +54,8 @@ export default function Password() {
 
   return (
     <>
-    <button>
-      <Link to="/myaccount/personalinfo/">
-        Back
-      </Link>
-    </button>
-    <h1>Password</h1>
+    <AccountHeader />
+    <SubHeading />
     <p>Choose a strong password and don't reuse it for other accounts.
       &nbsp;<a>Learn more</a>
     </p>
@@ -129,3 +126,10 @@ export default function Password() {
     </>
   )
 }
+
+const SubHeading = () => (
+  <div className="account-subhead">
+    <BackArrow />
+  <div className="account-subhead-text">Password</div>
+</div>
+)

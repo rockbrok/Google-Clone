@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
-import { ArrowLeftIcon } from "@heroicons/react/solid";
+import { BackArrow } from "../Home";
 import AccountHeader from "../Header";
 
 import '../style.css';
@@ -124,11 +124,7 @@ export default function Email() {
 
 const SubHeading = () => (
   <div className="account-subhead">
-    <div className="back-arrow">
-      <Link to="/myaccount/personalinfo/">
-        <ArrowLeftIcon className="help-icon"/>
-      </Link>
-    </div>
+    <BackArrow />
   <div className="account-subhead-text">Google Account email</div>
 </div>
 )

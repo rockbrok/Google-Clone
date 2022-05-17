@@ -8,6 +8,22 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  height: 56px;
+  width: auto;
+  border-bottom: 1px solid lightgray;
+}
+
+.account-main-wrap {
+  display: flex;
+  align-self: center;
+  margin: 0 auto;
+  width: 624px;
+}
+
+.subhead-wrap {
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
 }
 
 .back-arrow {
@@ -32,4 +48,19 @@
   line-height: 32px;
   vertical-align: middle;
   margin-left: 4px;
+  margin-top: 6px;
+}
+
+.account-flex {
+  display: flex;
+  flex-direction: column;
+  padding: 0 48px;
+  margin-left: 280px;
+  width: 684px;
+}
+
+.account-page-wrap {
+  display: flex;
+  flex-direction: row;
+  margin-top: 60px;
 }

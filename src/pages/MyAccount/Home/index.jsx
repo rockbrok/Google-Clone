@@ -1,4 +1,8 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
+import { ArrowLeftIcon } from "@heroicons/react/solid";
+import AccountHeader from "../Header";
+import AccountSideBar from "../../../components/AccountSideBar";
 
 export default function Account() {
   const obj = JSON.parse(localStorage.getItem('user'));
@@ -12,25 +16,22 @@ export default function Account() {
   const URL = "http://localhost:5000/users?email=" + email;
 
   return (
-      <center>
-        <XLProfileIcon letter={letter}/>
-        <h1>Welcome, {firstName}&nbsp;{lastName}</h1>
-        <p>Manage your info, privacy, and security to make Google work better for you.
-          &nbsp;<a>Learn more</a>
-        </p>
-      <button>
-        <Link to="/myaccount/personalinfo/">
-          Personal Info
-        </Link>
-      </button>
-      <br />
-      <button>
-        <Link to="/myaccount/data-and-personalization">
-          Data & Privacy
-        </Link>
-      </button>
-
-      </center>
+    <>
+      <Helmet>
+        <title>Google Account</title>
+      </Helmet>
+      <AccountHeader />
+      <section className="account-page-wrap">
+        <AccountSideBar />
+        <section className="account-flex">
+          <XLProfileIcon letter={letter}/>
+          <h1>Welcome, {firstName}&nbsp;{lastName}</h1>
+          <p>Manage your info, privacy, and security to make Google work better for you.
+            &nbsp;<a>Learn more</a>
+          </p>
+        </section>
+      </section>
+    </>
   );
 }
 
@@ -41,3 +42,11 @@ const XLProfileIcon = ({ letter }) => {
     </div>
   );
 }
+
+export const BackArrow = () => (
+  <Link to="/myaccount/personalinfo/">
+    <div className="back-arrow">
+      <ArrowLeftIcon className="help-icon"/>
+    </div>
+  </Link>
+)
