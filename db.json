@@ -10,211 +10,31 @@
       "id": 4
     },
     {
-      "firstName": "James",
-      "lastName": "asf",
-      "email": "ksmith@yahoo.com",
+      "firstName": "Jerry",
+      "lastName": "Jones",
+      "email": "JJones@gmail.com",
       "password": "asdfasdfasdf",
-      "gender": "male",
-      "dateOfBirth": "01/3/1902",
+      "gender": "female",
+      "dateOfBirth": "02/3/1902",
       "id": 5
     },
     {
-      "firstName": "asdf",
-      "lastName": "asdf",
-      "email": "ksmith@yahoo.com",
+      "firstName": "Jamey",
+      "lastName": "Jones",
+      "email": "jamejon@google.com",
       "password": "asdfasdfasdf",
       "gender": "male",
-      "dateOfBirth": "10/2/1901",
+      "dateOfBirth": "04/4/1902",
       "id": 6
     },
     {
-      "firstName": "asdf",
-      "lastName": "asdf",
-      "email": "asdf@asdf.com",
+      "firstName": "Jone",
+      "lastName": "Jone",
+      "email": "jone@jone.com",
       "password": "asdfasdfasdf",
-      "gender": "male",
-      "dateOfBirth": "05/2/1901",
+      "gender": "other",
+      "dateOfBirth": "03/3/1902",
       "id": 7
-    },
-    {
-      "firstName": "asdf",
-      "lastName": "asdf",
-      "email": "asdf@asdf.com",
-      "password": "asdfasdfasdf",
-      "gender": "male",
-      "dateOfBirth": "05/2/1901",
-      "id": 8
-    },
-    {
-      "firstName": "asdf",
-      "lastName": "asdf",
-      "email": "asdf@asdf.com",
-      "password": "asdfasdfasdf",
-      "gender": "male",
-      "dateOfBirth": "05/2/1901",
-      "id": 9
-    },
-    {
-      "firstName": "asdf",
-      "lastName": "asdf",
-      "email": "asdf@asdf.com",
-      "password": "asdfasdfasdf",
-      "gender": "male",
-      "dateOfBirth": "03/2/1900",
-      "id": 10
-    },
-    {
-      "firstName": "kev",
-      "lastName": "asdf",
-      "email": "kevasdfasdf@as.com",
-      "password": "asdfasdfasdf",
-      "gender": "female",
-      "dateOfBirth": "04/2/1901",
-      "id": 11
-    },
-    {
-      "firstName": "asdf",
-      "lastName": "asdf",
-      "email": "asdf@asdf.com",
-      "password": "asdfasdfasdf",
-      "gender": "male",
-      "dateOfBirth": "04/1/1901",
-      "id": 12
-    },
-    {
-      "firstName": "asdf",
-      "lastName": "asdf",
-      "email": "asdf@asdf.com",
-      "password": "asdfasdfasdf",
-      "gender": "female",
-      "dateOfBirth": "04/2/1900",
-      "id": 13
-    },
-    {
-      "firstName": "asdf",
-      "lastName": "asdf",
-      "email": "asdf@asdf333.com",
-      "password": "asdfasdfasdf",
-      "gender": "male",
-      "dateOfBirth": "02/1/1900",
-      "id": 14
-    },
-    {
-      "firstName": "asdf",
-      "lastName": "asdf",
-      "email": "asdf@a22sdf.com",
-      "password": "asdfasdfasdf",
-      "gender": "female",
-      "dateOfBirth": "03/2/1901",
-      "id": 15
-    },
-    {
-      "firstName": "asd",
-      "lastName": "asdf",
-      "email": "asdf2123@asd2.com",
-      "password": "asdfasdfasdf",
-      "gender": "female",
-      "dateOfBirth": "02/2/1901",
-      "id": 16
-    },
-    {
-      "firstName": "asdf",
-      "lastName": "asdf",
-      "email": "2222asdf@asdf.com",
-      "password": "asdfasdfasdf",
-      "gender": "other",
-      "dateOfBirth": "04/3/1901",
-      "id": 17
-    },
-    {
-      "firstName": "asdf",
-      "lastName": "asdf",
-      "email": "2222asdf@asdf.com",
-      "password": "asdfasdfasdf",
-      "gender": "other",
-      "dateOfBirth": "04/3/1901",
-      "id": 18
-    },
-    {
-      "firstName": "asdf",
-      "lastName": "asdf",
-      "email": "2222asdf@asdf.com",
-      "password": "asdfasdfasdf",
-      "gender": "other",
-      "dateOfBirth": "04/3/1901",
-      "id": 19
-    },
-    {
-      "firstName": "asdf",
-      "lastName": "asdf",
-      "email": "22asdf@asfd.com",
-      "password": "asdfasdfasdf",
-      "gender": "female",
-      "dateOfBirth": "02/2/1901",
-      "id": 20
-    },
-    {
-      "firstName": "Kev",
-      "lastName": "James",
-      "email": "kevjames@yah.com",
-      "password": "asdfasdfasdf",
-      "gender": "male",
-      "dateOfBirth": "01/3/1901",
-      "id": 21
-    },
-    {
-      "firstName": "James",
-      "lastName": "McGee",
-      "email": "jamesdf@asf.com",
-      "password": "asdfasdfasdf",
-      "gender": "male",
-      "dateOfBirth": "02/3/1901",
-      "id": 22
-    },
-    {
-      "firstName": "Katelyn",
-      "lastName": "Dddd",
-      "email": "asdf@asdf.com",
-      "password": "asdfasdfasdf",
-      "gender": "female",
-      "dateOfBirth": "05/3/1901",
-      "id": 23
-    },
-    {
-      "firstName": "Katelyn",
-      "lastName": "Jeen",
-      "email": "Katejeen@yah.com",
-      "password": "asdfasdfasdf",
-      "gender": "female",
-      "dateOfBirth": "05/3/1901",
-      "id": 24
-    },
-    {
-      "firstName": "Jenny",
-      "lastName": "Jane",
-      "email": "jjjane@gmail.com",
-      "password": "asdfasdfasdf",
-      "gender": "female",
-      "dateOfBirth": "04/3/1901",
-      "id": 25
-    },
-    {
-      "firstName": "Drake",
-      "lastName": "Yoo",
-      "email": "Drakeyo@yoo.com",
-      "password": "asdfasdfasdf",
-      "gender": "female",
-      "dateOfBirth": "03/2/1901",
-      "id": 26
-    },
-    {
-      "firstName": "Jerry",
-      "lastName": "Smit",
-      "email": "jsmit33@gmail.com",
-      "password": "asdfasdfasdf",
-      "gender": "female",
-      "dateOfBirth": "04/2/1902",
-      "id": 27
     }
   ]
 }

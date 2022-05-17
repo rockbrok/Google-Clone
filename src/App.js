@@ -8,11 +8,19 @@ import Search from './pages/Search';
 import DeleteAccount from './pages/DeleteAccount';
 import UserContextProvider from './usercontext';
 import { darkTheme, lightTheme, GlobalStyles, ThemeProvider, useTheme } from './themes';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
 export default function App() {
   const [theme] = useTheme();
+
+  const PrivateRoute = ({ children}) => {
+    let user = JSON.parse(localStorage.getItem('user'));
+    if (user !== null) {
+      return children
+    }
+    return <Navigate to="/signin/identifier/" />
+  }
 
   return (
     <>
@@ -30,8 +38,14 @@ export default function App() {
           <Route path="/signin/challenge/recovery/" element={<PasswordRecovery />} />
           <Route path="/signup/" element={<SignUp />} />
           <Route path="/delete/" element={<DeleteAccount />} />
-          <Route path="/myaccount/" element={<Account />} />
           <Route path="*" element={<PageNotFound />} />
+          <Route path="/myaccount/"
+            element={
+              <PrivateRoute>
+                <Account />
+              </PrivateRoute>
+            }
+          />
         </Routes>
       </Router>
       </UserContextProvider>
