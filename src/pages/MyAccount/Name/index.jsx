@@ -47,6 +47,11 @@ export default function Name() {
 
   return (
     <>
+    <button>
+      <Link to="/myaccount/personalinfo/">
+        Back
+      </Link>
+    </button>
     <h1>Name</h1>
     <p>Changes to your name will be reflected across your Google Account.
       &nbsp;<a>Learn more</a>
@@ -116,13 +121,14 @@ export default function Name() {
             Last Name
           </span>
         </div>
-      <button>
-        <Link to="/myaccount">
+
+    </form>
+    <button>
+        <Link to="/myaccount/personalinfo">
           Cancel
         </Link>
       </button>
       <button type="submit">Save</button>
-    </form>
     </>
   )
 }

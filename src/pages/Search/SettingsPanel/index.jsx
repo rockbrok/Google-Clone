@@ -1,4 +1,4 @@
-import { Toggle, useTheme } from '../../themes';
+import { Toggle, useTheme } from '../../../themes';
 import { t } from 'i18next';
 
 import './style.css';

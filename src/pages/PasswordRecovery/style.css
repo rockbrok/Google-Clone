@@ -1,8 +1,0 @@
-.empty {
-    display: flex;
-    content: "";
-}
-
-.flex-row {
-    margin-top: 32px;
-}

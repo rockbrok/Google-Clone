@@ -1,10 +1,13 @@
 import PageNotFound from './pages/404';
 import SignInEmail from './pages/SignIn/Email';
 import SignInPassword from './pages/SignIn/Password';
-import PasswordRecovery from './pages/PasswordRecovery';
 import SignUp from './pages/SignUp';
 import Account from './pages/MyAccount/Home';
 import Search from './pages/Search';
+import Birthday from './pages/MyAccount/Birthday';
+import Email from './pages/MyAccount/Email';
+import Password from './pages/MyAccount/Password';
+import Gender from './pages/MyAccount/Gender';
 import PersonalInfo from './pages/MyAccount/PersonalInfo';
 import DataPrivacy from './pages/MyAccount/DataPrivacy';
 import DeleteAccount from './pages/MyAccount/DeleteAccount';
@@ -38,7 +41,6 @@ export default function App() {
           <Route exact path="/" element={<Search />}/>
           <Route path="/signin/identifier/" element={<SignInEmail />} />
           <Route path="/signin/challenge/" element={<SignInPassword />} />
-          <Route path="/signin/challenge/recovery/" element={<PasswordRecovery />} />
           <Route path="/signup/" element={<SignUp />} />
           <Route path="*" element={<PageNotFound />} />
           <Route path="/myaccount/"
@@ -73,6 +75,34 @@ export default function App() {
             element={
               <PrivateRoute>
                 <Name />
+              </PrivateRoute>
+            }
+          />
+          <Route path="/myaccount/birthday/"
+            element={
+              <PrivateRoute>
+                <Birthday />
+              </PrivateRoute>
+            }
+          />
+          <Route path="/myaccount/gender/"
+            element={
+              <PrivateRoute>
+                <Gender />
+              </PrivateRoute>
+            }
+          />
+          <Route path="/myaccount/email/"
+            element={
+              <PrivateRoute>
+                <Email />
+              </PrivateRoute>
+            }
+          />
+          <Route path="/myaccount/password/"
+            element={
+              <PrivateRoute>
+                <Password />
               </PrivateRoute>
             }
           />
