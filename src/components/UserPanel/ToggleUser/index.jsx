@@ -49,7 +49,7 @@ const AccountButton = ({ show, showTitle, setShowTitle, firstName, lastName, ema
 const Title = ({ showTitle, firstName, lastName, email }) => (
   <div className="user-panel-title fade-in" style={{ display: showTitle ? "block" : "none" }}>
     Google Account<br />
-    <span className="user-panel-title-text">{firstName} {lastName}</span><br />
+    <span className="user-panel-title-text">{firstName}&nbsp;{lastName}</span><br />
     <span className="user-panel-title-text">{email}</span>
   </div>
 );

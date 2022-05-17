@@ -62,6 +62,15 @@
       "gender": "male",
       "dateOfBirth": "05/3/1902",
       "id": 10
+    },
+    {
+      "firstName": "Peter",
+      "lastName": "Parker",
+      "email": "petepark@yah.com",
+      "password": "asdfasdfasdf",
+      "gender": "male",
+      "dateOfBirth": "03/2/1901",
+      "id": 11
     }
   ]
 }

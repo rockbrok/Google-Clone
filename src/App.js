@@ -5,7 +5,10 @@ import PasswordRecovery from './pages/PasswordRecovery';
 import SignUp from './pages/SignUp';
 import Account from './pages/MyAccount/Home';
 import Search from './pages/Search';
-import DeleteAccount from './pages/DeleteAccount';
+import PersonalInfo from './pages/MyAccount/PersonalInfo';
+import DataPrivacy from './pages/MyAccount/DataPrivacy';
+import DeleteAccount from './pages/MyAccount/DeleteAccount';
+import Name from './pages/MyAccount/Name';
 import UserContextProvider from './usercontext';
 import { darkTheme, lightTheme, GlobalStyles, ThemeProvider, useTheme } from './themes';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
@@ -37,12 +40,39 @@ export default function App() {
           <Route path="/signin/challenge/" element={<SignInPassword />} />
           <Route path="/signin/challenge/recovery/" element={<PasswordRecovery />} />
           <Route path="/signup/" element={<SignUp />} />
-          <Route path="/delete/" element={<DeleteAccount />} />
           <Route path="*" element={<PageNotFound />} />
           <Route path="/myaccount/"
             element={
               <PrivateRoute>
                 <Account />
+              </PrivateRoute>
+            }
+          />
+          <Route path="/myaccount/personalinfo/"
+            element={
+              <PrivateRoute>
+                <PersonalInfo />
+              </PrivateRoute>
+            }
+          />
+          <Route path="/myaccount/data-and-personalization/"
+            element={
+              <PrivateRoute>
+                <DataPrivacy />
+              </PrivateRoute>
+            }
+          />
+          <Route path="/myaccount/deleteaccount/"
+            element={
+              <PrivateRoute>
+                <DeleteAccount />
+              </PrivateRoute>
+            }
+          />
+          <Route path="/myaccount/name/"
+            element={
+              <PrivateRoute>
+                <Name />
               </PrivateRoute>
             }
           />

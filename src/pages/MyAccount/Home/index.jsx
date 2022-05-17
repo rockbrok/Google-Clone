@@ -1,13 +1,19 @@
+import { Link } from "react-router-dom";
+
 export default function Account() {
   return (
       <center>
-      <p>First name</p>
-      <p>Last name</p>
-      <p>Email address</p>
-      <p>Password</p>
-      <p>Account creation date</p>
-      <p>Profile photo</p>
-      <button className="create-account">Delete account</button>
+      <button>
+        <Link to="/myaccount/personalinfo/">
+          Personal Info
+        </Link>
+      </button>
+      <br />
+      <button>
+        <Link to="/myaccount/data-and-personalization">
+          Data & Privacy
+        </Link>
+      </button>
       </center>
   );
 }
