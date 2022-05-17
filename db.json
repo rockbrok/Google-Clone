@@ -35,6 +35,33 @@
       "gender": "other",
       "dateOfBirth": "03/3/1902",
       "id": 7
+    },
+    {
+      "firstName": "JSDJKdf",
+      "lastName": "asdf",
+      "email": "a32341234sdf@asdf.com",
+      "password": "asdfasdfasdf",
+      "gender": "male",
+      "dateOfBirth": "02/2/1902",
+      "id": 8
+    },
+    {
+      "firstName": "Jamie",
+      "lastName": "Fox",
+      "email": "jamiefox@google.com",
+      "password": "asdfasdfasdf",
+      "gender": "male",
+      "dateOfBirth": "04/11/1901",
+      "id": 9
+    },
+    {
+      "firstName": "Kevin",
+      "lastName": "Hart",
+      "email": "khart33@gmail.com",
+      "password": "asdfasdfasdf",
+      "gender": "male",
+      "dateOfBirth": "05/3/1902",
+      "id": 10
     }
   ]
 }
