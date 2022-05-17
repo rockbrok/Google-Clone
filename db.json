@@ -17,6 +17,15 @@
       "gender": "male",
       "dateOfBirth": "03/2/1901",
       "id": 2
+    },
+    {
+      "firstName": "asdf",
+      "lastName": "asdf",
+      "email": "asda32asdff@asdf.com",
+      "password": "asdfasdfasdf",
+      "gender": "male",
+      "dateOfBirth": "03/3/1901",
+      "id": 3
     }
   ]
 }

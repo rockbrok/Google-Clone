@@ -1,0 +1,35 @@
+.back-arrow-icon {
+  width: 24px;
+  height: 24px;
+  color: #5f6368;
+}
+
+.account-subhead {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.back-arrow {
+  display: flex;
+  position: relative;
+  height: 48px;
+  width: 48px;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-arrow:active {
+  background-color: var(--gapp-icon-active);
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.account-subhead-text {
+  color: rgb(32,33,36);
+  font-family: Roboto;
+  font-size: 24px;
+  line-height: 32px;
+  vertical-align: middle;
+  margin-left: 4px;
+}

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import AccountHeader from "../Header";
 
 export default function PersonalInfo() {
   const obj = JSON.parse(localStorage.getItem('user'));
@@ -11,6 +12,9 @@ export default function PersonalInfo() {
 
   return (
     <>
+    <AccountHeader />
+    <main>
+
     <h6>Info about you and your preferences across Google services</h6>
 
     <h1>Your profile info in Google services</h1>
@@ -57,6 +61,7 @@ export default function PersonalInfo() {
     <h6>General preferences for the web</h6>
     <p>Manage settings for Google services on the web</p>
     <p>GlobeIcon Language   English (United States)</p>
+    </main>
     </>
   )
 }

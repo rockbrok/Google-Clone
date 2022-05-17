@@ -32,3 +32,11 @@
     white-space: nowrap;
   }
 }
+
+.header-icons-margin {
+  margin-right: -8px;
+}
+
+.header-gapps-margin {
+  margin-right: -7px;
+}

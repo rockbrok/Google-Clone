@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
+import { ArrowLeftIcon } from "@heroicons/react/solid";
+import AccountHeader from "../Header";
+
+import '../style.css';
 
 export default function Email() {
   const {register, handleSubmit, watch, formState: { errors }} = useForm({
@@ -56,12 +60,8 @@ export default function Email() {
 
   return (
     <>
-    <button>
-      <Link to="/myaccount/personalinfo/">
-        Back
-      </Link>
-    </button>
-    <h1>Google Account email</h1>
+    <AccountHeader />
+    <SubHeading />
     <p>The address used to identify your Google Account to you and others.
       &nbsp;<a>Learn more</a>
     </p>
@@ -121,3 +121,14 @@ export default function Email() {
     </>
   )
 }
+
+const SubHeading = () => (
+  <div className="account-subhead">
+    <div className="back-arrow">
+      <Link to="/myaccount/personalinfo/">
+        <ArrowLeftIcon className="help-icon"/>
+      </Link>
+    </div>
+  <div className="account-subhead-text">Google Account email</div>
+</div>
+)
