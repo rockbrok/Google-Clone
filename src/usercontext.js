@@ -5,12 +5,12 @@ export const UserContext = createContext(null);
 const UserContextProvider = (props) => {
   const [user, setUser] = useState(() => {
     const localData = localStorage.getItem('user');
-    return localData ? JSON.parse(localData) : [];
+    return localData ? JSON.parse(localData) : null;
   });
 
   useEffect(() => {
     localStorage.setItem('user', JSON.stringify(user));
-  }, [user]);
+  }, user);
 
   return (
     <UserContext.Provider value={{ user, setUser }}>

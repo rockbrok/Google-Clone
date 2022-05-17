@@ -7,10 +7,10 @@ import { useState } from 'react';
 export default function ToggleUser() {
   const user = useContext(UserContext);
 
-  var obj = JSON.parse(localStorage.getItem('user'));
-  let firstName = obj[0].firstName;
-  let lastName = obj[0].lastName;
-  let email = obj[0].email;
+  var obj = JSON.parse(localStorage.getItem('user')) || '';
+  let firstName = (localStorage.getItem('user') !== null) ? obj[0].firstName : '';
+  let lastName = (localStorage.getItem('user') !== null) ? obj[0].lastName : '';
+  let email = (localStorage.getItem('user') !== null) ? obj[0].email : '';
 
   const [show, setShow] = useState(false)
   const [showTitle, setShowTitle] = useState(false);

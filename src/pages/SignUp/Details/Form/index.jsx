@@ -28,7 +28,9 @@ export default function Form({ value, setValue, register, handleSubmit, errors, 
         },
         headers: { "Content-Type": "application/json"},
       });
-
+      setTimeout(function () {
+        window.location.href = "http://localhost:3000/";
+      }, 250);
     } catch(error) {
       console.log(error.response.data)
     }

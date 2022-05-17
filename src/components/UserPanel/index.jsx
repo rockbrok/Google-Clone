@@ -16,6 +16,12 @@ export default function UserPanel() {
 
   let URL = "http://localhost:5000/users?email=" + email;
 
+  const SignOut = () => {
+    localStorage.setItem('user', null);
+    setTimeout(function () {
+      window.location.reload();
+    }, 150);
+  }
 
   return (
     <div className="user-panel">
@@ -29,7 +35,7 @@ export default function UserPanel() {
           Manage your Google Account
         </Link>
       </button>
-      <button className="signout-button">
+      <button className="signout-button" onClick={SignOut}>
         Sign out
       </button>
       <div className="user-links">

@@ -2,13 +2,10 @@ import ToggleApps from './../AppsPanel/ToggleApps';
 import ToggleUser from '../UserPanel/ToggleUser';
 import { t } from 'i18next';
 import { Link } from 'react-router-dom';
-import { useContext } from "react";
-import { UserContext } from "../../usercontext";
 
 import './style.css';
 
 export default function Header() {
-  const user = useContext(UserContext);
 
   return (
     <header>
@@ -16,8 +13,7 @@ export default function Header() {
         <Gmail />
         <Images />
         <ToggleApps />
-        { user ? <ToggleUser /> : <SignIn /> }
-
+        { JSON.parse(localStorage.getItem('user')) !== null ? <ToggleUser /> : <SignIn /> }
       </ul>
     </header>
   )
