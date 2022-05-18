@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { BackArrow } from "../Home";
+import { Helmet } from "react-helmet";
+import AccountFooter from "../../../components/AccountFooter";
 import AccountHeader from "../Header";
 
 import '../style.css';
@@ -60,12 +62,19 @@ export default function Email() {
 
   return (
     <>
-    <AccountHeader />
-    <SubHeading />
-    <p>The address used to identify your Google Account to you and others.
-      &nbsp;<a>Learn more</a>
-    </p>
-
+      <Helmet>
+        <title>Email</title>
+      </Helmet>
+      <AccountHeader />
+      <SubHeading />
+      <section className="account-flex-2">
+        <div className="account-flex-sect">
+        The address used to identify your Google Account to you and others.&nbsp;
+          <a className="learn-more">
+            Learn more
+          </a>
+        </div>
+        <div className="account-flex-form">
     <div className="birthday-row">
       <h3>{email}</h3>
       PencilIcon
@@ -118,13 +127,21 @@ export default function Email() {
         </Link>
       </button>
       <button type="submit">Save</button>
+      </div>
+      </section>
+      <AccountFooter />
     </>
   )
 }
 
 const SubHeading = () => (
-  <div className="account-subhead">
-    <BackArrow />
-  <div className="account-subhead-text">Google Account email</div>
-</div>
+  <>
+  <div className="account-subhead-wrap">
+    <div className="account-subhead">
+      <BackArrow />
+      <div className="account-subhead-text">Email</div>
+    </div>
+    </div>
+    <div className="account-subhead-divider" />
+  </>
 )

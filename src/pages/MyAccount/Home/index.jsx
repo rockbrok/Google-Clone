@@ -46,7 +46,7 @@ const XLProfileIcon = ({ letter }) => {
 export const BackArrow = () => (
   <Link to="/myaccount/personalinfo/">
     <div className="back-arrow">
-      <ArrowLeftIcon className="help-icon"/>
+      <ArrowLeftIcon className="back-arrow-icon"/>
     </div>
   </Link>
 )

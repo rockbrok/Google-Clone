@@ -1,29 +1,31 @@
 .back-arrow-icon {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   color: #5f6368;
+}
+
+.account-subhead-wrap {
+  display: block;
+  margin-top: 64px;
+  height: 56px;
+  z-index: 5;
 }
 
 .account-subhead {
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: 56px;
-  width: auto;
-  border-bottom: 1px solid lightgray;
-}
-
-.account-main-wrap {
-  display: flex;
-  align-self: center;
+  height: 48px;
+  width: 870px;
   margin: 0 auto;
-  width: 624px;
+  padding: 4px 0;
+  background-color: white;
+  z-index: 5;
 }
 
-.subhead-wrap {
-  display: flex;
-  justify-content: flex-start;
-  align-content: flex-start;
+.account-subhead-divider {
+  width: 100%;
+  border-bottom: 1px solid lightgray;
 }
 
 .back-arrow {
@@ -48,7 +50,6 @@
   line-height: 32px;
   vertical-align: middle;
   margin-left: 4px;
-  margin-top: 6px;
 }
 
 .account-flex {
@@ -57,6 +58,43 @@
   padding: 0 48px;
   margin-left: 280px;
   width: 684px;
+}
+
+.account-flex-2 {
+  display: flex;
+  flex-direction: column;
+  padding: 0 24px;
+  margin: 0 auto;
+  margin-top: 0;
+  width: 840px;
+}
+
+.account-flex-sect {
+  display: block;
+  margin: 24px auto 24px 0;
+  max-width: 552px;
+  color: rgb(95, 99, 104);
+  font-family: Roboto;
+  font-size: 16px;
+  letter-spacing: 0.1px;
+  line-height: 24px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.learn-more {
+  cursor: pointer;
+  color: rgb(26, 115, 232);
+  text-decoration-color: rgb(26, 115, 232);
+}
+
+.account-flex-form {
+  display: block;
+  margin: 0 auto 24px 0;
+  width: 504px;
+  border: 1px solid rgb(218, 220, 224);
+  border-radius: 8px;
+  padding: 24px;
 }
 
 .account-page-wrap {

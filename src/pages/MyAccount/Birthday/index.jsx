@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import { Helmet } from "react-helmet";
 import { useState } from "react";
 import AccountHeader from "../Header";
+import AccountFooter from "../../../components/AccountFooter";
 import { BackArrow } from "../Home";
 
 export default function Birthday() {
@@ -49,112 +51,125 @@ export default function Birthday() {
 
   return (
     <>
-    <AccountHeader />
-    <SubHeading />
-    <p>Your birthday may be used for account security and personalization across Google services. If this Google Account is for a business or organization, use the birthday of the person who manages the account.
-      &nbsp;<a>Learn more</a>
-    </p>
-
-    <h3>UPDATE BIRTHDAY</h3>
-    <form onSubmit={handleSubmit} noValidate>
-    <div className="birthday-row">
-        <div className="input-container">
-          <select 
-            {...register("month", {
-              required: true
-            })}
-            className="signup-input" 
-            name="month"
-            type="month"
-            size="1"
-            onChange={handleChange}
-            value={value.month}
-          >
-            <option value="" className="signup-input-placeholder" defaultValue disabled hidden />
-            <option value="01">January</option>
-            <option value="02">February</option>
-            <option value="03">March</option>
-            <option value="04">April</option>
-            <option value="05">May</option>
-            <option value="06">June</option>
-            <option value="07">July</option>
-            <option value="08">August</option>
-            <option value="09">September</option>
-            <option value="10">October</option>
-            <option value="11">November</option>
-            <option value="12">December</option>
-          </select>
-          <span className="signup-input-placeholder">
-            ''
-          </span>
+      <Helmet>
+        <title>Birthday</title>
+      </Helmet>
+      <AccountHeader />
+      <SubHeading />
+      <section className="account-flex-2">
+        <div className="account-flex-sect">
+          Your birthday may be used for account security and personalization across Google services. If this Google Account is for a business or organization, use the birthday of the person who manages the account.&nbsp;
+          <a className="learn-more">
+            Learn more
+          </a>
         </div>
-        <div className="input-container">
-          <input 
-            {...register("day", {
-              required: true,
-              minLength: 1,
-              maxLength: 2,
-              pattern: /[0-9]$/,
-              validate: (value) => {
-                return !!value.trim()
-              }
-            })}
-            autoComplete="off"
-            name="day"
-            type="number"
-            min="0"
-            max="32"
-            value={value.day}
-            onChange={handleChange}
-            className="signup-input"
-          />
-          <span className="signup-input-placeholder">
-            Day
-          </span>
-        </div>
-        <div className="input-container">
-          <input 
-            {...register("year", {
-              required: true,
-              minLength: 4,
-              maxLength: 4,
-              pattern: /[0-9]{4}$/,
-              validate: (value) => {
-                return !!value.trim()
-              }
-            })}
-            autoComplete="off"
-            name="year"
-            type="number"
-            min="1900"
-            max="2022"
-            value={value.year}
-            onChange={handleChange}
-            className="signup-input"
-          />
-          <span className="signup-input-placeholder">
-            Year
-          </span>
-        </div>
+        <div className="account-flex-form">
+        <h3>UPDATE BIRTHDAY</h3>
+        <form onSubmit={handleSubmit} noValidate>
+          <div className="birthday-row">
+          <div className="input-container">
+            <select 
+              {...register("month", {
+                required: true
+              })}
+              className="signup-input" 
+              name="month"
+              type="month"
+              size="1"
+              onChange={handleChange}
+              value={value.month}
+            >
+              <option value="" className="signup-input-placeholder" defaultValue disabled hidden />
+              <option value="01">January</option>
+              <option value="02">February</option>
+              <option value="03">March</option>
+              <option value="04">April</option>
+              <option value="05">May</option>
+              <option value="06">June</option>
+              <option value="07">July</option>
+              <option value="08">August</option>
+              <option value="09">September</option>
+              <option value="10">October</option>
+              <option value="11">November</option>
+              <option value="12">December</option>
+            </select>
+            <span className="signup-input-placeholder">
+              ''
+            </span>
+          </div>
+          <div className="input-container">
+            <input 
+              {...register("day", {
+                required: true,
+                minLength: 1,
+                maxLength: 2,
+                pattern: /[0-9]$/,
+                validate: (value) => {
+                  return !!value.trim()
+                }
+              })}
+              autoComplete="off"
+              name="day"
+              type="number"
+              min="0"
+              max="32"
+              value={value.day}
+              onChange={handleChange}
+              className="signup-input"
+            />
+            <span className="signup-input-placeholder">
+              Day
+            </span>
+          </div>
+          <div className="input-container">
+            <input 
+              {...register("year", {
+                required: true,
+                minLength: 4,
+                maxLength: 4,
+                pattern: /[0-9]{4}$/,
+                validate: (value) => {
+                  return !!value.trim()
+                }
+              })}
+              autoComplete="off"
+              name="year"
+              type="number"
+              min="1900"
+              max="2022"
+              value={value.year}
+              onChange={handleChange}
+              className="signup-input"
+            />
+            <span className="signup-input-placeholder">
+              Year
+            </span>
+          </div>
+          </div>
+        </form>
+        <button>
+          <Link to="/myaccount/personalinfo">
+            Cancel
+          </Link>
+        </button>
+        <button type="submit">
+          Save
+        </button>
       </div>
-    </form>
-    <button>
-        <Link to="/myaccount/personalinfo">
-          Cancel
-        </Link>
-      </button>
-      <button type="submit">Save</button>
+      </section>
+      <AccountFooter />
     </>
   )
 }
 
 const SubHeading = () => (
-  <div className="account-subhead">
-    <div className="account-main-wrap">
-      <div className="subhead-wrap">
-        <BackArrow />
-        <div className="account-subhead-text">Birthday</div>
-      </div>
+  <>
+  <div className="account-subhead-wrap">
+    <div className="account-subhead">
+      <BackArrow />
+      <div className="account-subhead-text">Birthday</div>
     </div>
-</div>
+    </div>
+    <div className="account-subhead-divider" />
+  </>
 )

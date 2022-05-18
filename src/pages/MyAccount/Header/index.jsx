@@ -10,7 +10,7 @@ export default function AccountHeader() {
   const [showTitle, setShowTitle] = useState(false);
   return (
     <header className="header-flex">
-      <Link to="/myaccount/">
+      <Link to="/myaccount/" className="no-deco">
         <div className="no-select">
           <AccountLogo />
         </div>

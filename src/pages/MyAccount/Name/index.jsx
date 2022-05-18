@@ -2,7 +2,9 @@ import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { BackArrow } from "../Home";
+import { Helmet } from "react-helmet";
 import AccountHeader from "../Header";
+import AccountFooter from "../../../components/AccountFooter";
 
 export default function Name() {
   const {register, handleSubmit, watch, formState: { errors }} = useForm({
@@ -49,12 +51,19 @@ export default function Name() {
 
   return (
     <>
-    <AccountHeader />
-    <SubHeading />
-    <p>Changes to your name will be reflected across your Google Account.
-      &nbsp;<a>Learn more</a>
-    </p>
-
+        <Helmet>
+        <title>Name</title>
+      </Helmet>
+      <AccountHeader />
+      <SubHeading />
+      <section className="account-flex-2">
+        <div className="account-flex-sect">
+        Changes to your name will be reflected across your Google Account.&nbsp;
+          <a className="learn-more">
+            Learn more
+          </a>
+        </div>
+        <div className="account-flex-form">
     <h3>CHANGE NAME</h3>
     <form onSubmit={handleSubmit} noValidate>
     <div className="input-container">
@@ -127,13 +136,21 @@ export default function Name() {
         </Link>
       </button>
       <button type="submit">Save</button>
+      </div>
+      </section>
+      <AccountFooter />
     </>
   )
 }
 
 const SubHeading = () => (
-  <div className="account-subhead">
-    <BackArrow />
-  <div className="account-subhead-text">Name</div>
-</div>
+  <>
+    <div className="account-subhead-wrap">
+      <div className="account-subhead">
+        <BackArrow />
+        <div className="account-subhead-text">Name</div>
+      </div>
+    </div>
+    <div className="account-subhead-divider" />
+  </>
 )

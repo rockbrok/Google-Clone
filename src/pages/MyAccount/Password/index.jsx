@@ -1,6 +1,8 @@
 import { useForm } from "react-hook-form";
 import { useState } from "react";
+import { Helmet } from "react-helmet";
 import AccountHeader from "../Header";
+import AccountFooter from "../../../components/AccountFooter";
 import { BackArrow } from "../Home";
 
 export default function Password() {
@@ -54,12 +56,19 @@ export default function Password() {
 
   return (
     <>
-    <AccountHeader />
-    <SubHeading />
-    <p>Choose a strong password and don't reuse it for other accounts.
-      &nbsp;<a>Learn more</a>
-    </p>
-
+    <Helmet>
+        <title>Password</title>
+      </Helmet>
+      <AccountHeader />
+      <SubHeading />
+      <section className="account-flex-2">
+        <div className="account-flex-sect">
+        Choose a strong password and don't reuse it for other accounts.&nbsp;
+          <a className="learn-more">
+            Learn more
+          </a>
+        </div>
+        <div className="account-flex-form">
     <form onSubmit={handleSubmit} noValidate>
     <div className="input-container">
           <input 
@@ -123,13 +132,21 @@ export default function Password() {
         </div>
     </form>
     <button type="submit">Change password</button>
+    </div>
+    </section>
+    <AccountFooter />
     </>
   )
 }
 
 const SubHeading = () => (
-  <div className="account-subhead">
-    <BackArrow />
-  <div className="account-subhead-text">Password</div>
-</div>
+  <>
+    <div className="account-subhead-wrap">
+      <div className="account-subhead">
+        <BackArrow />
+        <div className="account-subhead-text">Password</div>
+      </div>
+    </div>
+    <div className="account-subhead-divider" />
+  </>
 )
