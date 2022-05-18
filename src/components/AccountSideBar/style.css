@@ -6,7 +6,8 @@
   margin-top: 20px;
 }
 
-.sidebar-item {
+.sidebar-item,
+.sidebar-item-active {
   display: flex;
   flex-direction: row;
   width: 240px;
@@ -14,6 +15,11 @@
   align-items: center;
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
+}
+
+.sidebar-item-active {
+  background-color: rgb(232, 240, 254);
+  text-decoration: none;
 }
 
 .sidebar-links {
@@ -37,14 +43,15 @@
 }
 
 .sidebar-item:active {
-  background-color: rgb(232, 240, 254);
+  background-color: rgb(224, 224, 224);
+  text-decoration: none;
 }
 
-.sidebar-item:active .sidebar-icon {
+.sidebar-item-active .sidebar-icon {
   color: #155bb6;
 }
 
-.sidebar-item:active .sidebar-links {
+.sidebar-item-active .sidebar-links {
   color: #1a73e8;
 }
 

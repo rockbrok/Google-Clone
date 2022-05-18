@@ -1,19 +1,17 @@
-import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet";
-import { ArrowLeftIcon } from "@heroicons/react/solid";
-import AccountHeader from "../Header";
-import AccountSideBar from "../../../components/AccountSideBar";
+import AccountHeader from '../Header';
+import AccountSideBar from '../../../components/AccountSideBar';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
+import { ArrowLeftIcon } from '@heroicons/react/solid';
+
+import './style.css';
 
 export default function Account() {
   const obj = JSON.parse(localStorage.getItem('user'));
   const email = obj[0].email;
   const firstName = obj[0].firstName;
   const lastName = obj[0].lastName;
-  const gender = obj[0].gender;
-  const dateOfBirth = obj[0].dateOfBirth;
-  const password = obj[0].password;
   const letter = firstName.charAt(0).toUpperCase();
-  const URL = "http://localhost:5000/users?email=" + email;
 
   return (
     <>

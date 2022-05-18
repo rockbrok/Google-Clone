@@ -7,7 +7,7 @@ export default function DataPrivacy() {
   return (
     <>
       <Helmet>
-        <title>Google Account</title>
+        <title>Data & privacy</title>
       </Helmet>
       <AccountHeader />
       <section className="account-page-wrap">

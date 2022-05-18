@@ -26,6 +26,15 @@
       "gender": "male",
       "dateOfBirth": "03/3/1901",
       "id": 3
+    },
+    {
+      "firstName": "Kendrick",
+      "lastName": "Lamar",
+      "email": "klamar99@gmail.com",
+      "password": "asdfasdfasdf",
+      "gender": "male",
+      "dateOfBirth": "04/3/1902",
+      "id": 4
     }
   ]
 }

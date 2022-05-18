@@ -15,7 +15,7 @@ export default function PersonalInfo() {
   return (
     <>
       <Helmet>
-        <title>Google Account</title>
+        <title>Personal info</title>
       </Helmet>
       <AccountHeader />
       <section className="account-page-wrap">
