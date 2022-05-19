@@ -9,6 +9,7 @@ import './style.css';
 
 export default function AccountSideBar() {
   return (
+    <div className="account-sidebar-wrap">
     <div className="account-sidebar"> 
       <Home />
       <PersonalInfo />
@@ -16,6 +17,7 @@ export default function AccountSideBar() {
       <div className="sidebar-divider" />
       <About />
       <AccountFooter />
+    </div>
     </div>
   )
 }

@@ -1,7 +1,10 @@
-import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet";
 import AccountHeader from "../Header";
 import AccountSideBar from "../../../components/AccountSideBar";
+import AccountNavBar from "../../../components/AccountNavBar";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
+
+import './style.css';
 
 export default function PersonalInfo() {
   const obj = JSON.parse(localStorage.getItem('user'));
@@ -17,11 +20,14 @@ export default function PersonalInfo() {
       <Helmet>
         <title>Personal info</title>
       </Helmet>
+      <main>
       <AccountHeader />
+      <AccountNavBar />
       <section className="account-page-wrap">
         <AccountSideBar />
         <section className="account-flex">
-          <h6>Info about you and your preferences across Google services</h6>
+          <div className="account-page-head">Personal info</div>
+          <div className="account-page-subhead">Info about you and your preferences across Google services</div>
           <h1>Your profile info in Google services</h1>
           <h3>Personal info and options to manage it. You can make some of this info, like your contact details, visible to others so they can reach you easily. You can also see a summary of your profiles.</h3>
           <h6>Basic info</h6>
@@ -63,6 +69,7 @@ export default function PersonalInfo() {
           <p>GlobeIcon Language   English (United States)</p>
         </section>
       </section>
+      </main>
     </>
   )
 }

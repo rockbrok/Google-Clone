@@ -13,7 +13,7 @@ export default function Form({ value, setValue, register, handleSubmit, errors, 
     return response.data;
   };
 
-  const onSubmit = async(formData) => {
+  const onSubmit = async() => {
     try {
       const response = await axios({
         method: "post",
@@ -55,7 +55,7 @@ export default function Form({ value, setValue, register, handleSubmit, errors, 
             {...register("month", {
               required: true
             })}
-            className="signup-input" 
+            className="signup-input focus-blue" 
             name="month"
             type="month"
             size="1"
@@ -135,9 +135,8 @@ export default function Form({ value, setValue, register, handleSubmit, errors, 
           {...register("gender", {
             required: true
           })}
-          className="signup-input"
+          className="signup-input input-width focus-blue"
           name="gender"
-          size="1"
           onChange={handleChange}
           value={value.gender}
         >

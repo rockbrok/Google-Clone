@@ -1,0 +1,20 @@
+.account-page-head {
+  font-family: Roboto;
+  line-height: 36px;
+  font-size: 28px;
+  color: rgb(32, 33, 36);
+  overflow-wrap: break-word;
+  margin: 2px 0 10px 0;
+  align-self: center;
+}
+
+.account-page-subhead {
+  font-family: Roboto;
+  font-size: 16px;
+  margin-top: 0;
+  align-self: center;
+  letter-spacing: 0.1px;
+  line-height: 24px;
+  overflow-wrap: break-word;
+  color: rgb(95, 99, 104);
+}

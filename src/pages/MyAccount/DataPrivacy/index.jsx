@@ -1,7 +1,8 @@
-import { Link } from "react-router-dom"
-import { Helmet } from "react-helmet"
-import AccountHeader from "../Header"
-import AccountSideBar from "../../../components/AccountSideBar"
+import AccountHeader from "../Header";
+import AccountSideBar from "../../../components/AccountSideBar";
+import AccountNavBar from "../../../components/AccountNavBar";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 export default function DataPrivacy() {
   return (
@@ -9,7 +10,9 @@ export default function DataPrivacy() {
       <Helmet>
         <title>Data & privacy</title>
       </Helmet>
+      <main>
       <AccountHeader />
+      <AccountNavBar />
       <section className="account-page-wrap">
         <AccountSideBar />
         <section className="account-flex">
@@ -22,6 +25,7 @@ export default function DataPrivacy() {
           </div>
         </section>
       </section>
+      </main>
     </>
   )
 }

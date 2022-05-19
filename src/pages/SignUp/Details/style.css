@@ -6,3 +6,27 @@
   flex-direction: row;
   justify-content: space-between;
 }
+
+.welcome-subhead {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: Roboto;
+  font-size: 14px;
+  letter-spacing: 0.25px;
+  line-height: 20px;
+}
+
+.welcome-subhead-email {
+  margin-left: -4px;
+}
+
+.input-width {
+  width: 100%;
+}
+
+.focus-blue:focus-visible {
+  border: 2px solid #1a73e8;
+  outline: none;
+}

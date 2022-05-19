@@ -1,5 +1,11 @@
+.account-sidebar-wrap {
+  display: flex;
+  flex-direction: column;
+  min-width: 280px;
+}
+
 .account-sidebar {
-  display: inline-flex;
+  display: block;
   position: fixed;
   flex-direction: column;
   height: auto;
@@ -70,4 +76,10 @@
 .no-deco:hover,
 .no-deco:active {
   text-decoration: none;
+}
+
+@media only screen and (max-width: 1072px) {
+  .account-sidebar-wrap {
+    display: none;
+  }
 }
