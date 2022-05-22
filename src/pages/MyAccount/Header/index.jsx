@@ -1,6 +1,7 @@
 import HeaderIcons from "../../../components/Header";
 import { useState } from 'react';
 import { Link } from "react-router-dom";
+import { t } from 'i18next';
 import { QuestionMarkCircleIcon } from "@heroicons/react/outline";
 
 import './style.css';
@@ -33,7 +34,7 @@ const AccountLogo = () => (
       <path fill="#34a853" d="M58.193.67h2.564v17.44h-2.564z"></path>
       <path fill="#ea4335" d="M67.954 16.303c-1.33 0-2.278-.608-2.886-1.804l7.967-3.3-.27-.68c-.495-1.33-2.008-3.79-5.102-3.79-3.068 0-5.622 2.41-5.622 5.96 0 3.34 2.53 5.96 5.92 5.96 2.73 0 4.31-1.67 4.97-2.64l-2.03-1.35c-.673.98-1.6 1.64-2.93 1.64zm-.203-7.27c1.04 0 1.92.52 2.21 1.264l-5.32 2.21c-.06-2.3 1.79-3.474 3.12-3.474z"></path>
     </svg>
-    <div className="header-account-text">Account</div>
+    <div className="header-account-text">{t('account')}</div>
   </div>
 )
 
@@ -53,6 +54,6 @@ const Support = ({ show, showTitle, setShowTitle }) => (
 
 const SupportTitle = ({ showTitle }) => (
   <div className="user-panel-title fade-in" style={{ display: showTitle ? "block" : "none" }}>
-    Support
+    {t('support')}
   </div>
 )

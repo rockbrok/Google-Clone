@@ -4,20 +4,21 @@ import { IdentificationIcon } from '@heroicons/react/outline';
 import { InformationCircleIcon } from '@heroicons/react/outline';
 import { ShieldCheckIcon } from '@heroicons/react/outline';
 import { NavLink } from 'react-router-dom';
+import { t } from 'i18next';
 
 import './style.css';
 
 export default function AccountSideBar() {
   return (
     <div className="account-sidebar-wrap">
-    <div className="account-sidebar"> 
-      <Home />
-      <PersonalInfo />
-      <DataPrivacy />
-      <div className="sidebar-divider" />
-      <About />
-      <AccountFooter />
-    </div>
+      <div className="account-sidebar"> 
+        <Home />
+        <PersonalInfo />
+        <DataPrivacy />
+        <div className="sidebar-divider" />
+        <About />
+        <AccountFooter />
+      </div>
     </div>
   )
 }
@@ -31,7 +32,7 @@ const Home = () => (
   >
     <UserCircleIcon className="sidebar-icon"/>
       <div className="sidebar-links">
-        Home
+        {t('home')}
       </div>
   </NavLink>
 )
@@ -45,7 +46,7 @@ const PersonalInfo = () => (
   >
     <IdentificationIcon className="sidebar-icon"/>
       <div className="sidebar-links">
-        Personal info
+        {t('personal_info')}
       </div>
   </NavLink>
 )
@@ -59,7 +60,7 @@ const DataPrivacy = () => (
   >
     <ShieldCheckIcon className="sidebar-icon"/>
       <div className="sidebar-links">
-        Data & Privacy
+        {t('data_and_privacy')}
       </div>
   </NavLink>
 )
@@ -69,7 +70,7 @@ const About = () => (
     <div className="sidebar-item">
       <InformationCircleIcon className="sidebar-icon"/>
       <div className="sidebar-links">
-        About
+        {t('account_about')}
       </div>
     </div>
   </a>

@@ -3,6 +3,7 @@ import AccountSideBar from '../../../components/AccountSideBar';
 import AccountNavBar from '../../../components/AccountNavBar';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import { t } from 'i18next';
 import { ArrowLeftIcon } from '@heroicons/react/solid';
 
 import './style.css';
@@ -16,7 +17,7 @@ export default function Account() {
   return (
     <>
       <Helmet>
-        <title>Google Account</title>
+        <title>{t('google_account')}</title>
       </Helmet>
       <main>
         <AccountHeader />
@@ -50,12 +51,12 @@ const Welcome = ({ letter, firstName, lastName }) => (
   <>
     <XLProfileIcon letter={letter}/>
     <div className="welcome-head">
-      Welcome,&nbsp;{firstName}&nbsp;{lastName}
+      {t('welcome')},&nbsp;{firstName}&nbsp;{lastName}
     </div>
     <div className="welcome-subhead">
-      Manage your info, privacy, and security to make Google work better for you.&nbsp;
+      {t('account_subheading')}&nbsp;
       <a className="learn-more no-deco">
-        Learn more
+        {t('learn_more')}
       </a>
     </div>
   </>
@@ -68,15 +69,15 @@ const PrivacyAndPersonalization = () => (
         <div className="inner-card-row">
           <div className="welcome-top-card-info">
             <div className="welcome-card-head">
-              Privacy &amp; personalization
+              {t('privacy_and_personalization')}
             </div>
-              See the data in your Google Account and choose what activity is saved to personalize your Google experience
-            </div>
-            <div className="personalize-img" />
+            {t('privacy_detail')}
           </div>
+          <div className="personalize-img" />
         </div>
-        <div className="welcome-card-bottom">
-          Manage your data &amp; privacy
+      </div>
+      <div className="welcome-card-bottom">
+        {t('manage_data')}
       </div>
     </section>
   </Link>
@@ -89,15 +90,15 @@ const PersonalInfo = () => (
         <div className="inner-card-row">
           <div className="welcome-top-card-info">
             <div className="welcome-card-head">
-              Choose what others see
+              {t('choose_what_others_see')}
             </div>
-              Decide what personal information you make visible to others
+            {t('personal_detail')}
           </div>
           <div className="personalinfo-img" />
         </div>
       </div>
       <div className="welcome-card-bottom">
-        Manage your personal info
+        {t('manage_personal')}
       </div>
     </section>
   </Link>

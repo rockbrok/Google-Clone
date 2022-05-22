@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+import { t } from 'i18next';
 
 import './style.css';
 
@@ -21,7 +22,7 @@ const Home = () => (
       }
     >
       <div className="navbar-links">
-        Home
+        {t('home')}
       </div>    
     </NavLink>
   </div>
@@ -36,7 +37,7 @@ const PersonalInfo = () => (
       }
     >
       <div className="navbar-links">
-        Personal info
+        {t('personal_info')}
       </div>
     </NavLink>
   </div>
@@ -51,7 +52,7 @@ const DataPrivacy = () => (
       }
     >
       <div className="navbar-links">
-        Data & privacy
+        {t('data_and_privacy')}
       </div>
     </NavLink>
   </div>

@@ -102,7 +102,21 @@
     "password_forgot" : "¿Olvidaste la contraseña?",
 
     "next": "Siguiente",
+    "help": "Ayuda",
+    "learn_more": "Más información",
+    "support": "Ayuda",
 
-    "signpage_footer_help": "Ayuda"
-
+    "google_account": "Cuenta de Google",
+        "home": "Página principal",
+        "personal_info": "Información personal",
+        "data_and_privacy": "Datos y privacidad",
+        "account_about": "Información",
+        "welcome": "Bienvenido",
+        "account_subheading": "Administra tu información y las opciones de privacidad y seguridad a fin de que Google sea más relevante para ti.",
+        "privacy_and_personalization": "Privacidad y personalización",
+        "privacy_detail": "Para personalizar tu experiencia en Google, elige la actividad de tu cuenta que quieras guardar",
+        "manage_data": "Administrar tus datos y privacidad",
+        "choose_what_others_see": "Elige lo que pueden ver los demás",
+        "personal_detail": "Decide qué información personal haces visible para los demás",
+        "manage_personal": "Gestione su información personal"
 }

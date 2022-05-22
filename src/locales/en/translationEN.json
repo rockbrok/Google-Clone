@@ -54,7 +54,6 @@
     "privacy": "Privacy",
     "terms": "Terms",
     "settings": "Settings",
-    
         "search_settings": "Search settings",
         "advanced_search": "Advanced search",
         "your_data_in_search": "Your data in Search",
@@ -67,19 +66,19 @@
         },
 
     "not_found_title": "Error 404 (Not Found)!!1",
-    "thats_an_error": "That's an error.",
-    "requested_url": "The requested URL ",
-    "not_found_on_server": " was not found on this server. ",
-    "thats_all_we_know": "That's all we know.",
+        "thats_an_error": "That's an error.",
+        "requested_url": "The requested URL ",
+        "not_found_on_server": " was not found on this server. ",
+        "thats_all_we_know": "That's all we know.",
 
     "sign_in_title": "Sign in - Google Accounts",
-    "sign_in_heading": "Sign in",
-    "sign_in_subheading": "Use your Google Account",
-    "sign_in_form_placeholder": "Email or phone",
-    "sign_in_forgot_email": "Forgot email?",
-    "sign_in_note": "Not your computer? Use Guest mode to sign in privately.",
-    "sign_in_learn_more": "Learn more",
-    "sign_in_create_account": "Create account",
+        "sign_in_heading": "Sign in",
+        "sign_in_subheading": "Use your Google Account",
+        "sign_in_form_placeholder": "Email or phone",
+        "sign_in_forgot_email": "Forgot email?",
+        "sign_in_note": "Not your computer? Use Guest mode to sign in privately.",
+        "sign_in_learn_more": "Learn more",
+        "sign_in_create_account": "Create account",
 
     "sign_up_heading": "Create your Google Account",
     "sign_up_first_name" : "First name",
@@ -102,7 +101,21 @@
     "password_forgot" : "Forgot password?",
 
     "next": "Next",
+    "help": "Help",
+    "learn_more": "Learn more",
+    "support": "Support",
 
-    "signpage_footer_help": "Help"
-
+    "google_account": "Google Account",
+        "home": "Home",
+        "personal_info": "Personal info",
+        "data_and_privacy": "Data & privacy",
+        "account_about": "About",
+        "welcome": "Welcome",
+        "account_subheading": "Manage your info, privacy, and security to make Google work better for you.",
+        "privacy_and_personalization": "Privacy & personalization",
+        "privacy_detail": "See the data in your Google Account and choose what activity is saved to personalize your Google experience",
+        "manage_data": "Manage your data & privacy",
+        "choose_what_others_see": "Choose what others see",
+        "personal_detail": "Decide what personal information you make visible to others",
+        "manage_personal": "Manage your personal info"
 }
