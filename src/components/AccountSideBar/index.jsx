@@ -66,7 +66,7 @@ const DataPrivacy = () => (
 )
 
 const About = () => (
-  <a href="https://www.google.com/account/about/" target="_blank" className="no-deco">
+  <a href="https://www.google.com/account/about/" rel="noreferrer" target="_blank" className="no-deco">
     <div className="sidebar-item">
       <InformationCircleIcon className="sidebar-icon"/>
       <div className="sidebar-links">

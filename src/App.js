@@ -17,6 +17,8 @@ import { darkTheme, lightTheme, GlobalStyles, ThemeProvider, useTheme } from './
 import { BrowserRouter as Router, Route, Routes, Navigate, Outlet } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
+import Test from './pages/test';
+
 export default function App() {
   const [theme] = useTheme();
 
@@ -53,10 +55,11 @@ export default function App() {
             <Route path="/myaccount/gender/" element={<Gender />} />
             <Route path="/myaccount/email/" element={<Email />} />
             <Route path="/myaccount/password/" element={<Password />} />
+            <Route path="/test/" element={<Test />} />
           </Route>
         </Routes>
       </Router>
-      </UserContextProvider>
+    </UserContextProvider>
     </ThemeProvider>
     </>
   )

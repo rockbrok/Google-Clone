@@ -25,10 +25,13 @@ export default function Form({ value, setValue, register, handleSubmit, checkEma
   const emptyStringRegex = /^(?![\s\S])/; // '' //
   const noSpaceStartOrEndRegex = /^[^\s].+[^\s]$/;
 
+  
+
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="signup-form" noValidate>
       <div className="name-row">
         <div className="input-container">
+          <div id="output" />
           <input 
             {...register("firstName", {
               required: true,
@@ -244,42 +247,12 @@ const EmailErrors = ({ errors }) => {
         <p className="invalidtext">Enter your email address</p>
       </div>
     )
-  } else if (errors.email?.type === "noUsername" || 
-    errors.email?.type === "noUsernameDot") {
+  } else if (errors.email?.type === "uniqueEmail") {
     return (
       <div className="invalid">
-        <ErrorLogo/>
-        <p className="invalidtext">Enter a username before the '@'.</p>
-      </div>
-    )
-  } else if (errors.email?.type === "onlyCharacters" ||
-    errors.email?.type === "noAt" ||
-    errors.email?.type === "noAtWithTopDomain") {
-    return (
-      <div className="invalid">
-        <ErrorLogo/>
-        <p className="invalidtext">Don't forget to include '@'.</p>
-      </div>
-    )
-  } else if (errors.email?.type === "noDomain") {
-    return (
-      <div className="invalid">
-        <ErrorLogo/>
-        <p className="invalidtext">Enter a domain after '@'.</p>
-      </div>
-    )
-  } else if (errors.email?.type !== "validEmail" & ( 
-    errors.email?.type !== "noUsername" ||
-    errors.email?.type !== "noUsernameDot" ||
-    errors.email?.type !== "onlyCharacters" ||
-    errors.email?.type !== "noDomain" ||
-    errors.email?.type !== "noAt" ||
-    errors.email?.type !== "noAtWithTopDomain")) {
-    return (
-      <div className="invalid">
-        <ErrorLogo/>
-        <p className="invalidtext">This email address is not valid.</p>
-      </div>
+      <ErrorLogo/>
+      <p className="invalidtext">Enter a unique email</p>
+    </div>
     )
   }
 }

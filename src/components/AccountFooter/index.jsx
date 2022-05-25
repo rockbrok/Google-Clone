@@ -4,35 +4,35 @@ import './style.css';
 
 export default function AccountFooter() {
   return (
-    <div className="account-footer">
+    <footer className="account-footer">
       <Privacy />
       <Terms />
       <Help />
       <About />
-    </div>
+    </footer>
   )
 }
 
 const Privacy = () => (
-  <a className="account-footer-items" href="https://policies.google.com/privacy" target="_blank">
+  <a className="account-footer-items" href="https://policies.google.com/privacy" rel="noreferrer" target="_blank">
     {t('privacy')}
   </a>
 )
 
 const Terms = () => (
-  <a className="account-footer-items" href="https://policies.google.com/terms" target="_blank">
+  <a className="account-footer-items" href="https://policies.google.com/terms" rel="noreferrer" target="_blank">
     {t('terms')}
   </a>
 )
 
 const Help = () => (
-  <a className="account-footer-items" href="https://myaccount.google.com/support" target="_blank">
+  <a className="account-footer-items" href="https://myaccount.google.com/support" rel="noreferrer" target="_blank">
     {t('help')}
   </a>
 )
 
 const About = () => (
-  <a className="account-footer-items" href="https://www.google.com/account/about/" target="_blank">
+  <a className="account-footer-items" href="https://www.google.com/account/about/" rel="noreferrer" target="_blank">
     {t('account_about')}
   </a>
 )

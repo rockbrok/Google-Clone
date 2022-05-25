@@ -35,6 +35,33 @@
       "gender": "male",
       "dateOfBirth": "04/3/1902",
       "id": 4
+    },
+    {
+      "firstName": "Jerry",
+      "lastName": "Smith",
+      "email": "jsmith@yah.com",
+      "password": "asdfasdfasdf",
+      "gender": "male",
+      "dateOfBirth": "03/3/1902",
+      "id": 5
+    },
+    {
+      "firstName": "james",
+      "lastName": "brown",
+      "email": "klamar99@gmail.com",
+      "password": "asdfasdfasdf",
+      "gender": "male",
+      "dateOfBirth": "04/3/1901",
+      "id": 6
+    },
+    {
+      "firstName": "asdf",
+      "lastName": "asdf",
+      "email": "asdf@asdf.com",
+      "password": "asdfasdfasdf",
+      "gender": "other",
+      "dateOfBirth": "05/2/1901",
+      "id": 7
     }
   ]
 }

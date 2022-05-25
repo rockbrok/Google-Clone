@@ -15,7 +15,7 @@ export default function Form({ value, setValue, register, handleSubmit, errors, 
 
   const onSubmit = async() => {
     try {
-      const response = await axios({
+      await axios({
         method: "post",
         url: "http://localhost:5000/users",
         data: {
