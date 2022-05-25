@@ -1,10 +1,11 @@
 import { ShowPassword } from '../../../../components/SignPage/ShowPassword';
 import { SignInInstead, ErrorLogo } from '..';
 import { t } from 'i18next';
+import axios from 'axios';
 
 import '../style.css';
 
-export default function Form({ value, setValue, register, handleSubmit, checkEmail, errors, watch, onSubmit, Next }) {
+export default function Form({ value, setValue, register, handleSubmit, errors, watch, onSubmit, Next }) {
   const handleChange = (e) => {
     setValue({
       ...value,
@@ -12,7 +13,7 @@ export default function Form({ value, setValue, register, handleSubmit, checkEma
     });
   }
 
-  console.log(watch());
+  console.log(errors);
 
   const validPasswordRegex =  /^(?=.*?[A-Z,a-z]).{8,}$/;
   const validEmailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/; // user@domain.com //
@@ -25,7 +26,17 @@ export default function Form({ value, setValue, register, handleSubmit, checkEma
   const emptyStringRegex = /^(?![\s\S])/; // '' //
   const noSpaceStartOrEndRegex = /^[^\s].+[^\s]$/;
 
-  
+  async function uniqueEmail(e) {
+    const response = await axios.get("http://localhost:5000/users/");
+    const userInput = (value.email).toLowerCase();
+
+    for (let i = 0; i < response.data.length; i++) {
+      if (response.data[i].email === userInput) {
+        console.log("email matches");
+        return false;
+      }
+    }
+  }
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="signup-form" noValidate>
@@ -106,6 +117,7 @@ export default function Form({ value, setValue, register, handleSubmit, checkEma
               noAt: (value) => noAtRegex.test(value) ? false : true, // user. //
               noAtWithTopDomain : (value) => noAtWithTopDomainRegex.test(value) ? false : true, // user.com // 
               emptyString: (value) => emptyStringRegex.test(value) ? false : true, // ' ' //
+              checkEmail: async () => await uniqueEmail(),
             }
           })}
           autoComplete="off"
@@ -113,8 +125,8 @@ export default function Form({ value, setValue, register, handleSubmit, checkEma
           type="email"
           value={value.email}
           onChange={handleChange}
-          className={errors.email?.type !== "validEmail" && (
-            errors.email?.type !== "noUsername" ||
+          className={errors.email?.type === "validEmail" && (
+            errors.email?.type === "noUsername" ||
             errors.email?.type !== "noUsernameDot" ||
             errors.email?.type !== "onlyCharacters" ||
             errors.email?.type !== "noDomain" ||
@@ -124,7 +136,7 @@ export default function Form({ value, setValue, register, handleSubmit, checkEma
             errors.email?.type !== "noAtWithTopDomain")
             ? "signup-input-error" : "signup-input"
           }
-          aria-invalid={errors.email ? "true" : "false"}
+          aria-invalid={errors.email ? "false" : "true"}
         />
         <div className="signup-input-placeholder">
           {t("sign_up_email")}
@@ -247,7 +259,7 @@ const EmailErrors = ({ errors }) => {
         <p className="invalidtext">Enter your email address</p>
       </div>
     )
-  } else if (errors.email?.type === "uniqueEmail") {
+  } else if (errors.email?.type === "checkEmail") {
     return (
       <div className="invalid">
       <ErrorLogo/>

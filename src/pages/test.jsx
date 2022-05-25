@@ -3,7 +3,7 @@ import axios from 'axios';
 export default function Test() {
   const onChange = async (e) => {
     const response = await axios.get("http://localhost:5000/users/");
-    const userInput = e.target.value;
+    const userInput = (e.target.value).toLowerCase();
 
     for (let i = 0; i < response.data.length; i++) {
       if (response.data[i].email === userInput) {
@@ -16,8 +16,9 @@ export default function Test() {
     <form onChange={onChange}>
       <input
         type="text"
-        name="code"
-        placeholder="enter code"
+        name="email"
+        placeholder="enter email"
+        autoComplete='off'
       />
     </form>
   )

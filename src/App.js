@@ -44,6 +44,7 @@ export default function App() {
           <Route path="/signin/identifier/" element={<SignInEmail />} />
           <Route path="/signin/challenge/" element={<SignInPassword />} />
           <Route path="/signup/" element={<SignUp />} />
+          <Route path="/test/" element={<Test />} />
           <Route path="*" element={<PageNotFound />} />
           <Route element={<ProtectedRoute />}>
             <Route path="/myaccount/" element={<Account />} />
@@ -55,7 +56,6 @@ export default function App() {
             <Route path="/myaccount/gender/" element={<Gender />} />
             <Route path="/myaccount/email/" element={<Email />} />
             <Route path="/myaccount/password/" element={<Password />} />
-            <Route path="/test/" element={<Test />} />
           </Route>
         </Routes>
       </Router>
