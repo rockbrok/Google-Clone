@@ -24,7 +24,6 @@ export default function Form({ value, setValue, register, handleSubmit, errors, 
   const noAtRegex = /^\w+([.-]?\w+)*(\.)+$/; // user. //
   const noAtWithTopDomainRegex = /^\w+([.-]?\w+)*(\.\w{2,3})+$/; // user.com //
   const emptyStringRegex = /^(?![\s\S])/; // '' //
-  const noSpaceStartOrEndRegex = /^[^\s].+[^\s]$/;
 
   async function uniqueEmail(e) {
     const response = await axios.get("http://localhost:5000/users/");
@@ -151,7 +150,6 @@ export default function Form({ value, setValue, register, handleSubmit, errors, 
               minLength: 8,
               validate: {
                 emptyString: (value) => emptyStringRegex.test(value) ? false : true, // ' ' //
-                noSpaceStartOrEnd: (value) => noSpaceStartOrEndRegex.test(value) ? true : false,
                 validPassword: (value) => validPasswordRegex.test(value) ? true : false
               }
             })}
@@ -163,8 +161,7 @@ export default function Form({ value, setValue, register, handleSubmit, errors, 
             onChange={handleChange}
             className={(
               errors.password?.type === "minLength" ||
-              errors.password?.type === "required" ||
-              errors.password?.type === "noSpaceStartOrEnd")
+              errors.password?.type === "required")
               ? "signup-input-error" : "signup-input"
             }
             aria-invalid={errors.password ? "true" : "false"}
@@ -188,10 +185,10 @@ export default function Form({ value, setValue, register, handleSubmit, errors, 
             name="passwordConfirm"
             id="passwordConfirm"
             type="password"
-            className={errors.password && (
+            className={(
               errors.passwordConfirm?.type === "minLength" ||
               errors.passwordConfirm?.type === "required" ||
-              errors.passwordConfirm?.type !== "passwordConfirm")
+              errors.passwordConfirm?.type === "passwordConfirm")
               ? "signup-input-error" : "signup-input"
             }
             aria-invalid={errors.passwordConfirm ? "true" : "false"}
@@ -201,7 +198,7 @@ export default function Form({ value, setValue, register, handleSubmit, errors, 
           </div>
         </div>
       </div>
-      <PasswordNote errors={errors}/>
+      <PasswordNote value={value} errors={errors}/>
       <PasswordErrors errors={errors}/>
       <ShowPassword />
       <div className="button-row">
@@ -279,7 +276,7 @@ const PasswordErrors = ({ errors }) => {
         <p className="invalidtext">Enter a password</p>
       </div>
     )
-  } else if (errors.password?.type === "validPassword" &&
+  } else if (errors.password?.type !== "validPassword" &&
     errors.password?.type !== "minLength" &&
     errors.passwordConfirm?.type === "required") {
     return (
@@ -288,20 +285,14 @@ const PasswordErrors = ({ errors }) => {
         <p className="invalidtext">Confirm your password</p>
       </div>
     )
-  } else if (errors.password?.type === "validPassword" &&
-    errors.passwordConfirm?.type !== "required" &&
-    errors.passwordConfirm?.type !== "passwordConfirm") {
+  } else if (errors.password?.type !== "validPassword" &&
+    errors.passwordConfirm?.type !== "required" && (
+    errors.passwordConfirm?.type === "passwordConfirm" ||
+    errors.passwordConfirm?.type === "minLength")) {
     return (
       <div className="invalid">
         <ErrorLogo/>
         <p className="invalidtext">Those passwords didn't match. Try again.</p>
-      </div>
-    )
-  } else if (errors.password?.type === "noSpaceStartOrEnd") {
-    return (
-      <div className="invalid">
-        <ErrorLogo/>
-        <p className="invalidtext">Your password can't start or end with a blank space</p>
       </div>
     )
   } else if (errors.password?.type === "minLength") {
@@ -314,9 +305,12 @@ const PasswordErrors = ({ errors }) => {
   }
 }
 
-const PasswordNote = ({ errors }) => (
-  (!errors.password) ?
+const PasswordNote = ({ value, errors }) => {
+  if ((((value.password) === '' || (value.passwordConfirm) === '') && errors.password?.type !== "minLength") && (errors.password?.type !== "required")) {
+    return (
     <div className="signup-note">
-      Use 8 or more characters with a mix of letters, numbers & symbols
-    </div> : ''
-);
+      Use 8 or more characters with a mix of letters, numbers &amp; symbols
+    </div>
+    )
+  }
+};
