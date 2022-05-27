@@ -9,7 +9,7 @@ import '../../../components/SignPage/Heading/style.css';
 export default function SignUpDetails({ value, setValue, register, handleSubmit, errors, watch, Next, Logo }) {
   return (
     <>
-      <main className="form-container">
+      <section className="form-container">
         <Logo />
         <Heading value={value}/>
         <Form
@@ -21,7 +21,7 @@ export default function SignUpDetails({ value, setValue, register, handleSubmit,
           errors={errors} 
           watch={watch} 
         />
-      </main>
+      </section>
       <AccountLogo />
     </>
   )

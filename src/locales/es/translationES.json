@@ -118,5 +118,10 @@
         "manage_data": "Administrar tus datos y privacidad",
         "choose_what_others_see": "Elige lo que pueden ver los demás",
         "personal_detail": "Decide qué información personal haces visible para los demás",
-        "manage_personal": "Gestione su información personal"
+        "manage_personal": "Gestione su información personal",
+
+    "language_select": {
+        "1": "Español (Latinoamérica)",
+        "2": "English (United States)"
+    }
 }

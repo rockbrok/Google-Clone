@@ -1,7 +1,7 @@
+import axios from 'axios';
 import { ShowPassword } from '../../../../components/SignPage/ShowPassword';
 import { SignInInstead, ErrorLogo } from '..';
 import { t } from 'i18next';
-import axios from 'axios';
 
 import '../style.css';
 
@@ -66,9 +66,9 @@ export default function Form({ value, setValue, register, handleSubmit, errors, 
             }
             aria-invalid={errors.firstName ? "true" : "false"}
           />
-          <div className="signup-input-placeholder">
+          <span className="signup-input-placeholder">
             {t("sign_up_first_name")}
-          </div>
+          </span>
         </div>
         <div className="input-container">
           <input 
@@ -96,9 +96,9 @@ export default function Form({ value, setValue, register, handleSubmit, errors, 
             }
             aria-invalid={errors.lastName ? "true" : "false"}
           />
-          <div className="signup-input-placeholder">
+          <span className="signup-input-placeholder">
             {t("sign_up_last_name")}
-          </div>
+          </span>
         </div>
       </div>
       <NameErrors errors={errors}/>
@@ -136,9 +136,9 @@ export default function Form({ value, setValue, register, handleSubmit, errors, 
           }
           aria-invalid={errors.email ? "false" : "true"}
         />
-        <div className="signup-input-placeholder">
+        <span className="signup-input-placeholder">
           {t("sign_up_email")}
-        </div>
+        </span>
       </div>
       <EmailErrors errors={errors}/>
       <div className="name-row">
@@ -165,9 +165,9 @@ export default function Form({ value, setValue, register, handleSubmit, errors, 
             }
             aria-invalid={errors.password ? "true" : "false"}
           />
-          <div className="signup-input-placeholder">
+          <span className="signup-input-placeholder">
             {t("sign_up_password")}
-          </div>
+          </span>
         </div>
         <div className="input-container">
           <input 
@@ -192,9 +192,9 @@ export default function Form({ value, setValue, register, handleSubmit, errors, 
             }
             aria-invalid={errors.passwordConfirm ? "true" : "false"}
           />
-          <div className="signup-input-placeholder">
+          <span className="signup-input-placeholder">
             {t("sign_up_confirm")}
-          </div>
+          </span>
         </div>
       </div>
       <PasswordNote value={value} errors={errors}/>

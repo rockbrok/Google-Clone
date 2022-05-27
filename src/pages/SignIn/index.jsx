@@ -2,7 +2,6 @@ import SignInEmail from './Email';
 import SignInPassword from './Password';
 import SignPageFooter from '../../components/SignPage/Footer';
 import SignPageHeader from '../../components/SignPage/Header';
-import axios from 'axios';
 import { t } from 'i18next';
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
@@ -26,16 +25,13 @@ export default function SignIn() {
     password: '',
   })
 
-  const response = async () => (await axios.get("http://localhost:5000/users?email=" + value.email))
-  const firstName = async () => JSON.stringify(await response.data[0].firstName);
-
   const onSubmit = async () => {
     setSuccess(true);
   }
 
   return (
     <>
-    <Helmet>
+      <Helmet>
         <title>{t('sign_in_title')}</title>
       </Helmet>
       <section className="flex-container">
@@ -51,7 +47,6 @@ export default function SignIn() {
               watch={watch}
               Next={Next}
               Logo={Logo}
-              firstName={firstName}
             /> 
             : 
             <SignInEmail 

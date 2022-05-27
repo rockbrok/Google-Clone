@@ -19,49 +19,31 @@
       "id": 2
     },
     {
-      "firstName": "asdf",
-      "lastName": "asdf",
-      "email": "asda32asdff@asdf.com",
-      "password": "asdfasdfasdf",
-      "gender": "male",
-      "dateOfBirth": "03/3/1901",
-      "id": 3
-    },
-    {
-      "firstName": "Kendrick",
-      "lastName": "Lamar",
-      "email": "klamar99@gmail.com",
-      "password": "asdfasdfasdf",
-      "gender": "male",
-      "dateOfBirth": "04/3/1902",
-      "id": 4
-    },
-    {
       "firstName": "Jerry",
       "lastName": "Smith",
       "email": "jsmith@yah.com",
       "password": "asdfasdfasdf",
       "gender": "male",
       "dateOfBirth": "03/3/1902",
-      "id": 5
+      "id": 3
     },
     {
-      "firstName": "james",
-      "lastName": "brown",
-      "email": "klamar99@gmail.com",
+      "firstName": "James",
+      "lastName": "Brown",
+      "email": "jbrown88@gmail.com",
       "password": "asdfasdfasdf",
       "gender": "male",
       "dateOfBirth": "04/3/1901",
-      "id": 6
+      "id": 4
     },
     {
-      "firstName": "asdf",
-      "lastName": "asdf",
-      "email": "asdf@asdf.com",
+      "firstName": "Jacob",
+      "lastName": "Cowboy",
+      "email": "jacobcowboy@cowboy.net",
       "password": "asdfasdfasdf",
       "gender": "other",
-      "dateOfBirth": "05/2/1901",
-      "id": 7
+      "dateOfBirth": "07/29/2002",
+      "id": 5
     }
   ]
 }

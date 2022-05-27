@@ -117,5 +117,10 @@
         "manage_data": "Manage your data & privacy",
         "choose_what_others_see": "Choose what others see",
         "personal_detail": "Decide what personal information you make visible to others",
-        "manage_personal": "Manage your personal info"
+        "manage_personal": "Manage your personal info",
+
+    "language_select": {
+        "1": "English (United States)",
+        "2": "Español (Latinoamérica)"
+    }
 }

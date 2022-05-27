@@ -9,6 +9,8 @@ import { UserContext } from "../../../usercontext";
 import { Helmet } from "react-helmet";
 
 export default function Name() {
+  const { user, setUser } = useContext(UserContext);
+
   const {register, handleSubmit, watch, formState: { errors }} = useForm({
     defaultValues: {
       firstName: '',
@@ -24,14 +26,6 @@ export default function Name() {
     lastName: ''
   })
 
-  const handleChange = (e) => {
-    setValue({
-      ...value,
-      [e.target.name]: e.target.value
-    });
-  }
-
-  const { user, setUser } = useContext(UserContext);
   const obj = JSON.parse(localStorage.getItem('user'));
   const email = obj[0].email;
   const firstName = obj[0].firstName;
@@ -39,28 +33,26 @@ export default function Name() {
   const URL = "http://localhost:5000/users?email=" + email;
 
   const currentUser = async () => {
-    const obj = JSON.parse(localStorage.getItem('user'));
-    const email = obj[0].email;
-    const URL = "http://localhost:5000/users?email=" + email;
     let response = await axios.get(URL);
     return response.data;
   };
 
   const onSubmit = async() => {
     try {
-      const response = await axios({
+      await axios({
         method: "put",
         url: URL,
         data: {
-          firstName: value.firstName,
-          lastName: value.lastName,
+          [0] : {
+            firstName: value.firstName,
+            lastName: value.lastName,
+          }
         },
         headers: { "Content-Type": "application/json"},
       });
       setTimeout(function () {
         window.location.href = "http://localhost:3000/myaccount/personalinfo/";
       }, 250);
-      return ({...response.data});
     } catch(error) {
       console.log(error.response.data)
     }
@@ -68,7 +60,12 @@ export default function Name() {
       setUser(user);
   }
 
-  console.log(watch());
+  const handleChange = (e) => {
+    setValue({
+      ...value,
+      [e.target.name]: e.target.value
+    });
+  }
 
   return (
     <>
@@ -87,7 +84,7 @@ export default function Name() {
         <div className="account-flex-form">
     <h3>CHANGE NAME</h3>
     <form onSubmit={handleSubmit(onSubmit)} noValidate>
-    <div className="input-container">
+      <div className="input-container">
           <input 
             {...register("firstName", {
               required: true,
@@ -154,7 +151,7 @@ export default function Name() {
           Cancel
         </Link>
       </button>
-      <button type="submit">Save</button>
+      <button type="submit" role="submit">Save</button>
     </form>
 
 

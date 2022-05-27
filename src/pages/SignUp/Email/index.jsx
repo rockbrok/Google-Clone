@@ -10,7 +10,7 @@ import '../../../components/SignPage/ShowPassword/style.css';
 export default function SignUpEmail({value, setValue, errors, handleSubmit, checkEmail, register, watch, Next, onSubmit, Logo}) {
   return (
     <>
-      <main className="form-container">
+      <section className="form-container">
         <Logo />
         <Heading />
         <Form
@@ -24,7 +24,7 @@ export default function SignUpEmail({value, setValue, errors, handleSubmit, chec
           errors={errors}
           checkEmail={checkEmail}
         />
-      </main>
+      </section>
       <AccountLogo />
     </>
   )
@@ -45,7 +45,7 @@ export const ErrorLogo = () => (
 )
 
 export const SignInInstead = () => (
-  <Link to="/signin/identifier/">
+  <Link to="/signin/">
     <button className="create-account">
       {t("sign_up_sign_in")}
     </button>
