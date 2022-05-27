@@ -77,7 +77,6 @@ export default function Form({ value, setValue, register, handleSubmit, errors, 
             <option value="12">{t("months.12")}</option>
           </select>
           <span className="signup-input-placeholder">
-            
           </span>
         </div>
         <div className="input-container">

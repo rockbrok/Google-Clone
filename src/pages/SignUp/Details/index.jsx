@@ -48,7 +48,7 @@ export const ErrorLogo = () => (
 )
 
 export const Information = () => (
-  <a target="_blank" rel="noreferrer" href="https://support.google.com/accounts/answer/1733224?hl=en" className="create-account">
+  <a target="_blank" rel="noreferrer" href="https://support.google.com/accounts/answer/1733224?hl=en" className="create-account no-deco">
     {t("sign_up_info_button")}
   </a>
 );

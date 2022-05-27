@@ -106,7 +106,8 @@
 }
 
 .input-container input:focus ~ span,
-.input-container input:valid ~ span {
+.input-container input:valid ~ span,
+.input-container input:invalid ~ span {
   transform: translateY(-13px) translateX(-7px);
   font-size: 11px;
   line-height: 11px;

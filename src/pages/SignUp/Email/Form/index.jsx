@@ -40,162 +40,51 @@ export default function Form({ value, setValue, register, handleSubmit, errors, 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="signup-form" noValidate>
       <div className="name-row">
-        <div className="input-container">
-          <input 
-            {...register("firstName", {
-              required: true,
-              minLength: 2,
-              maxLength: 16,
-              pattern: /^[a-z,A-Z ,.'-]{2,16}$/,
-              validate: (value) => {
-                return !!value.trim()
-              }
-            })}
-            autoComplete="off"
-            name="firstName"
-            type="text"
-            value={value.firstName}
-            onChange={handleChange}
-            className={(
-              errors.firstName?.type === "pattern" ||
-              errors.firstName?.type === "minLength" ||
-              errors.firstName?.type === "maxLength" ||
-              errors.firstName?.type === "validate" ||
-              errors.firstName?.type === "required")
-              ? "signup-input-error" : "signup-input"
-            }
-            aria-invalid={errors.firstName ? "true" : "false"}
-          />
-          <span className="signup-input-placeholder">
-            {t("sign_up_first_name")}
-          </span>
-        </div>
-        <div className="input-container">
-          <input 
-            {...register("lastName", {
-              required: true,
-              minLength: 2,
-              maxLength: 16,
-              pattern: /^[a-z,A-Z ,.'-]{2,16}$/,
-              validate: (value) => {
-                return !!value.trim()
-              }
-            })}
-            autoComplete="off"
-            name="lastName"
-            type="text"
-            value={value.lastName}
-            onChange={handleChange}
-            className={(
-              errors.lastName?.type === "pattern" ||
-              errors.lastName?.type === "minLength" ||
-              errors.lastName?.type === "maxLength" ||
-              errors.lastName?.type === "validate" ||
-              errors.lastName?.type === "required")
-              ? "signup-input-error" : "signup-input"
-            }
-            aria-invalid={errors.lastName ? "true" : "false"}
-          />
-          <span className="signup-input-placeholder">
-            {t("sign_up_last_name")}
-          </span>
-        </div>
+        <FirstName 
+          register={register}
+          value={value} 
+          handleChange={handleChange}
+          errors={errors}
+        />
+        <LastName 
+          register={register}
+          value={value} 
+          handleChange={handleChange}
+          errors={errors}
+        />
       </div>
       <NameErrors errors={errors}/>
-      <div className="input-container">
-        <input 
-          {...register("email", {
-            required: true,
-            validate: {
-              noUsername: (value) => noUsernameRegex.test(value) ? false : true, // @domain //
-              noUsernameDot: (value) => noUsernameDotRegex.test(value) ? false : true, // @domain. //
-              onlyCharacters: (value) => onlyCharactersRegex.test(value) ? false : true, // abcdefg //
-              validEmail: (value) => validEmailRegex.test(value) ? true : false, // user@domain.com //
-              noDomain: (value) => noDomainRegex.test(value) ? false : true, // user@ //
-              noAt: (value) => noAtRegex.test(value) ? false : true, // user. //
-              noAtWithTopDomain : (value) => noAtWithTopDomainRegex.test(value) ? false : true, // user.com // 
-              emptyString: (value) => emptyStringRegex.test(value) ? false : true, // ' ' //
-              checkEmail: async () => await uniqueEmail(),
-            }
-          })}
-          autoComplete="off"
-          name="email"
-          type="email"
-          value={value.email}
-          onChange={handleChange}
-          className={errors.email?.type === "validEmail" && (
-            errors.email?.type === "noUsername" ||
-            errors.email?.type !== "noUsernameDot" ||
-            errors.email?.type !== "onlyCharacters" ||
-            errors.email?.type !== "noDomain" ||
-            errors.email?.type !== "required" ||
-            errors.email?.type !== "noAt" ||
-            errors.email?.type !== "emptyString" ||
-            errors.email?.type !== "noAtWithTopDomain")
-            ? "signup-input-error" : "signup-input"
-          }
-          aria-invalid={errors.email ? "false" : "true"}
+      <Email 
+          register={register}
+          value={value} 
+          handleChange={handleChange}
+          errors={errors}
+          noUsernameRegex={noUsernameRegex}
+          noUsernameDotRegex={noUsernameDotRegex}
+          onlyCharactersRegex={onlyCharactersRegex}
+          validEmailRegex={validEmailRegex}
+          noDomainRegex={noDomainRegex}
+          noAtRegex={noAtRegex}
+          noAtWithTopDomainRegex={noAtWithTopDomainRegex}
+          emptyStringRegex={emptyStringRegex}
+          uniqueEmail={uniqueEmail}
         />
-        <span className="signup-input-placeholder">
-          {t("sign_up_email")}
-        </span>
-      </div>
       <EmailErrors errors={errors}/>
       <div className="name-row">
-        <div className="input-container">
-          <input 
-            {...register("password", {
-              required: true,
-              minLength: 8,
-              validate: {
-                emptyString: (value) => emptyStringRegex.test(value) ? false : true, // ' ' //
-                validPassword: (value) => validPasswordRegex.test(value) ? true : false
-              }
-            })}
-            autoComplete="off"
-            name="password"
-            id="password"
-            type="password"
-
-            onChange={handleChange}
-            className={(
-              errors.password?.type === "minLength" ||
-              errors.password?.type === "required")
-              ? "signup-input-error" : "signup-input"
-            }
-            aria-invalid={errors.password ? "true" : "false"}
-          />
-          <span className="signup-input-placeholder">
-            {t("sign_up_password")}
-          </span>
-        </div>
-        <div className="input-container">
-          <input 
-            {...register("passwordConfirm", {
-              required: true,
-              minLength: 8,
-              validate: {
-                emptyString: (value) => emptyStringRegex.test(value) ? false : true, // ' ' //
-                passwordConfirm: (value) => value === watch('password') ? true : false,
-                validPassword: (value) => validPasswordRegex.test(value) ? true : false
-              }
-            })}
-            autoComplete="off"
-            name="passwordConfirm"
-            id="passwordConfirm"
-            type="password"
-            className={(
-              errors.passwordConfirm?.type === "minLength" ||
-              errors.passwordConfirm?.type === "required" ||
-              errors.passwordConfirm?.type === "passwordConfirm")
-              ? "signup-input-error" : "signup-input"
-            }
-            aria-invalid={errors.passwordConfirm ? "true" : "false"}
-          />
-          <span className="signup-input-placeholder">
-            {t("sign_up_confirm")}
-          </span>
-        </div>
+        <Password
+          register={register}
+          handleChange={handleChange}
+          errors={errors}
+          validPasswordRegex={validPasswordRegex} 
+          emptyStringRegex={emptyStringRegex}
+        />
+        <PasswordConfirm
+          register={register}
+          watch={watch}
+          errors={errors}
+          validPasswordRegex={validPasswordRegex} 
+          emptyStringRegex={emptyStringRegex}
+        />
       </div>
       <PasswordNote value={value} errors={errors}/>
       <PasswordErrors errors={errors}/>
@@ -208,13 +97,181 @@ export default function Form({ value, setValue, register, handleSubmit, errors, 
   )
 }
 
+const FirstName = ({ register, value, handleChange, errors }) => (
+  <div className="input-container">
+    <input 
+      {...register("firstName", {
+        required: true,
+        minLength: 2,
+        maxLength: 16,
+        pattern: /^[a-z,A-Z ,.'-]{2,16}$/,
+        validate: (value) => {
+          return !!value.trim()
+        }
+      })}
+      autoComplete="off"
+      name="firstName"
+      type="text"
+      value={value.firstName}
+      onChange={handleChange}
+      className={(
+        errors.firstName?.type === "pattern" ||
+        errors.firstName?.type === "minLength" ||
+        errors.firstName?.type === "maxLength" ||
+        errors.firstName?.type === "validate" ||
+        errors.firstName?.type === "required")
+        ? "signup-input-error" : "signup-input"
+      }
+      aria-invalid={errors.firstName ? "true" : "false"}
+    />
+    <span className="signup-input-placeholder">
+      {t("sign_up_first_name")}
+    </span>
+  </div>
+);
+
+const LastName = ({ register, value, handleChange, errors }) => (
+  <div className="input-container">
+    <input 
+      {...register("lastName", {
+        required: true,
+        minLength: 2,
+        maxLength: 16,
+        pattern: /^[a-z,A-Z ,.'-]{2,16}$/,
+        validate: (value) => {
+          return !!value.trim()
+        }
+      })}
+      autoComplete="off"
+      name="lastName"
+      type="text"
+      value={value.lastName}
+      onChange={handleChange}
+      className={(
+        errors.lastName?.type === "pattern" ||
+        errors.lastName?.type === "minLength" ||
+        errors.lastName?.type === "maxLength" ||
+        errors.lastName?.type === "validate" ||
+        errors.lastName?.type === "required")
+        ? "signup-input-error" : "signup-input"
+      }
+      aria-invalid={errors.lastName ? "true" : "false"}
+    />
+    <span className="signup-input-placeholder">
+      {t("sign_up_last_name")}
+    </span>
+  </div>
+);
+
+const Email = ({ register, value, handleChange, errors, noUsernameRegex, noUsernameDotRegex, onlyCharactersRegex, validEmailRegex, noDomainRegex, noAtRegex, noAtWithTopDomainRegex, emptyStringRegex, uniqueEmail }) => (
+  <div className="input-container">
+    <input 
+      {...register("email", {
+        required: true,
+        minLength: 2,
+        validate: {
+          noUsername: (value) => noUsernameRegex.test(value) ? false : true, // @domain //
+          noUsernameDot: (value) => noUsernameDotRegex.test(value) ? false : true, // @domain. //
+          onlyCharacters: (value) => onlyCharactersRegex.test(value) ? false : true, // abcdefg //
+          validEmail: (value) => validEmailRegex.test(value) ? true : false, // user@domain.com //
+          noDomain: (value) => noDomainRegex.test(value) ? false : true, // user@ //
+          noAt: (value) => noAtRegex.test(value) ? false : true, // user. //
+          noAtWithTopDomain : (value) => noAtWithTopDomainRegex.test(value) ? false : true, // user.com // 
+          emptyString: (value) => emptyStringRegex.test(value) ? false : true, // ' ' //
+          checkEmail: async () => await uniqueEmail(),
+        }
+      })}
+      autoComplete="off"
+      name="email"
+      type="email"
+      value={value.email}
+      onChange={handleChange}
+      className={(errors.email?.type === "validEmail" || 
+        errors.email?.type === "noUsername" ||
+        errors.email?.type === "noUsernameDot" ||
+        errors.email?.type === "onlyCharacters" ||
+        errors.email?.type === "noDomain" ||
+        errors.email?.type === "required" ||
+        errors.email?.type === "noAt" ||
+        errors.email?.type === "emptyString" ||
+        errors.email?.type === "noAtWithTopDomain" ||
+        errors.email?.type === "checkEmail")
+        ? "signup-input-error" : "signup-input"
+      }
+      aria-invalid={errors.email ? "false" : "true"}
+    />
+    <span className="signup-input-placeholder">
+      {t("sign_up_email")}
+    </span>
+  </div>
+);
+
+const Password = ({ register, handleChange, errors, validPasswordRegex, emptyStringRegex }) => (
+  <div className="input-container">
+    <input 
+      {...register("password", {
+        required: true,
+        minLength: 8,
+        validate: {
+          emptyString: (value) => emptyStringRegex.test(value) ? false : true, // ' ' //
+          validPassword: (value) => validPasswordRegex.test(value) ? true : false
+        }
+      })}
+      autoComplete="off"
+      name="password"
+      id="password"
+      type="password"
+      onChange={handleChange}
+      className={(
+        errors.password?.type === "minLength" ||
+        errors.password?.type === "required")
+        ? "signup-input-error" : "signup-input"
+      }
+      aria-invalid={errors.password ? "true" : "false"}
+    />
+    <span className="signup-input-placeholder">
+      {t("sign_up_password")}
+    </span>
+  </div>
+);
+
+const PasswordConfirm = ({ register, watch, errors, validPasswordRegex, emptyStringRegex }) => (
+  <div className="input-container">
+    <input 
+      {...register("passwordConfirm", {
+        required: true,
+        minLength: 8,
+        validate: {
+          emptyString: (value) => emptyStringRegex.test(value) ? false : true, // ' ' //
+          passwordConfirm: (value) => value === watch('password') ? true : false,
+          validPassword: (value) => validPasswordRegex.test(value) ? true : false
+        }
+      })}
+      autoComplete="off"
+      name="passwordConfirm"
+      id="passwordConfirm"
+      type="password"
+      className={(
+        errors.passwordConfirm?.type === "minLength" ||
+        errors.passwordConfirm?.type === "required" ||
+        errors.passwordConfirm?.type === "passwordConfirm")
+        ? "signup-input-error" : "signup-input"
+      }
+      aria-invalid={errors.passwordConfirm ? "true" : "false"}
+    />
+    <span className="signup-input-placeholder">
+      {t("sign_up_confirm")}
+    </span>
+  </div>
+);
+
 const NameErrors = ({ errors }) => {
   if ((errors.firstName?.type === "required" && errors.lastName?.type === "required") || 
       (errors.firstName?.type === "validate" && errors.lastName?.type === "validate")) {
     return (
       <div className="invalid">
         <ErrorLogo/>
-        <p className="invalidtext">Enter first and last names</p>
+        <p className="invalidtext">{t("sign_up_name_errors.enter_first_last")}</p>
       </div>
     )
   } else if (errors.firstName?.type === "pattern" || 
@@ -226,21 +283,21 @@ const NameErrors = ({ errors }) => {
     return (
       <div className="invalid">
         <ErrorLogo/>
-        <p className="invalidtext">Are you sure you entered your name correctly?</p>
+        <p className="invalidtext">{t("sign_up_name_errors.enter_correct")}</p>
       </div>
     )
   } else if (errors.firstName && !errors.lastName) {
     return (
       <div className="invalid">
         <ErrorLogo/>
-        <p className="invalidtext">Enter first name</p>
+        <p className="invalidtext">{t("sign_up_name_errors.enter_first")}</p>
       </div>
     )
   } else if (!errors.firstName && errors.lastName) {
     return (
       <div className="invalid">
         <ErrorLogo/>
-        <p className="invalidtext">Enter last name</p>
+        <p className="invalidtext">{t("sign_up_name_errors.enter_last")}</p>
       </div>
     )
   }
@@ -252,15 +309,45 @@ const EmailErrors = ({ errors }) => {
     return (
       <div className="invalid">
         <ErrorLogo/>
-        <p className="invalidtext">Enter your email address</p>
+        <p className="invalidtext">{t("sign_up_email_errors.enter_email")}</p>
+      </div>
+    )
+  } else if (errors.email?.type === "noUsername" || 
+    errors.email?.type === "noUsernameDot") {
+    return (
+      <div className="invalid">
+        <ErrorLogo/>
+        <p className="invalidtext">{t("sign_up_email_errors.enter_username")}</p>
+      </div>
+    )
+  } else if (errors.email?.type === "onlyCharacters" ||
+    errors.email?.type === "noAt" ||
+    errors.email?.type === "noAtWithTopDomain") {
+    return (
+      <div className="invalid">
+        <ErrorLogo/>
+        <p className="invalidtext">{t("sign_up_email_errors.enter_at")}</p>
       </div>
     )
   } else if (errors.email?.type === "checkEmail") {
     return (
       <div className="invalid">
       <ErrorLogo/>
-      <p className="invalidtext">Enter a unique email</p>
+      <p className="invalidtext">{t("sign_up_email_errors.email_exists")}</p>
     </div>
+    )
+  } else if (errors.email?.type === "validEmail" && ( 
+    errors.email?.type !== "noUsername" ||
+    errors.email?.type !== "noUsernameDot" ||
+    errors.email?.type !== "onlyCharacters" ||
+    errors.email?.type !== "noDomain" ||
+    errors.email?.type !== "noAt" ||
+    errors.email?.type !== "noAtWithTopDomain")) {
+    return (
+      <div className="invalid">
+        <ErrorLogo/>
+        <p className="invalidtext">{t("sign_up_email_errors.not_valid")}</p>
+      </div>
     )
   }
 }
@@ -272,7 +359,7 @@ const PasswordErrors = ({ errors }) => {
     return (
       <div className="invalid">
         <ErrorLogo/>
-        <p className="invalidtext">Enter a password</p>
+        <p className="invalidtext">{t("sign_up_password_errors.enter_password")}</p>
       </div>
     )
   } else if (errors.password?.type !== "validPassword" &&
@@ -281,7 +368,7 @@ const PasswordErrors = ({ errors }) => {
     return (
       <div className="invalid">
         <ErrorLogo/>
-        <p className="invalidtext">Confirm your password</p>
+        <p className="invalidtext">{t("sign_up_password_errors.confirm_password")}</p>
       </div>
     )
   } else if (errors.password?.type !== "validPassword" &&
@@ -291,14 +378,14 @@ const PasswordErrors = ({ errors }) => {
     return (
       <div className="invalid">
         <ErrorLogo/>
-        <p className="invalidtext">Those passwords didn't match. Try again.</p>
+        <p className="invalidtext">{t("sign_up_password_errors.no_match")}</p>
       </div>
     )
   } else if (errors.password?.type === "minLength") {
     return (
       <div className="invalid">
         <ErrorLogo/>
-        <p className="invalidtext">Use 8 characters or more for your password</p>
+        <p className="invalidtext">{t("sign_up_password_errors.8_characters")}</p>
       </div>
     )
   }

@@ -90,6 +90,28 @@
     "sign_up_sign_in" : "Sign in instead",
     "sign_up_figure_caption": "One account. All of Google working for you.",
 
+    "sign_up_name_errors" : {
+        "enter_first_last": "Enter first and last names",
+        "enter_correct": "Are you sure you entered your name correctly?",
+        "enter_first": "Enter first name",
+        "enter_last": "Enter last name"
+    },
+
+    "sign_up_email_errors" : {
+        "enter_email": "Enter your email address",
+        "enter_username": "Enter a username before the '@'.",
+        "enter_at": "Don't forget to include '@'.",
+        "email_exists": "This email is already in use.",
+        "not_valid": "This email address is not valid."
+    },
+
+    "sign_up_password_errors": {
+        "enter_password": "Enter a password",
+        "confirm_password": "Confirm your password",
+        "no_match": "Those passwords didn't match. Try again.",
+        "8_characters": "Use 8 characters or more for your password"
+    },
+
     "sign_up_detail_heading": "welcome to Google",
     "sign_up_info_button": "Why we ask for this information",
     "sign_up_your_birthday": "Your birthday",

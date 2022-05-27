@@ -91,6 +91,28 @@
     "sign_up_sign_in" : "Acceder a tu cuenta en su lugar",
     "sign_up_figure_caption": "Una cuenta. Todos los servicios de Google a tu disposición.",
 
+    "sign_up_name_errors" : {
+        "enter_first_last": "Ingrese nombres y apellidos",
+        "enter_correct": "¿Estás seguro de haber ingresado el nombre correctamente?",
+        "enter_first": "Ingrese el nombre",
+        "enter_last": "Ingrese el apellido"
+    },
+
+    "sign_up_email_errors" : {
+        "enter_email": "Ingrese su dirección de correo electrónico",
+        "enter_username": "Ingrese un nombre de usuario antes de la '@'.",
+        "enter_at": "No olvide incluir '@'.",
+        "email_exists": "Este correo electrónico ya está en uso.",
+        "not_valid": "Esta dirección de correo electrónico no es válida."
+    },
+
+    "sign_up_password_errors": {
+        "enter_password": "Ingrese una contraseña",
+        "confirm_password": "Confirmar la contraseña",
+        "no_match": "Esas contraseñas no coincidían. Intentar otra vez.",
+        "8_characters": "Use 8 caracteres o más para su contraseña"
+    },
+
     "sign_up_detail_heading": "Bienvenido a Google",
     "sign_up_info_button": "Por qué solicitamos esta información",
     "sign_up_your_birthday": "Tu cumpleaños",
