@@ -41,7 +41,6 @@ export default function Form({ value, setValue, register, handleSubmit, errors, 
     <form onSubmit={handleSubmit(onSubmit)} className="signup-form" noValidate>
       <div className="name-row">
         <div className="input-container">
-          <div id="output" />
           <input 
             {...register("firstName", {
               required: true,

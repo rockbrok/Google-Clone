@@ -21,7 +21,7 @@ const LanguageSelector = () => (
   
 const Links = () => (
   <ul className="signup-footer-links">
-    <li>{t('signpage_footer_help')}</li>
+    <li>{t('help')}</li>
     <li>{t('privacy')}</li>
     <li>{t('terms')}</li>
   </ul>

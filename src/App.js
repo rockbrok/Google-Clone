@@ -1,8 +1,7 @@
 import Search from './pages/Search';
 import PageNotFound from './pages/404';
 import SignUp from './pages/SignUp';
-import SignInEmail from './pages/SignIn/Email';
-import SignInPassword from './pages/SignIn/Password';
+import SignIn from './pages/SignIn';
 import Account from './pages/MyAccount/Home';
 import PersonalInfo from './pages/MyAccount/PersonalInfo';
 import Name from './pages/MyAccount/Name';
@@ -27,7 +26,7 @@ export default function App() {
     if (user !== null) {
       return <Outlet />
     }
-    return <Navigate to="/signin/identifier/" />
+    return <Navigate to="/signin/" />
   }
 
   return (
@@ -41,8 +40,7 @@ export default function App() {
       <Router>
         <Routes>
           <Route exact path="/" element={<Search />}/>
-          <Route path="/signin/identifier/" element={<SignInEmail />} />
-          <Route path="/signin/challenge/" element={<SignInPassword />} />
+          <Route path="/signin/" element={<SignIn />} />
           <Route path="/signup/" element={<SignUp />} />
           <Route path="/test/" element={<Test />} />
           <Route path="*" element={<PageNotFound />} />

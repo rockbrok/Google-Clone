@@ -20,7 +20,7 @@ export default function HeaderIcons() {
 
 const SignIn = () => (
   <li>
-    <Link to="/signin/identifier/">
+    <Link to="/signin/">
       <button className="sign-in" target="_top">
         {t('sign_in')}
       </button>
