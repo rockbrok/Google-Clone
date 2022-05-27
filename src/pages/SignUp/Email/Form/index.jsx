@@ -308,7 +308,7 @@ const PasswordNote = ({ value, errors }) => {
   if ((((value.password) === '' || (value.passwordConfirm) === '') && errors.password?.type !== "minLength") && (errors.password?.type !== "required")) {
     return (
     <div className="signup-note">
-      Use 8 or more characters with a mix of letters, numbers &amp; symbols
+      {t("sign_up_password_note")}
     </div>
     )
   }

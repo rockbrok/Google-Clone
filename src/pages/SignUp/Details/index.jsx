@@ -30,7 +30,7 @@ export default function SignUpDetails({ value, setValue, register, handleSubmit,
 const Heading = ({ value }) => (
   <>
     <h1 className="heading">
-      {value.firstName}, welcome to Google
+      {value.firstName}, {t("sign_up_detail_heading")}
     </h1>
     <div className="welcome-subhead">
     <UserCircleIcon className="sidebar-icon"/>
@@ -49,13 +49,13 @@ export const ErrorLogo = () => (
 
 export const Information = () => (
   <a target="_blank" rel="noreferrer" href="https://support.google.com/accounts/answer/1733224?hl=en" className="create-account">
-    Why we ask for this information
+    {t("sign_up_info_button")}
   </a>
 );
 
 export const Back = () => (
   <button className="create-account" onClick={() => window.location.reload()}>
-    Back
+    {t("back")}
   </button>
 );
 
@@ -64,7 +64,7 @@ const AccountLogo = () => (
     <figure className="account-app-figure">
       <img src="https://ssl.gstatic.com/accounts/signup/glif/personal.svg" alt="" width="244" height="244" />
       <figcaption className="fig-heading">
-        Your personal info is private & safe
+        {t("sign_up_detail_figure_caption")}
       </figcaption>
     </figure>
   </section>

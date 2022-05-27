@@ -90,6 +90,38 @@
     "sign_up_sign_in" : "Sign in instead",
     "sign_up_figure_caption": "One account. All of Google working for you.",
 
+    "sign_up_detail_heading": "welcome to Google",
+    "sign_up_info_button": "Why we ask for this information",
+    "sign_up_your_birthday": "Your birthday",
+    "sign_up_detail_figure_caption": "Your personal info is private & safe",
+    "back": "Back",
+    
+    "months": {
+        "1": "January",
+        "2": "February",
+        "3": "March",
+        "4": "April",
+        "5": "May",
+        "6": "June",
+        "7": "July",
+        "8": "August",
+        "9": "September",
+        "10": "October",
+        "11": "November",
+        "12": "December"
+    },
+
+    "genders": {
+        "male": "Male",
+        "female": "Female",
+        "other": "Other"
+    },
+
+    "month": "Month",
+    "day": "Day",
+    "year": "Year",
+    "gender": "Gender",
+
     "password_recovery_heading" : "Account recovery",
     "password_recovery_subheading" : "To help keep your account safe, Google wants to make sure it’s really you trying to sign in",
     "password_recovery_note" : "Enter the 6-digit code Google just sent to your email",

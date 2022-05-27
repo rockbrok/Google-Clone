@@ -1,3 +1,4 @@
+import OutsideClickHandler from 'react-outside-click-handler';
 import i18n, { t } from 'i18next';
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
@@ -5,6 +6,8 @@ import { useState } from 'react';
 import './style.css'
 
 export default function SignPageFooter() {
+  const [show, setShow] = useState(false)
+
   const {register, handleSubmit } = useForm({
     defaultValues: {
       language: ''
@@ -32,25 +35,44 @@ export default function SignPageFooter() {
       ...value,
       [e.target.name]: e.target.value,
     });
-    LanguageChange();
+    setTimeout(function () {
+      LanguageChange();
+      }, 0);
     window.location.reload(false);
   }
 
   return (
     <section className="signup-footer" >
       <div className="signup-footer-container">
-      <LanguageSelect 
+      <LanguageButton
+        show={show}
+        setShow={setShow}
         register={register}
         handleSubmit={handleSubmit}
         value={value}
         handleChange={handleChange}
-        LanguageChange={LanguageChange}
       />
       <Links />
       </div>
     </section>
   );
 }
+
+const LanguageButton = ({ show, setShow, register, handleSubmit, handleChange, value }) => (
+  <OutsideClickHandler onOutsideClick={() => { setShow(false) }}>
+    <button className="language-select-button" onClick={() => setShow(!show)}>
+      {t('language_select.1')}
+    </button>
+    { show ? 
+    <LanguageSelect 
+        register={register}
+        handleSubmit={handleSubmit}
+        value={value}
+        handleChange={handleChange}
+      />
+    : null }
+  </OutsideClickHandler>
+);
 
 const LanguageSelect = ({ register, handleSubmit, handleChange, value }) => (
   <form onSubmit={handleSubmit} className="signup-footer-language" noValidate>
@@ -59,14 +81,16 @@ const LanguageSelect = ({ register, handleSubmit, handleChange, value }) => (
         required: true
       })}
       name="language"
-      size="1"
+      size="2"
       value={value.language}
       onChange={handleChange}
+      className="select-wrapper"
+      
     >
-      <option value="01">{t('language_select.1')}</option>
-      <option value="02">{t('language_select.2')}</option>
+      <option value="" defaultValue disabled>{t('language_select.1')}</option>
+      <option value="01">{t('language_select.2')}</option>
     </select>
-</form>
+  </form>
 );
   
 const Links = () => (

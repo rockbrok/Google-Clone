@@ -62,22 +62,22 @@ export default function Form({ value, setValue, register, handleSubmit, errors, 
             onChange={handleChange}
             value={value.month}
           >
-            <option value="" className="signup-input-placeholder" defaultValue disabled hidden />
-            <option value="01">January</option>
-            <option value="02">February</option>
-            <option value="03">March</option>
-            <option value="04">April</option>
-            <option value="05">May</option>
-            <option value="06">June</option>
-            <option value="07">July</option>
-            <option value="08">August</option>
-            <option value="09">September</option>
-            <option value="10">October</option>
-            <option value="11">November</option>
-            <option value="12">December</option>
+            <option value="" className="signup-input-placeholder" defaultValue disabled hidden>{t("month")}</option>
+            <option value="01">{t("months.1")}</option>
+            <option value="02">{t("months.2")}</option>
+            <option value="03">{t("months.3")}</option>
+            <option value="04">{t("months.4")}</option>
+            <option value="05">{t("months.5")}</option>
+            <option value="06">{t("months.6")}</option>
+            <option value="07">{t("months.7")}</option>
+            <option value="08">{t("months.8")}</option>
+            <option value="09">{t("months.9")}</option>
+            <option value="10">{t("months.10")}</option>
+            <option value="11">{t("months.11")}</option>
+            <option value="12">{t("months.12")}</option>
           </select>
           <span className="signup-input-placeholder">
-            ''
+            
           </span>
         </div>
         <div className="input-container">
@@ -101,7 +101,7 @@ export default function Form({ value, setValue, register, handleSubmit, errors, 
             className="signup-input"
           />
           <span className="signup-input-placeholder">
-            Day
+            {t("day")}
           </span>
         </div>
         <div className="input-container">
@@ -125,7 +125,7 @@ export default function Form({ value, setValue, register, handleSubmit, errors, 
             className="signup-input"
           />
           <span className="signup-input-placeholder">
-            Year
+            {t("year")}
           </span>
         </div>
       </div>
@@ -140,13 +140,13 @@ export default function Form({ value, setValue, register, handleSubmit, errors, 
           onChange={handleChange}
           value={value.gender}
         >
-          <option value="" className="signup-input-placeholder" defaultValue disabled hidden />
-          <option value="male">Male</option>
-          <option value="female">Female</option>
-          <option value="other">Other</option>
+          <option value="" className="signup-input-placeholder" defaultValue disabled hidden>{t("gender")}</option>
+          <option value="male">{t("genders.male")}</option>
+          <option value="female">{t("genders.female")}</option>
+          <option value="other">{t("genders.other")}</option>
         </select>
         <span className="signup-input-placeholder">
-          ''
+          
         </span>
       </div>
       <Information />
@@ -160,6 +160,6 @@ export default function Form({ value, setValue, register, handleSubmit, errors, 
 
 const BirthdayNote = () => (
   <div className="signup-note">
-    Your birthday
+    {t("sign_up_your_birthday")}
   </div>
 );

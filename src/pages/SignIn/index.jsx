@@ -36,31 +36,33 @@ export default function SignIn() {
       </Helmet>
       <section className="flex-container">
         <SignPageHeader />
-        <section className="signpage-container">
-          { success ? 
-            <SignInPassword 
-              handleSubmit={handleSubmit} 
-              value={value}
-              setValue={setValue}
-              register={register}
-              errors={errors}
-              watch={watch}
-              Next={Next}
-              Logo={Logo}
-            /> 
-            : 
-            <SignInEmail 
-              handleSubmit={handleSubmit} 
-              value={value}
-              setValue={setValue}
-              register={register}
-              Next={Next}
-              Logo={Logo}
-              onSubmit={onSubmit}
-            />
-          }
+        <section className="signpage-container-wrapper">
+          <section className="signpage-container">
+            { success ? 
+              <SignInPassword 
+                handleSubmit={handleSubmit} 
+                value={value}
+                setValue={setValue}
+                register={register}
+                errors={errors}
+                watch={watch}
+                Next={Next}
+                Logo={Logo}
+              /> 
+              : 
+              <SignInEmail 
+                handleSubmit={handleSubmit} 
+                value={value}
+                setValue={setValue}
+                register={register}
+                Next={Next}
+                Logo={Logo}
+                onSubmit={onSubmit}
+              />
+            }
+          </section>
+          <SignPageFooter />
         </section>
-        <SignPageFooter />
       </section>
     </>
   )

@@ -48,37 +48,39 @@ export default function SignUp() {
   return (
     <>
       <Helmet>
-        <title>Create your Google Account</title>
+        <title>{t("sign_up_heading")}</title>
       </Helmet>
       <section className="flex-container">
         <SignPageHeader />
-        <section className="signpage-container">
-          { success ? 
-            <SignUpDetails 
-              handleSubmit={handleSubmit} 
-              value={value}
-              setValue={setValue}
-              register={register}
-              errors={errors}
-              watch={watch}
-              Next={Next}
-              Logo={Logo}
-            /> 
-            : 
-            <SignUpEmail 
-              handleSubmit={handleSubmit} 
-              value={value}
-              setValue={setValue}
-              register={register}
-              errors={errors}
-              watch={watch}
-              Next={Next}
-              Logo={Logo}
-              onSubmit={onSubmit}
-            />
-          }
+        <section className="signpage-container-wrapper">
+          <section className="signpage-container">
+            { success ? 
+              <SignUpDetails 
+                handleSubmit={handleSubmit} 
+                value={value}
+                setValue={setValue}
+                register={register}
+                errors={errors}
+                watch={watch}
+                Next={Next}
+                Logo={Logo}
+              /> 
+              : 
+              <SignUpEmail 
+                handleSubmit={handleSubmit} 
+                value={value}
+                setValue={setValue}
+                register={register}
+                errors={errors}
+                watch={watch}
+                Next={Next}
+                Logo={Logo}
+                onSubmit={onSubmit}
+              />
+            }
+          </section>
+          <SignPageFooter />
         </section>
-        <SignPageFooter />
       </section>
     </>
   )

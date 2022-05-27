@@ -91,6 +91,38 @@
     "sign_up_sign_in" : "Acceder a tu cuenta en su lugar",
     "sign_up_figure_caption": "Una cuenta. Todos los servicios de Google a tu disposición.",
 
+    "sign_up_detail_heading": "Bienvenido a Google",
+    "sign_up_info_button": "Por qué solicitamos esta información",
+    "sign_up_your_birthday": "Tu cumpleaños",
+    "sign_up_detail_figure_caption": "Su información personal es privada y segura",
+    "back": "Atrás",
+
+    "months": {
+        "1": "Enero",
+        "2": "Febrero",
+        "3": "Marzo",
+        "4": "Abril",
+        "5": "Mayo",
+        "6": "Junio",
+        "7": "Julio",
+        "8": "Agosto",
+        "9": "Septiembre",
+        "10": "Octubre",
+        "11": "Noviembre",
+        "12": "Diciembre"
+    },
+
+    "genders": {
+        "male": "Masculino",
+        "female": "Femenino",
+        "other": "Otro"
+    },
+
+    "month": "Mes",
+    "day": "Día",
+    "year": "Año",
+    "gender": "Sexo",
+
     "password_recovery_heading" : "Recuperación de la cuenta",
     "password_recovery_subheading" : "Para proteger tu cuenta, Google quiere asegurarse de que realmente seas tú la persona que intenta acceder",
     "password_recovery_note" : "Ingresa el código de 6 dígitos que Google acaba de enviar a tu correo",
