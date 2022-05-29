@@ -22,7 +22,7 @@ const SignIn = () => (
   <li>
     <Link to="/signin/">
       <button className="sign-in" target="_top">
-        {t('sign_in')}
+        {t('sign-in.sign_in')}
       </button>
     </Link> 
   </li>

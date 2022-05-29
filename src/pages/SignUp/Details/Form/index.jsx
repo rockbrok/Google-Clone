@@ -1,6 +1,7 @@
+import axios from 'axios';
 import { Information, Back } from '..';
 import { t } from 'i18next';
-import axios from 'axios';
+import { ErrorLogo } from '..';
 import { useContext } from 'react';
 import { UserContext } from '../../../../usercontext';
 
@@ -50,104 +51,33 @@ export default function Form({ value, setValue, register, handleSubmit, errors, 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="signup-form" noValidate>
       <div className="birthday-row">
-        <div className="input-container">
-          <select 
-            {...register("month", {
-              required: true
-            })}
-            className="signup-input focus-blue" 
-            name="month"
-            type="month"
-            size="1"
-            onChange={handleChange}
-            value={value.month}
-          >
-            <option value="" className="signup-input-placeholder" defaultValue disabled hidden>{t("month")}</option>
-            <option value="01">{t("months.1")}</option>
-            <option value="02">{t("months.2")}</option>
-            <option value="03">{t("months.3")}</option>
-            <option value="04">{t("months.4")}</option>
-            <option value="05">{t("months.5")}</option>
-            <option value="06">{t("months.6")}</option>
-            <option value="07">{t("months.7")}</option>
-            <option value="08">{t("months.8")}</option>
-            <option value="09">{t("months.9")}</option>
-            <option value="10">{t("months.10")}</option>
-            <option value="11">{t("months.11")}</option>
-            <option value="12">{t("months.12")}</option>
-          </select>
-          <span className="signup-input-placeholder">
-          </span>
-        </div>
-        <div className="input-container">
-          <input 
-            {...register("day", {
-              required: true,
-              minLength: 1,
-              maxLength: 2,
-              pattern: /[0-9]$/,
-              validate: (value) => {
-                return !!value.trim()
-              }
-            })}
-            autoComplete="off"
-            name="day"
-            type="number"
-            min="0"
-            max="32"
-            value={value.day}
-            onChange={handleChange}
-            className="signup-input"
-          />
-          <span className="signup-input-placeholder">
-            {t("day")}
-          </span>
-        </div>
-        <div className="input-container">
-          <input 
-            {...register("year", {
-              required: true,
-              minLength: 4,
-              maxLength: 4,
-              pattern: /[0-9]{4}$/,
-              validate: (value) => {
-                return !!value.trim()
-              }
-            })}
-            autoComplete="off"
-            name="year"
-            type="number"
-            min="1900"
-            max="2022"
-            value={value.year}
-            onChange={handleChange}
-            className="signup-input"
-          />
-          <span className="signup-input-placeholder">
-            {t("year")}
-          </span>
-        </div>
+        <Month 
+          register={register}
+          value={value}
+          handleChange={handleChange}
+          errors={errors}
+        />
+        <Day 
+          register={register}
+          value={value}
+          handleChange={handleChange}
+          errors={errors}
+        />
+        <Year 
+          register={register}
+          value={value}
+          handleChange={handleChange}
+          errors={errors}
+        />
       </div>
-      <BirthdayNote errors={errors}/>
-      <div className="input-container">
-        <select 
-          {...register("gender", {
-            required: true
-          })}
-          className="signup-input input-width focus-blue"
-          name="gender"
-          onChange={handleChange}
-          value={value.gender}
-        >
-          <option value="" className="signup-input-placeholder" defaultValue disabled hidden>{t("gender")}</option>
-          <option value="male">{t("genders.male")}</option>
-          <option value="female">{t("genders.female")}</option>
-          <option value="other">{t("genders.other")}</option>
-        </select>
-        <span className="signup-input-placeholder">
-          
-        </span>
-      </div>
+      <BirthdayErrors errors={errors}/>
+      <Gender 
+        register={register}
+        value={value}
+        handleChange={handleChange}
+        errors={errors}
+      />
+      <GenderErrors errors={errors}/>
       <Information />
       <div className="button-row">
         <Back />
@@ -157,8 +87,194 @@ export default function Form({ value, setValue, register, handleSubmit, errors, 
   )
 }
 
-const BirthdayNote = () => (
-  <div className="signup-note">
-    {t("sign-up.detail.your_birthday")}
+const Month = ({ register, value, handleChange, errors }) => (
+  <div className="input-container">
+    <select 
+      {...register("month", {
+        required: true
+      })}
+      className={ errors.month ? "signup-input-error focus-red" : "signup-input focus-blue" }
+      name="month"
+      type="month"
+      size="1"
+      onChange={handleChange}
+      value={value.month}
+    >
+      <option value="" defaultValue disabled hidden />
+      <option value="01">{t("months.1")}</option>
+      <option value="02">{t("months.2")}</option>
+      <option value="03">{t("months.3")}</option>
+      <option value="04">{t("months.4")}</option>
+      <option value="05">{t("months.5")}</option>
+      <option value="06">{t("months.6")}</option>
+      <option value="07">{t("months.7")}</option>
+      <option value="08">{t("months.8")}</option>
+      <option value="09">{t("months.9")}</option>
+      <option value="10">{t("months.10")}</option>
+      <option value="11">{t("months.11")}</option>
+      <option value="12">{t("months.12")}</option>
+    </select>
+    <div className="signup-input-placeholder-detail">
+      {t("month")}
+    </div>
+  </div>
+)
+
+const Day = ({ register, handleChange, value, errors }) => (
+  <div className="input-container">
+    <input 
+      {...register("day", {
+        required: true,
+        minLength: 1,
+        maxLength: 2,
+        pattern: /[0-9]$/,
+        validate: (value) => {
+          return !!value.trim()
+        }, max: 31,
+      })}
+      autoComplete="off"
+      name="day"
+      type="number"
+      value={value.day}
+      onChange={handleChange}
+      className={ errors.day?.type === "required" ||
+        errors.day?.type === "minLength" || 
+        errors.day?.type === "maxLength" || 
+        errors.day?.type === "max" ? "signup-input-error" : "signup-input" }
+    />
+    <span className="signup-input-placeholder">
+      {t("day")}
+    </span>
   </div>
 );
+
+const Year = ({ register, value, handleChange, errors }) => (
+  <div className="input-container">
+    <input 
+      {...register("year", {
+        required: true,
+        minLength: 4,
+        maxLength: 4,
+        pattern: /[0-9]$/,
+        validate: (value) => {
+          return !!value.trim()
+        }, min: 1900, max: 2020,
+      })}
+      autoComplete="off"
+      name="year"
+      type="number"
+      value={value.year}
+      onChange={handleChange}
+      className={ errors.year?.type === "required" ||
+        errors.year?.type === "maxLength" || 
+        errors.year?.type === "minLength" || 
+        errors.year?.type === "min" || 
+        errors.year?.type === "max" ? "signup-input-error" : "signup-input" }
+    />
+    <span className="signup-input-placeholder">
+      {t("year")}
+    </span>
+  </div>
+);
+
+const Gender = ({ register, value, handleChange, errors }) => (
+  <div className="input-container">
+    <select 
+      {...register("gender", {
+        required: true
+      })}
+      className={ errors.gender?.type === "required" ? "signup-input-error focus-red input-width" : "signup-input focus-blue input-width" }
+      name="gender"
+      onChange={handleChange}
+      value={value.gender}
+    >
+      <option value=""defaultValue disabled hidden/>
+      <option value="male">{t("genders.male")}</option>
+      <option value="female">{t("genders.female")}</option>
+      <option value="other">{t("genders.other")}</option>
+    </select>
+    <div className="signup-input-placeholder-detail">
+      {t("gender")}
+    </div>
+  </div>
+)
+
+const BirthdayErrors = ({ errors }) => {
+  if ((errors.year?.type === "required" && errors.day?.type === "required" && errors.month?.type === "required") ||
+  ((errors.year?.type === "min" || errors.year?.type === "max") && (errors.day?.type === "max"))) {
+    return (
+      <div className="invalid">
+        <ErrorLogo/>
+        <p className="invalidtext">Enter valid birthdate</p>
+      </div>
+    )
+  } else if (errors.year?.type === "required" && errors.day?.type === "required") {
+    return (
+      <div className="invalid">
+        <ErrorLogo/>
+        <p className="invalidtext">Enter day and year</p>
+      </div>
+    )
+  } else if (errors.year?.type === "required" && errors.month?.type === "required") {
+    return (
+      <div className="invalid">
+        <ErrorLogo/>
+        <p className="invalidtext">Enter month and year</p>
+      </div>
+    )
+  } else if (errors.day?.type === "required" && errors.month?.type === "required") {
+    return (
+      <div className="invalid">
+        <ErrorLogo/>
+        <p className="invalidtext">Enter month and day</p>
+      </div>
+    )
+  } else if (errors.month?.type === "required") {
+    return (
+      <div className="invalid">
+        <ErrorLogo/>
+        <p className="invalidtext">Select month</p>
+      </div>
+    )
+  } else if (errors.day?.type === "required") {
+    return (
+      <div className="invalid">
+        <ErrorLogo/>
+        <p className="invalidtext">Enter day</p>
+      </div>
+    )
+  } else if (errors.year?.type === "required") {
+    return (
+      <div className="invalid">
+        <ErrorLogo/>
+        <p className="invalidtext">Enter year</p>
+      </div>
+    )
+  } else if (errors.year?.type === "min" || 
+    errors.year?.type === "max") {
+    return (
+      <div className="invalid">
+        <ErrorLogo/>
+        <p className="invalidtext">Enter valid year</p>
+      </div>
+    )
+  } else if (errors.day?.type === "max") {
+    return (
+      <div className="invalid">
+        <ErrorLogo/>
+        <p className="invalidtext">Enter valid day</p>
+      </div>
+    )
+  } 
+};
+
+const GenderErrors = ({ errors }) => {
+  if (errors.gender?.type === "required") {
+    return (
+      <div className="invalid">
+        <ErrorLogo/>
+        <p className="invalidtext">Select gender</p>
+      </div>
+    )
+  }
+}

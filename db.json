@@ -44,6 +44,24 @@
       "gender": "other",
       "dateOfBirth": "07/29/2002",
       "id": 5
+    },
+    {
+      "firstName": "asdf",
+      "lastName": "asdf",
+      "email": "as234a@asdf.com",
+      "password": "asdfasdfasdf",
+      "gender": "male",
+      "dateOfBirth": "04/31/1990",
+      "id": 6
+    },
+    {
+      "firstName": "asdf",
+      "lastName": "asdf",
+      "email": "asdf4awfd@asdf.com",
+      "password": "asdfasdfasdf",
+      "gender": "female",
+      "dateOfBirth": "02/31/1990",
+      "id": 7
     }
   ]
 }
