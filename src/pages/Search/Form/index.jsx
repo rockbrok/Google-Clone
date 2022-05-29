@@ -50,7 +50,7 @@ export default function Form() {
           <SearchIcon className="search-icon" />
           <input
             type="search"
-            title={t('searchbar_title')}
+            title={t('search.searchbar_title')}
             className="searchInput"
             name="q"
             role="search"
@@ -71,7 +71,7 @@ export default function Form() {
         <ul>
           <li>
             <button className="google-search" name="" type="submit" disabled={state.formValid}>
-              {t('google_search')}
+              {t('search.google_search')}
             </button>
           </li>
           <LuckySearch />
@@ -84,7 +84,7 @@ export default function Form() {
 const LuckySearch = () => (
   <li>
   <button className="lucky-search" name="btnI" type="submit">
-    {t('lucky_search')}
+    {t('search.lucky_search')}
   </button>
 </li>
 );
@@ -93,7 +93,7 @@ const ClearButton = () => (
   <div className="clear-button">
     <button className="clear tip" type="reset" value='reset' aria-label="clear">
       <XIcon className="x-icon" />
-      <span className="clear">{t('clear')}</span>
+      <span className="clear">{t('search.clear')}</span>
     </button>
   </div>
 );
@@ -101,6 +101,6 @@ const ClearButton = () => (
 const VoiceButton = () => (
   <a href="https://www.google.com/" type="" className="tip" aria-label="search by voice">
     <MicrophoneIcon className="microphone-icon" />
-    <span className="microphone">{t('search_by_voice')}</span>
+    <span className="microphone">{t('search.search_by_voice')}</span>
   </a>
 );

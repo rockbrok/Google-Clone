@@ -16,7 +16,7 @@ export default function ToggleSettings() {
           className="settings"
           alt="Settings"
         >
-          {t('settings')}
+          {t('search.footer.settings')}
         </button>
         
         { show ? <SettingsPanel/> : null }

@@ -125,7 +125,7 @@ const FirstName = ({ register, value, handleChange, errors }) => (
       aria-invalid={errors.firstName ? "true" : "false"}
     />
     <span className="signup-input-placeholder">
-      {t("sign_up_first_name")}
+      {t("sign-up.email.first_name")}
     </span>
   </div>
 );
@@ -158,7 +158,7 @@ const LastName = ({ register, value, handleChange, errors }) => (
       aria-invalid={errors.lastName ? "true" : "false"}
     />
     <span className="signup-input-placeholder">
-      {t("sign_up_last_name")}
+      {t("sign-up.email.last_name")}
     </span>
   </div>
 );
@@ -201,7 +201,7 @@ const Email = ({ register, value, handleChange, errors, noUsernameRegex, noUsern
       aria-invalid={errors.email ? "false" : "true"}
     />
     <span className="signup-input-placeholder">
-      {t("sign_up_email")}
+      {t("sign-up.email.email")}
     </span>
   </div>
 );
@@ -230,7 +230,7 @@ const Password = ({ register, handleChange, errors, validPasswordRegex, emptyStr
       aria-invalid={errors.password ? "true" : "false"}
     />
     <span className="signup-input-placeholder">
-      {t("sign_up_password")}
+      {t("sign-up.email.password")}
     </span>
   </div>
 );
@@ -260,7 +260,7 @@ const PasswordConfirm = ({ register, watch, errors, validPasswordRegex, emptyStr
       aria-invalid={errors.passwordConfirm ? "true" : "false"}
     />
     <span className="signup-input-placeholder">
-      {t("sign_up_confirm")}
+      {t("sign-up.email.confirm")}
     </span>
   </div>
 );
@@ -395,7 +395,7 @@ const PasswordNote = ({ value, errors }) => {
   if ((((value.password) === '' || (value.passwordConfirm) === '') && errors.password?.type !== "minLength") && (errors.password?.type !== "required")) {
     return (
     <div className="signup-note">
-      {t("sign_up_password_note")}
+      {t("sign-up.email.password_note")}
     </div>
     )
   }

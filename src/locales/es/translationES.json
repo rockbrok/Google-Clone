@@ -1,123 +1,134 @@
 {
     "gmail": "Gmail",
     "images": "Imágenes",
-    "sign_in": "Acceder",
 
-    "account": "Cuenta",
-    "search": "Búsqueda",
-    "maps": "Maps",
-    "youtube": "YouTube",
-    "play": "Play",
-    "news": "Noticias",
-    "meet": "Meet",
-    "chat": "Chat",
-    "contacts": "Contactos",
-    "drive": "Drive",
-    "calendar": "Calendario",
-    "translate": "Traductor",
-    "photos": "Fotos",
-    "duo": "Duo",
-    "shopping": "Shopping",
-    "finance": "Finance",
-    "docs": "Documentos",
-    "sheets": "Hojas de cálculo",
-    "slides": "Presentaciones",
-    "books": "Libros",
-    "blogger": "Blogger",
-    "hangouts": "Hangouts",
-    "keep": "Keep",
-    "jamboard": "Jamboard",
-    "classroom": "Classroom",
-    "earth": "Earth",
-    "collections": "Collecciones",
-    "arts_and_culture": "Arte y Cultura",
-    "google_ads": "Google Ads",
-    "podcasts": "Podcasts",
-    "google_one": "Google One",
-    "travel": "Viajes",
-    "forms": "Formularios",
-    "more_from_google": "Más productos de Google",
+    "gapps": {
+        "account": "Cuenta",
+        "search": "Búsqueda",
+        "maps": "Maps",
+        "youtube": "YouTube",
+        "play": "Play",
+        "news": "Noticias",
+        "meet": "Meet",
+        "chat": "Chat",
+        "contacts": "Contactos",
+        "drive": "Drive",
+        "calendar": "Calendario",
+        "translate": "Traductor",
+        "photos": "Fotos",
+        "duo": "Duo",
+        "shopping": "Shopping",
+        "finance": "Finance",
+        "docs": "Documentos",
+        "sheets": "Hojas de cálculo",
+        "slides": "Presentaciones",
+        "books": "Libros",
+        "blogger": "Blogger",
+        "hangouts": "Hangouts",
+        "keep": "Keep",
+        "jamboard": "Jamboard",
+        "classroom": "Classroom",
+        "earth": "Earth",
+        "collections": "Collecciones",
+        "arts_and_culture": "Arte y Cultura",
+        "google_ads": "Google Ads",
+        "podcasts": "Podcasts",
+        "google_one": "Google One",
+        "travel": "Viajes",
+        "forms": "Formularios",
+        "more_from_google": "Más productos de Google"
+    },
 
-    "searchbar_title": "Buscar",
-    "clear": "Borrar",
-    "search_by_voice": "Búsqueda por voz",
-    "google_search": "Buscar con Google",
-    "lucky_search": "Me siento con suerte",
+    "search": {
+        "searchbar_title": "Buscar",
+        "clear": "Borrar",
+        "search_by_voice": "Búsqueda por voz",
+        "google_search": "Buscar con Google",
+        "lucky_search": "Me siento con suerte",
+        "google_language": "Google ofreció en:",
+        "footer": {
+            "about": "Sobre Google",
+            "advertising" : "Publicidad",
+            "business": "Negocios",
+            "how_search_works": "Cómo funciona la Búsqueda",
+            "settings": "Preferencias",
+                "search_settings": "Configuración de búsqueda",
+                "advanced_search": "Búsqueda avanzada",
+                "your_data_in_search": "Tus datos en la Búsqueda",
+                "search_history": "Historial de búsqueda",
+                "search_help": "Buscar en la ayuda",
+                "send_feedback": "Enviar comentarios",
+                "dark_theme": {
+                    "off": "Tema oscuro: Desactivado",
+                    "on": "Tema oscuro: Activado"
+                }
+        }
+    },
 
-    "google_language": "Google ofreció en:",
-    "language_name": "English (United States)",
+    "not-found": {
+        "found_title": "¡¡Error 404 (no encontrado)!!1",
+        "thats_an_error": "Eso es un error.",
+        "requested_url": "La URL solicitada ",
+        "not_found_on_server": " se encontró en este servidor. ",
+        "thats_all_we_know": "Eso es todo lo que sabemos."
+    },
 
-    "about": "Sobre Google",
-    "advertising" : "Publicidad",
-    "business": "Negocios",
-    "how_search_works": "Cómo funciona la Búsqueda",
-    "privacy": "Privacidad",
-    "terms": "Condiciones",
-    "settings": "Preferencias",
-    
-        "search_settings": "Configuración de búsqueda",
-        "advanced_search": "Búsqueda avanzada",
-        "your_data_in_search": "Tus datos en la Búsqueda",
-        "search_history": "Historial de búsqueda",
-        "search_help": "Buscar en la ayuda",
-        "send_feedback": "Enviar comentarios",
-        "dark_theme": {
-            "off": "Tema oscuro: Desactivado",
-            "on": "Tema oscuro: Activado"
+    "sign-in": {
+        "sign_in": "Acceder",
+        "title": "Acceso: Cuentas de Google",
+        "email": {
+            "subheading": "Usa tu Cuenta de Google",
+            "form_placeholder": "Correo electrónico o teléfono",
+            "forgot_email": "¿Olvidaste el correo electrónico?",
+            "note": "¿Esta no es tu computadora? Usa el modo de invitado para navegar de forma privada.",
+            "create_account": "Crear cuenta"
         },
-    
-    "not_found_title": "¡¡Error 404 (no encontrado)!!1",
-    "thats_an_error": "Eso es un error.",
-    "requested_url": "La URL solicitada ",
-    "not_found_on_server": " se encontró en este servidor. ",
-    "thats_all_we_know": "Eso es todo lo que sabemos.",
-
-    "sign_in_title": "Acceso: Cuentas de Google",
-    "sign_in_heading": "Acceder",
-    "sign_in_subheading": "Usa tu Cuenta de Google",
-    "sign_in_form_placeholder": "Correo electrónico o teléfono",
-    "sign_in_forgot_email": "¿Olvidaste el correo electrónico?",
-    "sign_in_note": "¿Esta no es tu computadora? Usa el modo de invitado para navegar de forma privada.",
-    "sign_in_learn_more": "Más información",
-    "sign_in_create_account": "Crear cuenta",
-
-    "sign_up_heading": "Crear tu cuenta de Google",
-    "sign_up_first_name" : "Nombre",
-    "sign_up_last_name" : "Apellido",
-    "sign_up_email" : "Tu dirección de correo electrónico",
-    "sign_up_password": "Contraseña",
-    "sign_up_confirm": "Confirmación",
-    "sign_up_password_note": "Usa 8 o más caracteres con una combinación de letras, números y símbolos",
-    "sign_up_sign_in" : "Acceder a tu cuenta en su lugar",
-    "sign_up_figure_caption": "Una cuenta. Todos los servicios de Google a tu disposición.",
-
-    "sign_up_name_errors" : {
-        "enter_first_last": "Ingrese nombres y apellidos",
-        "enter_correct": "¿Estás seguro de haber ingresado el nombre correctamente?",
-        "enter_first": "Ingrese el nombre",
-        "enter_last": "Ingrese el apellido"
+        "password": {
+            "heading": "Hola ",
+            "form_placeholder": "Ingresa tu contraseña",
+            "show": "Mostrar contraseña",
+            "forgot" : "¿Olvidaste la contraseña?"
+        }
     },
 
-    "sign_up_email_errors" : {
-        "enter_email": "Ingrese su dirección de correo electrónico",
-        "enter_username": "Ingrese un nombre de usuario antes de la '@'.",
-        "enter_at": "No olvide incluir '@'.",
-        "email_exists": "Este correo electrónico ya está en uso.",
-        "not_valid": "Esta dirección de correo electrónico no es válida."
+    "sign-up": {
+        "title": "Crear tu cuenta de Google",
+        "name-errors": {
+            "enter_first_last": "Ingrese nombres y apellidos",
+            "enter_correct": "¿Estás seguro de haber ingresado el nombre correctamente?",
+            "enter_first": "Ingrese el nombre",
+            "enter_last": "Ingrese el apellido"
+        },
+        "email-errors": {
+            "enter_email": "Ingrese su dirección de correo electrónico",
+            "enter_username": "Ingrese un nombre de usuario antes de la '@'.",
+            "enter_at": "No olvide incluir '@'.",
+            "email_exists": "Este correo electrónico ya está en uso.",
+            "not_valid": "Esta dirección de correo electrónico no es válida."
+        },
+        "password-errors": {
+            "enter_password": "Ingrese una contraseña",
+            "confirm_password": "Confirmar la contraseña",
+            "no_match": "Esas contraseñas no coincidían. Intentar otra vez.",
+            "8_characters": "Use 8 caracteres o más para su contraseña"
+        },
+        "email": {
+            "first_name" : "Nombre",
+            "last_name" : "Apellido",
+            "email" : "Tu dirección de correo electrónico",
+            "password": "Contraseña",
+            "confirm": "Confirmación",
+            "password_note": "Usa 8 o más caracteres con una combinación de letras, números y símbolos",
+            "instead" : "Acceder a tu cuenta en su lugar",
+            "figure_caption": "Una cuenta. Todos los servicios de Google a tu disposición."
+        },
+        "detail": {
+            "heading": "Bienvenido a Google",
+            "info_button": "Por qué solicitamos esta información",
+            "your_birthday": "Tu cumpleaños",
+            "figure_caption": "Su información personal es privada y segura"
+        }
     },
-
-    "sign_up_password_errors": {
-        "enter_password": "Ingrese una contraseña",
-        "confirm_password": "Confirmar la contraseña",
-        "no_match": "Esas contraseñas no coincidían. Intentar otra vez.",
-        "8_characters": "Use 8 caracteres o más para su contraseña"
-    },
-
-    "sign_up_detail_heading": "Bienvenido a Google",
-    "sign_up_info_button": "Por qué solicitamos esta información",
-    "sign_up_your_birthday": "Tu cumpleaños",
-    "sign_up_detail_figure_caption": "Su información personal es privada y segura",
-    "back": "Atrás",
 
     "months": {
         "1": "Enero",
@@ -145,26 +156,22 @@
     "year": "Año",
     "gender": "Sexo",
 
-    "password_recovery_heading" : "Recuperación de la cuenta",
-    "password_recovery_subheading" : "Para proteger tu cuenta, Google quiere asegurarse de que realmente seas tú la persona que intenta acceder",
-    "password_recovery_note" : "Ingresa el código de 6 dígitos que Google acaba de enviar a tu correo",
-    "password_recovery_form_placeholder": "Ingresa el código",
-
-    "password_heading": "Hola ",
-    "password_form_placeholder": "Ingresa tu contraseña",
-    "password_show": "Mostrar contraseña",
-    "password_forgot" : "¿Olvidaste la contraseña?",
-
     "next": "Siguiente",
     "help": "Ayuda",
     "learn_more": "Más información",
+    "back": "Atrás",
     "support": "Ayuda",
+    "privacy": "Privacidad",
+    "terms": "Condiciones",
 
-    "google_account": "Cuenta de Google",
+    "google-account": {
+        "google_account": "Cuenta de Google",
         "home": "Página principal",
         "personal_info": "Información personal",
         "data_and_privacy": "Datos y privacidad",
-        "account_about": "Información",
+        "about": "Información"
+    },
+
         "welcome": "Bienvenido",
         "account_subheading": "Administra tu información y las opciones de privacidad y seguridad a fin de que Google sea más relevante para ti.",
         "privacy_and_personalization": "Privacidad y personalización",

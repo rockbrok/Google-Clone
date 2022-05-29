@@ -159,6 +159,6 @@ export default function Form({ value, setValue, register, handleSubmit, errors, 
 
 const BirthdayNote = () => (
   <div className="signup-note">
-    {t("sign_up_your_birthday")}
+    {t("sign-up.detail.your_birthday")}
   </div>
 );

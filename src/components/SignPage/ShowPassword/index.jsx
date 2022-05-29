@@ -20,7 +20,7 @@ function showPassword() {
 export const ShowPassword = () => (
   <div>
     <label className="pass-container" onClick={showPassword}>
-      {t("password_show")}
+      {t("sign-in.password.show")}
       <span className="checkmark-bg">
         <input
           className="password-checkbox"

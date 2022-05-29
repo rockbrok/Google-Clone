@@ -57,8 +57,8 @@ export default function SignInEmail({ Logo, value, setValue, register, handleSub
 
 const Heading = () => (
   <>
-    <center><h1 className="heading">{t('sign_in_heading')}</h1></center>
-    <center><h4 className="sub-heading">{t('sign_in_subheading')}</h4></center>
+    <center><h1 className="heading">{t('sign-in.sign_in')}</h1></center>
+    <center><h4 className="sub-heading">{t('sign-in.email.subheading')}</h4></center>
   </>
 );
 
@@ -80,17 +80,17 @@ const Form = ({ handleSubmit, onSubmit, handleChange, value, register, uniqueEma
       className="input-email"
     />
     <span className="input-placeholder">
-      {t('sign_in_form_placeholder')}
+      {t('sign-in.email.form_placeholder')}
     </span>
   </form>
 );
 
 const Note = () => (
   <div className="note">
-    {t('sign_in_note')} 
+    {t('sign-in.email.note')} 
     <br/>
     <a className="button-blue" href="https://support.google.com/chrome/answer/6130773?hl=en" rel="noreferrer" target="_blank">
-      {t('sign_in_learn_more')}
+      {t('learn_more')}
     </a>
   </div>
 );
@@ -98,7 +98,7 @@ const Note = () => (
 const CreateAccount = () => (
   <Link to="/signup/">
     <button className="create-account">
-      {t('sign_in_create_account')}
+      {t('sign-in.email.create_account')}
     </button>
   </Link>
 );

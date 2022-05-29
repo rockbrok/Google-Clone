@@ -33,7 +33,7 @@ const FooterCountry = () => (
 const About = () => (
   <li>
     <a href="https://about.google/" alt="About">
-      {t('about')}
+      {t('search.footer.about')}
     </a>
   </li>
 );
@@ -41,7 +41,7 @@ const About = () => (
 const Advertising = () => (
   <li>
     <a href="https://ads.google.com/" alt="Advertising">
-      {t('advertising')}
+      {t('search.footer.advertising')}
     </a>
   </li>
 );
@@ -49,7 +49,7 @@ const Advertising = () => (
 const Business = () => (
   <li>
     <a href="https://smallbusiness.withgoogle.com/" alt="Business">
-      {t('business')}
+      {t('search.footer.business')}
     </a>
   </li>
 );
@@ -57,7 +57,7 @@ const Business = () => (
 const HowSearchWorks = () => (
   <li>
     <a href="https://www.google.com/search/howsearchworks/" alt="How Search Works">
-      {t('how_search_works')}
+      {t('search.footer.how_search_works')}
     </a>
   </li>
 );

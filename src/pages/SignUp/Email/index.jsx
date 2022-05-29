@@ -32,7 +32,7 @@ export default function SignUpEmail({value, setValue, errors, handleSubmit, chec
 
 const Heading = () => (
   <h1 className="heading">
-    {t("sign_up_heading")}
+    {t("sign-up.title")}
   </h1>
 );
 
@@ -47,7 +47,7 @@ export const ErrorLogo = () => (
 export const SignInInstead = () => (
   <Link to="/signin/">
     <button className="create-account">
-      {t("sign_up_sign_in")}
+      {t("sign-up.email.instead")}
     </button>
   </Link>
 );
@@ -57,7 +57,7 @@ const AccountLogo = () => (
     <figure className="account-app-figure">
       <img src="https://ssl.gstatic.com/accounts/signup/glif/account.svg" alt="" width="244" height="244" />
       <figcaption className="fig-heading">
-        {t("sign_up_figure_caption")}
+        {t("sign-up.email.figure_caption")}
       </figcaption>
     </figure>
   </section>

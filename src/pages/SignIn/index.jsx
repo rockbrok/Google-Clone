@@ -32,7 +32,7 @@ export default function SignIn() {
   return (
     <>
       <Helmet>
-        <title>{t('sign_in_title')}</title>
+        <title>{t('sign-in.title')}</title>
       </Helmet>
       <section className="flex-container">
         <SignPageHeader />

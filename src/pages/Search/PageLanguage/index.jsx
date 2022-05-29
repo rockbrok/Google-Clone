@@ -15,12 +15,12 @@ export default function PageLanguage() {
   return (
     <div className="search-language-container">
       <div className="search-language">
-        {t('google_language')}&nbsp;
+        {t('search.google_language')}&nbsp;
         <button
           onClick={() => LanguageChange()}
           onClickCapture={() => window.location.reload(false)}
         >
-          {t('language_name')}
+          {t('language_select.2')}
         </button>
       </div>
     </div>

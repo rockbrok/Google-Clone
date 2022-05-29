@@ -48,7 +48,7 @@ export default function SignUp() {
   return (
     <>
       <Helmet>
-        <title>{t("sign_up_heading")}</title>
+        <title>{t("sign-up.title")}</title>
       </Helmet>
       <section className="flex-container">
         <SignPageHeader />

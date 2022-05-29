@@ -71,7 +71,7 @@ export default function SignInPassword({ Logo, value, setValue, register, handle
 
 const Heading = ({ value }) => (
   <>
-    <center><h1 className="heading">{t("password_heading")}&nbsp; firstName</h1></center>
+    <center><h1 className="heading">{t("sign-in.password.heading")}&nbsp; firstName</h1></center>
     <center><div className="email-name">{value.email}</div></center>
   </>
 );
@@ -95,7 +95,7 @@ const Form = ({ handleSubmit, onSubmit, handleChange, value, register, matchPass
       className="input-email"
     />
     <span className="input-placeholder">
-      {t("password_form_placeholder")}
+      {t("sign-in.password.form_placeholder")}
     </span>
   </form>
 );
@@ -103,7 +103,7 @@ const Form = ({ handleSubmit, onSubmit, handleChange, value, register, matchPass
 const Forgot = () => (
   <Link to="/signin/challenge/recovery/">
     <button className="create-account">
-      {t("password_forgot")}
+      {t("sign-in.password.forgot")}
     </button>
   </Link>
 );

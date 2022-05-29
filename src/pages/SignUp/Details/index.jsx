@@ -30,7 +30,7 @@ export default function SignUpDetails({ value, setValue, register, handleSubmit,
 const Heading = ({ value }) => (
   <>
     <h1 className="heading">
-      {value.firstName}, {t("sign_up_detail_heading")}
+      {value.firstName}, {t("sign-up.detail.heading")}
     </h1>
     <div className="welcome-subhead">
     <UserCircleIcon className="sidebar-icon"/>
@@ -49,7 +49,7 @@ export const ErrorLogo = () => (
 
 export const Information = () => (
   <a target="_blank" rel="noreferrer" href="https://support.google.com/accounts/answer/1733224?hl=en" className="create-account no-deco">
-    {t("sign_up_info_button")}
+    {t("sign-up.detail.info_button")}
   </a>
 );
 
@@ -64,7 +64,7 @@ const AccountLogo = () => (
     <figure className="account-app-figure">
       <img src="https://ssl.gstatic.com/accounts/signup/glif/personal.svg" alt="" width="244" height="244" />
       <figcaption className="fig-heading">
-        {t("sign_up_detail_figure_caption")}
+        {t("sign-up.detail.figure_caption")}
       </figcaption>
     </figure>
   </section>
