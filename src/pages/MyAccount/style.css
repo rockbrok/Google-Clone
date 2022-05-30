@@ -56,17 +56,34 @@
 .account-flex {
   display: flex;
   flex-direction: column;
-  padding: 0 8px;
-  margin-top: 24px;
-  min-width: 500px;
-  max-width: 840px;
+  margin: 24px 0 0 0;
+  flex: 1 1 auto;
 }
 
 .account-main-wrap {
   display: flex;
   flex-direction: column;
   justify-self: flex-start;
+  max-width: 840px;
+  flex-shrink: 1;
+}
 
+.blue-wrap {
+  display: flex;
+  flex-direction: row;
+  flex: 1 1 auto;
+  flex-flow: row;
+  width: 100%;
+  align-content: center;
+  justify-content: center;
+}
+
+.red-wrap {
+  display: inline-flex;
+  flex: 1 1 auto;
+  content: "";
+  width: auto;
+  max-width: 300px;
 }
 
 .account-flex-2 {
@@ -112,21 +129,28 @@
   margin-top: 60px;
 }
 
-@media only screen and (min-width: 1024px)  {
+
+
+@media (min-width: 1024px) {
   .account-flex {
-    max-width: 1120px;
     padding: 0 48px;
   }
 }
 
-@media only screen and (min-width: 720px)  {
+@media (max-width: 1024px) {
   .account-flex {
     padding: 0 24px;
   }
 }
 
-@media only screen and (min-width: 600px)  {
+@media (max-width: 720px) {
   .account-flex {
     padding: 0 16px;
+  }
+}
+
+@media (max-width: 1072px) {
+  .account-page-wrap {
+    margin: 0;
   }
 }

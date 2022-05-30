@@ -25,6 +25,7 @@ export default function Account() {
         <section className="account-page-wrap">
           <AccountSideBar />
           <section className="account-flex">
+            <div className="blue-wrap">
             <section className="account-main-wrap">
               <Welcome letter={letter} firstName={firstName} lastName={lastName} />
               <div className="card-row">
@@ -32,6 +33,8 @@ export default function Account() {
                 <PersonalInfo />
               </div>
             </section>
+            <div className="red-wrap" />
+            </div>
           </section>
         </section>
       </main>
@@ -54,10 +57,11 @@ const Welcome = ({ letter, firstName, lastName }) => (
       {t('my-account.account-home.welcome')},&nbsp;{firstName}&nbsp;{lastName}
     </div>
     <div className="welcome-subhead">
-      {t('my-account.account-home.subheading')}&nbsp;
-      <a className="learn-more no-deco">
+      <span>{t('my-account.account-home.subheading')}&nbsp;
+      <a className="cherry-more no-deco">
         {t('learn_more')}
       </a>
+      </span>
     </div>
   </>
 )

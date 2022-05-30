@@ -3,9 +3,19 @@
   line-height: 36px;
   font-size: 28px;
   color: rgb(32, 33, 36);
-  overflow-wrap: break-word;
+
   margin: 20px 0;
   align-self: center;
+  text-align: center;
+  padding: 0 12px;
+}
+
+.cherry-more {
+
+  cursor: pointer;
+  color: rgb(26, 115, 232);
+  text-decoration-color: rgb(26, 115, 232);
+  
 }
 
 .welcome-subhead {
@@ -15,7 +25,8 @@
   align-self: center;
   letter-spacing: 0.1px;
   line-height: 24px;
-  overflow-wrap: break-word;
+  padding: 0 14px;
+  white-space: wrap;
   color: rgb(95, 99, 104);
 }
 
@@ -28,15 +39,13 @@
   font-size: 14px;
   letter-spacing: 0.2px;
   line-height: 20px;
-  min-width: 300px;
-  max-width: 406px;
+  width: 406px;
   margin: 24px 12px 0 12px;
 }
 
 .welcome-card-top {
   display: flex;
-  min-width: 292px;
-  max-width: 358px;
+  width: 358px;
   height: 124px;
   flex-shrink: 1;
   padding: 24px 24px 16px 24px;
@@ -47,6 +56,7 @@
 }
 
 .welcome-card-head {
+  display: flex;
   font-family: Roboto;
   color: rgb(32, 33, 36);
   font-size: 22px;
@@ -57,8 +67,7 @@
 
 .welcome-card-bottom {
   display: flex;
-  min-width: 292px;
-  max-width: 358px;
+  width: 358px;
   height: 20px;
   flex-shrink: 1;
   padding: 17px 24px 18px 24px;
@@ -95,25 +104,48 @@
 
 }
 
-.personalize-img {
-  background-image: url("../../../../public/personalize.png");
+.personalize-img,
+.personalinfo-img {
+  display: flex;
   background-size: 96px 96px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 16px;
   height: 96px;
   width: 96px;
-  margin-left: 16px;
   align-self: center;
+}
+
+.personalize-img {
+  background-image: url("../../../../public/personalize.png");
 }
 
 .personalinfo-img {
   background-image: url("../../../../public/personalinfo.png");
-  background-size: 96px 96px;
-  height: 96px;
-  width: 96px;
-  margin-left: 16px;
-  align-self: center;
 }
 
 .flex-link {
   display: flex;
   flex-shrink: 1;
+}
+
+@media (max-width: 745px) {
+  .welcome-card,
+  .welcome-card-top,
+  .welcome-card-bottom {
+    width: calc(100% - 36px);
+  }
+
+  .card-row {
+    flex-direction: column;
+  }
+
+  .welcome-top-card-info {
+    width: 100%;
+  }
+
+  .welcome-card-head {
+    max-width: 500px;
+  }
+
 }
