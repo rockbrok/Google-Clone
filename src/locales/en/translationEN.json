@@ -225,6 +225,7 @@
         "manage_account": "Manage your Google Account",
         "sign_out": "Sign out",
         "privacy": "Privacy Policy",
-        "terms": "Terms of Service"
+        "terms": "Terms of Service",
+        "google_account": "Google Account"
     }
 }

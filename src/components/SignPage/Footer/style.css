@@ -1,11 +1,7 @@
-
-  
 .signup-footer {
   position: relative;
   display: block;
   min-height: 64px;
-  flex: 1 1 0px;
-  content: "";
   box-sizing: border-box;
   width: auto;
 }
@@ -116,4 +112,37 @@ select option:active {
   border: 4px solid transparent;
   border-top: 5px solid rgb(46, 46, 46);
   border-bottom:0 none;
+}
+
+.language-text {
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .signup-footer-container {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    font-size: 12px;
+    line-height: 16.8px;
+    padding: 24px 15px 0 15px;
+    width: calc(100% - 30px);
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .signup-footer {
+    flex: 0;
+  }
+
+  .select-wrapper {
+    left: 2px;
+  }
+
+  .footer-grow {
+    display: flex;
+    flex: 1 1 auto;
+    content: "";
+    box-sizing: border-box;
+  }
 }

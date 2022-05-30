@@ -34,9 +34,9 @@ export default function SignIn() {
       <Helmet>
         <title>{t('sign-in.title')}</title>
       </Helmet>
-      <section className="flex-container">
+      <section className="signpage-container-wrapper">
+        <section className="flex-container">
         <SignPageHeader />
-        <section className="signpage-container-wrapper">
           <section className="signpage-container">
             { success ? 
               <SignInPassword 

@@ -50,9 +50,9 @@ export default function SignUp() {
       <Helmet>
         <title>{t("sign-up.title")}</title>
       </Helmet>
-      <section className="flex-container">
+      <section className="signpage-container-wrapper">
+        <section className="flex-container">
         <SignPageHeader />
-        <section className="signpage-container-wrapper">
           <section className="signpage-container">
             { success ? 
               <SignUpDetails 

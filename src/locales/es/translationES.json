@@ -209,6 +209,7 @@
         "manage_account": "Administra tu cuenta de Google",
         "sign_out": "Desconectar",
         "privacy": "Política de privacidad",
-        "terms": "Términos de servicio"
+        "terms": "Términos de servicio",
+        "google_account": "Google Cuenta"
     }
 }

@@ -27,7 +27,8 @@
 
 .name-row {
   display: inline-grid;
-  grid-template-columns: 174px 174px;
+  grid-template-columns: 192px 192px;
+  grid-column-gap: 8px;
   padding: 0;
   width: stretch;
   flex-direction: row;
@@ -177,4 +178,10 @@
   top: 6px;
   left: 9px;
   transition: 150ms cubic-bezier(0.4,0,0.2,1),opacity 150ms cubic-bezier(0.4,0,0.2,1);
+}
+
+@media (max-width: 600px) {
+  .name-row {
+    grid-template-columns: 214px 214px;
+  }
 }

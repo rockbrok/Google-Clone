@@ -1,8 +1,14 @@
 .signin-header {
-  display: flex;
+  display: inline-flex;
   flex: 1 1 0px;
   min-height: 30px;
-  box-sizing: border-box;
+  max-height: 64px;
   content: "";
   width: auto;
+}
+
+@media (max-width: 600px) {
+  .signin-header {
+    display: none;
+  }
 }

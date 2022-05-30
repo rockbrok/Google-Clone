@@ -1,6 +1,7 @@
 import OutsideClickHandler from 'react-outside-click-handler';
 import UserPanel from './../';
 import { useState } from 'react';
+import { t } from 'i18next';
 
 export default function ToggleUser() {
   const [show, setShow] = useState(false)
@@ -48,7 +49,7 @@ const AccountButton = ({ show, showTitle, setShowTitle, firstName, lastName, ema
 
 const Title = ({ showTitle, firstName, lastName, email }) => (
   <div className="user-panel-title fade-in" style={{ display: showTitle ? "block" : "none" }}>
-    Google Account<br />
+    {t("user-panel.google_account")}<br />
     <span className="user-panel-title-text">{firstName}&nbsp;{lastName}</span><br />
     <span className="user-panel-title-text">{email}</span>
   </div>

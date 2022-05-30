@@ -42,19 +42,22 @@ export default function SignPageFooter() {
   }
 
   return (
-    <section className="signup-footer" >
-      <div className="signup-footer-container">
-      <LanguageButton
-        show={show}
-        setShow={setShow}
-        register={register}
-        handleSubmit={handleSubmit}
-        value={value}
-        handleChange={handleChange}
-      />
-      <Links />
-      </div>
-    </section>
+    <>
+      <section className="footer-grow" />
+      <section className="signup-footer" >
+        <div className="signup-footer-container">
+          <LanguageButton
+            show={show}
+            setShow={setShow}
+            register={register}
+            handleSubmit={handleSubmit}
+            value={value}
+            handleChange={handleChange}
+          />
+          <Links />
+        </div>
+      </section>
+    </>
   );
 }
 
@@ -87,8 +90,8 @@ const LanguageSelect = ({ register, handleSubmit, handleChange, value }) => (
       className="select-wrapper"
       
     >
-      <option value="" defaultValue disabled>{t('language_select.1')}</option>
-      <option value="01">{t('language_select.2')}</option>
+      <option value="" className="language-text" defaultValue disabled>{t('language_select.1')}</option>
+      <option value="01" className="language-text">{t('language_select.2')}</option>
     </select>
   </form>
 );

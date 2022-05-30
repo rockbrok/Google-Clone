@@ -2,7 +2,6 @@ import axios from 'axios';
 import { ShowPassword } from '../../../components/SignPage/ShowPassword';
 import { useContext } from 'react';
 import { UserContext } from '../../../usercontext';
-import { Link } from 'react-router-dom';
 import { t } from 'i18next';
 
 import './style.css';
@@ -13,7 +12,7 @@ import './../../../components/SignPage/SignInForm/style.css';
 import './../../../components/SignPage/ShowPassword/style.css';
 
 export default function SignInPassword({ Logo, value, setValue, register, handleSubmit, watch, errors, Next }) {
-  const { user, setUser } = useContext(UserContext);
+  const { setUser } = useContext(UserContext);
 
   const currentUser = async () => {
     let URL = "http://localhost:5000/users?email=" + value.email;
@@ -62,7 +61,7 @@ export default function SignInPassword({ Logo, value, setValue, register, handle
       />
       <ShowPassword />
       <div className="flex-row">
-        <Forgot />
+        <div />
         <Next />
       </div>
     </div>
@@ -98,12 +97,4 @@ const Form = ({ handleSubmit, onSubmit, handleChange, value, register, matchPass
       {t("sign-in.password.form_placeholder")}
     </span>
   </form>
-);
-
-const Forgot = () => (
-  <Link to="/signin/challenge/recovery/">
-    <button className="create-account">
-      {t("sign-in.password.forgot")}
-    </button>
-  </Link>
 );
