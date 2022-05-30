@@ -1,3 +1,4 @@
+import { t } from "i18next";
 import { Link } from "react-router-dom";
 
 import './style.css';
@@ -30,11 +31,11 @@ export default function UserPanel() {
       </div>
       <button className="manage-account-button">
         <Link to="/myaccount/">
-          Manage your Google Account
+          {t("user-panel.manage_account")}
         </Link>
       </button>
       <button className="signout-button" onClick={SignOut}>
-        Sign out
+      {t("user-panel.sign_out")}
       </button>
       <div className="user-links">
         <Privacy />
@@ -47,13 +48,13 @@ export default function UserPanel() {
 
 const Privacy = () => (
   <button className="user-panel-link">
-    <a rel="noreferrer" target="_blank" href="https://policies.google.com/privacy?hl=en">Privacy Policy</a>
+    <a rel="noreferrer" target="_blank" href="https://policies.google.com/privacy?hl=en">{t("user-panel.privacy")}</a>
   </button>
 )
 
 const Terms = () => (
   <button className="user-panel-link">
-    <a rel="noreferrer" target="_blank" href="https://policies.google.com/terms?hl=en">Terms of Service</a>
+    <a rel="noreferrer" target="_blank" href="https://policies.google.com/terms?hl=en">{t("user-panel.terms")}</a>
   </button>
 )
 

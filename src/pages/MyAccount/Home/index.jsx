@@ -17,7 +17,7 @@ export default function Account() {
   return (
     <>
       <Helmet>
-        <title>{t('google_account')}</title>
+        <title>{t('my-account.google_account')}</title>
       </Helmet>
       <main>
         <AccountHeader />
@@ -51,10 +51,10 @@ const Welcome = ({ letter, firstName, lastName }) => (
   <>
     <XLProfileIcon letter={letter}/>
     <div className="welcome-head">
-      {t('welcome')},&nbsp;{firstName}&nbsp;{lastName}
+      {t('my-account.account-home.welcome')},&nbsp;{firstName}&nbsp;{lastName}
     </div>
     <div className="welcome-subhead">
-      {t('account_subheading')}&nbsp;
+      {t('my-account.account-home.subheading')}&nbsp;
       <a className="learn-more no-deco">
         {t('learn_more')}
       </a>
@@ -69,15 +69,15 @@ const PrivacyAndPersonalization = () => (
         <div className="inner-card-row">
           <div className="welcome-top-card-info">
             <div className="welcome-card-head">
-              {t('privacy_and_personalization')}
+              {t('my-account.account-home.privacy_and_personalization')}
             </div>
-            {t('privacy_detail')}
+            {t('my-account.account-home.privacy_detail')}
           </div>
           <div className="personalize-img" />
         </div>
       </div>
       <div className="welcome-card-bottom">
-        {t('manage_data')}
+        {t('my-account.account-home.manage_data')}
       </div>
     </section>
   </Link>
@@ -90,15 +90,15 @@ const PersonalInfo = () => (
         <div className="inner-card-row">
           <div className="welcome-top-card-info">
             <div className="welcome-card-head">
-              {t('choose_what_others_see')}
+              {t('my-account.account-home.choose_what_others_see')}
             </div>
-            {t('personal_detail')}
+            {t('my-account.account-home.personal_detail')}
           </div>
           <div className="personalinfo-img" />
         </div>
       </div>
       <div className="welcome-card-bottom">
-        {t('manage_personal')}
+        {t('my-account.account-home.manage_personal')}
       </div>
     </section>
   </Link>

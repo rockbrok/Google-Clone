@@ -22,7 +22,7 @@ const Home = () => (
       }
     >
       <div className="navbar-links">
-        {t('home')}
+        {t('my-account.home')}
       </div>    
     </NavLink>
   </div>
@@ -37,7 +37,7 @@ const PersonalInfo = () => (
       }
     >
       <div className="navbar-links">
-        {t('personal_info')}
+        {t('my-account.personal-info.personal_info')}
       </div>
     </NavLink>
   </div>
@@ -52,7 +52,7 @@ const DataPrivacy = () => (
       }
     >
       <div className="navbar-links">
-        {t('data_and_privacy')}
+        {t('my-account.data-privacy.data_and_privacy')}
       </div>
     </NavLink>
   </div>

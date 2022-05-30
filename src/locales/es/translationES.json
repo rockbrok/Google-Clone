@@ -127,6 +127,18 @@
             "info_button": "Por qué solicitamos esta información",
             "your_birthday": "Tu cumpleaños",
             "figure_caption": "Su información personal es privada y segura"
+        },
+        "detail-errors": {
+            "valid_birthdate": "Ingrese una fecha de nacimiento válida",
+            "day_year": "Ingrese día y año",
+            "month_year": "Ingrese el mes y el año",
+            "month_day": "Ingrese el mes y el día",
+            "month": "Seleccione mes",
+            "gender": "Seleccione sexo",
+            "day": "Ingrese el día",
+            "year": "Ingrese el año",
+            "valid_year": "Ingrese el año válido",
+            "valid_day": "Ingrese un día válido"
         }
     },
 
@@ -164,25 +176,39 @@
     "privacy": "Privacidad",
     "terms": "Condiciones",
 
-    "google-account": {
+    "my-account": {
         "google_account": "Cuenta de Google",
+        "about": "Información",
         "home": "Página principal",
-        "personal_info": "Información personal",
-        "data_and_privacy": "Datos y privacidad",
-        "about": "Información"
+        "account-home": {
+            "welcome": "Bienvenido",
+            "subheading": "Administra tu información y las opciones de privacidad y seguridad a fin de que Google sea más relevante para ti.",
+            "privacy_and_personalization": "Privacidad y personalización",
+            "privacy_detail": "Para personalizar tu experiencia en Google, elige la actividad de tu cuenta que quieras guardar",
+            "manage_data": "Administrar tus datos y privacidad",
+            "choose_what_others_see": "Elige lo que pueden ver los demás",
+            "personal_detail": "Decide qué información personal haces visible para los demás",
+            "manage_personal": "Gestione su información personal"
+        },
+        "personal-info": {
+            "personal_info": "Información personal"
+        },
+        "data-privacy": {
+            "data_and_privacy": "Datos y privacidad"
+        }
     },
 
-        "welcome": "Bienvenido",
-        "account_subheading": "Administra tu información y las opciones de privacidad y seguridad a fin de que Google sea más relevante para ti.",
-        "privacy_and_personalization": "Privacidad y personalización",
-        "privacy_detail": "Para personalizar tu experiencia en Google, elige la actividad de tu cuenta que quieras guardar",
-        "manage_data": "Administrar tus datos y privacidad",
-        "choose_what_others_see": "Elige lo que pueden ver los demás",
-        "personal_detail": "Decide qué información personal haces visible para los demás",
-        "manage_personal": "Gestione su información personal",
+        
 
     "language_select": {
         "1": "Español (Latinoamérica)",
         "2": "English (United States)"
+    },
+
+    "user-panel": {
+        "manage_account": "Administra tu cuenta de Google",
+        "sign_out": "Desconectar",
+        "privacy": "Política de privacidad",
+        "terms": "Términos de servicio"
     }
 }

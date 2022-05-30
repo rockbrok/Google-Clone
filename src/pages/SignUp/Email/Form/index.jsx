@@ -271,7 +271,7 @@ const NameErrors = ({ errors }) => {
     return (
       <div className="invalid">
         <ErrorLogo/>
-        <p className="invalidtext">{t("sign_up_name_errors.enter_first_last")}</p>
+        <p className="invalidtext">{t("sign-up.name-errors.enter_first_last")}</p>
       </div>
     )
   } else if (errors.firstName?.type === "pattern" || 
@@ -283,21 +283,21 @@ const NameErrors = ({ errors }) => {
     return (
       <div className="invalid">
         <ErrorLogo/>
-        <p className="invalidtext">{t("sign_up_name_errors.enter_correct")}</p>
+        <p className="invalidtext">{t("sign-up.name-errors.enter_correct")}</p>
       </div>
     )
   } else if (errors.firstName && !errors.lastName) {
     return (
       <div className="invalid">
         <ErrorLogo/>
-        <p className="invalidtext">{t("sign_up_name_errors.enter_first")}</p>
+        <p className="invalidtext">{t("sign-up.name-errors.enter_first")}</p>
       </div>
     )
   } else if (!errors.firstName && errors.lastName) {
     return (
       <div className="invalid">
         <ErrorLogo/>
-        <p className="invalidtext">{t("sign_up_name_errors.enter_last")}</p>
+        <p className="invalidtext">{t("sign-up.name-errors.enter_last")}</p>
       </div>
     )
   }
@@ -309,7 +309,7 @@ const EmailErrors = ({ errors }) => {
     return (
       <div className="invalid">
         <ErrorLogo/>
-        <p className="invalidtext">{t("sign_up_email_errors.enter_email")}</p>
+        <p className="invalidtext">{t("sign-up.email-errors.enter_email")}</p>
       </div>
     )
   } else if (errors.email?.type === "noUsername" || 
@@ -317,7 +317,7 @@ const EmailErrors = ({ errors }) => {
     return (
       <div className="invalid">
         <ErrorLogo/>
-        <p className="invalidtext">{t("sign_up_email_errors.enter_username")}</p>
+        <p className="invalidtext">{t("sign-up.email-errors.enter_username")}</p>
       </div>
     )
   } else if (errors.email?.type === "onlyCharacters" ||
@@ -326,14 +326,14 @@ const EmailErrors = ({ errors }) => {
     return (
       <div className="invalid">
         <ErrorLogo/>
-        <p className="invalidtext">{t("sign_up_email_errors.enter_at")}</p>
+        <p className="invalidtext">{t("sign-up.email-errors.enter_at")}</p>
       </div>
     )
   } else if (errors.email?.type === "checkEmail") {
     return (
       <div className="invalid">
       <ErrorLogo/>
-      <p className="invalidtext">{t("sign_up_email_errors.email_exists")}</p>
+      <p className="invalidtext">{t("sign-up.email-errors.email_exists")}</p>
     </div>
     )
   } else if (errors.email?.type === "validEmail" && ( 
@@ -346,7 +346,7 @@ const EmailErrors = ({ errors }) => {
     return (
       <div className="invalid">
         <ErrorLogo/>
-        <p className="invalidtext">{t("sign_up_email_errors.not_valid")}</p>
+        <p className="invalidtext">{t("sign-up.email-errors.not_valid")}</p>
       </div>
     )
   }
@@ -359,7 +359,7 @@ const PasswordErrors = ({ errors }) => {
     return (
       <div className="invalid">
         <ErrorLogo/>
-        <p className="invalidtext">{t("sign_up_password_errors.enter_password")}</p>
+        <p className="invalidtext">{t("sign-up.password-errors.enter_password")}</p>
       </div>
     )
   } else if (errors.password?.type !== "validPassword" &&
@@ -368,7 +368,7 @@ const PasswordErrors = ({ errors }) => {
     return (
       <div className="invalid">
         <ErrorLogo/>
-        <p className="invalidtext">{t("sign_up_password_errors.confirm_password")}</p>
+        <p className="invalidtext">{t("sign-up.password-errors.confirm_password")}</p>
       </div>
     )
   } else if (errors.password?.type !== "validPassword" &&
@@ -378,14 +378,14 @@ const PasswordErrors = ({ errors }) => {
     return (
       <div className="invalid">
         <ErrorLogo/>
-        <p className="invalidtext">{t("sign_up_password_errors.no_match")}</p>
+        <p className="invalidtext">{t("sign-up.password-errors.no_match")}</p>
       </div>
     )
   } else if (errors.password?.type === "minLength") {
     return (
       <div className="invalid">
         <ErrorLogo/>
-        <p className="invalidtext">{t("sign_up_password_errors.8_characters")}</p>
+        <p className="invalidtext">{t("sign-up.password-errors.8_characters")}</p>
       </div>
     )
   }

@@ -205,49 +205,49 @@ const BirthdayErrors = ({ errors }) => {
     return (
       <div className="invalid">
         <ErrorLogo/>
-        <p className="invalidtext">Enter valid birthdate</p>
+        <p className="invalidtext">{t("sign-up.detail-errors.valid_birthdate")}</p>
       </div>
     )
   } else if (errors.year?.type === "required" && errors.day?.type === "required") {
     return (
       <div className="invalid">
         <ErrorLogo/>
-        <p className="invalidtext">Enter day and year</p>
+        <p className="invalidtext">{t("sign-up.detail-errors.day_year")}</p>
       </div>
     )
   } else if (errors.year?.type === "required" && errors.month?.type === "required") {
     return (
       <div className="invalid">
         <ErrorLogo/>
-        <p className="invalidtext">Enter month and year</p>
+        <p className="invalidtext">{t("sign-up.detail-errors.month_year")}</p>
       </div>
     )
   } else if (errors.day?.type === "required" && errors.month?.type === "required") {
     return (
       <div className="invalid">
         <ErrorLogo/>
-        <p className="invalidtext">Enter month and day</p>
+        <p className="invalidtext">{t("sign-up.detail-errors.month_day")}</p>
       </div>
     )
   } else if (errors.month?.type === "required") {
     return (
       <div className="invalid">
         <ErrorLogo/>
-        <p className="invalidtext">Select month</p>
+        <p className="invalidtext">{t("sign-up.detail-errors.month")}</p>
       </div>
     )
   } else if (errors.day?.type === "required") {
     return (
       <div className="invalid">
         <ErrorLogo/>
-        <p className="invalidtext">Enter day</p>
+        <p className="invalidtext">{t("sign-up.detail-errors.day")}</p>
       </div>
     )
   } else if (errors.year?.type === "required") {
     return (
       <div className="invalid">
         <ErrorLogo/>
-        <p className="invalidtext">Enter year</p>
+        <p className="invalidtext">{t("sign-up.detail-errors.year")}</p>
       </div>
     )
   } else if (errors.year?.type === "min" || 
@@ -255,14 +255,14 @@ const BirthdayErrors = ({ errors }) => {
     return (
       <div className="invalid">
         <ErrorLogo/>
-        <p className="invalidtext">Enter valid year</p>
+        <p className="invalidtext">{t("sign-up.detail-errors.valid_year")}</p>
       </div>
     )
   } else if (errors.day?.type === "max") {
     return (
       <div className="invalid">
         <ErrorLogo/>
-        <p className="invalidtext">Enter valid day</p>
+        <p className="invalidtext">{t("sign-up.detail-errors.valid_day")}</p>
       </div>
     )
   } 
@@ -273,7 +273,7 @@ const GenderErrors = ({ errors }) => {
     return (
       <div className="invalid">
         <ErrorLogo/>
-        <p className="invalidtext">Select gender</p>
+        <p className="invalidtext">{t("sign-up.detail-errors.gender")}</p>
       </div>
     )
   }

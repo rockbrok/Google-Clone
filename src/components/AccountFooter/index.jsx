@@ -33,6 +33,6 @@ const Help = () => (
 
 const About = () => (
   <a className="account-footer-items" href="https://www.google.com/account/about/" rel="noreferrer" target="_blank">
-    {t('account_about')}
+    {t('my-account.about')}
   </a>
 )

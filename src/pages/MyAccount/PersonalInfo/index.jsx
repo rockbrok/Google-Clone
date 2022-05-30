@@ -3,6 +3,7 @@ import AccountSideBar from "../../../components/AccountSideBar";
 import AccountNavBar from "../../../components/AccountNavBar";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import { t } from 'i18next';
 
 import './style.css';
 
@@ -18,7 +19,7 @@ export default function PersonalInfo() {
   return (
     <>
       <Helmet>
-        <title>Personal info</title>
+        <title>{t("my-account.personal-info.personal_info")}</title>
       </Helmet>
       <main>
       <AccountHeader />
@@ -26,33 +27,33 @@ export default function PersonalInfo() {
       <section className="account-page-wrap">
         <AccountSideBar />
         <section className="account-flex">
-          <div className="account-page-head">Personal info</div>
-          <div className="account-page-subhead">Info about you and your preferences across Google services</div>
+          <div className="account-page-head">{t("my-account.personal-info.personal_info")}</div>
+          <div className="account-page-subhead">{t("my-account.personal-info.subheading")}</div>
           <h1>Your profile info in Google services</h1>
           <h3>Personal info and options to manage it. You can make some of this info, like your contact details, visible to others so they can reach you easily. You can also see a summary of your profiles.</h3>
           <h6>Basic info</h6>
           <p>Some info may be visible to other people using Google services.&nbsp;
-            <a>Learn more</a>
+            <a>{t("learn_more")}</a>
           </p>
           <button className="manage-account-button">
             <Link to="/myaccount/name/">
-              Name {firstName}&nbsp;{lastName}
-              </Link>
+              {t("my-account.personal-info.personal-name.name")}&nbsp;{firstName}&nbsp;{lastName}
+            </Link>
           </button><br />
           <button className="manage-account-button">
             <Link to="/myaccount/birthday/">
-              Birthday {dateOfBirth}
+              {t("my-account.personal-info.personal-birthday.birthday")}&nbsp;{dateOfBirth}
             </Link>
           </button><br />
           <button className="manage-account-button">
             <Link to="/myaccount/gender/">
-              Gender {gender}
+              {t("my-account.personal-info.personal-gender.gender")}&nbsp;{gender}
             </Link>
           </button><br />
           <h6>Contact info</h6>
           <button className="manage-account-button">
             <Link to="/myaccount/email/">
-              Email {email}
+              {t("my-account.personal-info.personal-email.email")}&nbsp;{email}
             </Link>
           </button>
           <h1>Other info and preferences for Google services</h1>

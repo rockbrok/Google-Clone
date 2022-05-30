@@ -21,7 +21,15 @@ import Test from './pages/test';
 export default function App() {
   const [theme] = useTheme();
 
-  const ProtectedRoute = () => {
+  const UserRoute = () => {
+    let user = JSON.parse(localStorage.getItem('user'));
+    if (user === null) {
+      return <Outlet />
+    }
+    return <Navigate to="/myaccount/" />
+  }
+
+  const NoUserRoute = () => {
     let user = JSON.parse(localStorage.getItem('user'));
     if (user !== null) {
       return <Outlet />
@@ -40,11 +48,13 @@ export default function App() {
       <Router>
         <Routes>
           <Route exact path="/" element={<Search />}/>
-          <Route path="/signin/" element={<SignIn />} />
-          <Route path="/signup/" element={<SignUp />} />
-          <Route path="/test/" element={<Test />} />
           <Route path="*" element={<PageNotFound />} />
-          <Route element={<ProtectedRoute />}>
+          <Route path="/test/" element={<Test />} />
+          <Route element={<UserRoute />}>
+            <Route path="/signin/" element={<SignIn />} />
+            <Route path="/signup/" element={<SignUp />} />
+          </Route>
+          <Route element={<NoUserRoute />}>
             <Route path="/myaccount/" element={<Account />} />
             <Route path="/myaccount/personalinfo/" element={<PersonalInfo />} />
             <Route path="/myaccount/data-and-personalization/" element={<DataPrivacy />} />

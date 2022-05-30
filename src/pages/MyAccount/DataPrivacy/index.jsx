@@ -3,12 +3,13 @@ import AccountSideBar from "../../../components/AccountSideBar";
 import AccountNavBar from "../../../components/AccountNavBar";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import { t } from "i18next";
 
 export default function DataPrivacy() {
   return (
     <>
       <Helmet>
-        <title>Data & privacy</title>
+        <title>{t("my-account.data-privacy.data_and_privacy")}</title>
       </Helmet>
       <main>
       <AccountHeader />

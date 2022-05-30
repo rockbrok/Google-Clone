@@ -32,7 +32,7 @@ const Home = () => (
   >
     <UserCircleIcon className="sidebar-icon"/>
       <div className="sidebar-links">
-        {t('home')}
+        {t('my-account.home')}
       </div>
   </NavLink>
 )
@@ -46,7 +46,7 @@ const PersonalInfo = () => (
   >
     <IdentificationIcon className="sidebar-icon"/>
       <div className="sidebar-links">
-        {t('personal_info')}
+        {t('my-account.personal-info.personal_info')}
       </div>
   </NavLink>
 )
@@ -60,7 +60,7 @@ const DataPrivacy = () => (
   >
     <ShieldCheckIcon className="sidebar-icon"/>
       <div className="sidebar-links">
-        {t('data_and_privacy')}
+        {t('my-account.data-privacy.data_and_privacy')}
       </div>
   </NavLink>
 )
@@ -70,7 +70,7 @@ const About = () => (
     <div className="sidebar-item">
       <InformationCircleIcon className="sidebar-icon"/>
       <div className="sidebar-links">
-        {t('account_about')}
+        {t('my-account.about')}
       </div>
     </div>
   </a>
