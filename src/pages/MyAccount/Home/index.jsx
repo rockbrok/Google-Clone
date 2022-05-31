@@ -26,14 +26,14 @@ export default function Account() {
           <AccountSideBar />
           <section className="account-flex">
             <div className="blue-wrap">
-            <section className="account-main-wrap">
-              <Welcome letter={letter} firstName={firstName} lastName={lastName} />
-              <div className="card-row">
-                <PrivacyAndPersonalization />
-                <PersonalInfo />
-              </div>
-            </section>
-            <div className="red-wrap" />
+              <section className="account-main-wrap">
+                <Welcome letter={letter} firstName={firstName} lastName={lastName} />
+                <div className="card-row">
+                  <PrivacyAndPersonalization />
+                  <PersonalInfo />
+                </div>
+              </section>
+              <div className="red-wrap" />
             </div>
           </section>
         </section>

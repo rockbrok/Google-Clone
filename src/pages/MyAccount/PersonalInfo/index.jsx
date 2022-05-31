@@ -1,6 +1,7 @@
 import AccountHeader from "../Header";
 import AccountSideBar from "../../../components/AccountSideBar";
 import AccountNavBar from "../../../components/AccountNavBar";
+import { ChevronRightIcon } from "@heroicons/react/solid";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { t } from 'i18next';
@@ -26,51 +27,167 @@ export default function PersonalInfo() {
       <AccountNavBar />
       <section className="account-page-wrap">
         <AccountSideBar />
-        <section className="account-flex">
-          <div className="account-page-head">{t("my-account.personal-info.personal_info")}</div>
-          <div className="account-page-subhead">{t("my-account.personal-info.subheading")}</div>
-          <h1>Your profile info in Google services</h1>
-          <h3>Personal info and options to manage it. You can make some of this info, like your contact details, visible to others so they can reach you easily. You can also see a summary of your profiles.</h3>
-          <h6>Basic info</h6>
-          <p>Some info may be visible to other people using Google services.&nbsp;
-            <a>{t("learn_more")}</a>
-          </p>
-          <button className="manage-account-button">
-            <Link to="/myaccount/name/">
-              {t("my-account.personal-info.personal-name.name")}&nbsp;{firstName}&nbsp;{lastName}
-            </Link>
-          </button><br />
-          <button className="manage-account-button">
-            <Link to="/myaccount/birthday/">
-              {t("my-account.personal-info.personal-birthday.birthday")}&nbsp;{dateOfBirth}
-            </Link>
-          </button><br />
-          <button className="manage-account-button">
-            <Link to="/myaccount/gender/">
-              {t("my-account.personal-info.personal-gender.gender")}&nbsp;{gender}
-            </Link>
-          </button><br />
-          <h6>Contact info</h6>
-          <button className="manage-account-button">
-            <Link to="/myaccount/email/">
-              {t("my-account.personal-info.personal-email.email")}&nbsp;{email}
-            </Link>
-          </button>
-          <h1>Other info and preferences for Google services</h1>
-          <h3>Ways to verify it’s you and settings for the web</h3>
-          <h6>Password</h6>
-          <p>A secure password helps protect your Google Account</p>
-          <button className="manage-account-button">
-            <Link to="/myaccount/password/">
-              Password {password}
-            </Link>
-          </button>
-          <h6>General preferences for the web</h6>
-          <p>Manage settings for Google services on the web</p>
-          <p>GlobeIcon Language   English (United States)</p>
+          <section className="account-flex">
+            <div className="blue-wrap">
+              <section className="account-main-wrap">
+                <Heading />
+                <Card />
+                <BasicInfo 
+                  firstName={firstName}
+                  lastName={lastName}
+                  dateOfBirth={dateOfBirth}
+                  gender={gender}
+                  ChevronRightIcon={ChevronRightIcon}
+                />
+                <ContactInfo 
+                  email={email}
+                  ChevronRightIcon={ChevronRightIcon}
+                />
+                <Card2 />
+                <PasswordInfo
+                  password={password}
+                  ChevronRightIcon={ChevronRightIcon}
+                />
+            </section>
+            <div className="red-wrap" />
+          </div>
         </section>
       </section>
       </main>
     </>
   )
 }
+
+const Heading = () => (
+  <>
+    <div className="account-page-head align-center">{t("my-account.personal-info.personal_info")}</div>
+    <div className="account-page-subhead align-center">{t("my-account.personal-info.subheading")}</div>
+  </>
+)
+
+const Card = () => (
+  <div className="personal-card-1">
+    <div>
+      <div className="account-page-head">Your profile information in Google services</div>
+      <div className="account-page-subhead">Personal information and options to manage it. You can make some of this info, like your contact details, visible to others so they can reach you easily. You can also see a summary of your profiles.</div>
+    </div>
+    <div className="personal-scene-img-contain">
+      <div className="personal-scene-img" />
+    </div>
+  </div>
+)
+
+const BasicInfo = ({ firstName, lastName, dateOfBirth, gender, ChevronRightIcon }) => (
+  <div className="info-card">
+    <div className="h3">Basic information</div>
+    <div className="h3-note">Some information may be visible to other people using Google services.&nbsp;
+      <a className="learn-more no-deco">More information</a>
+    </div>
+    <button className="info-button">
+      <Link to="/myaccount/name/" className="no-deco">
+        <div className="info-wrap-divide" />
+        <div className="info-wrap">
+          <div className="info-title">
+            {t("my-account.personal-info.personal-name.name")}
+          </div>
+          <div className="info-value">
+            {firstName}&nbsp;{lastName}
+          </div>
+          <div className="info-arrow">
+            <ChevronRightIcon className="chevron-arrow"/>
+          </div>
+        </div>
+      </Link>
+    </button>
+    <button className="info-button">
+      <Link to="/myaccount/birthday/" className="no-deco">
+        <div className="info-wrap-divide" />
+        <div className="info-wrap">
+          <div className="info-title">
+            {t("my-account.personal-info.personal-birthday.birthday")}
+          </div>
+          <div className="info-value">
+            {dateOfBirth}
+          </div>
+          <div className="info-arrow">
+            <ChevronRightIcon className="chevron-arrow"/>
+          </div>
+        </div>
+      </Link>
+    </button>
+    <button className="info-button">
+      <Link to="/myaccount/gender/" className="no-deco">
+        <div className="info-wrap-divide" />
+        <div className="info-wrap info-wrap-bottom">
+          <div className="info-title">
+            {t("my-account.personal-info.personal-gender.gender")}
+          </div>
+          <div className="info-value">
+            {gender}
+          </div>
+          <div className="info-arrow">
+            <ChevronRightIcon className="chevron-arrow"/>
+          </div>
+        </div>
+      </Link>
+    </button>
+  </div>
+)
+
+const ContactInfo = ({ email, ChevronRightIcon }) => (
+  <div className="info-card">
+    <div className="h3">Contact information</div>
+    <div className="h3-note" />
+    <button className="info-button">
+      <Link to="/myaccount/email/" className="no-deco">
+        <div className="info-wrap-divide" />
+        <div className="info-wrap info-wrap-bottom">
+          <div className="info-title">
+            {t("my-account.personal-info.personal-email.email")}
+          </div>
+          <div className="info-value undercase">
+            {email}
+          </div>
+          <div className="info-arrow">
+            <ChevronRightIcon className="chevron-arrow"/>
+          </div>
+        </div>
+      </Link>
+    </button>
+  </div>
+)
+
+const Card2 = () => (
+  <div className="personal-card-1">
+  <div>
+    <div className="account-page-head">Other information and preferences for Google services</div>
+    <div className="account-page-subhead">Ways to verify it's you and settings for the Web.</div>
+  </div>
+  <div className="personal-scene-img-contain">
+    <div className="personal-scene-pref-img" />
+  </div>
+</div>
+)
+
+const PasswordInfo = ({ password }) => (
+  <div className="info-card account-bottom-marg">
+    <div className="h3">Password</div>
+      <div className="h3-note">A secure password helps protect your Google Account</div>
+      <button className="info-button">
+      <Link to="/myaccount/password/" className="no-deco">
+        <div className="info-wrap-divide" />
+        <div className="info-wrap info-wrap-bottom">
+          <div className="info-title">
+            Password
+          </div>
+          <div className="info-value undercase">
+            {password}
+          </div>
+          <div className="info-arrow">
+            <ChevronRightIcon className="chevron-arrow"/>
+          </div>
+        </div>
+      </Link>
+    </button>
+  </div>
+)
