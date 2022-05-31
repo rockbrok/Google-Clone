@@ -44,12 +44,10 @@
   --tooltip-background-color: hsl(0, 0%, 18%);
   --tooltip-text-color: hsl(0, 0%, 100%);
   --tooltip-border-color: hsl(0, 0%, 95%);
-  overflow-x: hidden;
   min-width: 500px;
 }
 
 body {
-  overflow-x: hidden;
   display: flex;
   flex-flow: column;
   padding: 0;

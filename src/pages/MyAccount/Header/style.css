@@ -1,11 +1,15 @@
 .header-flex {
-  display: inline-flex;
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
-  position: absolute;
   background-color: white;
-  z-index: 5;
-  top: 0;
+  width: calc(100% - 12px);
+  padding-right: 12px;
+  position: fixed;
+}
+
+.sticky {
+  border-bottom: 1px solid lightgray;
 }
 
 .header-logo {
@@ -68,4 +72,10 @@
   background-color: var(--gapp-icon-active);
   border-radius: 50%;
   box-sizing: border-box;
+}
+
+@media (max-width: 1020px) {
+  .sticky {
+    border: none;
+  }
 }

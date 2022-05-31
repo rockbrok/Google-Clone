@@ -1,5 +1,5 @@
 import HeaderIcons from "../../../components/Header";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import { t } from 'i18next';
 import { QuestionMarkCircleIcon } from "@heroicons/react/outline";
@@ -7,10 +7,18 @@ import { QuestionMarkCircleIcon } from "@heroicons/react/outline";
 import './style.css';
 
 export default function AccountHeader() {
-  const [show, setShow] = useState(false)
+  const [show] = useState(false)
   const [showTitle, setShowTitle] = useState(false);
+
+  const [scroll, setScroll] = useState(false);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setScroll(window.scrollY > 2);
+    });
+  }, []);
+
   return (
-    <header className="header-flex">
+    <header className={ scroll ? "header-flex sticky" : "header-flex" }>
       <Link to="/myaccount/" className="no-deco">
         <div className="no-select">
           <AccountLogo />
@@ -42,7 +50,7 @@ const Support = ({ show, showTitle, setShowTitle }) => (
   <a 
     href="https://support.google.com/"
     target="_blank"
-
+    rel="noreferrer"
     className="help-icon-link"
     onMouseEnter={!show ? (e) => setShowTitle(true) : (e) => setShowTitle(false)}
     onMouseLeave={(e) => setShowTitle(false)}
