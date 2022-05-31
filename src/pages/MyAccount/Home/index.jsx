@@ -58,7 +58,7 @@ const Welcome = ({ letter, firstName, lastName }) => (
     </div>
     <div className="welcome-subhead">
       <span>{t('my-account.account-home.subheading')}&nbsp;
-      <a className="cherry-more no-deco">
+      <a href="https://www.google.com/account/about/" target="_blank" rel="noreferrer" className="cherry-more no-deco">
         {t('learn_more')}
       </a>
       </span>
@@ -77,7 +77,9 @@ const PrivacyAndPersonalization = () => (
             </div>
             {t('my-account.account-home.privacy_detail')}
           </div>
-          <div className="personalize-img" />
+          <div className="img-contain">
+            <div className="personalize-img" />
+          </div>
         </div>
       </div>
       <div className="welcome-card-bottom">
@@ -98,7 +100,9 @@ const PersonalInfo = () => (
             </div>
             {t('my-account.account-home.personal_detail')}
           </div>
-          <div className="personalinfo-img" />
+          <div className="img-contain">
+            <div className="personalinfo-img" />
+          </div>
         </div>
       </div>
       <div className="welcome-card-bottom">

@@ -44,7 +44,7 @@
   --tooltip-background-color: hsl(0, 0%, 18%);
   --tooltip-text-color: hsl(0, 0%, 100%);
   --tooltip-border-color: hsl(0, 0%, 95%);
-  min-width: 500px;
+  min-width: calc(500px - 15px);
 }
 
 body {
@@ -63,7 +63,6 @@ main {
   display: flex;
   flex-flow: column;
   height: 100vh;
-  min-width: 500px;
 }
 
 a,

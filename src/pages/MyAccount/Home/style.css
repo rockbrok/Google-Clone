@@ -3,7 +3,6 @@
   line-height: 36px;
   font-size: 28px;
   color: rgb(32, 33, 36);
-
   margin: 20px 0;
   align-self: center;
   text-align: center;
@@ -14,7 +13,6 @@
   cursor: pointer;
   color: rgb(26, 115, 232);
   text-decoration-color: rgb(26, 115, 232);
-  
 }
 
 .welcome-subhead {
@@ -38,14 +36,12 @@
   font-size: 14px;
   letter-spacing: 0.2px;
   line-height: 20px;
-  width: 406px;
+
   margin: 24px 12px 0 12px;
 }
 
 .welcome-card-top {
   display: flex;
-  width: 358px;
-  height: 124px;
   flex-shrink: 1;
   padding: 24px 24px 16px 24px;
   border: 1px solid lightgray;
@@ -66,7 +62,7 @@
 
 .welcome-card-bottom {
   display: flex;
-  width: 358px;
+
   height: 20px;
   flex-shrink: 1;
   padding: 17px 24px 18px 24px;
@@ -88,11 +84,15 @@
   display: flex;
   flex-direction: row;
   align-content: space-between;
+
 }
 
 .inner-card-row {
   display: flex;
   flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  height: max-content;
 }
 
 .welcome-top-card-info {
@@ -100,19 +100,24 @@
   flex-direction: column;
   width: 246px;
   height: 124px;
-
 }
 
 .personalize-img,
 .personalinfo-img {
-  display: flex;
+  display: inline-block;
   background-size: 96px 96px;
   background-repeat: no-repeat;
   background-position: center;
-  margin-left: 16px;
   height: 96px;
   width: 96px;
+  margin-left: 16px;
+}
+
+.img-contain {
+  display: flex;
   align-self: center;
+  justify-self: center;
+  justify-content: center;
 }
 
 .personalize-img {
@@ -124,27 +129,79 @@
 }
 
 .flex-link {
-  display: flex;
-  flex-shrink: 1;
+  display: block;
+  width: auto;
+  margin: 0 -5px;
 }
 
-@media (max-width: 745px) {
-  .welcome-card,
+@media (max-width: 600px) {
   .welcome-card-top,
-  .welcome-card-bottom {
-    width: calc(100% - 36px);
+  .welcome-card-bottom,
+  .welcome-card-head {
+    width: auto;
   }
+}
 
+@media (max-width: 912px) {
   .card-row {
     flex-direction: column;
+    max-width: 700px;
   }
-
+  .welcome-card,
+  .welcome-card-top,
+  .welcome-card-bottom,
   .welcome-top-card-info {
-    width: 100%;
+    width: auto;
   }
+}
 
-  .welcome-card-head {
-    max-width: 500px;
+@media (min-width: 1072px) {
+  .card-row {
+    flex-direction: column;
+    min-width: 680px;
   }
+  .welcome-card-top,
+  .welcome-card-bottom,
+  .welcome-card-head,
+  .welcome-top-card-info {
+    width: auto;
+  }
+  .welcome-card-top {
+    height: 114px;
+  }
+}
 
+@media (min-width: 1116px) {
+  .card-row {
+    flex-direction: row;
+    width: auto;
+    align-self: center;
+  }
+  .welcome-card-top,
+  .welcome-card-bottom,
+  .welcome-card-head,
+  .welcome-top-card-info {
+    width: auto;
+  }
+  .welcome-card {
+    width: 346px;
+    display: flex;
+    flex-grow: 1;
+  }
+  .welcome-card-top {
+    height: 180px;
+  }
+}
+
+@media (min-width: 1216px) {
+  .card-row {
+    flex-direction: row;
+    width: auto;
+    align-self: center;
+  }
+  .welcome-card {
+    width: 386px;
+    display: flex;
+    flex: 1 1 auto;
+  }
 }

@@ -5,10 +5,12 @@ import './style.css';
 
 export default function AccountNavBar() {
   return (
-    <section className="navbar-wrap">
-      <Home />
-      <PersonalInfo />
-      <DataPrivacy />
+    <section className="nav-contain">
+      <section className="navbar-wrap">
+        <Home />
+        <PersonalInfo />
+        <DataPrivacy />
+      </section>
     </section>
   )
 }
