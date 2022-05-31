@@ -90,7 +90,7 @@ const PrivacyAndPersonalization = () => (
 )
 
 const PersonalInfo = () => (
-  <Link exact to="/myaccount/personalinfo/" className="no-deco flex-link">
+  <Link exact to="/myaccount/personalinfo/" className="no-deco flex-link account-bottom-marg">
     <section className="welcome-card">
       <div className="welcome-card-top">
         <div className="inner-card-row">

@@ -122,7 +122,7 @@ const BasicInfo = ({ firstName, lastName, dateOfBirth, gender, ChevronRightIcon 
           <div className="info-title">
             {t("my-account.personal-info.personal-gender.gender")}
           </div>
-          <div className="info-value">
+          <div className="info-value capitalize">
             {gender}
           </div>
           <div className="info-arrow">
@@ -180,7 +180,7 @@ const PasswordInfo = ({ password }) => (
           <div className="info-title">
             Password
           </div>
-          <div className="info-value undercase">
+          <div className="info-value password">
             {password}
           </div>
           <div className="info-arrow">

@@ -1,0 +1,49 @@
+.data-scene-img {
+  background-image: url("../../../../public/dataandpersonalization_scene.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 360px 128px;
+  width: 360px;
+  height: 128px;
+}
+
+.data-no-marg {
+  margin-top: -32px;
+  padding-top: -32px;
+}
+
+.info-card-no-pad {
+  padding-top: 0;
+}
+
+.info-wrap-bot-top {
+  border-radius: 8px;
+}
+
+.trash-icon {
+  display: inline-flex;
+  height: 24px;
+  width: 24px;
+  color: #5f6368;
+  padding-right: 24px;
+}
+
+.info-title-width {
+  width: 400px;
+}
+
+.data-title {
+  font-size: 1rem;
+  font-family: Roboto;
+  color: #202124;
+  line-height: 1.5rem;
+  font-weight: 400;
+  text-transform: none;
+}
+
+.data-value {
+  color: rgb(95, 99, 104);
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  line-height: 20px;
+}

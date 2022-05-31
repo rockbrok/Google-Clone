@@ -94,7 +94,6 @@
   flex-direction: row;
   align-items: center;
   padding: 16px 24px;
-
   margin-left: -24px;
   margin-right: -24px;
 }
@@ -133,7 +132,6 @@
 .info-title {
   display: flex;
   justify-self: flex-start;
-  width: 200px;
   margin-right: 24px;
   color: rgb(95, 99, 104);
   font-size: 11px;
@@ -155,7 +153,7 @@
   line-height: 24px;
   letter-spacing: 0.1px;
   color: rgb(32, 33, 36);
-  text-transform: capitalize;
+  width: min-content;
 }
 
 .info-arrow {
@@ -177,4 +175,43 @@
 
 .undercase {
   text-transform: lowercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.password {
+  font-family: text-security-disc;
+  -webkit-text-security: disc;
+}
+
+@media (min-width: 600px) {
+  .info-title {
+    width: 200px;
+  }
+}
+
+@media (max-width: 600px) {
+  .info-title {
+    width: 120px;
+  }
+}
+
+@media (max-width: 860px) {
+  .personal-scene-img-contain {
+    display: none;
+  }
+}
+
+@media (min-width: 1072px) {
+  .personal-scene-img-contain {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .personal-scene-img-contain {
+    display: flex;
+  }
 }
