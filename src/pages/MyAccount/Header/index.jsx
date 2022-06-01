@@ -7,15 +7,22 @@ import { QuestionMarkCircleIcon } from "@heroicons/react/outline";
 import './style.css';
 
 export default function AccountHeader() {
-  const [show] = useState(false)
+  const [show] = useState(false);
   const [showTitle, setShowTitle] = useState(false);
-
   const [scroll, setScroll] = useState(false);
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      setScroll(window.scrollY > 2);
-    });
-  }, []);
+
+  const URL = document.URL.replace(/\/+$/, "");
+  const test1 = URL.endsWith("personalinfo");
+  const test2 = URL.endsWith("myaccount");
+  const test3 = URL.endsWith("data-and-personalization");
+
+    useEffect(() => {
+      if (test1 || test2 || test3  === true ) {
+        window.addEventListener("scroll", () => {
+          setScroll(window.scrollY > 2);
+        })
+      };
+    }, [test1, test2, test3]);
 
   return (
     <header className={ scroll ? "header-flex sticky" : "header-flex" }>

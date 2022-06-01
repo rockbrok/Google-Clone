@@ -1,0 +1,97 @@
+.navbar-form-wrap {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  width: auto;
+  min-height: 48px;
+  border-bottom: 1px solid lightgray;
+  background-color: white;
+  margin-left: -16px;
+  z-index: 10;
+}
+
+.nav-contain-blue {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: auto;
+  top: 60px;
+  background-color: white;
+  justify-content: flex-start;
+}
+
+.blue-form-flex {
+  display: flex;
+  margin-top: 116px;
+  padding-top: 20px;
+  width: max-content;
+  justify-self: center;
+}
+
+.account-page-con {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.form-bord-bot {
+  position: fixed;
+  top: 116px;
+  height: 1px;
+  width: 100%;
+  background-color: lightgray;
+  z-index: 1;
+}
+
+.account-form-flex {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  content: "";
+  width: 280px;
+}
+
+.account-page-row-blue {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 96px);
+  background-color: white;
+  padding: 0 48px;
+  justify-self: center;
+  justify-content: center;
+  width: max-content;
+  margin: 0 auto;
+}
+
+.account-flex-form {
+  display: block;
+  margin: 0 auto 24px 0;
+  width: 610px;
+  border: 1px solid rgb(218, 220, 224);
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.users-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.users-note {
+  width: 360px;
+}
+
+.form-button-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: auto;
+}
+
+.users-icon {
+  height: 20px;
+  width: 20px;
+  color: gray;
+  margin: 0;
+  padding: 0 16px 16px 0;
+}

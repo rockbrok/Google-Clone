@@ -16,7 +16,7 @@
   flex-direction: row;
   align-items: center;
   height: 48px;
-  width: 870px;
+  width: auto;
   margin: 0 auto;
   padding: 4px 0;
   background-color: white;
@@ -112,15 +112,6 @@
   cursor: pointer;
   color: rgb(26, 115, 232);
   text-decoration-color: rgb(26, 115, 232);
-}
-
-.account-flex-form {
-  display: block;
-  margin: 0 auto 24px 0;
-  width: 504px;
-  border: 1px solid rgb(218, 220, 224);
-  border-radius: 8px;
-  padding: 24px;
 }
 
 .account-page-wrap {
