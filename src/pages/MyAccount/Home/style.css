@@ -89,13 +89,14 @@
   width: 100%;
   justify-content: space-between;
   height: max-content;
+  padding-bottom: 16px;
 }
 
 .welcome-top-card-info {
   display: flex;
   flex-direction: column;
   width: 246px;
-  height: 124px;
+  height: auto;
 }
 
 .personalize-img,
@@ -136,6 +137,15 @@
   .welcome-card-head {
     width: auto;
   }
+  .welcome-top-card-info {
+    height: 100px;
+  }
+}
+
+@media (min-width: 1220px) {
+  .welcome-top-card-info {
+    height: 146px;
+  }
 }
 
 @media (max-width: 912px) {
@@ -148,6 +158,12 @@
   .welcome-card-bottom,
   .welcome-top-card-info {
     width: auto;
+  }
+}
+
+@media (min-width: 912px) {
+  .welcome-top-card-info {
+    height: 140px;
   }
 }
 
@@ -185,7 +201,7 @@
     flex-grow: 1;
   }
   .welcome-card-top {
-    height: 180px;
+    height: min-content;
   }
 }
 
@@ -199,5 +215,11 @@
     width: 386px;
     display: flex;
     flex: 1 1 auto;
+  }
+  .welcome-card-top {
+    height: min-content;
+  }
+  .welcome-top-card-info {
+    height: 140px;
   }
 }

@@ -29,7 +29,7 @@
 }
 
 .info-title-width {
-  width: 400px;
+  width: stretch;
 }
 
 .data-title {
@@ -46,4 +46,41 @@
   font-size: 14px;
   letter-spacing: 0.2px;
   line-height: 20px;
+  margin-left: 0;
+}
+
+
+
+.data-subheading {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .wrap-column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .wrap-row-space {
+    width: 60px;
+  }
+}
+
+@media(min-width: 700px) {
+  .wrap-column {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+}
+
+@media(min-width: 800px) {
+
+  .wrap-row-space {
+    min-width: 80px;
+  }
 }

@@ -1,7 +1,7 @@
 import AccountHeader from "../Header";
 import AccountSideBar from "../../../components/AccountSideBar";
 import AccountNavBar from "../../../components/AccountNavBar";
-import { ChevronRightIcon } from "@heroicons/react/solid";
+import { Arrow } from "../Home";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { t } from 'i18next';
@@ -37,16 +37,13 @@ export default function PersonalInfo() {
                   lastName={lastName}
                   dateOfBirth={dateOfBirth}
                   gender={gender}
-                  ChevronRightIcon={ChevronRightIcon}
                 />
                 <ContactInfo 
                   email={email}
-                  ChevronRightIcon={ChevronRightIcon}
                 />
                 <Card2 />
                 <PasswordInfo
                   password={password}
-                  ChevronRightIcon={ChevronRightIcon}
                 />
             </section>
             <div className="red-wrap" />
@@ -77,11 +74,11 @@ const Card = () => (
   </div>
 )
 
-const BasicInfo = ({ firstName, lastName, dateOfBirth, gender, ChevronRightIcon }) => (
+const BasicInfo = ({ firstName, lastName, dateOfBirth, gender }) => (
   <div className="info-card">
     <div className="h3">Basic information</div>
     <div className="h3-note">Some information may be visible to other people using Google services.&nbsp;
-      <a className="learn-more no-deco">More information</a>
+      <a href="https://support.google.com/accounts/answer/6304920" target="_blank" rel="noreferrer" className="learn-more no-deco">More information</a>
     </div>
     <button className="info-button">
       <Link to="/myaccount/name/" className="no-deco">
@@ -93,9 +90,7 @@ const BasicInfo = ({ firstName, lastName, dateOfBirth, gender, ChevronRightIcon 
           <div className="info-value">
             {firstName}&nbsp;{lastName}
           </div>
-          <div className="info-arrow">
-            <ChevronRightIcon className="chevron-arrow"/>
-          </div>
+          <Arrow />
         </div>
       </Link>
     </button>
@@ -109,9 +104,7 @@ const BasicInfo = ({ firstName, lastName, dateOfBirth, gender, ChevronRightIcon 
           <div className="info-value">
             {dateOfBirth}
           </div>
-          <div className="info-arrow">
-            <ChevronRightIcon className="chevron-arrow"/>
-          </div>
+          <Arrow />
         </div>
       </Link>
     </button>
@@ -125,16 +118,14 @@ const BasicInfo = ({ firstName, lastName, dateOfBirth, gender, ChevronRightIcon 
           <div className="info-value capitalize">
             {gender}
           </div>
-          <div className="info-arrow">
-            <ChevronRightIcon className="chevron-arrow"/>
-          </div>
+          <Arrow />
         </div>
       </Link>
     </button>
   </div>
 )
 
-const ContactInfo = ({ email, ChevronRightIcon }) => (
+const ContactInfo = ({ email }) => (
   <div className="info-card">
     <div className="h3">Contact information</div>
     <div className="h3-note" />
@@ -148,9 +139,7 @@ const ContactInfo = ({ email, ChevronRightIcon }) => (
           <div className="info-value undercase">
             {email}
           </div>
-          <div className="info-arrow">
-            <ChevronRightIcon className="chevron-arrow"/>
-          </div>
+          <Arrow />
         </div>
       </Link>
     </button>
@@ -183,9 +172,7 @@ const PasswordInfo = ({ password }) => (
           <div className="info-value password">
             {password}
           </div>
-          <div className="info-arrow">
-            <ChevronRightIcon className="chevron-arrow"/>
-          </div>
+          <Arrow />
         </div>
       </Link>
     </button>

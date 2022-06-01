@@ -4,6 +4,7 @@ import AccountNavBar from '../../../components/AccountNavBar';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { t } from 'i18next';
+import { ChevronRightIcon } from '@heroicons/react/solid';
 import { ArrowLeftIcon } from '@heroicons/react/solid';
 
 import './style.css';
@@ -118,4 +119,10 @@ export const BackArrow = () => (
       <ArrowLeftIcon className="back-arrow-icon"/>
     </div>
   </Link>
+)
+
+export const Arrow = () => (
+  <div className="info-arrow">
+    <ChevronRightIcon className="chevron-arrow"/>
+  </div>
 )

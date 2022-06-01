@@ -2,7 +2,7 @@ import AccountHeader from "../Header";
 import AccountSideBar from "../../../components/AccountSideBar";
 import AccountNavBar from "../../../components/AccountNavBar";
 import { TrashIcon } from "@heroicons/react/outline";
-import { ChevronRightIcon } from "@heroicons/react/solid";
+import { Arrow } from "../Home";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { t } from "i18next";
@@ -23,10 +23,10 @@ export default function DataPrivacy() {
           <section className="account-flex">
             <div className="blue-wrap">
               <section className="account-main-wrap">
+                <Heading />
                 <Card />
                 <DeleteAccount 
                   TrashIcon={TrashIcon}
-                  ChevronRightIcon={ChevronRightIcon}
                 />
               </section>
               <div className="red-wrap" />
@@ -38,10 +38,17 @@ export default function DataPrivacy() {
   )
 }
 
+const Heading = () => (
+  <>
+    <div className="account-page-head align-center">Data and privacy</div>
+    <div className="account-page-subhead data-subheading">In the key privacy options, you can choose what data is saved in your account, the ads you see, the information you share with others and much more.</div>
+  </>
+)
+
 const Card = () => (
-  <div className="personal-card-1 data-no-marg">
+  <div className="personal-card-1">
     <div>
-      <div className="account-page-head">More options</div>
+      <div className="account-page-head">Options</div>
       <div className="account-page-subhead">Other options to manage your data, such as choosing what happens to it if your account becomes inactive or is deleted.</div>
     </div>
     <div className="personal-scene-img-contain">
@@ -50,21 +57,22 @@ const Card = () => (
   </div>
 )
 
-const DeleteAccount = ({ TrashIcon, ChevronRightIcon }) => (
-  <div className="info-card info-card-no-pad">
+const DeleteAccount = ({ TrashIcon }) => (
+  <div className="info-card info-card-no-pad account-bottom-marg">
     <button className="info-button">
     <Link to="/myaccount/deleteaccount/" className="no-deco">
         <div className="info-wrap info-wrap-bot-top">
-          <div className="info-title info-title-width data-title">
-            <TrashIcon className="trash-icon"/>
-            Delete your Google Account
+          <TrashIcon className="trash-icon"/>
+          <div className="wrap-column">
+            <div className="info-title info-title-width data-title">
+              Delete your Google Account
+            </div>
+            <div className="info-value data-value">
+              Delete your account and all data
+            </div>
           </div>
-          <div className="info-value data-value">
-            Delete your account and all data
-          </div>
-          <div className="info-arrow">
-            <ChevronRightIcon className="chevron-arrow"/>
-          </div>
+          <div className="wrap-row-space" />
+          <Arrow />
         </div>
       </Link>
     </button>
