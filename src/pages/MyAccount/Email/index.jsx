@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
-import { SubHeading } from "../Home";
+import { BackArrow } from "../Home";
 import { Helmet } from "react-helmet";
 import AccountFooter from "../../../components/AccountFooter";
 import AccountHeader from "../Header";
@@ -133,3 +133,14 @@ export default function Email() {
     </>
   )
 }
+
+const SubHeading = () => (
+  <div className="nav-contain-blue nav-contain-no-bord">
+    <div className="navbar-form-wrap">
+      <div className="account-subhead">
+        <BackArrow />
+        <div className="account-subhead-text">Email</div>
+      </div>
+    </div>
+  </div>
+)

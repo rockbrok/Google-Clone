@@ -2,7 +2,7 @@ import AccountHeader from "../Header";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import { SubHeading } from "../Home";
+import { BackArrow } from "../Home";
 import { useState, useContext } from 'react';
 import { UserContext } from "../../../usercontext";
 import { Helmet } from "react-helmet";
@@ -108,6 +108,17 @@ export default function Password() {
   )
 }
 
+const SubHeading = () => (
+  <div className="nav-contain-blue nav-contain-no-bord">
+    <div className="navbar-form-wrap">
+      <div className="account-subhead">
+        <BackArrow />
+        <div className="account-subhead-text">Password</div>
+      </div>
+    </div>
+  </div>
+)
+
 const SubHeadNote = () => (
   <div className="top-note subhead-note font-16">
     Choose a strong password and don't reuse it for other accounts.&nbsp;
@@ -184,7 +195,7 @@ const PasswordConfirmInput = ({ register, emptyStringRegex, watch, validPassword
 
 const Note = () => (
   <div className="top-note">
-    Use at least 8 characters. Don't use a password from another site, or something too obvious like your pet's name. 
+    Use at least 8 characters. Don't use a password from another site, or something too obvious like your pet's name.&nbsp;
     <a href="https://support.google.com/accounts/answer/6304920" target="_blank" rel="noreferrer" className="learn-more">Why?</a>
   </div>
 )
