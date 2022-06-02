@@ -13,8 +13,13 @@ export default function DeleteAccount() {
   const obj = JSON.parse(localStorage.getItem('user'));
   const email = obj[0].email;
   const URL = "http://localhost:5000/users?email=" + email;
+  const deleteCheck = true;
 
-  const {register, handleSubmit, formState: { errors }} = useForm({
+  const [value, setValue] = useState({
+    deleteCheck: deleteCheck,
+  })
+
+  const {register, handleSubmit } = useForm({
     mode: 'onSubmit',
     reValidateMode: 'onChange',
     delayError: 1000,
@@ -42,6 +47,13 @@ export default function DeleteAccount() {
       setUser(user);
   }
 
+  const handleChange = (e) => {
+    setValue({
+      ...value,
+      [e.target.name]: e.target.value
+    });
+  }
+
   return (
     <>
       <Helmet>
@@ -57,8 +69,14 @@ export default function DeleteAccount() {
             <form onSubmit={handleSubmit(onSubmit)} noValidate>
               <DeleteInput 
                 register={register}
+                handleChange={handleChange}
+                value={value}
               />
-              <Buttons/>
+              <Buttons
+                value={value}
+                handleChange={handleChange}
+                deleteCheck={deleteCheck}
+              />
             </form>
           </section>
         </section>
@@ -85,26 +103,32 @@ const SubHeadNote = () => (
   </div>
 )
 
-const DeleteInput = ({ register }) => (
+const DeleteInput = ({ register, handleChange, value }) => (
   <div className="input-container">
-  <input 
-    {...register("deleteAccount", {
-      required: true,
-    })}
-    name="deleteAccount"
-    type="checkbox"
-  />
-  Yes, I want to permanently delete this Google Account and all its data.
-</div>
+    <label className="pass-container">
+      <input 
+        {...register("deleteAccount", {
+          required: true,
+        })}
+        name="deleteAccount"
+        type="checkbox"
+        className="password-checkbox"
+        onChange={handleChange}
+        value={value.deleteCheck}
+      />
+      <div className="checkmark"/>
+      Yes, I want to permanently delete this Google Account and all its data.
+    </label>
+  </div>
 )
 
-const Buttons = ({ }) => (
+const Buttons = ({ value, deleteCheck }) => (
   <div className="form-button-row">
     <button className="cancel">
       <Link to="/myaccount/data-and-personalization/" className="cancel-link no-deco">
         Cancel
       </Link>
     </button>
-    <button type="submit" className="next" disabled>DELETE ACCOUNT</button>
+    <button type="submit" className="next" disabled={deleteCheck !== value.deleteCheck}>DELETE ACCOUNT</button>
   </div>
 )
