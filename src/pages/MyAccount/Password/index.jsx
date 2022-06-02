@@ -1,5 +1,7 @@
 import AccountHeader from "../Header";
 import axios from "axios";
+import { t } from 'i18next';
+import { ErrorLogo } from "../../SignUp/Email";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { BackArrow } from "../Home";
@@ -16,12 +18,14 @@ export default function Password() {
   const URL = "http://localhost:5000/users?email=" + email;
 
   const [value, setValue] = useState({
-    password: password
+    password: '',
+    passwordConfirm: ''
   })
 
   const {register, handleSubmit, watch, formState: { errors }} = useForm({
     defaultValues: {
-      password: value.password
+      password: '',
+      passwordConfirm: ''
     },
     mode: 'onSubmit',
     reValidateMode: 'onChange',
@@ -96,9 +100,13 @@ export default function Password() {
                 watch={watch}
                 validPasswordRegex={validPasswordRegex}
               />
+              <PasswordErrors
+                errors={errors}
+              />
               <Note />
               <Buttons 
                 value={value}
+                password={password}
               />
             </form>
           </section>
@@ -193,6 +201,45 @@ const PasswordConfirmInput = ({ register, emptyStringRegex, watch, validPassword
   </div>
 )
 
+const PasswordErrors = ({ errors }) => {
+  if ((errors.password?.type === "required") || 
+    (errors.password?.type === "required" && 
+    errors.passwordConfirm?.type === "required")) {
+    return (
+      <div className="invalid">
+        <ErrorLogo/>
+        <p className="invalidtext">{t("sign-up.password-errors.enter_password")}</p>
+      </div>
+    )
+  } else if (errors.password?.type !== "validPassword" &&
+    errors.password?.type !== "minLength" &&
+    errors.passwordConfirm?.type === "required") {
+    return (
+      <div className="invalid">
+        <ErrorLogo/>
+        <p className="invalidtext">{t("sign-up.password-errors.confirm_password")}</p>
+      </div>
+    )
+  } else if (errors.password?.type !== "validPassword" &&
+    errors.passwordConfirm?.type !== "required" && (
+    errors.passwordConfirm?.type === "passwordConfirm" ||
+    errors.passwordConfirm?.type === "minLength")) {
+    return (
+      <div className="invalid">
+        <ErrorLogo/>
+        <p className="invalidtext">{t("sign-up.password-errors.no_match")}</p>
+      </div>
+    )
+  } else if (errors.password?.type === "minLength") {
+    return (
+      <div className="invalid">
+        <ErrorLogo/>
+        <p className="invalidtext">{t("sign-up.password-errors.8_characters")}</p>
+      </div>
+    )
+  }
+}
+
 const Note = () => (
   <div className="top-note">
     Use at least 8 characters. Don't use a password from another site, or something too obvious like your pet's name.&nbsp;
@@ -200,13 +247,13 @@ const Note = () => (
   </div>
 )
 
-const Buttons = ({ value }) => (
+const Buttons = ({ value, password }) => (
   <div className="form-button-row">
     <button className="cancel">
       <Link to="/myaccount/personalinfo/" className="cancel-link no-deco">
         Cancel
       </Link>
     </button>
-    <button type="submit" className="next" disabled>Save</button>
+    <button type="submit" className="next" disabled={ password === value.password }>Save</button>
   </div>
 )

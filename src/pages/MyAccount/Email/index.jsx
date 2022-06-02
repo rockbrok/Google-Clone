@@ -1,5 +1,7 @@
 import AccountHeader from "../Header";
 import axios from "axios";
+import { t } from 'i18next';
+import { ErrorLogo } from "../../SignUp/Email";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useState, useContext } from 'react';
@@ -98,6 +100,9 @@ export default function Email() {
                 noAtRegex={noAtRegex}
                 emptyStringRegex={emptyStringRegex}
               />
+              <EmailErrors
+                errors={errors}
+              />
               <Buttons 
                 email={email}
                 value={value}
@@ -149,15 +154,16 @@ const EmailInput = ({ register, value, errors, handleChange, noUsernameRegex, no
     type="email"
     value={value.email}
     onChange={handleChange}
-    className={errors.email?.type !== "validEmail" && (
-      errors.email?.type !== "noUsername" ||
-      errors.email?.type !== "noUsernameDot" ||
-      errors.email?.type !== "onlyCharacters" ||
-      errors.email?.type !== "noDomain" ||
-      errors.email?.type !== "required" ||
-      errors.email?.type !== "noAt" ||
-      errors.email?.type !== "emptyString" ||
-      errors.email?.type !== "noAtWithTopDomain")
+    className={(errors.email?.type === "validEmail" || 
+    errors.email?.type === "noUsername" ||
+    errors.email?.type === "noUsernameDot" ||
+    errors.email?.type === "onlyCharacters" ||
+    errors.email?.type === "noDomain" ||
+    errors.email?.type === "required" ||
+    errors.email?.type === "noAt" ||
+    errors.email?.type === "emptyString" ||
+    errors.email?.type === "noAtWithTopDomain" ||
+    errors.email?.type === "checkEmail")
       ? "change-form-input-error" : "change-form-input"
     }
     aria-invalid={errors.email ? "true" : "false"}
@@ -167,6 +173,55 @@ const EmailInput = ({ register, value, errors, handleChange, noUsernameRegex, no
   </div>
 </div>
 )
+
+const EmailErrors = ({ errors }) => {
+  if (errors.email?.type === "required" ||
+    errors.email?.type === "emptyString") {
+    return (
+      <div className="invalid">
+        <ErrorLogo/>
+        <p className="invalidtext">{t("sign-up.email-errors.enter_email")}</p>
+      </div>
+    )
+  } else if (errors.email?.type === "noUsername" || 
+    errors.email?.type === "noUsernameDot") {
+    return (
+      <div className="invalid">
+        <ErrorLogo/>
+        <p className="invalidtext">{t("sign-up.email-errors.enter_username")}</p>
+      </div>
+    )
+  } else if (errors.email?.type === "onlyCharacters" ||
+    errors.email?.type === "noAt" ||
+    errors.email?.type === "noAtWithTopDomain") {
+    return (
+      <div className="invalid">
+        <ErrorLogo/>
+        <p className="invalidtext">{t("sign-up.email-errors.enter_at")}</p>
+      </div>
+    )
+  } else if (errors.email?.type === "checkEmail") {
+    return (
+      <div className="invalid">
+      <ErrorLogo/>
+      <p className="invalidtext">{t("sign-up.email-errors.email_exists")}</p>
+    </div>
+    )
+  } else if (errors.email?.type === "validEmail" && ( 
+    errors.email?.type !== "noUsername" ||
+    errors.email?.type !== "noUsernameDot" ||
+    errors.email?.type !== "onlyCharacters" ||
+    errors.email?.type !== "noDomain" ||
+    errors.email?.type !== "noAt" ||
+    errors.email?.type !== "noAtWithTopDomain")) {
+    return (
+      <div className="invalid">
+        <ErrorLogo/>
+        <p className="invalidtext">{t("sign-up.email-errors.not_valid")}</p>
+      </div>
+    )
+  }
+}
 
 const Buttons = ({ email, value }) => (
   <div className="form-button-row">

@@ -1,5 +1,7 @@
 import AccountHeader from "../Header";
 import axios from "axios";
+import { t } from 'i18next';
+import { ErrorLogo } from "../../SignUp/Email";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { BackArrow } from "../Home";
@@ -90,6 +92,9 @@ export default function Name() {
                 value={value}
                 handleChange={handleChange}
                 register={register}
+                errors={errors}
+              />
+              <NameErrors
                 errors={errors}
               />
               <Note />
@@ -189,6 +194,44 @@ const LastName = ({ register, handleChange, value, errors }) => (
     </div>
   </div>
 )
+
+const NameErrors = ({ errors }) => {
+  if ((errors.firstName?.type === "required" && errors.lastName?.type === "required") || 
+      (errors.firstName?.type === "validate" && errors.lastName?.type === "validate")) {
+    return (
+      <div className="invalid">
+        <ErrorLogo/>
+        <p className="invalidtext">{t("sign-up.name-errors.enter_first_last")}</p>
+      </div>
+    )
+  } else if (errors.firstName?.type === "pattern" || 
+    errors.lastName?.type === "pattern" ||
+    errors.firstName?.type === "maxLength" || 
+    errors.lastName?.type === "maxLength" || 
+    errors.firstName?.type === "minLength" || 
+    errors.lastName?.type === "minLength") {
+    return (
+      <div className="invalid">
+        <ErrorLogo/>
+        <p className="invalidtext">{t("sign-up.name-errors.enter_correct")}</p>
+      </div>
+    )
+  } else if (errors.firstName && !errors.lastName) {
+    return (
+      <div className="invalid">
+        <ErrorLogo/>
+        <p className="invalidtext">{t("sign-up.name-errors.enter_first")}</p>
+      </div>
+    )
+  } else if (!errors.firstName && errors.lastName) {
+    return (
+      <div className="invalid">
+        <ErrorLogo/>
+        <p className="invalidtext">{t("sign-up.name-errors.enter_last")}</p>
+      </div>
+    )
+  }
+}
 
 const Note = () => (
   <>
