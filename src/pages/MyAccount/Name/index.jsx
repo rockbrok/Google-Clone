@@ -72,38 +72,34 @@ export default function Name() {
       <Helmet>
         <title>Name</title>
       </Helmet>
-        <AccountHeader />
-        <div className="form-bord-bot" />
-        <section className="account-page-row-blue">
-          <SubHeading />
-          <section className="blue-form-flex">
-            <section className="account-flex-form">
-              <TopNote />
-              <form onSubmit={handleSubmit(onSubmit)} noValidate>
-                <FirstName
-                  value={value}
-                  firstName={firstName}
-                  handleChange={handleChange}
-                  register={register}
-                  errors={errors}
-                />
-                <LastName
-                  value={value}
-                  lastName={lastName}
-                  handleChange={handleChange}
-                  register={register}
-                  errors={errors}
-                />
-                <Note />
-                <Buttons 
-                  firstName={firstName}
-                  lastName={lastName}
-                  value={value}
-                />
-              </form>
-            </section>
-          </section>
+      <AccountHeader />
+      <div className="form-bord-bot" />
+      <section className="account-page-row-blue">
+        <SubHeading />
+        <section className="account-flex-form">
+          <TopNote />
+          <form onSubmit={handleSubmit(onSubmit)} noValidate>
+            <FirstName
+              value={value}
+              handleChange={handleChange}
+              register={register}
+              errors={errors}
+            />
+            <LastName
+              value={value}
+              handleChange={handleChange}
+              register={register}
+              errors={errors}
+            />
+            <Note />
+            <Buttons 
+              firstName={firstName}
+              lastName={lastName}
+              value={value}
+            />
+          </form>
         </section>
+       </section>
     </>
   )
 }
@@ -126,7 +122,7 @@ const TopNote = () => (
   </div>
 )
 
-const FirstName = ({ register, firstName, handleChange, value, errors }) => (
+const FirstName = ({ register, handleChange, value, errors }) => (
   <div className="input-container">
     <input 
       {...register("firstName", {
@@ -149,17 +145,17 @@ const FirstName = ({ register, firstName, handleChange, value, errors }) => (
         errors.firstName?.type === "maxLength" ||
         errors.firstName?.type === "validate" ||
         errors.firstName?.type === "required")
-        ? "signup-input-error" : "signup-input"
+        ? "change-form-input-error" : "change-form-input"
       }
       aria-invalid={errors.firstName ? "true" : "false"}
     />
-    <span className="signup-input-placeholder">
+    <div className="change-form-placeholder">
       First Name
-    </span>
+    </div>
   </div>
 )
 
-const LastName = ({ register, lastName, handleChange, value, errors }) => (
+const LastName = ({ register, handleChange, value, errors }) => (
   <div className="input-container">
     <input 
       {...register("lastName", {
@@ -182,13 +178,13 @@ const LastName = ({ register, lastName, handleChange, value, errors }) => (
         errors.lastName?.type === "maxLength" ||
         errors.lastName?.type === "validate" ||
         errors.lastName?.type === "required")
-        ? "signup-input-error" : "signup-input"
+        ? "change-form-input-error" : "change-form-input"
       }
       aria-invalid={errors.lastName ? "true" : "false"}
     />
-    <span className="signup-input-placeholder">
+    <div className="change-form-placeholder">
       Last Name
-    </span>
+    </div>
   </div>
 )
 
