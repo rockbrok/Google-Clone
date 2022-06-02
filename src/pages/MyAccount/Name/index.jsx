@@ -76,28 +76,30 @@ export default function Name() {
       <div className="form-bord-bot" />
       <section className="account-page-row-blue">
         <SubHeading />
-        <section className="account-flex-form">
-          <TopNote />
-          <form onSubmit={handleSubmit(onSubmit)} noValidate>
-            <FirstName
-              value={value}
-              handleChange={handleChange}
-              register={register}
-              errors={errors}
-            />
-            <LastName
-              value={value}
-              handleChange={handleChange}
-              register={register}
-              errors={errors}
-            />
-            <Note />
-            <Buttons 
-              firstName={firstName}
-              lastName={lastName}
-              value={value}
-            />
-          </form>
+        <section className="account-flex-form-wrap">
+          <section className="account-flex-form">
+            <TopNote />
+            <form onSubmit={handleSubmit(onSubmit)} noValidate>
+              <FirstName
+                value={value}
+                handleChange={handleChange}
+                register={register}
+                errors={errors}
+              />
+              <LastName
+                value={value}
+                handleChange={handleChange}
+                register={register}
+                errors={errors}
+              />
+              <Note />
+              <Buttons 
+                firstName={firstName}
+                lastName={lastName}
+                value={value}
+              />
+            </form>
+          </section>
         </section>
        </section>
     </>

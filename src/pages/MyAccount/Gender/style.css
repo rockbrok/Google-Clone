@@ -1,0 +1,23 @@
+.subhead-note {
+  width: 610px;
+  margin: 8px 0 30px 0;
+}
+
+.font-16 {
+  font-size: 16px;
+}
+
+.font-12 {
+  font-size: 12px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+@media (max-width: 690px) {
+  .subhead-note {
+    width: calc(100% - 48px);
+    padding: 24px;
+  }
+}
