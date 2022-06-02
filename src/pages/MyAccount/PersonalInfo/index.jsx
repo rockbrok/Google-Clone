@@ -14,7 +14,9 @@ export default function PersonalInfo() {
   const firstName = obj[0].firstName;
   const lastName = obj[0].lastName;
   const gender = obj[0].gender;
-  const dateOfBirth = obj[0].dateOfBirth;
+  const month = obj[0].month;
+  const day = obj[0].day;
+  const year = obj[0].year;
   const password = obj[0].password;
 
   return (
@@ -35,7 +37,9 @@ export default function PersonalInfo() {
                 <BasicInfo 
                   firstName={firstName}
                   lastName={lastName}
-                  dateOfBirth={dateOfBirth}
+                  month={month}
+                  day={day}
+                  year={year}
                   gender={gender}
                 />
                 <ContactInfo 
@@ -74,7 +78,7 @@ const Card = () => (
   </div>
 )
 
-const BasicInfo = ({ firstName, lastName, dateOfBirth, gender }) => (
+const BasicInfo = ({ firstName, lastName, month, day, year, gender }) => (
   <div className="info-card">
     <div className="h3">Basic information</div>
     <div className="h3-note">Some information may be visible to other people using Google services.&nbsp;
@@ -102,7 +106,7 @@ const BasicInfo = ({ firstName, lastName, dateOfBirth, gender }) => (
             {t("my-account.personal-info.personal-birthday.birthday")}
           </div>
           <div className="info-value">
-            {dateOfBirth}
+            {month}&nbsp;{day},&nbsp;{year}
           </div>
           <Arrow />
         </div>

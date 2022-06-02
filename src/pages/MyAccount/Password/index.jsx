@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Helmet } from "react-helmet";
 import AccountHeader from "../Header";
 import AccountFooter from "../../../components/AccountFooter";
-import { BackArrow } from "../Home";
+import { SubHeading } from "../Home";
 
 export default function Password() {
   const {register, handleSubmit, watch, formState: { errors }} = useForm({
@@ -138,15 +138,3 @@ export default function Password() {
     </>
   )
 }
-
-const SubHeading = () => (
-  <>
-    <div className="account-subhead-wrap">
-      <div className="account-subhead">
-        <BackArrow />
-        <div className="account-subhead-text">Password</div>
-      </div>
-    </div>
-    <div className="account-subhead-divider" />
-  </>
-)

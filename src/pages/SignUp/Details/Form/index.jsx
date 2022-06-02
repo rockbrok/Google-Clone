@@ -25,7 +25,9 @@ export default function Form({ value, setValue, register, handleSubmit, errors, 
           email: value.email,
           password: value.password,
           gender: value.gender,
-          dateOfBirth: value.month + '/' + value.day + '/' + value.year,
+          month: value.month,
+          day: value.day,
+          year: value.year
         },
         headers: { "Content-Type": "application/json"},
       });
@@ -101,18 +103,18 @@ const Month = ({ register, value, handleChange, errors }) => (
       value={value.month}
     >
       <option value="" defaultValue disabled hidden />
-      <option value="01">{t("months.1")}</option>
-      <option value="02">{t("months.2")}</option>
-      <option value="03">{t("months.3")}</option>
-      <option value="04">{t("months.4")}</option>
-      <option value="05">{t("months.5")}</option>
-      <option value="06">{t("months.6")}</option>
-      <option value="07">{t("months.7")}</option>
-      <option value="08">{t("months.8")}</option>
-      <option value="09">{t("months.9")}</option>
-      <option value="10">{t("months.10")}</option>
-      <option value="11">{t("months.11")}</option>
-      <option value="12">{t("months.12")}</option>
+      <option value={t("months.1")}>{t("months.1")}</option>
+      <option value={t("months.2")}>{t("months.2")}</option>
+      <option value={t("months.3")}>{t("months.3")}</option>
+      <option value={t("months.4")}>{t("months.4")}</option>
+      <option value={t("months.5")}>{t("months.5")}</option>
+      <option value={t("months.6")}>{t("months.6")}</option>
+      <option value={t("months.7")}>{t("months.7")}</option>
+      <option value={t("months.8")}>{t("months.8")}</option>
+      <option value={t("months.9")}>{t("months.9")}</option>
+      <option value={t("months.10")}>{t("months.10")}</option>
+      <option value={t("months.11")}>{t("months.11")}</option>
+      <option value={t("months.12")}>{t("months.12")}</option>
     </select>
     <div className="signup-input-placeholder-detail">
       {t("month")}
@@ -189,9 +191,9 @@ const Gender = ({ register, value, handleChange, errors }) => (
       value={value.gender}
     >
       <option value=""defaultValue disabled hidden/>
-      <option value="male">{t("genders.male")}</option>
-      <option value="female">{t("genders.female")}</option>
-      <option value="other">{t("genders.other")}</option>
+      <option value="Male">{t("genders.male")}</option>
+      <option value="Female">{t("genders.female")}</option>
+      <option value="Other">{t("genders.other")}</option>
     </select>
     <div className="signup-input-placeholder-detail">
       {t("gender")}

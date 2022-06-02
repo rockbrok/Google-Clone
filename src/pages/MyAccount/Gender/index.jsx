@@ -2,10 +2,11 @@ import AccountHeader from "../Header";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import { BackArrow } from "../Home";
+
 import { useState, useContext } from 'react';
 import { UserContext } from "../../../usercontext";
 import { Helmet } from "react-helmet";
+import { SubHeading } from "../Home";
 
 import './style.css';
 
@@ -23,7 +24,7 @@ export default function Gender() {
 
   const {register, handleSubmit, formState: { errors }} = useForm({
     defaultValues: {
-      gender: '',
+      gender: value.gender,
     },
     mode: 'onSubmit',
     reValidateMode: 'onChange',
@@ -41,8 +42,7 @@ export default function Gender() {
         method: "put",
         url: URL,
         data: {
-          firstName: value.firstName,
-          lastName: value.lastName,  
+          gender: value.gender
         },
         headers: { "Content-Type": "application/json"},
       });
@@ -66,7 +66,7 @@ export default function Gender() {
   return (
     <>
       <Helmet>
-        <title>Birthday</title>
+        <title>Gender</title>
       </Helmet>
       <AccountHeader />
       <div className="form-bord-bot" />
@@ -92,17 +92,6 @@ export default function Gender() {
     </>
   )
 }
-
-const SubHeading = () => (
-  <div className="nav-contain-blue nav-contain-no-bord">
-    <div className="navbar-form-wrap">
-      <div className="account-subhead">
-        <BackArrow />
-        <div className="account-subhead-text">Gender</div>
-      </div>
-    </div>
-  </div>
-)
 
 const SubHeadNote = () => (
   <div className="top-note subhead-note font-16">

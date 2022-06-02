@@ -6,7 +6,9 @@
       "email": "ksmith@yahoo.com",
       "password": "asdfasdfasdf",
       "gender": "male",
-      "dateOfBirth": "06/18/2002",
+      "month": "June",
+      "day": "18",
+      "year": "2002",
       "id": 1
     },
     {
@@ -35,6 +37,17 @@
       "gender": "male",
       "dateOfBirth": "04/3/1901",
       "id": 4
+    },
+    {
+      "firstName": "asdf",
+      "lastName": "asdf",
+      "email": "asda@asdf.com",
+      "password": "asdfasdfasdf",
+      "gender": "Female",
+      "month": "January",
+      "day": "2",
+      "year": "1990",
+      "id": 5
     }
   ]
 }

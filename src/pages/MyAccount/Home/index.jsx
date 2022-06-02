@@ -113,16 +113,29 @@ const PersonalInfo = () => (
   </Link>
 )
 
-export const BackArrow = () => (
-  <Link to="/myaccount/personalinfo/">
-    <div className="back-arrow">
-      <ArrowLeftIcon className="back-arrow-icon"/>
-    </div>
-  </Link>
-)
-
 export const Arrow = () => (
   <div className="info-arrow">
     <ChevronRightIcon className="chevron-arrow"/>
   </div>
 )
+
+export const SubHeading = () => {
+  const URL = document.URL.replace(/\/+$/, "");
+  const URLName = URL.replace("http://localhost:3000/myaccount/", "");
+  const HeadTitle = URLName.charAt(0).toUpperCase() + URLName.slice(1);
+
+  return (
+    <div className="nav-contain-blue nav-contain-no-bord">
+      <div className="navbar-form-wrap">
+        <div className="account-subhead">
+          <Link to="/myaccount/personalinfo/">
+            <div className="back-arrow">
+              <ArrowLeftIcon className="back-arrow-icon"/>
+            </div>
+          </Link>
+          <div className="account-subhead-text">{HeadTitle}</div>
+        </div>
+      </div>
+    </div>
+  )
+}

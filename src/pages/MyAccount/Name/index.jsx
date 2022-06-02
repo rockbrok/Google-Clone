@@ -2,7 +2,7 @@ import AccountHeader from "../Header";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import { BackArrow } from "../Home";
+import { SubHeading } from "../Home";
 import { useState, useContext } from 'react';
 import { UserContext } from "../../../usercontext";
 import { Helmet } from "react-helmet";
@@ -105,17 +105,6 @@ export default function Name() {
     </>
   )
 }
-
-const SubHeading = () => (
-  <div className="nav-contain-blue nav-contain-no-bord">
-    <div className="navbar-form-wrap">
-      <div className="account-subhead">
-        <BackArrow />
-        <div className="account-subhead-text">Name</div>
-      </div>
-    </div>
-  </div>
-)
 
 const TopNote = () => (
   <div className="top-note">
