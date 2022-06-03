@@ -68,6 +68,19 @@ export default function Password() {
         },
         headers: { "Content-Type": "application/json"},
       });
+      var userObject = []
+      userObject[0] = { 
+        'firstName': value.firstName, 
+        'lastName': value.lastName, 
+        'email': value.email, 
+        'gender': value.gender, 
+        'month': value.month, 
+        'day': value.day, 
+        'year': value.year, 
+        'password': value.password, 
+        'id': id 
+      }
+      localStorage.setItem("user", JSON.stringify(userObject));
       setTimeout(function () {
         window.location.href = "http://localhost:3000/myaccount/personalinfo/";
       }, 250);
@@ -75,7 +88,7 @@ export default function Password() {
       console.log(error.response.data)
     }
     const user = await currentUser();
-      setUser(user);
+    setUser(user);
   }
 
   const handleChange = (e) => {

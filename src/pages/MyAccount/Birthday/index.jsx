@@ -1,5 +1,6 @@
 import AccountHeader from "../Header";
 import axios from "axios";
+import { t } from 'i18next';
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { BackArrow } from "../Home";
@@ -12,15 +13,25 @@ export default function Birthday() {
 
   const obj = JSON.parse(localStorage.getItem('user'));
   const email = obj[0].email;
+  const firstName = obj[0].firstName;
+  const lastName = obj[0].lastName;
+  const id = obj[0].id;
+  const gender = obj[0].gender;
   const month = obj[0].month;
   const day = obj[0].day;
   const year = obj[0].year;
-  const URL = "http://localhost:5000/users?email=" + email;
+  const password = obj[0].password;
+  const URL = "http://localhost:5000/users/" + id;
 
   const [value, setValue] = useState({
+    firstName: firstName,
+    lastName: lastName,
+    email: email,
+    gender: gender,
     month: month,
     day: day,
-    year: year
+    year: year,
+    password: password,
   })
 
   const {register, handleSubmit, formState: { errors }} = useForm({
@@ -45,12 +56,30 @@ export default function Birthday() {
         method: "put",
         url: URL,
         data: {
+          firstName: value.firstName,
+          lastName: value.lastName,
+          email: value.email,
+          gender: value.gender,
           month: value.month,
           day: value.day,
           year: value.year,
+          password: value.password,
         },
         headers: { "Content-Type": "application/json"},
       });
+      var userObject = []
+      userObject[0] = { 
+        'firstName': value.firstName, 
+        'lastName': value.lastName, 
+        'email': value.email, 
+        'gender': value.gender, 
+        'month': value.month, 
+        'day': value.day, 
+        'year': value.year, 
+        'password': value.password, 
+        'id': id 
+      }
+      localStorage.setItem("user", JSON.stringify(userObject));
       setTimeout(function () {
         window.location.href = "http://localhost:3000/myaccount/personalinfo/";
       }, 250);
@@ -58,7 +87,7 @@ export default function Birthday() {
       console.log(error.response.data)
     }
     const user = await currentUser();
-      setUser(user);
+    setUser(user);
   }
 
   const handleChange = (e) => {
@@ -103,6 +132,9 @@ export default function Birthday() {
                 />
               </div>
               <Buttons 
+                month={month}
+                day={day}
+                year={year}
                 value={value}
               />
             </form>
@@ -150,19 +182,19 @@ const Month = ({ register, handleChange, value }) => (
       onChange={handleChange}
       value={value.month}
     >
-      <option value="" className="change-form-input-placeholder" defaultValue disabled hidden />
-      <option value="01">January</option>
-      <option value="02">February</option>
-      <option value="03">March</option>
-      <option value="04">April</option>
-      <option value="05">May</option>
-      <option value="06">June</option>
-      <option value="07">July</option>
-      <option value="08">August</option>
-      <option value="09">September</option>
-      <option value="10">October</option>
-      <option value="11">November</option>
-      <option value="12">December</option>
+      <option value="" defaultValue disabled hidden />
+      <option value={t("months.1")}>{t("months.1")}</option>
+      <option value={t("months.2")}>{t("months.2")}</option>
+      <option value={t("months.3")}>{t("months.3")}</option>
+      <option value={t("months.4")}>{t("months.4")}</option>
+      <option value={t("months.5")}>{t("months.5")}</option>
+      <option value={t("months.6")}>{t("months.6")}</option>
+      <option value={t("months.7")}>{t("months.7")}</option>
+      <option value={t("months.8")}>{t("months.8")}</option>
+      <option value={t("months.9")}>{t("months.9")}</option>
+      <option value={t("months.10")}>{t("months.10")}</option>
+      <option value={t("months.11")}>{t("months.11")}</option>
+      <option value={t("months.12")}>{t("months.12")}</option>
     </select>
     <div className="change-form-placeholder">
       Month
@@ -224,13 +256,13 @@ const Year = ({ register, handleChange, value }) => (
   </div>
 )
 
-const Buttons = ({ value }) => (
+const Buttons = ({ month, year, day, value }) => (
   <div className="form-button-row">
     <button className="cancel">
       <Link to="/myaccount/personalinfo/" className="cancel-link no-deco">
         Cancel
       </Link>
     </button>
-    <button type="submit" className="next" disabled>Save</button>
+    <button type="submit" className="next" disabled={ month === value.month && year === value.year && day === value.day }>Save</button>
   </div>
 )

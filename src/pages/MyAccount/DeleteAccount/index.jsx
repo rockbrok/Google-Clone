@@ -8,16 +8,12 @@ import { Helmet } from "react-helmet";
 import { BackArrow } from "../Home";
 
 export default function DeleteAccount() {
+  const [agree, setAgree] = useState(false);
   const { setUser } = useContext(UserContext);
 
   const obj = JSON.parse(localStorage.getItem('user'));
-  const email = obj[0].email;
-  const URL = "http://localhost:5000/users?email=" + email;
-  const deleteCheck = true;
-
-  const [value, setValue] = useState({
-    deleteCheck: deleteCheck,
-  })
+  const id = obj[0].id;
+  const URL = "http://localhost:5000/users/" + id;
 
   const {register, handleSubmit } = useForm({
     mode: 'onSubmit',
@@ -38,20 +34,14 @@ export default function DeleteAccount() {
         headers: { "Content-Type": "application/json"},
       });
       setTimeout(function () {
-        window.location.href = "http://localhost:3000/myaccount/personalinfo/";
+        window.location.href = "http://localhost:3000/";
       }, 250);
+      localStorage.setItem('user', null);
     } catch(error) {
       console.log(error.response.data)
     }
     const user = await currentUser();
       setUser(user);
-  }
-
-  const handleChange = (e) => {
-    setValue({
-      ...value,
-      [e.target.name]: e.target.value
-    });
   }
 
   return (
@@ -69,13 +59,10 @@ export default function DeleteAccount() {
             <form onSubmit={handleSubmit(onSubmit)} noValidate>
               <DeleteInput 
                 register={register}
-                handleChange={handleChange}
-                value={value}
+                setAgree={setAgree}
               />
               <Buttons
-                value={value}
-                handleChange={handleChange}
-                deleteCheck={deleteCheck}
+                agree={agree}
               />
             </form>
           </section>
@@ -103,7 +90,7 @@ const SubHeadNote = () => (
   </div>
 )
 
-const DeleteInput = ({ register, handleChange, value }) => (
+const DeleteInput = ({ register, setAgree }) => (
   <div className="input-container">
     <label className="pass-container">
       <input 
@@ -113,8 +100,7 @@ const DeleteInput = ({ register, handleChange, value }) => (
         name="deleteAccount"
         type="checkbox"
         className="password-checkbox"
-        onChange={handleChange}
-        value={value.deleteCheck}
+        onClick={(e) => setAgree(e.target.checked)}
       />
       <div className="checkmark"/>
       Yes, I want to permanently delete this Google Account and all its data.
@@ -122,13 +108,13 @@ const DeleteInput = ({ register, handleChange, value }) => (
   </div>
 )
 
-const Buttons = ({ value, deleteCheck }) => (
+const Buttons = ({ agree }) => (
   <div className="form-button-row">
     <button className="cancel">
       <Link to="/myaccount/data-and-personalization/" className="cancel-link no-deco">
         Cancel
       </Link>
     </button>
-    <button type="submit" className="next" disabled={deleteCheck !== value.deleteCheck}>DELETE ACCOUNT</button>
+    <button type="submit" className="next" disabled={!agree}>DELETE ACCOUNT</button>
   </div>
 )
