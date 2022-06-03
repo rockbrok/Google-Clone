@@ -4,11 +4,11 @@
       "firstName": "Jones",
       "lastName": "McGee",
       "email": "jones@gmail.com",
-      "password": "asdfasdfasdf",
-      "gender": "Male",
+      "gender": "Other",
       "month": "February",
       "day": "12",
       "year": "1995",
+      "password": "asdfasdfasdf",
       "id": 1
     }
   ]

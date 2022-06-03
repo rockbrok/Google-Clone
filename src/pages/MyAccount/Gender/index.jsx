@@ -153,7 +153,7 @@ const TopNote = () => (
 
 const GenderInput = ({ register, handleChange }) => (
   <div className="input-container">
-    <label htmlFor="Male">
+    <label htmlFor="Male" className="radio-container">
       <input
         {...register("gender")}
         type="radio"
@@ -161,11 +161,13 @@ const GenderInput = ({ register, handleChange }) => (
         value="Male"
         id="Male"
         onChange={handleChange}
-        style={{height: '16px', width: '16px', margin: '0 12px 0 0'}}
       />
+      <div className="radio-circle">
+        <span className="radio" />
+      </div>
       Male
     </label>
-    <label htmlFor="Female">
+    <label htmlFor="Female" className="radio-container">
       <input
         {...register("gender")}
         type="radio"
@@ -174,9 +176,12 @@ const GenderInput = ({ register, handleChange }) => (
         id="Female"
         onChange={handleChange}
       />
+      <div className="radio-circle">
+        <span className="radio" />
+      </div>
       Female
     </label>
-    <label htmlFor="Other">
+    <label htmlFor="Other" className="radio-container">
       <input
         {...register("gender")}
         type="radio"
@@ -185,6 +190,9 @@ const GenderInput = ({ register, handleChange }) => (
         id="Other"
         onChange={handleChange}
       />
+      <div className="radio-circle">
+        <span className="radio" />
+      </div>
       Other
     </label>
   </div>
