@@ -2,9 +2,8 @@ import AccountHeader from "../Header";
 import axios from "axios";
 import { t } from 'i18next';
 import { ErrorLogo } from "../../SignUp/Email";
-import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import { BackArrow } from "../Home";
+import { BackArrow, Cancel } from "../Home";
 import { useState, useContext } from 'react';
 import { UserContext } from "../../../usercontext";
 import { Helmet } from "react-helmet";
@@ -103,7 +102,7 @@ export default function Name() {
   return (
     <>
       <Helmet>
-        <title>Name</title>
+        <title>{t("my-account.personal-info.personal-name.name")}</title>
       </Helmet>
       <AccountHeader />
       <div className="form-bord-bot" />
@@ -147,7 +146,7 @@ const SubHeading = () => (
     <div className="navbar-form-wrap">
       <div className="account-subhead">
         <BackArrow />
-        <div className="account-subhead-text">Name</div>
+        <div className="account-subhead-text">{t("my-account.personal-info.personal-name.name")}</div>
       </div>
     </div>
   </div>
@@ -155,8 +154,10 @@ const SubHeading = () => (
 
 const TopNote = () => (
   <div className="top-note">
-    Changes to your name will be reflected across your Google Account.&nbsp;
-    <a href="https://support.google.com/accounts/answer/27442" target="_blank" rel="noreferrer" className="learn-more">More information</a>
+      {t("my-account.personal-info.personal-name.top_note")}&nbsp;
+    <a href="https://support.google.com/accounts/answer/27442" target="_blank" rel="noreferrer" className="learn-more">
+      {t("more_information")}
+    </a>
   </div>
 )
 
@@ -188,7 +189,7 @@ const FirstName = ({ register, handleChange, value, errors }) => (
       aria-invalid={errors.firstName ? "true" : "false"}
     />
     <div className="change-form-placeholder">
-      First Name
+      {t("sign-up.email.first_name")}
     </div>
   </div>
 )
@@ -221,7 +222,7 @@ const LastName = ({ register, handleChange, value, errors }) => (
       aria-invalid={errors.lastName ? "true" : "false"}
     />
     <div className="change-form-placeholder">
-      Last Name
+      {t("sign-up.email.last_name")}
     </div>
   </div>
 )
@@ -266,12 +267,14 @@ const NameErrors = ({ errors }) => {
 
 const Note = () => (
   <>
-    <div className="header-note">Who can see your name</div>
+    <div className="header-note">{t("my-account.personal-info.personal-name.note_head")}</div>
       <div className="users-row">
         <UsersIcon className="users-icon"/>
         <div className="users-note top-note">
-          Anyone can see this info when they communicate with you or view content you create in Google services.&nbsp;
-          <a href="https://support.google.com/accounts/answer/6304920" target="_blank" rel="noreferrer" className="learn-more">Learn more.</a>
+          {t("my-account.personal-info.personal-name.note")}&nbsp;
+          <a href="https://support.google.com/accounts/answer/6304920" target="_blank" rel="noreferrer" className="learn-more">
+            {t("learn_more")}.
+          </a>
         </div>
       </div>
   </>
@@ -279,11 +282,7 @@ const Note = () => (
 
 const Buttons = ({ firstName, lastName, value }) => (
   <div className="form-button-row">
-    <button className="cancel">
-      <Link to="/myaccount/personalinfo/" className="cancel-link no-deco">
-        Cancel
-      </Link>
-    </button>
-    <button type="submit" className="next" disabled={ firstName === value.firstName && lastName === value.lastName }>Save</button>
+    <Cancel />
+    <button type="submit" className="next" disabled={ firstName === value.firstName && lastName === value.lastName }>{t("save")}</button>
   </div>
 )

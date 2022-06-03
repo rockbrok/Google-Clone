@@ -2,9 +2,8 @@ import AccountHeader from "../Header";
 import axios from "axios";
 import { t } from 'i18next';
 import { ErrorLogo } from "../../SignUp/Email";
-import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import { BackArrow } from "../Home";
+import { BackArrow, Cancel } from "../Home";
 import { useState, useContext } from 'react';
 import { UserContext } from "../../../usercontext";
 import { Helmet } from "react-helmet";
@@ -105,7 +104,7 @@ export default function Password() {
   return (
     <>
       <Helmet>
-        <title>Password</title>
+        <title>{t("my-account.personal-info.personal-password.password")}</title>
       </Helmet>
       <AccountHeader />
       <div className="form-bord-bot" />
@@ -155,7 +154,7 @@ const SubHeading = () => (
     <div className="navbar-form-wrap">
       <div className="account-subhead">
         <BackArrow />
-        <div className="account-subhead-text">Password</div>
+        <div className="account-subhead-text">{t("my-account.personal-info.personal-password.password")}</div>
       </div>
     </div>
   </div>
@@ -163,14 +162,16 @@ const SubHeading = () => (
 
 const SubHeadNote = () => (
   <div className="top-note subhead-note font-16">
-    Choose a strong password and don't reuse it for other accounts.&nbsp;
-    <a href="https://support.google.com/accounts/answer/27442" target="_blank" rel="noreferrer" className="learn-more">More information</a>
+    {t("my-account.personal-info.personal-password.top_note")}&nbsp;
+    <a href="https://support.google.com/accounts/answer/27442" target="_blank" rel="noreferrer" className="learn-more">
+      {t("more_information")}
+    </a>
   </div>
 )
 
 const TopNote = () => (
-  <div className="top-note font-12 capitalize">
-    Update Password
+  <div className="top-note font-12 uppercase">
+    {t("my-account.personal-info.personal-password.update_password")}
   </div>
 )
 
@@ -200,7 +201,7 @@ const PasswordInput = ({ register, emptyStringRegex, noSpaceStartOrEndRegex, val
       aria-invalid={errors.password ? "true" : "false"}
     />
     <div className="change-form-placeholder">
-      New Password
+      {t("my-account.personal-info.personal-password.new_password")}
     </div>
   </div>
 )
@@ -230,7 +231,7 @@ const PasswordConfirmInput = ({ register, emptyStringRegex, watch, validPassword
       aria-invalid={errors.passwordConfirm ? "true" : "false"}
     />
     <div className="change-form-placeholder">
-      Confirm new password
+      {t("my-account.personal-info.personal-password.confirm_new_password")}
     </div>
   </div>
 )
@@ -276,18 +277,18 @@ const PasswordErrors = ({ errors }) => {
 
 const Note = () => (
   <div className="top-note">
-    Use at least 8 characters. Don't use a password from another site, or something too obvious like your pet's name.&nbsp;
-    <a href="https://support.google.com/accounts/answer/6304920" target="_blank" rel="noreferrer" className="learn-more">Why?</a>
+    {t("my-account.personal-info.personal-password.note")}&nbsp;
+    <a href="https://support.google.com/accounts/answer/6304920" target="_blank" rel="noreferrer" className="learn-more">
+      {t("my-account.personal-info.personal-password.why")}
+    </a>
   </div>
 )
 
 const Buttons = ({ value, password }) => (
   <div className="form-button-row">
-    <button className="cancel">
-      <Link to="/myaccount/personalinfo/" className="cancel-link no-deco">
-        Cancel
-      </Link>
+    <Cancel />
+    <button type="submit" className="next" disabled={ password === value.password }>
+      {t("save")}
     </button>
-    <button type="submit" className="next" disabled={ password === value.password }>Save</button>
   </div>
 )

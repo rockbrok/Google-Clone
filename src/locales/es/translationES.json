@@ -171,10 +171,13 @@
     "next": "Siguiente",
     "help": "Ayuda",
     "learn_more": "Más información",
+    "more_information": "Más información",
     "back": "Atrás",
+    "cancel": "Cancelar",
     "support": "Ayuda",
     "privacy": "Privacidad",
     "terms": "Condiciones",
+    "save": "Guardar",
 
     "my-account": {
         "google_account": "Cuenta de Google",
@@ -191,10 +194,58 @@
             "manage_personal": "Gestione su información personal"
         },
         "personal-info": {
-            "personal_info": "Información personal"
+            "personal_info": "Información personal",
+            "subheading": "Información sobre usted y sus preferencias en los servicios de Google",
+            "profile_info_head": "La información de tu perfil en los servicios de Google",
+            "profile_info_subheading": "Información personal y opciones para gestionarla. Puede hacer que parte de esta información, como sus datos de contacto, sea visible para otros para que puedan comunicarse con usted fácilmente. También puedes ver un resumen de tus perfiles.",
+            "basic_info": "Información básica",
+            "basic_info_note": "Cierta información puede ser visible para otras personas que utilizan los servicios de Google.",
+            "contact_info": "Información del contacto",
+            "other_info_head": "Otra información y preferencias de los servicios de Google",
+            "other_info_subheading": "Formas de verificar que eres tú y configuraciones para la Web.",
+            "password_note": "Una contraseña segura ayuda a proteger su cuenta de Google",
+            "personal-name": {
+                "name": "Nombre",
+                "top_note": "Los cambios en su nombre se reflejarán en su cuenta de Google.",
+                "note_head": "Quién puede ver tu nombre",
+                "note": "Cualquiera puede ver esta información cuando se comunican contigo o ven el contenido que creas en los servicios de Google."
+            },
+            "personal-birthday": {
+                "birthday": "Fecha de Nacimiento",
+                "top_note": "Su fecha de nacimiento se puede utilizar para la seguridad y personalización de la cuenta en los servicios de Google. Si esta cuenta de Google es para una empresa u organización, use la fecha de nacimiento de la persona que administra la cuenta.",
+                "update_birthday": "Actualizar fecha de nacimiento"
+            },
+            "personal-gender": {
+                "gender": "Sexo",
+                "top_note": "Su género puede usarse para la personalización en los servicios de Google, incluida la forma en que nos referimos a usted."
+            },
+            "personal-email": {
+                "email": "Correo electrónico",
+                "top_note": "La dirección utilizada para identificar su cuenta de Google para usted y otros.",
+                "new_email": "Nuevo correo electrónico"
+            },
+            "personal-password": {
+                "password": "Contraseña",
+                "top_note": "Elija una contraseña segura y no la reutilice para otras cuentas.",
+                "update_password": "Actualiza contraseña",
+                "new_password": "Nueva contraseña",
+                "confirm_new_password": "Confirmar nueva contraseña",
+                "note": "Use al menos 8 caracteres. No uses una contraseña de otro sitio, o algo demasiado obvio como el nombre de tu mascota.",
+                "why": "¿Por qué?"
+            }
         },
         "data-privacy": {
-            "data_and_privacy": "Datos y privacidad"
+            "data_and_privacy": "Datos y privacidad",
+            "subheading": "En las opciones clave de privacidad, podrás elegir los datos que se guardan en tu cuenta, los anuncios que ves, la información que compartes con otras personas y mucho más.",
+            "options": "Opciones",
+            "options_subheading": "Otras opciones para administrar tus datos, como elegir qué les ocurre si tu cuenta queda inactiva o si se borra.",
+            "delete_account": "Borrar tu cuenta de Google",
+            "delete_data": "Borra tu cuenta y todos los datos",
+            "data-delete": {
+                "delete_account": "Borrar Cuenta",
+                "subheading": "Está intentando eliminar su cuenta de Google, que proporciona acceso a varios servicios de Google. Ya no podrá usar ninguno de esos servicios y perderá su cuenta y sus datos.",
+                "delete_confirm": "Sí, quiero eliminar de forma permanente esta cuenta de Google y todos sus datos."
+            }
         }
     },
 

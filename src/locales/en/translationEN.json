@@ -171,10 +171,13 @@
     "next": "Next",
     "help": "Help",
     "learn_more": "Learn more",
+    "more_information": "More information",
     "back": "Back",
+    "cancel": "Cancel",
     "support": "Support",
     "privacy": "Privacy",
     "terms": "Terms",
+    "save": "Save",
 
     "my-account": {
         "google_account": "Google Account",
@@ -193,24 +196,56 @@
         "personal-info": {
             "personal_info": "Personal info",
             "subheading": "Info about you and your preferences across Google services",
+            "profile_info_head": "Your profile information in Google services",
+            "profile_info_subheading": "Personal information and options to manage it. You can make some of this info, like your contact details, visible to others so they can reach you easily. You can also see a summary of your profiles.",
+            "basic_info": "Basic information",
+            "basic_info_note": "Some information may be visible to other people using Google services.",
+            "contact_info": "Contact information",
+            "other_info_head": "Other information and preferences for Google services",
+            "other_info_subheading": "Ways to verify it's you and settings for the Web.",
+            "password_note": "A secure password helps protect your Google Account",
             "personal-name": {
-                "name": "Name"
+                "name": "Name",
+                "top_note": "Changes to your name will be reflected across your Google Account.",
+                "note_head": "Who can see your name",
+                "note": "Anyone can see this info when they communicate with you or view content you create in Google services."
             },
             "personal-birthday": {
-                "birthday": "Birthday"
+                "birthday": "Birthday",
+                "top_note": "Your birthday may be used for account security and personalization across Google services. If this Google Account is for a business or organization, use the birthday of the person who manages the account.",
+                "update_birthday": "Update Date of Birth"
             },
             "personal-gender": {
-                "gender": "Gender"
+                "gender": "Gender",
+                "top_note": "Your gender may be used for personalization across Google services, including how we refer to you."
             },
             "personal-email": {
-                "email": "Email"
+                "email": "Email",
+                "top_note": "The address used to identify your Google Account to you and others.",
+                "new_email": "New email"
             },
             "personal-password": {
-                "password": "Password"
+                "password": "Password",
+                "top_note": "Choose a strong password and don't reuse it for other accounts.",
+                "update_password": "Update password",
+                "new_password": "New password",
+                "confirm_new_password": "Confirm new password",
+                "note": "Use at least 8 characters. Don't use a password from another site, or something too obvious like your pet's name.",
+                "why": "Why?"
             }
         },
         "data-privacy": {
-            "data_and_privacy": "Data & privacy"
+            "data_and_privacy": "Data & privacy",
+            "subheading": "In the key privacy options, you can choose what data is saved in your account, the ads you see, the information you share with others and much more.",
+            "options": "Options",
+            "options_subheading": "Other options to manage your data, such as choosing what happens to it if your account becomes inactive or is deleted.",
+            "delete_account": "Delete your Google Account",
+            "delete_data": "Delete your account and all data",
+            "data-delete": {
+                "delete_account": "Delete Account",
+                "subheading": "You're trying to delete your Google Account, which provides access to various Google services. You'll no longer be able to use any of those services, and your account and data will be lost.",
+                "delete_confirm": "Yes, I want to permanently delete this Google Account and all its data."
+            }
         }
     },
     

@@ -65,6 +65,10 @@ main {
   height: 100vh;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
 a,
 ins {
   text-decoration: none;

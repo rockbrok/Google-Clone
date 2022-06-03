@@ -1,9 +1,8 @@
 import AccountHeader from "../Header";
 import axios from "axios";
 import { t } from 'i18next';
-import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import { BackArrow } from "../Home";
+import { BackArrow, Cancel } from "../Home";
 import { useState, useContext } from 'react';
 import { UserContext } from "../../../usercontext";
 import { Helmet } from "react-helmet";
@@ -102,7 +101,7 @@ export default function Birthday() {
   return (
     <>
       <Helmet>
-        <title>Birthday</title>
+        <title>{t("my-account.personal-info.personal-birthday.birthday")}</title>
       </Helmet>
       <AccountHeader />
       <div className="form-bord-bot" />
@@ -152,7 +151,7 @@ const SubHeading = () => (
     <div className="navbar-form-wrap">
       <div className="account-subhead">
         <BackArrow />
-        <div className="account-subhead-text">Birthday</div>
+        <div className="account-subhead-text">{t("my-account.personal-info.personal-birthday.birthday")}</div>
       </div>
     </div>
   </div>
@@ -160,14 +159,16 @@ const SubHeading = () => (
 
 const SubHeadNote = () => (
   <div className="top-note subhead-note font-16">
-    Your birthday may be used for account security and personalization across Google services. If this Google Account is for a business or organization, use the birthday of the person who manages the account.&nbsp;
-    <a href="https://support.google.com/accounts/answer/27442" target="_blank" rel="noreferrer" className="learn-more">More information</a>
+    {t("my-account.personal-info.personal-birthday.top_note")}&nbsp;
+    <a href="https://support.google.com/accounts/answer/27442" target="_blank" rel="noreferrer" className="learn-more">
+      {t("more_information")}
+    </a>
   </div>
 )
 
 const TopNote = () => (
-  <div className="top-note font-12 capitalize">
-    Update Date of Birth
+  <div className="top-note font-12 uppercase">
+    {t("my-account.personal-info.personal-birthday.update_birthday")}
   </div>
 )
 
@@ -199,7 +200,7 @@ const Month = ({ register, handleChange, value }) => (
       <option value={t("months.12")}>{t("months.12")}</option>
     </select>
     <div className="birthday-change-form-placeholder">
-      Month
+      {t("month")}
     </div>
   </div>
 )
@@ -226,7 +227,7 @@ const Day = ({ register, handleChange, value }) => (
       className="change-form-input"
     />
     <div className="birthday-change-form-placeholder">
-      Day
+      {t("day")}
     </div>
   </div>
 )
@@ -253,18 +254,16 @@ const Year = ({ register, handleChange, value }) => (
       className="change-form-input"
     />
     <div className="birthday-change-form-placeholder">
-      Year
+      {t("year")}
     </div>
   </div>
 )
 
 const Buttons = ({ month, year, day, value }) => (
   <div className="form-button-row">
-    <button className="cancel">
-      <Link to="/myaccount/personalinfo/" className="cancel-link no-deco">
-        Cancel
-      </Link>
+    <Cancel />
+    <button type="submit" className="next" disabled={ month === value.month && year === value.year && day === value.day }>
+      {t("save")}
     </button>
-    <button type="submit" className="next" disabled={ month === value.month && year === value.year && day === value.day }>Save</button>
   </div>
 )

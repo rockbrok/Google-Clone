@@ -1,13 +1,13 @@
 import AccountHeader from "../Header";
 import axios from "axios";
-import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useState, useContext } from 'react';
 import { UserContext } from "../../../usercontext";
 import { Helmet } from "react-helmet";
-import { BackArrow } from "../Home";
+import { BackArrow, Cancel } from "../Home";
 
 import './style.css';
+import { t } from "i18next";
 
 export default function Gender() {
   const { setUser } = useContext(UserContext);
@@ -99,7 +99,7 @@ export default function Gender() {
   return (
     <>
       <Helmet>
-        <title>Gender</title>
+        <title>{t("my-account.personal-info.personal-gender.gender")}</title>
       </Helmet>
       <AccountHeader />
       <div className="form-bord-bot" />
@@ -132,7 +132,7 @@ const SubHeading = () => (
     <div className="navbar-form-wrap">
       <div className="account-subhead">
         <BackArrow />
-        <div className="account-subhead-text">Gender</div>
+        <div className="account-subhead-text">{t("my-account.personal-info.personal-gender.gender")}</div>
       </div>
     </div>
   </div>
@@ -140,14 +140,16 @@ const SubHeading = () => (
 
 const SubHeadNote = () => (
   <div className="top-note subhead-note font-16">
-    Your gender may be used for personalization across Google services, including how we refer to you.&nbsp;
-    <a href="https://support.google.com/accounts/answer/27442" target="_blank" rel="noreferrer" className="learn-more">More information</a>
+    {t("my-account.personal-info.personal-gender.top_note")}&nbsp;
+    <a href="https://support.google.com/accounts/answer/27442" target="_blank" rel="noreferrer" className="learn-more">
+      {t("more_information")}
+    </a>
   </div>
 )
 
 const TopNote = () => (
-  <div className="top-note font-12">
-    Gender
+  <div className="top-note font-12 uppercase">
+    {t("my-account.personal-info.personal-gender.gender")}
   </div>
 )
 
@@ -165,7 +167,7 @@ const GenderInput = ({ register, handleChange }) => (
       <div className="radio-circle">
         <span className="radio" />
       </div>
-      Male
+      {t("genders.male")}
     </label>
     <label htmlFor="Female" className="radio-container">
       <input
@@ -179,7 +181,7 @@ const GenderInput = ({ register, handleChange }) => (
       <div className="radio-circle">
         <span className="radio" />
       </div>
-      Female
+      {t("genders.female")}
     </label>
     <label htmlFor="Other" className="radio-container">
       <input
@@ -193,18 +195,16 @@ const GenderInput = ({ register, handleChange }) => (
       <div className="radio-circle">
         <span className="radio" />
       </div>
-      Other
+      {t("genders.other")}
     </label>
   </div>
 )
 
 const Buttons = ({ gender, value }) => (
   <div className="form-button-row">
-    <button className="cancel">
-      <Link to="/myaccount/personalinfo/" className="cancel-link no-deco">
-        Cancel
-      </Link>
+    <Cancel />
+    <button type="submit" className="next" disabled={ gender === value.gender }>
+      {t('save')}
     </button>
-    <button type="submit" className="next" disabled={ gender === value.gender }>Save</button>
   </div>
 )

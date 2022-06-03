@@ -40,16 +40,16 @@ export default function DataPrivacy() {
 
 const Heading = () => (
   <>
-    <div className="account-page-head align-center">Data and privacy</div>
-    <div className="account-page-subhead data-subheading">In the key privacy options, you can choose what data is saved in your account, the ads you see, the information you share with others and much more.</div>
+    <div className="account-page-head align-center">{t("my-account.data-privacy.data_and_privacy")}</div>
+    <div className="account-page-subhead data-subheading">{t("my-account.data-privacy.subheading")}</div>
   </>
 )
 
 const Card = () => (
   <div className="personal-card-1">
     <div>
-      <div className="account-page-head">Options</div>
-      <div className="account-page-subhead">Other options to manage your data, such as choosing what happens to it if your account becomes inactive or is deleted.</div>
+      <div className="account-page-head">{t("my-account.data-privacy.options")}</div>
+      <div className="account-page-subhead">{t("my-account.data-privacy.options_subheading")}</div>
     </div>
     <div className="personal-scene-img-contain">
       <div className="data-scene-img" />
@@ -65,10 +65,10 @@ const DeleteAccount = ({ TrashIcon }) => (
           <TrashIcon className="trash-icon"/>
           <div className="wrap-column">
             <div className="info-title info-title-width data-title">
-              Delete your Google Account
+              {t("my-account.data-privacy.delete_account")}
             </div>
             <div className="info-value data-value">
-              Delete your account and all data
+              {t("my-account.data-privacy.delete_data")}
             </div>
           </div>
           <div className="wrap-row-space" />

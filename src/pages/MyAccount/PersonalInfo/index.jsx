@@ -69,8 +69,8 @@ const Heading = () => (
 const Card = () => (
   <div className="personal-card-1">
     <div>
-      <div className="account-page-head">Your profile information in Google services</div>
-      <div className="account-page-subhead">Personal information and options to manage it. You can make some of this info, like your contact details, visible to others so they can reach you easily. You can also see a summary of your profiles.</div>
+      <div className="account-page-head">{t("my-account.personal-info.profile_info_head")}</div>
+      <div className="account-page-subhead">{t("my-account.personal-info.profile_info_subheading")}</div>
     </div>
     <div className="personal-scene-img-contain">
       <div className="personal-scene-img" />
@@ -80,9 +80,11 @@ const Card = () => (
 
 const BasicInfo = ({ firstName, lastName, month, day, year, gender }) => (
   <div className="info-card">
-    <div className="h3">Basic information</div>
-    <div className="h3-note">Some information may be visible to other people using Google services.&nbsp;
-      <a href="https://support.google.com/accounts/answer/6304920" target="_blank" rel="noreferrer" className="learn-more no-deco">More information</a>
+    <div className="h3">{t("my-account.personal-info.basic_info")}</div>
+    <div className="h3-note">{t("my-account.personal-info.basic_info_note")}&nbsp;
+      <a href="https://support.google.com/accounts/answer/6304920" target="_blank" rel="noreferrer" className="learn-more no-deco">
+        {t("more_information")}
+      </a>
     </div>
     <button className="info-button">
       <Link to="/myaccount/name/" className="no-deco">
@@ -131,7 +133,7 @@ const BasicInfo = ({ firstName, lastName, month, day, year, gender }) => (
 
 const ContactInfo = ({ email }) => (
   <div className="info-card">
-    <div className="h3">Contact information</div>
+    <div className="h3">{t("my-account.personal-info.contact_info")}</div>
     <div className="h3-note" />
     <button className="info-button">
       <Link to="/myaccount/email/" className="no-deco">
@@ -153,8 +155,8 @@ const ContactInfo = ({ email }) => (
 const Card2 = () => (
   <div className="personal-card-1">
   <div>
-    <div className="account-page-head">Other information and preferences for Google services</div>
-    <div className="account-page-subhead">Ways to verify it's you and settings for the Web.</div>
+    <div className="account-page-head">{t("my-account.personal-info.other_info_head")}</div>
+    <div className="account-page-subhead">{t("my-account.personal-info.other_info_subheading")}</div>
   </div>
   <div className="personal-scene-img-contain">
     <div className="personal-scene-pref-img" />
@@ -164,14 +166,14 @@ const Card2 = () => (
 
 const PasswordInfo = ({ password }) => (
   <div className="info-card account-bottom-marg">
-    <div className="h3">Password</div>
-      <div className="h3-note">A secure password helps protect your Google Account</div>
+    <div className="h3">{t("my-account.personal-info.personal-password.password")}</div>
+      <div className="h3-note">{t("my-account.personal-info.password_note")}</div>
       <button className="info-button">
       <Link to="/myaccount/password/" className="no-deco">
         <div className="info-wrap-divide" />
         <div className="info-wrap info-wrap-bottom">
           <div className="info-title">
-            Password
+            {t("my-account.personal-info.personal-password.password")}
           </div>
           <div className="info-value password">
             {password}

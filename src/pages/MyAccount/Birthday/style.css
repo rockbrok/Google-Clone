@@ -8,6 +8,15 @@
   justify-content: space-between;
 }
 
+.change-form-input:focus-within ~ .birthday-change-form-placeholder {
+  color: #1a73e8;
+}
+
+select {
+  border: none;
+  outline: none;
+}
+
 .birthday-change-form-placeholder {
   color: rgb(126, 126, 126);
   font-family: 'Roboto', Helvetica, Arial, sans-serif;

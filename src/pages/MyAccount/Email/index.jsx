@@ -2,11 +2,10 @@ import AccountHeader from "../Header";
 import axios from "axios";
 import { t } from 'i18next';
 import { ErrorLogo } from "../../SignUp/Email";
-import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useState, useContext } from 'react';
 import { UserContext } from "../../../usercontext";
-import { BackArrow } from "../Home";
+import { BackArrow, Cancel } from "../Home";
 import { Helmet } from "react-helmet";
 
 import '../style.css';
@@ -110,7 +109,7 @@ export default function Email() {
   return (
     <>
       <Helmet>
-        <title>Email</title>
+        <title>{t("my-account.personal-info.personal-email.email")}</title>
       </Helmet>
       <AccountHeader />
       <div className="form-bord-bot" />
@@ -154,7 +153,7 @@ const SubHeading = () => (
     <div className="navbar-form-wrap">
       <div className="account-subhead">
         <BackArrow />
-        <div className="account-subhead-text">Email</div>
+        <div className="account-subhead-text">{t("my-account.personal-info.personal-email.email")}</div>
       </div>
     </div>
   </div>
@@ -162,8 +161,10 @@ const SubHeading = () => (
 
 const SubHeadNote = () => (
   <div className="top-note subhead-note font-16">
-    The address used to identify your Google Account to you and others.&nbsp;
-    <a href="https://support.google.com/accounts/answer/27442" target="_blank" rel="noreferrer" className="learn-more">More information</a>
+    {t("my-account.personal-info.personal-email.top_note")}&nbsp;
+    <a href="https://support.google.com/accounts/answer/27442" target="_blank" rel="noreferrer" className="learn-more">
+      {t("more_information")}  
+    </a>
   </div>
 )
 
@@ -203,7 +204,7 @@ const EmailInput = ({ register, value, errors, handleChange, noUsernameRegex, no
     aria-invalid={errors.email ? "true" : "false"}
   />
   <div className="change-form-placeholder">
-    New email
+    {t("my-account.personal-info.personal-email.new_email")}
   </div>
 </div>
 )
@@ -259,11 +260,9 @@ const EmailErrors = ({ errors }) => {
 
 const Buttons = ({ email, value }) => (
   <div className="form-button-row">
-    <button className="cancel">
-      <Link to="/myaccount/personalinfo/" className="cancel-link no-deco">
-        Cancel
-      </Link>
+    <Cancel />
+    <button type="submit" className="next" disabled={ email === value.email }>
+      {t("save")}
     </button>
-    <button type="submit" className="next" disabled={ email === value.email }>Save</button>
   </div>
 )

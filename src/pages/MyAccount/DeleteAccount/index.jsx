@@ -1,5 +1,6 @@
 import AccountHeader from "../Header";
 import axios from "axios";
+import { t } from 'i18next';
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useState, useContext } from 'react';
@@ -47,7 +48,7 @@ export default function DeleteAccount() {
   return (
     <>
       <Helmet>
-        <title>Delete Account</title>
+        <title>{t("my-account.data-privacy.data-delete.delete_account")}</title>
       </Helmet>
       <AccountHeader />
       <div className="form-bord-bot" />
@@ -77,7 +78,7 @@ const SubHeading = () => (
     <div className="navbar-form-wrap">
       <div className="account-subhead">
         <BackArrow />
-        <div className="account-subhead-text">Delete account</div>
+        <div className="account-subhead-text">{t("my-account.data-privacy.data-delete.delete_account")}</div>
       </div>
     </div>
   </div>
@@ -85,8 +86,8 @@ const SubHeading = () => (
 
 const SubHeadNote = () => (
   <div className="top-note subhead-note font-16">
-    You're trying to delete your Google Account, which provides access to various Google services. You'll no longer be able to use any of those services, and your account and data will be lost.&nbsp;
-    <a href="https://support.google.com/accounts/answer/27442" target="_blank" rel="noreferrer" className="learn-more">More information</a>
+    {t("my-account.data-privacy.data-delete.subheading")}&nbsp;
+    <a href="https://support.google.com/accounts/answer/27442" target="_blank" rel="noreferrer" className="learn-more">{t("more_information")}</a>
   </div>
 )
 
@@ -103,7 +104,7 @@ const DeleteInput = ({ register, setAgree }) => (
         onClick={(e) => setAgree(e.target.checked)}
       />
       <div className="checkmark"/>
-      Yes, I want to permanently delete this Google Account and all its data.
+      {t("my-account.data-privacy.data-delete.delete_confirm")}
     </label>
   </div>
 )
@@ -112,9 +113,9 @@ const Buttons = ({ agree }) => (
   <div className="form-button-row">
     <button className="cancel">
       <Link to="/myaccount/data-and-personalization/" className="cancel-link no-deco">
-        Cancel
+        {t("cancel")}
       </Link>
     </button>
-    <button type="submit" className="next" disabled={!agree}>DELETE ACCOUNT</button>
+    <button type="submit" className="next uppercase" disabled={!agree}>{t("my-account.data-privacy.data-delete.delete_account")}</button>
   </div>
 )
