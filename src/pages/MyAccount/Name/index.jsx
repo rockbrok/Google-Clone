@@ -19,14 +19,26 @@ export default function Name() {
   const email = obj[0].email;
   const firstName = obj[0].firstName;
   const lastName = obj[0].lastName;
-  const URL = "http://localhost:5000/users?email=" + email;
+  const id = obj[0].id;
+  const gender = obj[0].gender;
+  const month = obj[0].month;
+  const day = obj[0].day;
+  const year = obj[0].year;
+  const password = obj[0].password;
+  const URL = "http://localhost:5000/users/" + id;
 
   const [value, setValue] = useState({
     firstName: firstName,
-    lastName: lastName
+    lastName: lastName,
+    email: email,
+    gender: gender,
+    month: month,
+    day: day,
+    year: year,
+    password: password,
   })
 
-  const {register, handleSubmit, watch, formState: { errors }} = useForm({
+  const {register, handleSubmit, formState: { errors }} = useForm({
     defaultValues: {
       firstName: value.firstName,
       lastName: value.lastName
@@ -48,10 +60,29 @@ export default function Name() {
         url: URL,
         data: {
           firstName: value.firstName,
-          lastName: value.lastName,  
+          lastName: value.lastName,
+          email: value.email,
+          gender: value.gender,
+          month: value.month,
+          day: value.day,
+          year: value.year,
+          password: value.password,
         },
         headers: { "Content-Type": "application/json"},
       });
+      var userObject = []
+      userObject[0] = { 
+        'firstName': value.firstName, 
+        'lastName': value.lastName, 
+        'email': value.email, 
+        'gender': value.gender, 
+        'month': value.month, 
+        'day': value.day, 
+        'year': value.year, 
+        'password': value.password, 
+        'id': id 
+      }
+      localStorage.setItem("user", JSON.stringify(userObject));
       setTimeout(function () {
         window.location.href = "http://localhost:3000/myaccount/personalinfo/";
       }, 250);
@@ -59,7 +90,7 @@ export default function Name() {
       console.log(error.response.data)
     }
     const user = await currentUser();
-      setUser(user);
+    setUser(user);
   }
 
   const handleChange = (e) => {

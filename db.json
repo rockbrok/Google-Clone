@@ -1,14 +1,14 @@
 {
   "users": [
     {
-      "firstName": "Kevin",
-      "lastName": "Smith",
+      "firstName": "Peter",
+      "lastName": "Parker",
       "email": "ksmith@yahoo.com",
-      "password": "asdfasdfasdf",
       "gender": "male",
       "month": "June",
       "day": "18",
       "year": "2002",
+      "password": "asdfasdfasdf2",
       "id": 1
     },
     {
@@ -42,12 +42,16 @@
       "firstName": "asdf",
       "lastName": "asdf",
       "email": "asda@asdf.com",
-      "password": "asdfasdfasdf",
       "gender": "Female",
       "month": "January",
       "day": "2",
       "year": "1990",
+      "password": "asdfasdfasdf2",
       "id": 5
+    },
+    {
+      "firstName": "Thomas",
+      "id": 6
     }
   ]
 }

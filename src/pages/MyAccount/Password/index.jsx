@@ -14,11 +14,25 @@ export default function Password() {
 
   const obj = JSON.parse(localStorage.getItem('user'));
   const email = obj[0].email;
+  const firstName = obj[0].firstName;
+  const lastName = obj[0].lastName;
+  const id = obj[0].id;
+  const gender = obj[0].gender;
+  const month = obj[0].month;
+  const day = obj[0].day;
+  const year = obj[0].year;
   const password = obj[0].password;
-  const URL = "http://localhost:5000/users?email=" + email;
+  const URL = "http://localhost:5000/users/" + id;
 
   const [value, setValue] = useState({
-    password: '',
+    firstName: firstName,
+    lastName: lastName,
+    email: email,
+    gender: gender,
+    month: month,
+    day: day,
+    year: year,
+    password: password,
     passwordConfirm: ''
   })
 
@@ -43,7 +57,14 @@ export default function Password() {
         method: "put",
         url: URL,
         data: {
-          password: value.password
+          firstName: value.firstName,
+          lastName: value.lastName,
+          email: value.email,
+          gender: value.gender,
+          month: value.month,
+          day: value.day,
+          year: value.year,
+          password: value.password,
         },
         headers: { "Content-Type": "application/json"},
       });
