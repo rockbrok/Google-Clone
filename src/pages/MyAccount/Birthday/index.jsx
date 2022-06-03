@@ -8,6 +8,8 @@ import { useState, useContext } from 'react';
 import { UserContext } from "../../../usercontext";
 import { Helmet } from "react-helmet";
 
+import './style.css';
+
 export default function Birthday() {
   const { setUser } = useContext(UserContext);
 
@@ -111,7 +113,7 @@ export default function Birthday() {
           <section className="account-flex-form">
             <TopNote />
             <form onSubmit={handleSubmit(onSubmit)} noValidate>
-              <div className="birthday-row">
+              <div className="birthday-row-change">
                 <Month
                   value={value}
                   handleChange={handleChange}
@@ -196,7 +198,7 @@ const Month = ({ register, handleChange, value }) => (
       <option value={t("months.11")}>{t("months.11")}</option>
       <option value={t("months.12")}>{t("months.12")}</option>
     </select>
-    <div className="change-form-placeholder">
+    <div className="birthday-change-form-placeholder">
       Month
     </div>
   </div>
@@ -223,7 +225,7 @@ const Day = ({ register, handleChange, value }) => (
       onChange={handleChange}
       className="change-form-input"
     />
-    <div className="change-form-placeholder">
+    <div className="birthday-change-form-placeholder">
       Day
     </div>
   </div>
@@ -250,7 +252,7 @@ const Year = ({ register, handleChange, value }) => (
       onChange={handleChange}
       className="change-form-input"
     />
-    <div className="change-form-placeholder">
+    <div className="birthday-change-form-placeholder">
       Year
     </div>
   </div>

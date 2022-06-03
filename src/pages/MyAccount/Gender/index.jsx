@@ -35,7 +35,7 @@ export default function Gender() {
     password: password,
   })
 
-  const {register, handleSubmit, formState: { errors }} = useForm({
+  const {register, handleSubmit } = useForm({
     defaultValues: {
       gender: value.gender,
     },
@@ -151,26 +151,42 @@ const TopNote = () => (
   </div>
 )
 
-const GenderInput = ({ register, handleChange, value }) => (
+const GenderInput = ({ register, handleChange }) => (
   <div className="input-container">
-    <select 
-      {...register("gender", {
-        required: true
-      })}
-      className="signup-input"
-      name="gender"
-      size="1"
-      onChange={handleChange}
-      value={value.gender}
-    >
-      <option value="" className="signup-input-placeholder" defaultValue disabled hidden />
-      <option value="male">Male</option>
-      <option value="female">Female</option>
-      <option value="other">Other</option>
-    </select>
-    <span className="signup-input-placeholder">
-      ''
-    </span>
+    <label htmlFor="Male">
+      <input
+        {...register("gender")}
+        type="radio"
+        name="gender"
+        value="Male"
+        id="Male"
+        onChange={handleChange}
+        style={{height: '16px', width: '16px', margin: '0 12px 0 0'}}
+      />
+      Male
+    </label>
+    <label htmlFor="Female">
+      <input
+        {...register("gender")}
+        type="radio"
+        name="gender"
+        value="Female"
+        id="Female"
+        onChange={handleChange}
+      />
+      Female
+    </label>
+    <label htmlFor="Other">
+      <input
+        {...register("gender")}
+        type="radio"
+        name="gender"
+        value="Other"
+        id="Other"
+        onChange={handleChange}
+      />
+      Other
+    </label>
   </div>
 )
 

@@ -1,3 +1,15 @@
 {
-  "users": []
+  "users": [
+    {
+      "firstName": "Jones",
+      "lastName": "McGee",
+      "email": "jones@gmail.com",
+      "password": "asdfasdfasdf",
+      "gender": "Male",
+      "month": "February",
+      "day": "12",
+      "year": "1995",
+      "id": 1
+    }
+  ]
 }
