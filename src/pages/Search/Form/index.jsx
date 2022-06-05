@@ -3,8 +3,7 @@ import { SearchIcon, MicrophoneIcon, XIcon } from '@heroicons/react/solid';
 import { t } from 'i18next';
 import { useForm } from 'react-hook-form';
 
-import './SearchButton/style.css';
-import './SearchBar/style.css';
+import './style.css';
 
 export default function NewForm() {
   const [value, setValue] = useState({

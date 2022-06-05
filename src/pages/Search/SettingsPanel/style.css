@@ -7,6 +7,7 @@ ul.panel {
   height: auto;
   border: 1px solid var(--text-color-1);
   background: var(--background-color);
+  overflow: hidden;
 }
 
 ul.panel li {
