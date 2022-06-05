@@ -2,11 +2,11 @@
   "users": [
     {
       "firstName": "Jones",
-      "lastName": "McGee",
+      "lastName": "McGuire",
       "email": "jones@gmail.com",
       "gender": "Male",
-      "month": "Diciembre",
-      "day": "29",
+      "month": "May",
+      "day": "25",
       "year": "1995",
       "password": "asdfasdfasdf",
       "id": 1

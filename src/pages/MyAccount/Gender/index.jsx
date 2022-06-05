@@ -1,4 +1,4 @@
-import AccountHeader from "../Header";
+import AccountHeader from "../../../components/MyAccount/Header";
 import axios from "axios";
 import { useForm } from "react-hook-form";
 import { useState, useContext } from 'react';

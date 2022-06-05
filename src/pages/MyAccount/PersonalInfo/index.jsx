@@ -1,6 +1,6 @@
-import AccountHeader from "../Header";
-import AccountSideBar from "../../../components/AccountSideBar";
-import AccountNavBar from "../../../components/AccountNavBar";
+import AccountHeader from "../../../components/MyAccount/Header";
+import AccountSideBar from "../../../components/MyAccount/SideBar";
+import AccountNavBar from "../../../components/MyAccount/NavBar";
 import { Arrow } from "../Home";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
