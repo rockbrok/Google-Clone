@@ -1,16 +1,15 @@
 {
-  "users":[
+  "users": [
     {
-      "firstName": "John",
-      "lastName": "Smith",
-      "email": "Johnsmith@domain.net",
-      "password": "123456789"
-    },
-    {
-      "firstName": "Paul",
-      "lastName": "Smith",
-      "email": "Paulsmith@domain.net",
-      "password": "123456789"
+      "firstName": "Jones",
+      "lastName": "McGuire",
+      "email": "jones@gmail.com",
+      "gender": "Male",
+      "month": "May",
+      "day": "25",
+      "year": "1995",
+      "password": "asdfasdfasdf",
+      "id": 1
     }
   ]
 }

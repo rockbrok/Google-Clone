@@ -1,40 +1,92 @@
-import SignPageFooter from '../../components/SignPage/Footer';
-import SignPageHeader from '../../components/SignPage/Header';
-import Form from './Form';
+import SignUpDetails from "./Details";
+import SignUpEmail from "./Email";
+import SignPageHeader from "../../components/SignPage/Header";
+import SignPageFooter from "../../components/SignPage/Footer";
 import { Helmet } from 'react-helmet';
-import { Link } from 'react-router-dom';
+import { useState } from "react";
+import { useForm } from "react-hook-form";
 import { t } from 'i18next';
 
-import './style.css';
-import './../../components/SignPage/Container/style.css';
-import './../../components/SignPage/NextButton/style.css';
-import './../../components/SignPage/Heading/style.css';
-import './../../components/SignPage/SignInForm/style.css';
-import './../../components/SignPage/ShowPassword/style.css';
+import '../../components/SignPage/Container/style.css';
+import '../../components/SignPage/NextButton/style.css';
 
 export default function SignUp() {
+  const [success, setSuccess] = useState(false);
+
+  const {register, handleSubmit, watch, formState: { errors }} = useForm({
+    defaultValues: {
+      firstName: '',
+      lastName: '',
+      email: '',
+      password: '',
+      passwordConfirm: '',
+      month: '',
+      gender: '',
+      day: '',
+      year: '',
+    },
+    mode: 'onSubmit',
+    reValidateMode: 'onChange',
+    delayError: 1000,
+  });
+
+  const [value, setValue] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    password: '',
+    month: '',
+    gender: '',
+    day: '',
+    year: '',
+  })
+
+  const onSubmit = async () => {
+    setSuccess(true);
+  }
+
   return (
     <>
       <Helmet>
-        <title>Create your Google Account</title>
+        <title>{t("sign-up.title")}</title>
       </Helmet>
-      <section className="flex-container">
+      <section className="signpage-container-wrapper">
+        <section className="flex-container">
         <SignPageHeader />
-        <section className="signpage-container">
-          <main className="form-container">
-            <Logo />
-            <Heading />
-            <Form />
-          </main>
-          <AccountLogo />
+          <section className="signpage-container">
+            { success ? 
+              <SignUpDetails 
+                handleSubmit={handleSubmit} 
+                value={value}
+                setValue={setValue}
+                register={register}
+                errors={errors}
+                watch={watch}
+                Next={Next}
+                Logo={Logo}
+              /> 
+              : 
+              <SignUpEmail 
+                handleSubmit={handleSubmit} 
+                value={value}
+                setValue={setValue}
+                register={register}
+                errors={errors}
+                watch={watch}
+                Next={Next}
+                Logo={Logo}
+                onSubmit={onSubmit}
+              />
+            }
+          </section>
+          <SignPageFooter />
         </section>
-        <SignPageFooter />
       </section>
     </>
   )
 }
 
-const Logo = () => (
+export const Logo = () => (
   <svg viewBox="0 0 75 24" width="75" height="24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <path fill="#4285f4" d="M14.11 14.182c.722-.723 1.205-1.78 1.387-3.334H9.423V8.373h8.518c.09.452.16 1.07.16 1.664 0 1.903-.52 4.26-2.19 5.934-1.63 1.7-3.71 2.61-6.48 2.61-5.12 0-9.42-4.17-9.42-9.29C0 4.17 4.31 0 9.43 0c2.83 0 4.843 1.108 6.362 2.56L14 4.347c-1.087-1.02-2.56-1.81-4.577-1.81-3.74 0-6.662 3.01-6.662 6.75s2.93 6.75 6.67 6.75c2.43 0 3.81-.972 4.69-1.856z"></path>
     <path fill="#ea4335" d="M25.17 6.71c-3.28 0-5.954 2.505-5.954 5.958 0 3.433 2.673 5.96 5.954 5.96 3.282 0 5.955-2.527 5.955-5.96 0-3.453-2.673-5.96-5.955-5.96zm0 9.567c-1.8 0-3.35-1.487-3.35-3.61 0-2.14 1.55-3.608 3.35-3.608s3.35 1.46 3.35 3.6c0 2.12-1.55 3.61-3.35 3.61z"></path>
@@ -45,35 +97,8 @@ const Logo = () => (
   </svg>
 );
 
-const Heading = () => (
-  <h1 className="heading">
-    {t("sign_up_heading")}
-  </h1>
-);
-
-export const ErrorLogo = () => (
-  <div className="invalidlogo">
-    <svg aria-hidden="true" fill="currentColor" focusable="false" width="16px" height="16px" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg">
-      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path>
-    </svg>
-  </div>
-)
-
-export const SignInInstead = () => (
-  <Link to="/signin/identifier/">
-    <button className="create-account">
-      {t("sign_up_sign_in")}
-    </button>
-  </Link>
-);
-
-const AccountLogo = () => (
-  <section className="account-app-icon">
-    <figure className="account-app-figure">
-      <img src="https://ssl.gstatic.com/accounts/signup/glif/account.svg" alt="" width="244" height="244" />
-      <figcaption className="fig-heading">
-        {t("sign_up_figure_caption")}
-      </figcaption>
-    </figure>
-  </section>
+export const Next = () => (
+  <button type="submit" className="next">
+    {t('next')}
+  </button>
 );

@@ -1,8 +1,8 @@
-import Logo from '../../components/Logo/index';
-import Header from '../../components/Header/index';
-import PageLanguage from '../../components/PageLanguage/index';
-import Footer from '../../components/Footer/index';
-import Form from '../../components/Form/index';
+import Logo from './Logo/index';
+import Header from './Header/index';
+import PageLanguage from './PageLanguage/index';
+import Footer from './Footer/index';
+import Form from './Form/index';
 
 export default function Search() {
   return (
