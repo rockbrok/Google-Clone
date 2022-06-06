@@ -6,7 +6,7 @@ import { useContext } from 'react';
 import { UserContext } from '../../../../usercontext';
 
 export default function Form({ value, setValue, register, handleSubmit, errors, watch, Next }) {
-  const { user, setUser } = useContext(UserContext);
+  const { setUser } = useContext(UserContext);
 
   const currentUser = async () => {
     let URL = "http://localhost:5000/users?email=" + value.email;

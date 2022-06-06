@@ -12,7 +12,6 @@ export default function ToggleUser() {
   const firstName = obj[0].firstName;
   const lastName = obj[0].lastName;
   const letter = firstName.charAt(0).toUpperCase();
-  const URL = "http://localhost:5000/users?email=" + email;
 
   return (
     <li className="pl">

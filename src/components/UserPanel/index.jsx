@@ -9,7 +9,6 @@ export default function UserPanel() {
   const firstName = obj[0].firstName;
   const lastName = obj[0].lastName;
   const letter = firstName.charAt(0).toUpperCase();
-  const URL = "http://localhost:5000/users?email=" + email;
 
   const SignOut = () => {
     localStorage.setItem('user', null);
