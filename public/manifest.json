@@ -1,6 +1,6 @@
 {
-  "name": "google-front",
-  "short_name": "google-front",
+  "name": "Google Frontend",
+  "short_name": "Google",
   "theme_color": "#000000",
   "background_color": "#ffffff",
   "display": "standalone",

@@ -9,10 +9,8 @@ export default function HeaderIcons() {
   let user = JSON.parse(localStorage.getItem('user'));
 
   return (
-    <ul className="header-icons-margin">
-      <div className="header-gapps-margin">
-      <ToggleApps />
-      </div>
+    <ul>
+      <ToggleApps/>
       { user !== null ? <ToggleUser /> : <SignIn /> }
     </ul>
   )

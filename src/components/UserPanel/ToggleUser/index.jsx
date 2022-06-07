@@ -39,9 +39,16 @@ const AccountButton = ({ show, showTitle, setShowTitle, firstName, lastName, ema
       onMouseEnter={!show ? (e) => setShowTitle(true) : (e) => setShowTitle(false)}
       onMouseLeave={(e) => setShowTitle(false)}
       onClick={(e) => setShowTitle(false)}
-      >
-      <ProfileIcon letter={letter} />
-      <Title showTitle={showTitle} firstName={firstName} lastName={lastName} email={email}/>
+    >
+      <ProfileIcon 
+        letter={letter} 
+      />
+      <Title 
+        showTitle={showTitle} 
+        firstName={firstName} 
+        lastName={lastName} 
+        email={email}
+      />
     </div>
   </div>
 );
@@ -49,8 +56,12 @@ const AccountButton = ({ show, showTitle, setShowTitle, firstName, lastName, ema
 const Title = ({ showTitle, firstName, lastName, email }) => (
   <div className="user-panel-title fade-in" style={{ display: showTitle ? "block" : "none" }}>
     {t("user-panel.google_account")}<br />
-    <span className="user-panel-title-text">{firstName}&nbsp;{lastName}</span><br />
-    <span className="user-panel-title-text">{email}</span>
+    <span className="user-panel-title-text">
+      {firstName}&nbsp;{lastName}
+    </span><br />
+    <span className="user-panel-title-text">
+      {email}
+    </span>
   </div>
 );
 

@@ -5,7 +5,7 @@
   box-sizing: border-box;
   padding: 9px 17px;
   border: 1px solid transparent;
-  margin: 0 8px 0 12px;
+  margin: 0 0px 0 12px;
   background: var(--text-color-3);
   border-radius: 4px;
   color: var(--background-color);
@@ -31,12 +31,4 @@
     padding: 9px;
     white-space: nowrap;
   }
-}
-
-.header-icons-margin {
-  margin-right: -8px;
-}
-
-.header-gapps-margin {
-  margin-right: -7px;
 }

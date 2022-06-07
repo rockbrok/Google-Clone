@@ -1,5 +1,6 @@
-import './style.css';
 import { t } from 'i18next';
+
+import './style.css';
 
 export default function AppsPanel() {
   return (

@@ -1,7 +1,6 @@
 import axios from 'axios';
-import { Information, Back } from '..';
+import { Information, Back, ErrorLogo } from '..';
 import { t } from 'i18next';
-import { ErrorLogo } from '..';
 import { useContext } from 'react';
 import { UserContext } from '../../../../usercontext';
 
