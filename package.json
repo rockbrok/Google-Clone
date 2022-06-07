@@ -1,6 +1,6 @@
 {
-  "homepage": "https://paq000.github.io/",
-  "name": "google-front",
+  "homepage": "https://paq000.github.io/Google",
+  "name": "google-frontend",
   "version": "0.1.0",
   "private": false,
   "dependencies": {
